@@ -1,0 +1,1560 @@
+North: -100000
+South: 8
+East: 12
+West: -100000
+
+North: -100000
+South: 6
+East: 12
+West: -100000
+
+North: -100000
+South: 12
+East: 6
+West: -100000
+
+North: -100000
+South: 12
+East: 8
+West: -100000
+
+North: -100000
+South: 6
+East: 12
+West: -100000
+
+North: -100000
+South: 2
+East: 8
+West: -100000
+
+North: -20
+South: 12
+East: 16
+West: -100000
+
+North: -18
+South: 8
+East: 8
+West: -100000
+
+North: -100000
+South: -2
+East: 6
+West: -100000
+
+North: -100000
+South: 18
+East: 42
+West: -100000
+
+North: -100000
+South: -6
+East: 2
+West: -100000
+
+North: -22
+South: 6
+East: 12
+West: -100000
+
+North: 12
+South: 42
+East: 38
+West: -100000
+
+North: -14
+South: 2
+East: 12
+West: -100000
+
+North: -40
+South: -100000
+East: -14
+West: -100000
+
+North: -8
+South: -100000
+East: 18
+West: -100000
+
+North: -34
+South: -100000
+East: -8
+West: -100000
+
+North: -100000
+South: -2
+East: 6
+West: -28
+
+North: -100000
+South: 48
+East: 44
+West: -8
+
+North: -100000
+South: -6
+East: 18
+West: -32
+
+North: -20
+South: 6
+East: 6
+West: -100000
+
+North: 12
+South: 44
+East: 38
+West: -100000
+
+North: -14
+South: 18
+East: 12
+West: -100000
+
+North: -100000
+South: -6
+East: 4
+West: -32
+
+North: -100000
+South: 20
+East: 30
+West: -6
+
+North: -100000
+South: -12
+East: -2
+West: -38
+
+North: -32
+South: 4
+East: 12
+West: -100000
+
+North: 18
+South: 30
+East: 38
+West: -100000
+
+North: -14
+South: -2
+East: 12
+West: -100000
+
+North: -100000
+South: -22
+East: -100000
+West: -100000
+
+North: -100000
+South: 4
+East: -100000
+West: -100000
+
+North: -100000
+South: -28
+East: -100000
+West: -100000
+
+North: -40
+South: -100000
+East: -14
+West: -100000
+
+North: -6
+South: -100000
+East: 20
+West: -100000
+
+North: -32
+South: -100000
+East: -6
+West: -100000
+
+North: -100000
+South: -6
+East: 4
+West: -32
+
+North: -100000
+South: 58
+East: 46
+West: -16
+
+North: -100000
+South: -12
+East: 20
+West: -38
+
+North: -22
+South: 4
+East: 4
+West: -100000
+
+North: 12
+South: 46
+East: 38
+West: -100000
+
+North: -14
+South: 20
+East: 12
+West: -100000
+
+North: -100000
+South: -10
+East: 2
+West: -36
+
+North: -100000
+South: 16
+East: 28
+West: -10
+
+North: -100000
+South: -18
+East: -6
+West: -44
+
+North: -46
+South: 2
+East: 12
+West: -100000
+
+North: 20
+South: 28
+East: 38
+West: -100000
+
+North: -14
+South: -6
+East: 12
+West: -100000
+
+North: -100000
+South: -24
+East: -100000
+West: -50
+
+North: -100000
+South: 2
+East: -100000
+West: -24
+
+North: -100000
+South: -32
+East: -100000
+West: -58
+
+North: -40
+South: -100000
+East: -14
+West: -100000
+
+North: -4
+South: -100000
+East: 22
+West: -100000
+
+North: -30
+South: -100000
+East: -4
+West: -100000
+
+North: -100000
+South: -10
+East: 2
+West: -36
+
+North: -100000
+South: 72
+East: 48
+West: -24
+
+North: -100000
+South: -18
+East: 22
+West: -44
+
+North: -24
+South: 2
+East: 2
+West: -100000
+
+North: 12
+South: 48
+East: 38
+West: -100000
+
+North: -14
+South: 22
+East: 12
+West: -100000
+
+North: -100000
+South: -14
+East: 0
+West: -40
+
+North: -100000
+South: 12
+East: 26
+West: -14
+
+North: -100000
+South: -24
+East: -10
+West: -50
+
+North: -64
+South: 0
+East: 12
+West: -100000
+
+North: 22
+South: 26
+East: 38
+West: -100000
+
+North: -14
+South: -10
+East: 12
+West: -100000
+
+North: -100000
+South: -26
+East: -100000
+West: -52
+
+North: -100000
+South: 0
+East: -100000
+West: -26
+
+North: -100000
+South: -36
+East: -100000
+West: -62
+
+North: -52
+South: -100000
+East: -14
+West: -100000
+
+North: -2
+South: -100000
+East: 24
+West: -100000
+
+North: -40
+South: -100000
+East: -2
+West: -100000
+
+North: -100000
+South: -14
+East: 0
+West: -68
+
+North: -100000
+South: 108
+East: 68
+West: -32
+
+North: -100000
+South: -24
+East: 24
+West: -78
+
+North: -38
+South: 0
+East: 0
+West: -100000
+
+North: 12
+South: 68
+East: 56
+West: -100000
+
+North: -26
+South: 24
+East: 12
+West: -100000
+
+North: -100000
+South: -24
+East: 20
+West: -58
+
+North: -100000
+South: 20
+East: 34
+West: -24
+
+North: -100000
+South: -58
+East: -14
+West: -68
+
+North: -94
+South: -20
+East: 34
+West: -100000
+
+North: 46
+South: 34
+East: 48
+West: -100000
+
+North: -22
+South: -54
+East: 20
+West: -100000
+
+North: -100000
+South: -56
+East: -100000
+West: -68
+
+North: -100000
+South: 20
+East: -100000
+West: -56
+
+North: -100000
+South: -68
+East: -100000
+West: -80
+
+North: 26
+South: -100000
+East: 40
+West: -100000
+
+North: 20
+South: -100000
+East: 20
+West: -100000
+
+North: 20
+South: -100000
+East: 20
+West: -100000
+
+North: -100000
+South: -22
+East: -100000
+West: -22
+
+North: -100000
+South: 29
+East: -100000
+West: 19
+
+North: 20
+South: -100000
+East: 20
+West: -100000
+
+North: 20
+South: -100000
+East: 20
+West: -100000
+
+North: 12
+South: -100000
+East: 26
+West: -44
+
+North: 14
+South: -100000
+East: 28
+West: -36
+
+North: 28
+South: -100000
+East: 40
+West: -100000
+
+North: -2
+South: -100000
+East: 12
+West: -44
+
+North: 0
+South: -100000
+East: 14
+West: -38
+
+North: 14
+South: -100000
+East: 26
+West: -100000
+
+North: -44
+South: -100000
+East: -100000
+West: -100000
+
+North: -36
+South: -100000
+East: -100000
+West: -100000
+
+North: -16
+South: -100000
+East: -2
+West: -44
+
+North: -14
+South: -100000
+East: 0
+West: -40
+
+North: 0
+South: -100000
+East: 12
+West: -100000
+
+North: -45
+South: -75
+East: -100000
+West: -51
+
+North: -39
+South: -75
+East: -100000
+West: -45
+
+North: -30
+South: -100000
+East: -16
+West: -44
+
+North: -28
+South: -100000
+East: -14
+West: -42
+
+North: -14
+South: -100000
+East: -2
+West: -100000
+
+North: -44
+South: -52
+East: -100000
+West: -48
+
+North: -40
+South: -48
+East: -100000
+West: -44
+
+North: -100000
+South: -100000
+East: -44
+West: -44
+
+North: -100000
+South: -100000
+East: -42
+West: -44
+
+North: -28
+South: -100000
+East: -16
+West: -100000
+
+North: -44
+South: -48
+East: -100000
+West: -46
+
+North: -42
+South: -46
+East: -100000
+West: -44
+
+North: -100000
+South: -100000
+East: -44
+West: -100000
+
+North: -100000
+South: -44
+East: -100000
+West: -44
+
+North: -100000
+South: -44
+East: -100000
+West: -44
+
+North: -100000
+South: -44
+East: -100000
+West: -44
+
+North: -100000
+South: -44
+East: -100000
+West: -44
+
+North: -100000
+South: -44
+East: -100000
+West: -44
+
+North: -100000
+South: -44
+East: -100000
+West: -44
+
+North: -44
+South: -44
+East: -100000
+West: -44
+
+North: -44
+South: -44
+East: -100000
+West: -44
+
+North: -100000
+South: -54
+East: -100000
+West: -45
+
+North: -100000
+South: -54
+East: -100000
+West: -45
+
+North: -47
+South: -51
+East: -100000
+West: -47
+
+North: -47
+South: -51
+East: -100000
+West: -47
+
+North: -100000
+South: -100000
+East: -100000
+West: -100000
+
+North: -100000
+South: -100000
+East: -100000
+West: -100000
+
+North: -45
+South: -100000
+East: -100000
+West: -100000
+
+North: -45
+South: -100000
+East: -100000
+West: -100000
+
+North: -45
+South: -100000
+East: -100000
+West: -45
+
+North: -45
+South: -100000
+East: -100000
+West: -45
+
+North: -45
+South: -100000
+East: -100000
+West: -45
+
+North: -45
+South: -100000
+East: -100000
+West: -45
+
+North: -45
+South: -100000
+East: -100000
+West: -100000
+
+North: -45
+South: -100000
+East: -100000
+West: -100000
+
+North: -100000
+South: -100000
+East: -100000
+West: -45
+
+North: -100000
+South: -100000
+East: -100000
+West: -45
+
+North: -46
+South: -50
+East: -100000
+West: -46
+
+North: -46
+South: -50
+East: -100000
+West: -46
+
+North: -100000
+South: -45
+East: -100000
+West: -45
+
+North: -100000
+South: -48
+East: -100000
+West: -46
+
+North: -100000
+South: -48
+East: -100000
+West: -46
+
+North: -100000
+South: -48
+East: -100000
+West: -46
+
+North: -100000
+South: -45
+East: -100000
+West: -100000
+
+North: -100000
+South: -45
+East: -100000
+West: -100000
+
+North: -100000
+South: -45
+East: -100000
+West: -100000
+
+North: -100000
+South: -100000
+East: -45
+West: -100000
+
+North: -100000
+South: -100000
+East: -45
+West: -100000
+
+North: -100000
+South: -46
+East: -100000
+West: -100000
+
+North: -100000
+South: -46
+East: -100000
+West: -100000
+
+North: -100000
+South: -100000
+East: -100000
+West: -100000
+
+North: -100000
+South: -100000
+East: -100000
+West: -100000
+
+North: -100000
+South: 8
+East: 12
+West: -100000
+
+North: -100000
+South: 6
+East: 12
+West: -100000
+
+North: -100000
+South: 12
+East: 6
+West: -100000
+
+North: -100000
+South: 12
+East: 8
+West: -100000
+
+North: -100000
+South: 6
+East: 12
+West: -100000
+
+North: -100000
+South: 2
+East: 8
+West: -100000
+
+North: -20
+South: 12
+East: 16
+West: -100000
+
+North: -18
+South: 8
+East: 8
+West: -100000
+
+North: -100000
+South: -2
+East: 6
+West: -100000
+
+North: -100000
+South: 18
+East: 42
+West: -100000
+
+North: -100000
+South: -6
+East: 2
+West: -100000
+
+North: -22
+South: 6
+East: 12
+West: -100000
+
+North: 12
+South: 42
+East: 38
+West: -100000
+
+North: -14
+South: 2
+East: 12
+West: -100000
+
+North: -40
+South: -100000
+East: -14
+West: -100000
+
+North: -8
+South: -100000
+East: 18
+West: -100000
+
+North: -34
+South: -100000
+East: -8
+West: -100000
+
+North: -100000
+South: -2
+East: 6
+West: -28
+
+North: -100000
+South: 48
+East: 44
+West: -8
+
+North: -100000
+South: -6
+East: 18
+West: -32
+
+North: -20
+South: 6
+East: 6
+West: -100000
+
+North: 12
+South: 44
+East: 38
+West: -100000
+
+North: -14
+South: 18
+East: 12
+West: -100000
+
+North: -100000
+South: -6
+East: 4
+West: -32
+
+North: -100000
+South: 20
+East: 30
+West: -6
+
+North: -100000
+South: -12
+East: -2
+West: -38
+
+North: -32
+South: 4
+East: 12
+West: -100000
+
+North: 18
+South: 30
+East: 38
+West: -100000
+
+North: -14
+South: -2
+East: 12
+West: -100000
+
+North: -100000
+South: -22
+East: -100000
+West: -100000
+
+North: -100000
+South: 4
+East: -100000
+West: -100000
+
+North: -100000
+South: -28
+East: -100000
+West: -100000
+
+North: -40
+South: -100000
+East: -14
+West: -100000
+
+North: -6
+South: -100000
+East: 20
+West: -100000
+
+North: -32
+South: -100000
+East: -6
+West: -100000
+
+North: -100000
+South: -6
+East: 4
+West: -32
+
+North: -100000
+South: 58
+East: 46
+West: -16
+
+North: -100000
+South: -12
+East: 20
+West: -38
+
+North: -22
+South: 4
+East: 4
+West: -100000
+
+North: 12
+South: 46
+East: 38
+West: -100000
+
+North: -14
+South: 20
+East: 12
+West: -100000
+
+North: -100000
+South: -10
+East: 2
+West: -36
+
+North: -100000
+South: 16
+East: 28
+West: -10
+
+North: -100000
+South: -18
+East: -6
+West: -44
+
+North: -46
+South: 2
+East: 12
+West: -100000
+
+North: 20
+South: 28
+East: 38
+West: -100000
+
+North: -14
+South: -6
+East: 12
+West: -100000
+
+North: -100000
+South: -24
+East: -100000
+West: -50
+
+North: -100000
+South: 2
+East: -100000
+West: -24
+
+North: -100000
+South: -32
+East: -100000
+West: -58
+
+North: -40
+South: -100000
+East: -14
+West: -100000
+
+North: -4
+South: -100000
+East: 22
+West: -100000
+
+North: -30
+South: -100000
+East: -4
+West: -100000
+
+North: -100000
+South: -10
+East: 2
+West: -36
+
+North: -100000
+South: 72
+East: 48
+West: -24
+
+North: -100000
+South: -18
+East: 22
+West: -44
+
+North: -24
+South: 2
+East: 2
+West: -100000
+
+North: 12
+South: 48
+East: 38
+West: -100000
+
+North: -14
+South: 22
+East: 12
+West: -100000
+
+North: -100000
+South: -14
+East: 0
+West: -40
+
+North: -100000
+South: 12
+East: 26
+West: -14
+
+North: -100000
+South: -24
+East: -10
+West: -50
+
+North: -64
+South: 0
+East: 12
+West: -100000
+
+North: 22
+South: 26
+East: 38
+West: -100000
+
+North: -14
+South: -10
+East: 12
+West: -100000
+
+North: -100000
+South: -26
+East: -100000
+West: -52
+
+North: -100000
+South: 0
+East: -100000
+West: -26
+
+North: -100000
+South: -36
+East: -100000
+West: -62
+
+North: -52
+South: -100000
+East: -14
+West: -100000
+
+North: -2
+South: -100000
+East: 24
+West: -100000
+
+North: -40
+South: -100000
+East: -2
+West: -100000
+
+North: -100000
+South: -14
+East: 0
+West: -68
+
+North: -100000
+South: 108
+East: 68
+West: -32
+
+North: -100000
+South: -24
+East: 24
+West: -78
+
+North: -38
+South: 0
+East: 0
+West: -100000
+
+North: 12
+South: 68
+East: 56
+West: -100000
+
+North: -26
+South: 24
+East: 12
+West: -100000
+
+North: -100000
+South: -24
+East: 20
+West: -58
+
+North: -100000
+South: 20
+East: 34
+West: -24
+
+North: -100000
+South: -58
+East: -14
+West: -68
+
+North: -94
+South: -20
+East: 34
+West: -100000
+
+North: 46
+South: 34
+East: 48
+West: -100000
+
+North: -22
+South: -54
+East: 20
+West: -100000
+
+North: -100000
+South: -56
+East: -100000
+West: -68
+
+North: -100000
+South: 20
+East: -100000
+West: -56
+
+North: -100000
+South: -68
+East: -100000
+West: -80
+
+North: 26
+South: -100000
+East: 40
+West: -100000
+
+North: 20
+South: -100000
+East: 20
+West: -100000
+
+North: 20
+South: -100000
+East: 20
+West: -100000
+
+North: -100000
+South: -22
+East: -100000
+West: -22
+
+North: -100000
+South: 29
+East: -100000
+West: 19
+
+North: 20
+South: -100000
+East: 20
+West: -100000
+
+North: 20
+South: -100000
+East: 20
+West: -100000
+
+North: 12
+South: -100000
+East: 26
+West: -44
+
+North: 14
+South: -100000
+East: 28
+West: -36
+
+North: 28
+South: -100000
+East: 40
+West: -100000
+
+North: -2
+South: -100000
+East: 12
+West: -44
+
+North: 0
+South: -100000
+East: 14
+West: -38
+
+North: 14
+South: -100000
+East: 26
+West: -100000
+
+North: -44
+South: -100000
+East: -100000
+West: -100000
+
+North: -36
+South: -100000
+East: -100000
+West: -100000
+
+North: -16
+South: -100000
+East: -2
+West: -44
+
+North: -14
+South: -100000
+East: 0
+West: -40
+
+North: 0
+South: -100000
+East: 12
+West: -100000
+
+North: -45
+South: -75
+East: -100000
+West: -51
+
+North: -39
+South: -75
+East: -100000
+West: -45
+
+North: -30
+South: -100000
+East: -16
+West: -44
+
+North: -28
+South: -100000
+East: -14
+West: -42
+
+North: -14
+South: -100000
+East: -2
+West: -100000
+
+North: -44
+South: -52
+East: -100000
+West: -48
+
+North: -40
+South: -48
+East: -100000
+West: -44
+
+North: -100000
+South: -100000
+East: -44
+West: -44
+
+North: -100000
+South: -100000
+East: -42
+West: -44
+
+North: -28
+South: -100000
+East: -16
+West: -100000
+
+North: -44
+South: -48
+East: -100000
+West: -46
+
+North: -42
+South: -46
+East: -100000
+West: -44
+
+North: -100000
+South: -100000
+East: -44
+West: -100000
+
+North: -100000
+South: -44
+East: -100000
+West: -44
+
+North: -100000
+South: -44
+East: -100000
+West: -44
+
+North: -100000
+South: -44
+East: -100000
+West: -44
+
+North: -100000
+South: -44
+East: -100000
+West: -44
+
+North: -100000
+South: -44
+East: -100000
+West: -44
+
+North: -100000
+South: -44
+East: -100000
+West: -44
+
+North: -44
+South: -44
+East: -100000
+West: -44
+
+North: -44
+South: -44
+East: -100000
+West: -44
+
+North: -100000
+South: -54
+East: -100000
+West: -45
+
+North: -100000
+South: -54
+East: -100000
+West: -45
+
+North: -47
+South: -51
+East: -100000
+West: -47
+
+North: -47
+South: -51
+East: -100000
+West: -47
+
+North: -100000
+South: -100000
+East: -100000
+West: -100000
+
+North: -100000
+South: -100000
+East: -100000
+West: -100000
+
+North: -45
+South: -100000
+East: -100000
+West: -100000
+
+North: -45
+South: -100000
+East: -100000
+West: -100000
+
+North: -45
+South: -100000
+East: -100000
+West: -45
+
+North: -45
+South: -100000
+East: -100000
+West: -45
+
+North: -45
+South: -100000
+East: -100000
+West: -45
+
+North: -45
+South: -100000
+East: -100000
+West: -45
+
+North: -45
+South: -100000
+East: -100000
+West: -100000
+
+North: -45
+South: -100000
+East: -100000
+West: -100000
+
+North: -100000
+South: -100000
+East: -100000
+West: -45
+
+North: -100000
+South: -100000
+East: -100000
+West: -45
+
+North: -46
+South: -50
+East: -100000
+West: -46
+
+North: -46
+South: -50
+East: -100000
+West: -46
+
+North: -100000
+South: -45
+East: -100000
+West: -45
+
+North: -100000
+South: -48
+East: -100000
+West: -46
+
+North: -100000
+South: -48
+East: -100000
+West: -46
+
+North: -100000
+South: -48
+East: -100000
+West: -46
+
+North: -100000
+South: -45
+East: -100000
+West: -100000
+
+North: -100000
+South: -45
+East: -100000
+West: -100000
+
+North: -100000
+South: -45
+East: -100000
+West: -100000
+
+North: -100000
+South: -100000
+East: -45
+West: -100000
+
+North: -100000
+South: -100000
+East: -45
+West: -100000
+
+North: -100000
+South: -46
+East: -100000
+West: -100000
+
+North: -100000
+South: -46
+East: -100000
+West: -100000
+
+North: -100000
+South: -100000
+East: -100000
+West: -100000
+
+North: -100000
+South: -100000
+East: -100000
+West: -100000
+

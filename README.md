@@ -12,7 +12,7 @@ Instructions
 
 To run the bot, do
 
-java -jar engine/Tron.jar maps/empty-room.txt ./MyTronbot "java -jar example_bots/Chaser.jar"
+java -jar engine/Tron.jar maps/empty-room.txt ./MyTronBot "java -jar example_bots/Chaser.jar"
 
 To see the output in a visualizer, do
 

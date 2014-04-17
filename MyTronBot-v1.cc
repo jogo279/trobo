@@ -116,61 +116,46 @@ pair<string, int> minimax (bool maxi, int depth, const Map &map) {
   int state = gameState(map);
   if (state != IN_PROGRESS) return make_pair("-",state);
 
-  string direction[4] = {"NORTH", "SOUTH", "EAST", "WEST"};
-  int score[4];
-  int player = maxi ? 1 : 0;
-  int vscore_coeff = maxi ? 1 : -1;
-
-  if(depth==1){
-    for(int i=0; i<4; i++){
-      score[i] = vscore_coeff*varonoiScore(Map(map, player, direction[i]));
+  int north_score, south_score, east_score, west_score;
+  if (maxi) {
+    if (depth==1) {
+      north_score = varonoiScore(Map(map, 1, "NORTH"));
+      south_score = varonoiScore(Map(map, 1, "SOUTH"));
+      east_score = varonoiScore(Map(map, 1, "EAST"));
+      west_score = varonoiScore(Map(map, 1, "WEST"));
+    } else {
+      north_score = minimax(false, depth-1, Map(map, 1, "NORTH")).second;
+      south_score = minimax(false, depth-1, Map(map, 1, "SOUTH")).second;
+      east_score = minimax(false, depth-1, Map(map, 1, "EAST")).second;
+      west_score = minimax(false, depth-1, Map(map, 1, "WEST")).second;
     }
   } else {
-    for(int i=0; i<4; i++){
-      score[i] = vscore_coeff*minimax(!maxi, depth-1, Map(map, player, direction[i])).second;
+    if (depth==1) {
+      north_score = -1*varonoiScore(Map(map, 2, "NORTH"));
+      south_score = -1*varonoiScore(Map(map, 2, "SOUTH"));
+      east_score = -1*varonoiScore(Map(map, 2, "EAST"));
+      west_score = -1*varonoiScore(Map(map, 2, "WEST"));
+    } else {
+      north_score = -1*minimax(true, depth-1, Map(map, 2, "NORTH")).second;
+      south_score = -1*minimax(true, depth-1, Map(map, 2, "SOUTH")).second;
+      east_score = -1*minimax(true, depth-1, Map(map, 2, "EAST")).second;
+      west_score = -1*minimax(true, depth-1, Map(map, 2, "WEST")).second;
     }
   }
-
-  int best_score = INT_MIN;
-  string best_dir = "";
-  for(int i=0; i<4; i++){
-    if(best_score < score[i]){
-      best_score = score[i];
-      best_dir = direction[i];
-    }
+  int best_score = north_score;
+  string best_dir = "NORTH";
+  if (south_score > best_score) {
+    best_score = south_score;
+    best_dir = "SOUTH";
   }
-
-  if (maxi) return make_pair(best_dir, best_score);
-  return make_pair(best_dir, -1*best_score);
-}
-
-pair<string, int> alphabeta (bool maxi, int depth, const Map &map, int a, int b) {
-  int state = gameState(map);
-  if (state != IN_PROGRESS) return make_pair("-",state);
-  string direction[4] = {"NORTH", "SOUTH", "EAST", "WEST"};
-  int score[4];
-  int player = maxi ? 1 : 0;
-  int vscore_coeff = maxi ? 1 : -1;
-
-  if(depth==1){
-    for(int i=0; i<4; i++){
-      score[i] = vscore_coeff*varonoiScore(Map(map, player, direction[i]));
-    }
-  } else {
-    for(int i=0; i<4; i++){
-      score[i] = vscore_coeff*alphabeta(!maxi, depth-1, Map(map, player, direction[i]), a, b).second;
-    }
+  if (east_score > best_score) {
+    best_score = east_score;
+    best_dir = "EAST";
   }
-  
-  int best_score = INT_MIN;
-  string best_dir = "";
-  for(int i=0; i<4; i++){
-    if(best_score < score[i]){
-      best_score = score[i];
-      best_dir = direction[i];
-    }
+  if (west_score > best_score) {
+    best_score = west_score;
+    best_dir = "WEST";
   }
-
   if (maxi) return make_pair(best_dir, best_score);
   return make_pair(best_dir, -1*best_score);
 }
