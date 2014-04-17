@@ -13,6 +13,9 @@ using namespace std;
 #define DRAW -1
 #define IN_PROGRESS 2
 
+#define MAX(a,b) ((a)>(b)?(a):(b))
+#define MIN(a,b) ((a)<(b)?(a):(b))
+
 
 int gameState(const Map& map) {
   if (map.MyX() == map.OpponentX() && map.MyY() == map.OpponentY()) return DRAW;
@@ -121,10 +124,8 @@ pair<string, int> minimax (bool maxi, int depth, const Map &map) {
   int player = maxi ? 1 : 0;
   int vscore_coeff = maxi ? 1 : -1;
 
-  if(depth==1){
-    for(int i=0; i<4; i++){
-      score[i] = vscore_coeff*varonoiScore(Map(map, player, direction[i]));
-    }
+  if(depth==0){
+      return make_pair("",varonoiScore(map));
   } else {
     for(int i=0; i<4; i++){
       score[i] = vscore_coeff*minimax(!maxi, depth-1, Map(map, player, direction[i])).second;
@@ -149,34 +150,41 @@ pair<string, int> alphabeta (bool maxi, int depth, const Map &map, int a, int b)
   if (state != IN_PROGRESS) return make_pair("-",state);
   string direction[4] = {"NORTH", "SOUTH", "EAST", "WEST"};
   int score[4];
+  string best_dir;
   int player = maxi ? 1 : 0;
-  int vscore_coeff = maxi ? 1 : -1;
 
-  if(depth==1){
+  if(depth==0){
+    return make_pair("",varonoiScore(map));
+  }
+
+  if(maxi){
     for(int i=0; i<4; i++){
-      score[i] = vscore_coeff*varonoiScore(Map(map, player, direction[i]));
+      score[i] = alphabeta(!maxi, depth-1, Map(map, player, direction[i]), a, b).second;
+      if(a < score[i]){
+        a = score[i];
+        best_dir = direction[i];
+      }
+      if (b<=a)
+        break;
     }
+    return make_pair(best_dir, a);
   } else {
     for(int i=0; i<4; i++){
-      score[i] = vscore_coeff*alphabeta(!maxi, depth-1, Map(map, player, direction[i]), a, b).second;
+      score[i] = alphabeta(!maxi, depth-1, Map(map, player, direction[i]), a, b).second;
+      if(b > score[i]){
+        b = score[i];
+        best_dir = direction[i];
+      }
+      if (b<=a)
+        break;
     }
+    return make_pair(best_dir, b);
   }
-  
-  int best_score = INT_MIN;
-  string best_dir = "";
-  for(int i=0; i<4; i++){
-    if(best_score < score[i]){
-      best_score = score[i];
-      best_dir = direction[i];
-    }
-  }
-
-  if (maxi) return make_pair(best_dir, best_score);
-  return make_pair(best_dir, -1*best_score);
 }
 
 string MakeMove(const Map& map) {
-  return minimax(true, 3, map).first;
+  // return minimax(true, 3, map).first;
+  return alphabeta(true, 3, map, INT_MIN, INT_MAX).first;
 }
 
 // Ignore this function. It is just handling boring stuff for you, like
