@@ -19,18 +19,20 @@ void Map::printStats() const {
   fprintf(stderr, "Player 1 (%d, %d); Player 2 (%d, %d)\n", player_one_x, player_one_y, player_two_x, player_two_y);
   fprintf(stderr, "End Game:%d\n", endGame());
   fprintf(stderr, "Num Blocks:%d\n", numBlocks());
-  for (int i = 0; i < numBlocks(); i++)
+  for (int i = 0; i < numBlocks(); i++) {
     fprintf(stderr, "Varonoi for block %d is %d\n", i, blockVaronoi(i));
+    fprintf(stderr, "Block %d battlefront status: %d\n", i, blockBattlefront(i));
+  }
   fprintf(stderr, "\n\n");
 }
 
 
 
 void Map::computeVaronoi() {
-  fprintf(stderr, "It begins.\n");
-
   grid = GetWalls();
   int x, y;
+
+  
 
   block_varonoi = vector<int>(num_blocks, 0);
 
@@ -40,31 +42,25 @@ void Map::computeVaronoi() {
   if (!IsWall(player_two_x, player_two_y))
     opp_set.insert(make_pair(player_two_x, player_two_y));
 
+
   while (!my_set.empty() || !opp_set.empty()) {
-    
+    my_set_new.clear();
+    opp_set_new.clear();
+
     // add neighboring squares to my_set_new
     for (set <pair<int, int> >::iterator it = my_set.begin(); it != my_set.end(); ++it) {
       x = (*it).first;
       y = (*it).second;
-      if (!IsWall(x, y-1) && !grid[x][y-1]) {
-        my_set_new.insert(make_pair(x, y-1));
-        grid[x][y-1] = true;
-        block_varonoi[getBlock(x,y-1)] ++;
-      }
-      if (!IsWall(x+1, y) && !grid[x+1][y]) {
-        my_set_new.insert(make_pair(x+1, y));
-        grid[x+1][y] = true;
-        block_varonoi[getBlock(x+1,y)] ++;
-      }
-      if (!IsWall(x, y+1) && !grid[x][y+1]) {
-        my_set_new.insert(make_pair(x, y+1));
-        grid[x][y+1] = true;
-        block_varonoi[getBlock(x,y+1)] ++;
-      }
-      if (!IsWall(x-1, y) && !grid[x-1][y]) {
-        my_set_new.insert(make_pair(x-1, y));
-        grid[x-1][y] = true;
-        block_varonoi[getBlock(x-1,y)] ++;
+
+      int newX[4] = {x, x+1, x, x-1};
+      int newY[4] = {y-1, y, y+1, y};
+
+      for(int i=0; i<4; i++){
+        if (!IsWall(newX[i], newY[i]) && !grid[newX[i]][newY[i]]) {
+          my_set_new.insert(make_pair(newX[i], newY[i]));
+          block_varonoi[getBlock(newX[i], newY[i])] ++;
+          if (block_varonoi[getBlock(newX[i], newY[i])] < 0) battlefront[getBlock(newX[i], newY[i])] = true;
+        }
       }
     }
 
@@ -72,31 +68,23 @@ void Map::computeVaronoi() {
     for (set <pair<int, int> >::iterator it = opp_set.begin(); it != opp_set.end(); ++it) {
       x = (*it).first;
       y = (*it).second;
-      if (!IsWall(x, y-1) && !grid[x][y-1]) {
-        opp_set_new.insert(make_pair(x, y-1));
-        grid[x][y-1] = true;
-        block_varonoi[getBlock(x,y-1)] --;
-      }
-      if (!IsWall(x+1, y) && !grid[x+1][y]) {
-        opp_set_new.insert(make_pair(x+1, y));
-        grid[x+1][y] = true;
-        block_varonoi[getBlock(x+1,y)] --;
-      }
-      if (!IsWall(x, y+1) && !grid[x][y+1]) {
-        opp_set_new.insert(make_pair(x, y+1));
-        grid[x][y+1] = true;
-        block_varonoi[getBlock(x,y+1)] --;
-      }
-      if (!IsWall(x-1, y) && !grid[x-1][y]) {
-        opp_set_new.insert(make_pair(x-1, y));
-        grid[x-1][y] = true;
-        block_varonoi[getBlock(x-1,y)] --;
+
+      int newX[4] = {x, x+1, x, x-1};
+      int newY[4] = {y-1, y, y+1, y};
+
+      for(int i=0; i<4; i++){
+        if (!IsWall(newX[i], newY[i]) && !grid[newX[i]][newY[i]]) {
+          opp_set_new.insert(make_pair(newX[i], newY[i]));
+          block_varonoi[getBlock(newX[i], newY[i])] --;
+          if (block_varonoi[getBlock(newX[i], newY[i])] > 0) battlefront[getBlock(newX[i], newY[i])] = true;
+        }
       }
     }
 
-    // remove squares that are in both of our sets--we are equidistant from these squares
-    // see http://stackoverflow.com/questions/2874441/deleting-elements-from-stl-set-while-iterating
+    //remove squares that are in both of our sets--we are equidistant from these squares
+    //see http://stackoverflow.com/questions/2874441/deleting-elements-from-stl-set-while-iterating
     for (set <pair<int, int> >::iterator it = my_set_new.begin(); it != my_set_new.end(); ) {
+      grid[(*it).first][(*it).second] = true;
       set <pair<int, int> >::iterator it2 = opp_set_new.find(*it);
       if (it2 != opp_set_new.end()) {
         opp_set_new.erase(it2);
@@ -105,17 +93,16 @@ void Map::computeVaronoi() {
         ++it;
       }
     }
-    
+
+    for (set <pair<int, int> >::iterator it = opp_set_new.begin(); it != opp_set_new.end(); it++) {
+      grid[(*it).first][(*it).second] = true;
+    }
+
     //update scores and sets
     my_set = my_set_new;
     opp_set = opp_set_new;
-    my_set_new.erase(my_set_new.begin(), my_set_new.end());
-    opp_set_new.erase(opp_set_new.begin(), opp_set_new.end());
 
-    fprintf(stderr, "%d %d %d %d\n", my_set.size(), opp_set.size(), my_set_new.size(), opp_set_new.size());
   }
-
-  fprintf(stderr, "It ends.\n");
 }
 
 
@@ -179,7 +166,6 @@ void Map::computeBlocks() {
     vector<vector<int> >(map_width,
             vector<int>(map_height, -1));
 
-
   parent = 
     vector<vector<pair<int,int> > >(map_height);
 
@@ -194,36 +180,38 @@ void Map::computeBlocks() {
     vector<vector<int> >(map_width,
             vector<int>(map_height, -1));
 
-
   counter = 0;
   for (int i = 0; i < num_components; i++) {
     calculateArticulations(representative[i].first, representative[i].second, -1);
   }
 
-  // found the cut vertices--now fill in the remainder of the data structures
-  for (int i = 0; i < num_components; i++) {
-    int x = representative[i].first, y = representative[i].second;
-    if (block_id[x][y] < 0) {
-      block_size.push_back(1);
-      blockDFS(x, y, num_blocks++);
-      cut_location.push_back(make_pair(-1,-1));
-    }
-  }
 
+  for (int i = 0; i < map_height; i++)
+    for (int j = 0; j < map_width; j++)
+      if (!IsWall(i,j) && block_id[i][j] == -1) points.insert(make_pair(i,j));
+
+  // found the cut vertices--now fill in the remainder of the data structures
+  while (!points.empty()) {
+    set<pair<int,int> >::iterator it = points.begin();
+    int x = (*it).first, y = (*it).second;
+    battlefront.push_back(false);
+    block_neighbors.push_back(set<int>());
+    blockDFS(x, y, num_blocks++);
+    cut_location.push_back(make_pair(-1,-1));
+  }
 
 }
 
 void Map::addCutVertex(int x, int y) {
-  block_id[x][y] = num_blocks;
-  block_size.push_back(1);
+  block_id[x][y] = num_blocks++;
+  battlefront.push_back(false);
+  block_neighbors.push_back(set<int>());
   cut_location.push_back(make_pair(x, y));
-  num_blocks++;
 }
 
 void Map::blockDFS(int x, int y, int block_idx) {
-  //fprintf(stderr, "blockDFS called at (%d, %d) # %d\n", x, y, block_idx);
   block_id[x][y] = block_idx;
-  block_size[block_idx]++;
+  points.erase(points.find(make_pair(x,y)));
   blockDFSHelper(x,y+1,block_idx);
   blockDFSHelper(x,y-1,block_idx);
   blockDFSHelper(x+1,y,block_idx);
@@ -231,9 +219,9 @@ void Map::blockDFS(int x, int y, int block_idx) {
 }
 
  void Map::blockDFSHelper(int x, int y, int block_idx) {
-  if (!IsWall(x,y) && block_id[x][y] < 0) {
+  if (points.find(make_pair(x,y)) != points.end()) {
     blockDFS(x,y,block_idx);
-  } else if (!IsWall(x,y) && block_id[x][y] > 0 && block_id[x][y] != block_idx) {
+  } else if (!IsWall(x,y) && block_id[x][y] >= 0 && block_id[x][y] != block_idx) {
     block_neighbors[block_idx].insert(block_id[x][y]);
     block_neighbors[block_id[x][y]].insert(block_idx);
   }
@@ -459,8 +447,8 @@ int Map::getBlock(int x, int y) const {
   return block_id[x][y];
 }
 
-int Map::blockSize(int block_id) const {
-  return block_size[block_id];
+bool Map::blockBattlefront(int block_id) const {
+  return battlefront[block_id];
 }
 
 int Map::blockVaronoi(int block_id) const {
