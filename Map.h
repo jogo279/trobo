@@ -60,16 +60,16 @@ class Map {
 
 
 
-  bool endGame();
+  bool endGame() const;
 
   int numBlocks() const;
-  int getBlock(int x, int y);
-  int blockSize(int block_id);
-  int blockVaronoi(int block_id);
-  std::pair<int, int> cutVertex(int block_id);//returns (-1,-1) if not cut vertex
-  std::set<int> neighborBlocks(int block_id);
+  int getBlock(int x, int y) const;
+  int blockSize(int block_id) const;
+  int blockVaronoi(int block_id) const;
+  std::pair<int, int> cutVertex(int block_id) const;//returns (-1,-1) if not cut vertex
+  std::set<int> neighborBlocks(int block_id) const;
 
-
+  void printStats() const;
 
  private:
   void ReadFromFile(FILE *file_handle);

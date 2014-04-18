@@ -123,6 +123,7 @@ int varonoiBlockScore(const Map& map) {
 
 
 pair<string, int> minimax (bool maxi, int depth, const Map &map) {
+  map.printStats();
   int state = gameState(map);
   if (state != IN_PROGRESS) return make_pair("-",state);
 
@@ -153,7 +154,9 @@ pair<string, int> minimax (bool maxi, int depth, const Map &map) {
 }
 
 pair<string, int> alphabeta (bool maxi, int depth, const Map &map, int a, int b) {
+  map.printStats();
   int state = gameState(map);
+
   if (state != IN_PROGRESS) return make_pair("-",state);
   string direction[4] = {"NORTH", "SOUTH", "EAST", "WEST"};
   int score[4];
