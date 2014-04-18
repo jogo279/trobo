@@ -119,10 +119,10 @@ int varonoiScore(const Map& map) {
 
 int varonoiBlockScore(const Map& map, int block_id, std::vector<bool> visited) {
   std::pair<int,int> p = map.cutVertex(block_id);
-  if(p.first == -1 && p.second == -1){
-    // Starting point is a cut vertex, handle accordingly
-    return;
-  }
+  // if(p.first == -1 && p.second == -1){
+  //   // Starting point is a cut vertex, handle accordingly
+  //   return 0;
+  // }
 
   // Otherwise starting in a block
   int block_score = map.blockVaronoi(block_id);
@@ -132,20 +132,25 @@ int varonoiBlockScore(const Map& map, int block_id, std::vector<bool> visited) {
   int max_score = block_score;
   for(it = neighbor_blocks.begin(); it!=neighbor_blocks.end(); it++){
     int child_block = *it;
+    int total_score;
     if(!visited[child_block]){
       visited[child_block] = true;
       int child_score = varonoiBlockScore(map, child_block, visited);
       visited[child_block] = false;
       // BATTLEFRONT CONDITION
       if(true) {
-
+        // If battlefront, find shortest path and update max
+        int distance = 0;
+        total_score = distance + child_score;
       } else {
-        // int value = ;
+        // Otherwise add value and update max
+        total_score = block_score + child_score;
       }
+      max_score = total_score > max_score ? total_score : max_score; 
     }
   }
 
-  return 0;
+  return max_score;
 }
 
 int varonoiBlockScoreWrapper(const Map& map) {
@@ -155,7 +160,6 @@ int varonoiBlockScoreWrapper(const Map& map) {
 }
 
 pair<string, int> minimax (bool maxi, int depth, const Map &map) {
-  map.printStats();
   int state = gameState(map);
   if (state != IN_PROGRESS) return make_pair("-",state);
 
@@ -186,9 +190,7 @@ pair<string, int> minimax (bool maxi, int depth, const Map &map) {
 }
 
 pair<string, int> alphabeta (bool maxi, int depth, const Map &map, int a, int b) {
-  map.printStats();
   int state = gameState(map);
-
   if (state != IN_PROGRESS) return make_pair("-",state);
   string direction[4] = {"NORTH", "SOUTH", "EAST", "WEST"};
   int score[4];
