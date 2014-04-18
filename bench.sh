@@ -26,4 +26,4 @@ do
 		echo "-----------------------------------"
 	fi
 done
-echo $OUTPUT
+rm -f errFile
