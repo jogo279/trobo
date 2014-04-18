@@ -5,27 +5,14 @@
 #include <set>
 #include <utility>
 #include <climits>
-#include <cstdio>
-#include <iostream> 
-#include "CycleTimer.h"
-#include <boost/program_options.hpp>
 
 using namespace std;
 
 #define WIN 100000
 #define LOSE -100000
-#define DRAW 0
+#define DRAW -1
 #define IN_PROGRESS 2
 
-#define DEFAULT_DEPTH 7
-
-#define MAX(a,b) ((a)>(b)?(a):(b))
-#define MIN(a,b) ((a)<(b)?(a):(b))
-
-namespace po = boost::program_options;
-po::variables_map vm;
-
-double vscoreTime;
 
 int gameState(const Map& map) {
   if (map.MyX() == map.OpponentX() && map.MyY() == map.OpponentY()) return DRAW;
@@ -40,8 +27,6 @@ int gameState(const Map& map) {
 /* The varonia score of a map is the number of squares that I can reach before my opponent, 
  * less the number of squares that my opponent can reach before me. */
 int varonoiScore(const Map& map) {
-
-  double start_time = CycleTimer::currentSeconds();
 
   //check for endgame scenarios
   int state = gameState(map);
@@ -123,9 +108,6 @@ int varonoiScore(const Map& map) {
     my_score += my_set.size();
     opp_score += opp_set.size();
   }
-
-  double end_time = CycleTimer::currentSeconds();
-  vscoreTime += (end_time - start_time);
   return my_score - opp_score;
 }
 
@@ -134,122 +116,60 @@ pair<string, int> minimax (bool maxi, int depth, const Map &map) {
   int state = gameState(map);
   if (state != IN_PROGRESS) return make_pair("-",state);
 
-  string direction[4] = {"NORTH", "SOUTH", "EAST", "WEST"};
-  int score[4];
-  int player = maxi ? 1 : 0;
-  int vscore_coeff = maxi ? 1 : -1;
-
-  if(depth==0){
-      return make_pair("",varonoiScore(map));
+  int north_score, south_score, east_score, west_score;
+  if (maxi) {
+    if (depth==1) {
+      north_score = varonoiScore(Map(map, 1, "NORTH"));
+      south_score = varonoiScore(Map(map, 1, "SOUTH"));
+      east_score = varonoiScore(Map(map, 1, "EAST"));
+      west_score = varonoiScore(Map(map, 1, "WEST"));
+    } else {
+      north_score = minimax(false, depth-1, Map(map, 1, "NORTH")).second;
+      south_score = minimax(false, depth-1, Map(map, 1, "SOUTH")).second;
+      east_score = minimax(false, depth-1, Map(map, 1, "EAST")).second;
+      west_score = minimax(false, depth-1, Map(map, 1, "WEST")).second;
+    }
   } else {
-    for(int i=0; i<4; i++){
-      score[i] = vscore_coeff*minimax(!maxi, depth-1, Map(map, player, direction[i])).second;
+    if (depth==1) {
+      north_score = -1*varonoiScore(Map(map, 2, "NORTH"));
+      south_score = -1*varonoiScore(Map(map, 2, "SOUTH"));
+      east_score = -1*varonoiScore(Map(map, 2, "EAST"));
+      west_score = -1*varonoiScore(Map(map, 2, "WEST"));
+    } else {
+      north_score = -1*minimax(true, depth-1, Map(map, 2, "NORTH")).second;
+      south_score = -1*minimax(true, depth-1, Map(map, 2, "SOUTH")).second;
+      east_score = -1*minimax(true, depth-1, Map(map, 2, "EAST")).second;
+      west_score = -1*minimax(true, depth-1, Map(map, 2, "WEST")).second;
     }
   }
-
-  int best_score = INT_MIN;
-  string best_dir = "";
-  for(int i=0; i<4; i++){
-    if(best_score < score[i]){
-      best_score = score[i];
-      best_dir = direction[i];
-    }
+  int best_score = north_score;
+  string best_dir = "NORTH";
+  if (south_score > best_score) {
+    best_score = south_score;
+    best_dir = "SOUTH";
   }
-
+  if (east_score > best_score) {
+    best_score = east_score;
+    best_dir = "EAST";
+  }
+  if (west_score > best_score) {
+    best_score = west_score;
+    best_dir = "WEST";
+  }
   if (maxi) return make_pair(best_dir, best_score);
   return make_pair(best_dir, -1*best_score);
 }
 
-pair<string, int> alphabeta (bool maxi, int depth, const Map &map, int a, int b) {
-  int state = gameState(map);
-  if (state != IN_PROGRESS) return make_pair("-",state);
-  string direction[4] = {"NORTH", "SOUTH", "EAST", "WEST"};
-  int score[4];
-  string best_dir;
-  int player = maxi ? 1 : 0;
-
-  if(depth==0){
-    return make_pair("",varonoiScore(map));
-  }
-
-  if(maxi){
-    for(int i=0; i<4; i++){
-      score[i] = alphabeta(!maxi, depth-1, Map(map, player, direction[i]), a, b).second;
-      if(a < score[i]){
-        a = score[i];
-        best_dir = direction[i];
-      }
-      if (b<=a)
-        break;
-    }
-    return make_pair(best_dir, a);
-  } else {
-    for(int i=0; i<4; i++){
-      score[i] = alphabeta(!maxi, depth-1, Map(map, player, direction[i]), a, b).second;
-      if(b > score[i]){
-        b = score[i];
-        best_dir = direction[i];
-      }
-      if (b<=a)
-        break;
-    }
-    return make_pair(best_dir, b);
-  }
-}
-
 string MakeMove(const Map& map) {
-  int depth = vm.count("depth") ? vm["depth"].as<int>(): DEFAULT_DEPTH;
-  if(vm.count("parallel")){
-    // IMPLEMENT PARALLEL ALGORITHM HERE
-    return "E"; 
-  } else{
-    if(vm.count("ab"))
-      return alphabeta(true, depth, map, INT_MIN, INT_MAX).first; 
-    else
-      return minimax(true, depth, map).first;
-  }
+  return minimax(true, 3, map).first;
 }
 
 // Ignore this function. It is just handling boring stuff for you, like
 // communicating with the Tron tournament engine.
-int main(int argc, char* argv[]) {
-  po::options_description desc("Options");   
-  desc.add_options()
-    ("help,h", "Print help messages")
-    ("verbose,v", "Turn on verbose testing / benchmark")
-    ("depth,d", po::value<int>(), "Maximum search depth")
-    ("parallel,p", "Use parallel algorithm")
-    ("ab", "alphabeta pruning");
-
-  po::store(po::parse_command_line(argc, argv, desc), vm);
-
-  if (vm.count("help")) {
-    std::cout << "Trobo options" << std::endl 
-              << desc << std::endl; 
-    return 0;
+int main() {
+  while (true) {
+    Map map;
+    Map::MakeMove(MakeMove(map));
   }
-
-  // If in verbose mode, print all sorts of things
-  if (vm.count("verbose")){
-    // std::cout << "Trobo testing mode:\n";
-    while (true) {
-      vscoreTime = 0.;
-
-      // fprintf(stderr, "abc\n");
-      Map map;
-      double start_time = CycleTimer::currentSeconds();
-      // fprintf(stderr, "def\n");
-      Map::MakeMove(MakeMove(map));
-      double end_time = CycleTimer::currentSeconds();
-      fprintf(stderr, "Move took %.4f seconds\n", end_time - start_time);
-      fprintf(stderr, "Spent %.4f seconds in varonoi function\n", vscoreTime);
-    }
-  } else {
-    while (true) {
-      // Otherwise we are on trobo competition mode
-      Map map;
-      Map::MakeMove(MakeMove(map));
-    }
-  } 
   return 0;
 }

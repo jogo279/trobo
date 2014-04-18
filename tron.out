@@ -19,12 +19,25 @@ East: 8
 West: -100000
 
 North: -100000
+<<<<<<< HEAD
+=======
+South: 6
+East: 12
+West: -100000
+
+North: -100000
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 South: 2
 East: 8
 West: -100000
 
+<<<<<<< HEAD
 North: -100000
 South: 0
+=======
+North: -20
+South: 12
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 East: 16
 West: -100000
 
@@ -33,9 +46,20 @@ South: 8
 East: 8
 West: -100000
 
+<<<<<<< HEAD
 North: -14
 South: 16
 East: 12
+=======
+North: -100000
+South: -2
+East: 6
+West: -100000
+
+North: -100000
+South: 18
+East: 42
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 West: -100000
 
 North: -100000
@@ -43,9 +67,20 @@ South: -6
 East: 2
 West: -100000
 
+<<<<<<< HEAD
 North: -100000
 South: -8
 East: 22
+=======
+North: -22
+South: 6
+East: 12
+West: -100000
+
+North: 12
+South: 42
+East: 38
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 West: -100000
 
 North: -14
@@ -53,8 +88,18 @@ South: 2
 East: 12
 West: -100000
 
+<<<<<<< HEAD
 North: -8
 South: 22
+=======
+North: -40
+South: -100000
+East: -14
+West: -100000
+
+North: -8
+South: -100000
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 East: 18
 West: -100000
 
@@ -63,26 +108,51 @@ South: -100000
 East: -8
 West: -100000
 
+<<<<<<< HEAD
 North: -26
 South: -100000
 East: 0
 West: -100000
+=======
+North: -100000
+South: -2
+East: 6
+West: -28
+
+North: -100000
+South: 48
+East: 44
+West: -8
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 
 North: -100000
 South: -6
 East: 18
 West: -32
 
+<<<<<<< HEAD
 North: -100000
 South: 30
 East: 26
 West: -34
+=======
+North: -20
+South: 6
+East: 6
+West: -100000
+
+North: 12
+South: 44
+East: 38
+West: -100000
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 
 North: -14
 South: 18
 East: 12
 West: -100000
 
+<<<<<<< HEAD
 North: -6
 South: 26
 East: 20
@@ -115,10 +185,45 @@ West: -100000
 
 North: -100000
 South: 16
+=======
+North: -100000
+South: -6
+East: 4
+West: -32
+
+North: -100000
+South: 20
+East: 30
+West: -6
+
+North: -100000
+South: -12
+East: -2
+West: -38
+
+North: -32
+South: 4
+East: 12
+West: -100000
+
+North: 18
+South: 30
+East: 38
+West: -100000
+
+North: -14
+South: -2
+East: 12
+West: -100000
+
+North: -100000
+South: -22
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 East: -100000
 West: -100000
 
 North: -100000
+<<<<<<< HEAD
 South: -24
 East: -12
 West: -50
@@ -177,51 +282,60 @@ North: -22
 South: -100000
 East: 4
 West: -100000
-
-North: -100000
-South: -18
-East: -6
-West: -44
-
-North: -100000
-South: 8
-East: 20
-West: -18
-
-North: -100000
-South: -24
-East: 30
-West: -50
-
-North: -14
-South: -6
-East: 12
+=======
+South: 4
+East: -100000
 West: -100000
 
-North: 4
-South: 20
-East: 60
-West: -100000
-
-North: -4
-South: 30
-East: 22
+North: -100000
+South: -28
+East: -100000
 West: -100000
 
 North: -40
 South: -100000
 East: -14
-West: -86
+West: -100000
+
+North: -6
+South: -100000
+East: 20
+West: -100000
+
+North: -32
+South: -100000
+East: -6
+West: -100000
+
+North: -100000
+South: -6
+East: 4
+West: -32
+
+North: -100000
+South: 58
+East: 46
+West: -16
+
+North: -100000
+South: -12
+East: 20
+West: -38
 
 North: -22
-South: -100000
-East: 44
-West: -64
+South: 4
+East: 4
+West: -100000
 
-North: -30
-South: -100000
-East: -4
-West: -56
+North: 12
+South: 46
+East: 38
+West: -100000
+
+North: -14
+South: 20
+East: 12
+West: -100000
 
 North: -100000
 South: -10
@@ -232,6 +346,110 @@ North: -100000
 South: 16
 East: 28
 West: -10
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
+
+North: -100000
+South: -18
+East: -6
+West: -44
+
+<<<<<<< HEAD
+North: -100000
+South: 8
+East: 20
+West: -18
+
+North: -100000
+South: -24
+East: 30
+West: -50
+=======
+North: -46
+South: 2
+East: 12
+West: -100000
+
+North: 20
+South: 28
+East: 38
+West: -100000
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
+
+North: -14
+South: -6
+East: 12
+West: -100000
+
+<<<<<<< HEAD
+North: 4
+South: 20
+East: 60
+West: -100000
+
+North: -4
+South: 30
+East: 22
+West: -100000
+=======
+North: -100000
+South: -24
+East: -100000
+West: -50
+
+North: -100000
+South: 2
+East: -100000
+West: -24
+
+North: -100000
+South: -32
+East: -100000
+West: -58
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
+
+North: -40
+South: -100000
+East: -14
+<<<<<<< HEAD
+West: -86
+
+North: -22
+South: -100000
+East: 44
+West: -64
+=======
+West: -100000
+
+North: -4
+South: -100000
+East: 22
+West: -100000
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
+
+North: -30
+South: -100000
+East: -4
+<<<<<<< HEAD
+West: -56
+=======
+West: -100000
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
+
+North: -100000
+South: -10
+East: 2
+West: -36
+
+North: -100000
+<<<<<<< HEAD
+South: 16
+East: 28
+West: -10
+=======
+South: 72
+East: 48
+West: -24
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 
 North: -100000
 South: -18
@@ -243,9 +461,15 @@ South: 2
 East: 2
 West: -100000
 
+<<<<<<< HEAD
 North: -6
 South: 28
 East: 68
+=======
+North: 12
+South: 48
+East: 38
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 West: -100000
 
 North: -14
@@ -298,7 +522,11 @@ South: -36
 East: -100000
 West: -62
 
+<<<<<<< HEAD
 North: -50
+=======
+North: -52
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 South: -100000
 East: -14
 West: -100000
@@ -308,7 +536,11 @@ South: -100000
 East: 24
 West: -100000
 
+<<<<<<< HEAD
 North: -38
+=======
+North: -40
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 South: -100000
 East: -2
 West: -100000
@@ -316,34 +548,57 @@ West: -100000
 North: -100000
 South: -14
 East: 0
+<<<<<<< HEAD
 West: -70
 
 North: -100000
 South: 122
 East: 82
+=======
+West: -68
+
+North: -100000
+South: 108
+East: 68
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 West: -32
 
 North: -100000
 South: -24
 East: 24
+<<<<<<< HEAD
 West: -80
 
 North: -36
+=======
+West: -78
+
+North: -38
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 South: 0
 East: 0
 West: -100000
 
 North: 12
+<<<<<<< HEAD
 South: 82
 East: 70
 West: -100000
 
 North: -24
+=======
+South: 68
+East: 56
+West: -100000
+
+North: -26
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 South: 24
 East: 12
 West: -100000
 
 North: -100000
+<<<<<<< HEAD
 South: -40
 East: 6
 West: -60
@@ -484,15 +739,132 @@ East: -100000
 West: -100000
 
 North: 20
+=======
+South: -24
+East: 20
+West: -58
+
+North: -100000
+South: 20
+East: 34
+West: -24
+
+North: -100000
+South: -58
+East: -14
+West: -68
+
+North: -94
+South: -20
+East: 34
+West: -100000
+
+North: 46
+South: 34
+East: 48
+West: -100000
+
+North: -22
+South: -54
+East: 20
+West: -100000
+
+North: -100000
+South: -56
+East: -100000
+West: -68
+
+North: -100000
+South: 20
+East: -100000
+West: -56
+
+North: -100000
+South: -68
+East: -100000
+West: -80
+
+North: 26
+South: -100000
+East: 40
+West: -100000
+
+North: 20
+South: -100000
+East: 20
+West: -100000
+
+North: 20
+South: -100000
+East: 20
+West: -100000
+
+North: -100000
+South: -22
+East: -100000
+West: -22
+
+North: -100000
+South: 29
+East: -100000
+West: 19
+
+North: 20
+South: -100000
+East: 20
+West: -100000
+
+North: 20
+South: -100000
+East: 20
+West: -100000
+
+North: 12
+South: -100000
+East: 26
+West: -44
+
+North: 14
+South: -100000
+East: 28
+West: -36
+
+North: 28
+South: -100000
+East: 40
+West: -100000
+
+North: -2
+South: -100000
+East: 12
+West: -44
+
+North: 0
+South: -100000
+East: 14
+West: -38
+
+North: 14
+South: -100000
+East: 26
+West: -100000
+
+North: -44
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 South: -100000
 East: -100000
 West: -100000
 
+<<<<<<< HEAD
 North: -104
+=======
+North: -36
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 South: -100000
 East: -100000
 West: -100000
 
+<<<<<<< HEAD
 North: -100
 South: -100000
 East: 20
@@ -617,6 +989,86 @@ North: -100000
 South: -100000
 East: -3
 West: -100000
+=======
+North: -16
+South: -100000
+East: -2
+West: -44
+
+North: -14
+South: -100000
+East: 0
+West: -40
+
+North: 0
+South: -100000
+East: 12
+West: -100000
+
+North: -45
+South: -75
+East: -100000
+West: -51
+
+North: -39
+South: -75
+East: -100000
+West: -45
+
+North: -30
+South: -100000
+East: -16
+West: -44
+
+North: -28
+South: -100000
+East: -14
+West: -42
+
+North: -14
+South: -100000
+East: -2
+West: -100000
+
+North: -44
+South: -52
+East: -100000
+West: -48
+
+North: -40
+South: -48
+East: -100000
+West: -44
+
+North: -100000
+South: -100000
+East: -44
+West: -44
+
+North: -100000
+South: -100000
+East: -42
+West: -44
+
+North: -28
+South: -100000
+East: -16
+West: -100000
+
+North: -44
+South: -48
+East: -100000
+West: -46
+
+North: -42
+South: -46
+East: -100000
+West: -44
+
+North: -100000
+South: -100000
+East: -44
+West: -100000
 
 North: -100000
 South: -44
@@ -624,6 +1076,28 @@ East: -100000
 West: -44
 
 North: -100000
+South: -44
+East: -100000
+West: -44
+
+North: -100000
+South: -44
+East: -100000
+West: -44
+
+North: -100000
+South: -44
+East: -100000
+West: -44
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
+
+North: -100000
+South: -44
+East: -100000
+West: -44
+
+North: -100000
+<<<<<<< HEAD
 South: -46
 East: -100000
 West: -46
@@ -710,11 +1184,95 @@ West: -100000
 
 North: -100000
 South: -46
+=======
+South: -44
+East: -100000
+West: -44
+
+North: -44
+South: -44
+East: -100000
+West: -44
+
+North: -44
+South: -44
+East: -100000
+West: -44
+
+North: -100000
+South: -54
+East: -100000
+West: -45
+
+North: -100000
+South: -54
+East: -100000
+West: -45
+
+North: -47
+South: -51
+East: -100000
+West: -47
+
+North: -47
+South: -51
+East: -100000
+West: -47
+
+North: -100000
+South: -100000
 East: -100000
 West: -100000
 
 North: -100000
 South: -100000
+East: -100000
+West: -100000
+
+North: -45
+South: -100000
+East: -100000
+West: -100000
+
+North: -45
+South: -100000
+East: -100000
+West: -100000
+
+North: -45
+South: -100000
+East: -100000
+West: -45
+
+North: -45
+South: -100000
+East: -100000
+West: -45
+
+North: -45
+South: -100000
+East: -100000
+West: -45
+
+North: -45
+South: -100000
+East: -100000
+West: -45
+
+North: -45
+South: -100000
+East: -100000
+West: -100000
+
+North: -45
+South: -100000
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
+East: -100000
+West: -100000
+
+North: -100000
+South: -100000
+<<<<<<< HEAD
 East: -46
 West: -100000
 
@@ -735,36 +1293,103 @@ West: -100000
 
 North: -100000
 South: -46
+=======
+East: -100000
+West: -45
+
+North: -100000
+South: -100000
+East: -100000
+West: -45
+
+North: -46
+South: -50
+East: -100000
+West: -46
+
+North: -46
+South: -50
+East: -100000
+West: -46
+
+North: -100000
+South: -45
+East: -100000
+West: -45
+
+North: -100000
+South: -48
+East: -100000
+West: -46
+
+North: -100000
+South: -48
+East: -100000
+West: -46
+
+North: -100000
+South: -48
+East: -100000
+West: -46
+
+North: -100000
+South: -45
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 East: -100000
 West: -100000
 
 North: -100000
+<<<<<<< HEAD
 South: -46
+=======
+South: -45
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 East: -100000
 West: -100000
 
 North: -100000
+<<<<<<< HEAD
 South: -100000
 East: -46
+=======
+South: -45
+East: -100000
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 West: -100000
 
 North: -100000
 South: -100000
+<<<<<<< HEAD
 East: -46
+=======
+East: -45
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 West: -100000
 
 North: -100000
 South: -100000
+<<<<<<< HEAD
 East: -46
 West: -100000
 
 North: -100000
 South: -47
+=======
+East: -45
+West: -100000
+
+North: -100000
+South: -46
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 East: -100000
 West: -100000
 
 North: -100000
+<<<<<<< HEAD
 South: -47
+=======
+South: -46
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 East: -100000
 West: -100000
 
@@ -799,12 +1424,25 @@ East: 8
 West: -100000
 
 North: -100000
+<<<<<<< HEAD
+=======
+South: 6
+East: 12
+West: -100000
+
+North: -100000
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 South: 2
 East: 8
 West: -100000
 
+<<<<<<< HEAD
 North: -100000
 South: 0
+=======
+North: -20
+South: 12
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 East: 16
 West: -100000
 
@@ -813,9 +1451,20 @@ South: 8
 East: 8
 West: -100000
 
+<<<<<<< HEAD
 North: -14
 South: 16
 East: 12
+=======
+North: -100000
+South: -2
+East: 6
+West: -100000
+
+North: -100000
+South: 18
+East: 42
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 West: -100000
 
 North: -100000
@@ -823,9 +1472,20 @@ South: -6
 East: 2
 West: -100000
 
+<<<<<<< HEAD
 North: -100000
 South: -8
 East: 22
+=======
+North: -22
+South: 6
+East: 12
+West: -100000
+
+North: 12
+South: 42
+East: 38
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 West: -100000
 
 North: -14
@@ -833,8 +1493,18 @@ South: 2
 East: 12
 West: -100000
 
+<<<<<<< HEAD
 North: -8
 South: 22
+=======
+North: -40
+South: -100000
+East: -14
+West: -100000
+
+North: -8
+South: -100000
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 East: 18
 West: -100000
 
@@ -843,26 +1513,51 @@ South: -100000
 East: -8
 West: -100000
 
+<<<<<<< HEAD
 North: -26
 South: -100000
 East: 0
 West: -100000
+=======
+North: -100000
+South: -2
+East: 6
+West: -28
+
+North: -100000
+South: 48
+East: 44
+West: -8
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 
 North: -100000
 South: -6
 East: 18
 West: -32
 
+<<<<<<< HEAD
 North: -100000
 South: 30
 East: 26
 West: -34
+=======
+North: -20
+South: 6
+East: 6
+West: -100000
+
+North: 12
+South: 44
+East: 38
+West: -100000
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 
 North: -14
 South: 18
 East: 12
 West: -100000
 
+<<<<<<< HEAD
 North: -6
 South: 26
 East: 20
@@ -895,10 +1590,45 @@ West: -100000
 
 North: -100000
 South: 16
+=======
+North: -100000
+South: -6
+East: 4
+West: -32
+
+North: -100000
+South: 20
+East: 30
+West: -6
+
+North: -100000
+South: -12
+East: -2
+West: -38
+
+North: -32
+South: 4
+East: 12
+West: -100000
+
+North: 18
+South: 30
+East: 38
+West: -100000
+
+North: -14
+South: -2
+East: 12
+West: -100000
+
+North: -100000
+South: -22
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 East: -100000
 West: -100000
 
 North: -100000
+<<<<<<< HEAD
 South: -24
 East: -12
 West: -50
@@ -957,51 +1687,60 @@ North: -22
 South: -100000
 East: 4
 West: -100000
-
-North: -100000
-South: -18
-East: -6
-West: -44
-
-North: -100000
-South: 8
-East: 20
-West: -18
-
-North: -100000
-South: -24
-East: 30
-West: -50
-
-North: -14
-South: -6
-East: 12
+=======
+South: 4
+East: -100000
 West: -100000
 
-North: 4
-South: 20
-East: 60
-West: -100000
-
-North: -4
-South: 30
-East: 22
+North: -100000
+South: -28
+East: -100000
 West: -100000
 
 North: -40
 South: -100000
 East: -14
-West: -86
+West: -100000
+
+North: -6
+South: -100000
+East: 20
+West: -100000
+
+North: -32
+South: -100000
+East: -6
+West: -100000
+
+North: -100000
+South: -6
+East: 4
+West: -32
+
+North: -100000
+South: 58
+East: 46
+West: -16
+
+North: -100000
+South: -12
+East: 20
+West: -38
 
 North: -22
-South: -100000
-East: 44
-West: -64
+South: 4
+East: 4
+West: -100000
 
-North: -30
-South: -100000
-East: -4
-West: -56
+North: 12
+South: 46
+East: 38
+West: -100000
+
+North: -14
+South: 20
+East: 12
+West: -100000
 
 North: -100000
 South: -10
@@ -1012,6 +1751,110 @@ North: -100000
 South: 16
 East: 28
 West: -10
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
+
+North: -100000
+South: -18
+East: -6
+West: -44
+
+<<<<<<< HEAD
+North: -100000
+South: 8
+East: 20
+West: -18
+
+North: -100000
+South: -24
+East: 30
+West: -50
+=======
+North: -46
+South: 2
+East: 12
+West: -100000
+
+North: 20
+South: 28
+East: 38
+West: -100000
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
+
+North: -14
+South: -6
+East: 12
+West: -100000
+
+<<<<<<< HEAD
+North: 4
+South: 20
+East: 60
+West: -100000
+
+North: -4
+South: 30
+East: 22
+West: -100000
+=======
+North: -100000
+South: -24
+East: -100000
+West: -50
+
+North: -100000
+South: 2
+East: -100000
+West: -24
+
+North: -100000
+South: -32
+East: -100000
+West: -58
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
+
+North: -40
+South: -100000
+East: -14
+<<<<<<< HEAD
+West: -86
+
+North: -22
+South: -100000
+East: 44
+West: -64
+=======
+West: -100000
+
+North: -4
+South: -100000
+East: 22
+West: -100000
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
+
+North: -30
+South: -100000
+East: -4
+<<<<<<< HEAD
+West: -56
+=======
+West: -100000
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
+
+North: -100000
+South: -10
+East: 2
+West: -36
+
+North: -100000
+<<<<<<< HEAD
+South: 16
+East: 28
+West: -10
+=======
+South: 72
+East: 48
+West: -24
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 
 North: -100000
 South: -18
@@ -1023,9 +1866,15 @@ South: 2
 East: 2
 West: -100000
 
+<<<<<<< HEAD
 North: -6
 South: 28
 East: 68
+=======
+North: 12
+South: 48
+East: 38
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 West: -100000
 
 North: -14
@@ -1078,7 +1927,11 @@ South: -36
 East: -100000
 West: -62
 
+<<<<<<< HEAD
 North: -50
+=======
+North: -52
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 South: -100000
 East: -14
 West: -100000
@@ -1088,7 +1941,11 @@ South: -100000
 East: 24
 West: -100000
 
+<<<<<<< HEAD
 North: -38
+=======
+North: -40
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 South: -100000
 East: -2
 West: -100000
@@ -1096,34 +1953,57 @@ West: -100000
 North: -100000
 South: -14
 East: 0
+<<<<<<< HEAD
 West: -70
 
 North: -100000
 South: 122
 East: 82
+=======
+West: -68
+
+North: -100000
+South: 108
+East: 68
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 West: -32
 
 North: -100000
 South: -24
 East: 24
+<<<<<<< HEAD
 West: -80
 
 North: -36
+=======
+West: -78
+
+North: -38
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 South: 0
 East: 0
 West: -100000
 
 North: 12
+<<<<<<< HEAD
 South: 82
 East: 70
 West: -100000
 
 North: -24
+=======
+South: 68
+East: 56
+West: -100000
+
+North: -26
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 South: 24
 East: 12
 West: -100000
 
 North: -100000
+<<<<<<< HEAD
 South: -40
 East: 6
 West: -60
@@ -1264,15 +2144,132 @@ East: -100000
 West: -100000
 
 North: 20
+=======
+South: -24
+East: 20
+West: -58
+
+North: -100000
+South: 20
+East: 34
+West: -24
+
+North: -100000
+South: -58
+East: -14
+West: -68
+
+North: -94
+South: -20
+East: 34
+West: -100000
+
+North: 46
+South: 34
+East: 48
+West: -100000
+
+North: -22
+South: -54
+East: 20
+West: -100000
+
+North: -100000
+South: -56
+East: -100000
+West: -68
+
+North: -100000
+South: 20
+East: -100000
+West: -56
+
+North: -100000
+South: -68
+East: -100000
+West: -80
+
+North: 26
+South: -100000
+East: 40
+West: -100000
+
+North: 20
+South: -100000
+East: 20
+West: -100000
+
+North: 20
+South: -100000
+East: 20
+West: -100000
+
+North: -100000
+South: -22
+East: -100000
+West: -22
+
+North: -100000
+South: 29
+East: -100000
+West: 19
+
+North: 20
+South: -100000
+East: 20
+West: -100000
+
+North: 20
+South: -100000
+East: 20
+West: -100000
+
+North: 12
+South: -100000
+East: 26
+West: -44
+
+North: 14
+South: -100000
+East: 28
+West: -36
+
+North: 28
+South: -100000
+East: 40
+West: -100000
+
+North: -2
+South: -100000
+East: 12
+West: -44
+
+North: 0
+South: -100000
+East: 14
+West: -38
+
+North: 14
+South: -100000
+East: 26
+West: -100000
+
+North: -44
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 South: -100000
 East: -100000
 West: -100000
 
+<<<<<<< HEAD
 North: -104
+=======
+North: -36
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 South: -100000
 East: -100000
 West: -100000
 
+<<<<<<< HEAD
 North: -100
 South: -100000
 East: 20
@@ -1397,6 +2394,86 @@ North: -100000
 South: -100000
 East: -3
 West: -100000
+=======
+North: -16
+South: -100000
+East: -2
+West: -44
+
+North: -14
+South: -100000
+East: 0
+West: -40
+
+North: 0
+South: -100000
+East: 12
+West: -100000
+
+North: -45
+South: -75
+East: -100000
+West: -51
+
+North: -39
+South: -75
+East: -100000
+West: -45
+
+North: -30
+South: -100000
+East: -16
+West: -44
+
+North: -28
+South: -100000
+East: -14
+West: -42
+
+North: -14
+South: -100000
+East: -2
+West: -100000
+
+North: -44
+South: -52
+East: -100000
+West: -48
+
+North: -40
+South: -48
+East: -100000
+West: -44
+
+North: -100000
+South: -100000
+East: -44
+West: -44
+
+North: -100000
+South: -100000
+East: -42
+West: -44
+
+North: -28
+South: -100000
+East: -16
+West: -100000
+
+North: -44
+South: -48
+East: -100000
+West: -46
+
+North: -42
+South: -46
+East: -100000
+West: -44
+
+North: -100000
+South: -100000
+East: -44
+West: -100000
 
 North: -100000
 South: -44
@@ -1404,6 +2481,28 @@ East: -100000
 West: -44
 
 North: -100000
+South: -44
+East: -100000
+West: -44
+
+North: -100000
+South: -44
+East: -100000
+West: -44
+
+North: -100000
+South: -44
+East: -100000
+West: -44
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
+
+North: -100000
+South: -44
+East: -100000
+West: -44
+
+North: -100000
+<<<<<<< HEAD
 South: -46
 East: -100000
 West: -46
@@ -1490,11 +2589,95 @@ West: -100000
 
 North: -100000
 South: -46
+=======
+South: -44
+East: -100000
+West: -44
+
+North: -44
+South: -44
+East: -100000
+West: -44
+
+North: -44
+South: -44
+East: -100000
+West: -44
+
+North: -100000
+South: -54
+East: -100000
+West: -45
+
+North: -100000
+South: -54
+East: -100000
+West: -45
+
+North: -47
+South: -51
+East: -100000
+West: -47
+
+North: -47
+South: -51
+East: -100000
+West: -47
+
+North: -100000
+South: -100000
 East: -100000
 West: -100000
 
 North: -100000
 South: -100000
+East: -100000
+West: -100000
+
+North: -45
+South: -100000
+East: -100000
+West: -100000
+
+North: -45
+South: -100000
+East: -100000
+West: -100000
+
+North: -45
+South: -100000
+East: -100000
+West: -45
+
+North: -45
+South: -100000
+East: -100000
+West: -45
+
+North: -45
+South: -100000
+East: -100000
+West: -45
+
+North: -45
+South: -100000
+East: -100000
+West: -45
+
+North: -45
+South: -100000
+East: -100000
+West: -100000
+
+North: -45
+South: -100000
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
+East: -100000
+West: -100000
+
+North: -100000
+South: -100000
+<<<<<<< HEAD
 East: -46
 West: -100000
 
@@ -1515,36 +2698,103 @@ West: -100000
 
 North: -100000
 South: -46
+=======
+East: -100000
+West: -45
+
+North: -100000
+South: -100000
+East: -100000
+West: -45
+
+North: -46
+South: -50
+East: -100000
+West: -46
+
+North: -46
+South: -50
+East: -100000
+West: -46
+
+North: -100000
+South: -45
+East: -100000
+West: -45
+
+North: -100000
+South: -48
+East: -100000
+West: -46
+
+North: -100000
+South: -48
+East: -100000
+West: -46
+
+North: -100000
+South: -48
+East: -100000
+West: -46
+
+North: -100000
+South: -45
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 East: -100000
 West: -100000
 
 North: -100000
+<<<<<<< HEAD
 South: -46
+=======
+South: -45
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 East: -100000
 West: -100000
 
 North: -100000
+<<<<<<< HEAD
 South: -100000
 East: -46
+=======
+South: -45
+East: -100000
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 West: -100000
 
 North: -100000
 South: -100000
+<<<<<<< HEAD
 East: -46
+=======
+East: -45
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 West: -100000
 
 North: -100000
 South: -100000
+<<<<<<< HEAD
 East: -46
 West: -100000
 
 North: -100000
 South: -47
+=======
+East: -45
+West: -100000
+
+North: -100000
+South: -46
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 East: -100000
 West: -100000
 
 North: -100000
+<<<<<<< HEAD
 South: -47
+=======
+South: -46
+>>>>>>> 8c001f8948575fb5b380a6daa6d296cdfd1deb3a
 East: -100000
 West: -100000
 
