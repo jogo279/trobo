@@ -14,7 +14,7 @@ using namespace std;
 
 #define WIN 100000
 #define LOSE -100000
-#define DRAW -1
+#define DRAW 0
 #define IN_PROGRESS 2
 
 #define DEFAULT_DEPTH 7

@@ -5,6 +5,8 @@
 
 #include <string>
 #include <vector>
+#include <utility>
+#include <set>
 
 class Map {
  public:
@@ -55,26 +57,37 @@ class Map {
 
   std::vector< std::vector<bool> > GetWalls() const;
 
+
+
+
+  bool endGame();
+
+  int numBlocks() const;
+  int getBlock(int x, int y);
+  int blockSize(int block_id);
+  int blockVaronoi(int block_id);
+  std::pair<int, int> cutVertex(int block_id);//returns (-1,-1) if not cut vertex
+  std::set<int> neighborBlocks(int block_id);
+
+
+
  private:
-  // Load a board from an open file handle. To read from the console, pass
-  // stdin, which is actually a (FILE*).
-  //   file_handle -- an open file handle from which to read.
-  //
-  // If there is a problem, the function returns NULL. Otherwise, a valid
-  // Board structure is returned.
-  //
-  // The file should be an ascii file. The first line contains the width and
-  // height of the board, separated by a space. subsequent lines contain visual
-  // representations of the rows of the board, using '#' and space characters.
-  // The starting positions of the two players are indicated by '1' and '2'
-  // characters. There must be exactly one '1' character and one '2' character
-  // on the board. For example:
-  // 6 4
-  // ######
-  // #1# 2#
-  // #   ##
-  // ######
   void ReadFromFile(FILE *file_handle);
+
+
+  void computeVaronoi();
+
+  void computeBlocks();
+  void assignNum(std::pair<int, int> v);
+  void assignLow(std::pair<int, int> v);
+  void assignLowHelper(int vfirst, int vsecond, int wfirst, int wsecond);
+  void addCutVertex(int x, int y);
+  void blockDFS(int x, int y, int block_idx);
+  void blockDFSHelper(int x, int y, int block_idx);
+
+
+  void findComponent(std::pair<int, int> point, int idx);
+  void computeComponents();
 
  private:
   // Indicates whether or not each cell in the board is passable.
@@ -86,4 +99,26 @@ class Map {
 
   // Map dimensions.
   int map_width, map_height;
+
+  // Data structures for components
+  std::vector<std::vector<int> > component_id;
+  std::vector<std::pair<int ,int> > representative;
+  std::set<std::pair<int, int> > points;
+  int num_components;
+
+  // Data structures for blocks
+  int num_blocks;
+  std::vector<std::vector<int> > block_id;
+  std::vector<int> block_size;
+  std::vector<int> block_varonoi;
+  std::vector< std::pair<int, int> > cut_location;
+  std::vector< std::set<int> > block_neighbors;
+
+
+  // Data for BlockDFS
+  int counter;
+  std::vector<std::vector<int> > num;
+  std::vector<std::vector<int> > low;
+  std::vector<std::vector<std::pair<int, int> > > parent;
+
 };
