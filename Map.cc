@@ -12,7 +12,6 @@ Map::Map() {
   computeComponents();
   computeBlocks();
   computeVaronoi();
-  printStats();
 }
 
 void Map::printStats() const {
@@ -374,10 +373,9 @@ Map::Map(const Map &other, int player, string direction) {
       }
       break;
   }
-  computeComponents();
+  computeComponents();  
   computeBlocks();
   computeVaronoi();
-  printStats();
 }
 
 int Map::Width() const {
