@@ -78,9 +78,7 @@ class Map {
   void computeVaronoi();
 
   void computeBlocks();
-  void assignNum(std::pair<int, int> v);
-  void assignLow(std::pair<int, int> v);
-  void assignLowHelper(int vfirst, int vsecond, int wfirst, int wsecond);
+  void calculateArticulations(int x, int y, int parent);
   void addCutVertex(int x, int y);
   void blockDFS(int x, int y, int block_idx);
   void blockDFSHelper(int x, int y, int block_idx);
@@ -120,5 +118,12 @@ class Map {
   std::vector<std::vector<int> > num;
   std::vector<std::vector<int> > low;
   std::vector<std::vector<std::pair<int, int> > > parent;
+
+  // Data structures for Varonoi
+  std::set< std::pair<int, int> > my_set;
+  std::set< std::pair<int, int> > my_set_new;
+  std::set< std::pair<int, int> > opp_set;
+  std::set< std::pair<int, int> > opp_set_new;
+  std::vector<std::vector<bool> > grid;
 
 };

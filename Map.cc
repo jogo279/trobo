@@ -12,32 +12,36 @@ Map::Map() {
   computeComponents();
   computeBlocks();
   computeVaronoi();
+  printStats();
 }
 
 void Map::printStats() const {
+  fprintf(stderr, "Stats!\n");
+  fprintf(stderr, "Player 1 (%d, %d); Player 2 (%d, %d)\n", player_one_x, player_one_y, player_two_x, player_two_y);
   fprintf(stderr, "End Game:%d\n", endGame());
   fprintf(stderr, "Num Blocks:%d\n", numBlocks());
+  for (int i = 0; i < numBlocks(); i++)
+    fprintf(stderr, "Varonoi for block %d is %d\n", i, blockVaronoi(i));
   fprintf(stderr, "\n\n");
 }
 
 
 
 void Map::computeVaronoi() {
-  vector< vector<bool> > grid = GetWalls();
+  fprintf(stderr, "It begins.\n");
+
+  grid = GetWalls();
   int x, y;
 
   block_varonoi = vector<int>(num_blocks, 0);
 
   //my_set and opp_set are essentially the "frontiers" of two simultaneous BFSs
-  set< pair<int, int> > my_set, my_set_new, opp_set, opp_set_new;
   if (!IsWall(player_one_x, player_one_y))
     my_set.insert(make_pair(player_one_x, player_one_y));
   if (!IsWall(player_two_x, player_two_y))
-    my_set.insert(make_pair(player_two_x, player_two_y));
+    opp_set.insert(make_pair(player_two_x, player_two_y));
 
   while (!my_set.empty() || !opp_set.empty()) {
-    my_set_new.clear();
-    opp_set_new.clear();
     
     // add neighboring squares to my_set_new
     for (set <pair<int, int> >::iterator it = my_set.begin(); it != my_set.end(); ++it) {
@@ -91,8 +95,8 @@ void Map::computeVaronoi() {
       }
     }
 
-    //remove squares that are in both of our sets--we are equidistant from these squares
-    //see http://stackoverflow.com/questions/2874441/deleting-elements-from-stl-set-while-iterating
+    // remove squares that are in both of our sets--we are equidistant from these squares
+    // see http://stackoverflow.com/questions/2874441/deleting-elements-from-stl-set-while-iterating
     for (set <pair<int, int> >::iterator it = my_set_new.begin(); it != my_set_new.end(); ) {
       set <pair<int, int> >::iterator it2 = opp_set_new.find(*it);
       if (it2 != opp_set_new.end()) {
@@ -102,11 +106,17 @@ void Map::computeVaronoi() {
         ++it;
       }
     }
-
+    
     //update scores and sets
     my_set = my_set_new;
     opp_set = opp_set_new;
+    my_set_new.erase(my_set_new.begin(), my_set_new.end());
+    opp_set_new.erase(opp_set_new.begin(), opp_set_new.end());
+
+    fprintf(stderr, "%d %d %d %d\n", my_set.size(), opp_set.size(), my_set_new.size(), opp_set_new.size());
   }
+
+  fprintf(stderr, "It ends.\n");
 }
 
 
@@ -114,25 +124,25 @@ void Map::findComponent(pair<int, int> point, int idx) {
   int x = point.first, y = point.second;
 
   set<pair<int,int> >::iterator it = points.find(make_pair(x, y-1));
-  if (it != points.end()) {
+  if (it != points.end() && component_id[x][y-1] == -1) {
     component_id[(*it).first][(*it).second] = idx;
     findComponent(*it, idx);
     points.erase(it);
   }
   it = points.find(make_pair(x, y+1));
-  if (it != points.end()) {
+  if (it != points.end() && component_id[x][y+1] == -1) {
     component_id[(*it).first][(*it).second] = idx;
     findComponent(*it, idx);
     points.erase(it);
   }
   it = points.find(make_pair(x-1, y));
-  if (it != points.end()) {
+  if (it != points.end() && component_id[x-1][y] == -1) {
     component_id[(*it).first][(*it).second] = idx;
     findComponent(*it, idx);
     points.erase(it);
   }
   it = points.find(make_pair(x+1, y));
-  if (it != points.end()) {
+  if (it != points.end() && component_id[x+1][y] == -1) {
     component_id[(*it).first][(*it).second] = idx;
     findComponent(*it, idx);
     points.erase(it);
@@ -146,19 +156,17 @@ void Map::computeComponents() {
 
   for (int i = 0; i < map_height; i++)
     for (int j = 0; j < map_width; j++)
-      if (!IsWall(i,j))  points.insert(make_pair(i,j));
+      if (!IsWall(i,j)) points.insert(make_pair(i,j));
 
   num_components = 0;
   while(!points.empty()) {
     set<pair<int,int> >::iterator it = points.begin();
     component_id[(*it).first][(*it).second] = num_components;
-    representative[num_components] = *it;
+    representative.push_back(*it);
     findComponent(*it, num_components);
     points.erase(it);
     num_components++;
   }
-
-  num_components++;
 }
 
 
@@ -172,37 +180,34 @@ void Map::computeBlocks() {
     vector<vector<int> >(map_width,
             vector<int>(map_height, -1));
 
+
+  parent = 
+    vector<vector<pair<int,int> > >(map_height);
+
   pair<int, int> p = make_pair(-1,-1);
-  for (int i = 0; i < map_width; i++)
-    for (int j = 0; j < map_height; j++) 
+  for (int i = 0; i < map_height; i++) {
+    parent[i] = vector<pair<int, int> >(map_width);
+    for (int j = 0; j < map_width; j++) 
       parent[i][j] = p;
+  }
 
   block_id =
     vector<vector<int> >(map_width,
             vector<int>(map_height, -1));
 
+
   counter = 0;
-  for (int i = 0; i < num_components; i++)
-    assignNum(representative[i]);
   for (int i = 0; i < num_components; i++) {
-    assignLow(representative[i]);
-    //representative[i] is articulation point if has 2 children in DFS tree
-    int children = 0, x = representative[i].first, y = representative[i].second;
-    if (x !=0 && parent[x-1][y] == representative[i]) children ++;
-    if (x !=map_width-1 && parent[x+1][y] == representative[i]) children ++;
-    if (y !=0 && parent[x][y-1] == representative[i]) children ++;
-    if (y !=map_height-1 && parent[x][y+1] == representative[i]) children ++;
-    if (children > 1) {
-      addCutVertex(x, y);
-    }
+    calculateArticulations(representative[i].first, representative[i].second, -1);
   }
 
   // found the cut vertices--now fill in the remainder of the data structures
   for (int i = 0; i < num_components; i++) {
     int x = representative[i].first, y = representative[i].second;
     if (block_id[x][y] < 0) {
+      block_size.push_back(1);
       blockDFS(x, y, num_blocks++);
-      cut_location[num_blocks] = make_pair(-1,-1);
+      cut_location.push_back(make_pair(-1,-1));
     }
   }
 
@@ -211,20 +216,19 @@ void Map::computeBlocks() {
 
 void Map::addCutVertex(int x, int y) {
   block_id[x][y] = num_blocks;
-  block_size[num_blocks] = 1;
-  cut_location[num_blocks] = make_pair(x, y);
-  //neighbors, varonoi TODO
+  block_size.push_back(1);
+  cut_location.push_back(make_pair(x, y));
   num_blocks++;
 }
 
 void Map::blockDFS(int x, int y, int block_idx) {
+  //fprintf(stderr, "blockDFS called at (%d, %d) # %d\n", x, y, block_idx);
   block_id[x][y] = block_idx;
   block_size[block_idx]++;
   blockDFSHelper(x,y+1,block_idx);
   blockDFSHelper(x,y-1,block_idx);
   blockDFSHelper(x+1,y,block_idx);
   blockDFSHelper(x-1,y,block_idx);
-  //neighbors, varonoi TODO
 }
 
  void Map::blockDFSHelper(int x, int y, int block_idx) {
@@ -236,51 +240,81 @@ void Map::blockDFS(int x, int y, int block_idx) {
   }
  }
 
-
-void Map::assignNum(pair<int, int> v) {
-  num[v.first][v.second] = ++ counter;
-  if (v.second != map_height -1 && num[v.first][v.second + 1] <= 0) {
-    parent[v.first][v.second + 1] = v;
-    assignNum(make_pair(v.first, v.second + 1));
-  }
-  if (v.second != 0 && num[v.first][v.second - 1] <= 0) {
-    parent[v.first][v.second - 1] = v;
-    assignNum(make_pair(v.first, v.second - 1));
-  }
-  if (v.first != map_width -1 && num[v.first + 1][v.second ] <= 0) {
-    parent[v.first + 1][v.second] = v;
-    assignNum(make_pair(v.first + 1, v.second));
-  }
-  if (v.first != 0 && num[v.first - 1][v.second] <= 0) {
-    parent[v.first - 1][v.second] = v;
-    assignNum(make_pair(v.first - 1, v.second));
-  }
-}
+void Map::calculateArticulations(int x, int y, int parent) {
+  //fprintf(stderr, "Calculating cut vertices for (%d, %d)\n", x, y);
+  int nodenum = ++counter;
+  low[x][y] = nodenum;
+  num[x][y] = nodenum;
+  int children=0;
 
 
-void Map::assignLowHelper(int vfirst, int vsecond, int wfirst, int wsecond) {
-  if (!IsWall(wfirst, wsecond)) {
-    if (num[wfirst][wsecond] > num[vfirst][vsecond]) {
-      assignLow(make_pair(wfirst, wsecond));
-      if (low[wfirst][wsecond] >= num[vfirst][vsecond]) {
-        addCutVertex(vfirst, vsecond);
+  int wx, wy;
+
+  wx = x;
+  wy = y+1;
+  if (!IsWall(wx, wy)) {
+    if (num[wx][wy] == -1) {
+      children++;
+      calculateArticulations(wx, wy, nodenum);
+      if (low[wx][wy] >= nodenum && parent != -1) {
+        addCutVertex(x,y);
       }
-      low[vfirst][vsecond] = min(low[vfirst][vsecond], low[wfirst][wsecond]);
+      if (low[wx][wy] < low[x][y]) low[x][y] = low[wx][wy];
     } else {
-      if (parent[vfirst][vsecond] != make_pair(wfirst, wsecond))
-        low[vfirst][vsecond] = min(low[vfirst][vsecond], num[wfirst][wsecond]);
+      if (num[wx][wy] < nodenum)
+        if (num[wx][wy] < low[x][y]) low[x][y] = num[wx][wy];
     }
-  }  
-}
+  }
+  wx = x;
+  wy = y-1;
+  if (!IsWall(wx, wy)) {
+    if (num[wx][wy] == -1) {
+      children++;
+      calculateArticulations(wx, wy, nodenum);
+      if (low[wx][wy] >= nodenum && parent != -1) {
+        addCutVertex(x,y);
+      }
+      if (low[wx][wy] < low[x][y]) low[x][y] = low[wx][wy];
+    } else {
+      if (num[wx][wy] < nodenum)
+        if (num[wx][wy] < low[x][y]) low[x][y] = num[wx][wy];
+    }
+  }
+  wx = x+1;
+  wy = y;
+  if (!IsWall(wx, wy)) {
+    if (num[wx][wy] == -1) {
+      children++;
+      calculateArticulations(wx, wy, nodenum);
+      if (low[wx][wy] >= nodenum && parent != -1) {
+        addCutVertex(x,y);
+      }
+      if (low[wx][wy] < low[x][y]) low[x][y] = low[wx][wy];
+    } else {
+      if (num[wx][wy] < nodenum)
+        if (num[wx][wy] < low[x][y]) low[x][y] = num[wx][wy];
+    }
+  }
+  wx = x-1;
+  wy = y;
+  if (!IsWall(wx, wy)) {
+    if (num[wx][wy] == -1) {
+      children++;
+      calculateArticulations(wx, wy, nodenum);
+      if (low[wx][wy] >= nodenum && parent != -1) {
+        addCutVertex(x,y);
+      }
+      if (low[wx][wy] < low[x][y]) low[x][y] = low[wx][wy];
+    } else {
+      if (num[wx][wy] < nodenum)
+        if (num[wx][wy] < low[x][y]) low[x][y] = num[wx][wy];
+    }
+  }
 
-void Map::assignLow(pair<int, int> v) {
-  low[v.first][v.second] = num[v.first][v.second];
-  assignLowHelper(v.first, v.second, v.first, v.second+1);
-  assignLowHelper(v.first, v.second, v.first, v.second-1);
-  assignLowHelper(v.first, v.second, v.first+1, v.second);
-  assignLowHelper(v.first, v.second, v.first-1, v.second);
+  if (parent == -1 && children > 1) {
+    addCutVertex(x,y);
+  }
 }
-
 
 
 
@@ -300,44 +334,42 @@ Map::Map(const Map &other, int player, string direction) {
   map_height = other.Height();
   is_wall = other.GetWalls();
 
+  if (player==1) {
+    is_wall[player_one_x][player_one_y] = true;
+  } else {
+    is_wall[player_two_x][player_two_y] = true;
+  }
+
   int c = (int)direction[0];
   switch (c) {
     case 'n':
     case 'N':
       if (player == 1) {
-        is_wall[player_one_x][player_one_y] = true;
         player_one_y--;
       } else {
-        is_wall[player_two_x][player_two_y] = true;
         player_two_y--;
       }
       break;
     case 'e':
     case 'E':
       if (player == 1) {
-        is_wall[player_one_x][player_one_y] = true;
         player_one_x++;
       } else {
-        is_wall[player_two_x][player_two_y] = true;
         player_two_x++;
       }
       break;
     case 's':
     case 'S':
       if (player == 1) {
-        is_wall[player_one_x][player_one_y] = true;
         player_one_y++;
       } else {
-        is_wall[player_two_x][player_two_y] = true;
         player_two_y++;
       }
       break;
     default:
       if (player == 1) {
-        is_wall[player_one_x][player_one_y] = true;
         player_one_x--;
       } else {
-        is_wall[player_two_x][player_two_y] = true;
         player_two_x--;
       }
       break;
@@ -345,6 +377,7 @@ Map::Map(const Map &other, int player, string direction) {
   computeComponents();
   computeBlocks();
   computeVaronoi();
+  printStats();
 }
 
 int Map::Width() const {
@@ -408,7 +441,7 @@ void Map::MakeMove(const std::string& move) {
       break;
     default:
       fprintf(stderr, "Invalid string passed to MakeMove(string): %s\n"
-	      "Move string must start with N, E, S, or W!", move.c_str());
+        "Move string must start with N, E, S, or W!", move.c_str());
       MakeMove(0);
       break;
     }
@@ -457,7 +490,7 @@ void Map::ReadFromFile(FILE *file_handle) {
   }
   is_wall =
     vector<vector<bool> >(map_width,
-				    vector<bool>(map_height, false));
+            vector<bool>(map_height, false));
   x = 0;
   y = 0;
   while (y < map_height && (c = fgetc(file_handle)) != EOF) {
@@ -466,32 +499,32 @@ void Map::ReadFromFile(FILE *file_handle) {
       break;
     case '\n':
       if (x != map_width) {
-      	fprintf(stderr, "x != width in Board_ReadFromStream\n");
-      	return;
+        fprintf(stderr, "x != width in Board_ReadFromStream\n");
+        return;
       }
       ++y;
       x = 0;
       break;
     case '#':
       if (x >= map_width) {
-      	fprintf(stderr, "x >= width in Board_ReadFromStream\n");
-      	return;
+        fprintf(stderr, "x >= width in Board_ReadFromStream\n");
+        return;
       }
       is_wall[x][y] = true;
       ++x;
       break;
     case ' ':
       if (x >= map_width) {
-      	fprintf(stderr, "x >= width in Board_ReadFromStream\n");
-      	return;
+        fprintf(stderr, "x >= width in Board_ReadFromStream\n");
+        return;
       }
       is_wall[x][y] = false;
       ++x;
       break;
     case '1':
       if (x >= map_width) {
-      	fprintf(stderr, "x >= width in Board_ReadFromStream\n");
-      	return;
+        fprintf(stderr, "x >= width in Board_ReadFromStream\n");
+        return;
       }
       is_wall[x][y] = false;
       player_one_x = x;
@@ -500,8 +533,8 @@ void Map::ReadFromFile(FILE *file_handle) {
       break;
     case '2':
       if (x >= map_width) {
-      	fprintf(stderr, "x >= width in Board_ReadFromStream\n");
-      	return;
+        fprintf(stderr, "x >= width in Board_ReadFromStream\n");
+        return;
       }
       is_wall[x][y] = false;
       player_two_x = x;
