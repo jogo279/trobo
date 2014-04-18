@@ -14,7 +14,7 @@ using namespace std;
 
 #define WIN 100000
 #define LOSE -100000
-#define DRAW 0
+#define DRAW -1
 #define IN_PROGRESS 2
 
 #define DEFAULT_DEPTH 7
@@ -117,10 +117,42 @@ int varonoiScore(const Map& map) {
   return my_score - opp_score;
 }
 
-int varonoiBlockScore(const Map& map) {
-  return 0;
-}
+// int varonoiBlockScore(const Map& map, int block_id, std::vector<bool> visited) {
+//   std::pair<int,int> p = map.cutVertex(block_id);
+//   if(p.first == -1 && p.second == -1){
+//     // Starting point is a cut vertex, handle accordingly
+//     return;
+//   }
 
+//   // Otherwise starting in a block
+//   int block_score = map.blockVaronoi(block_id);
+//   std::set<int> neighbor_blocks = map.neighborBlocks(block_id);
+//   std::set<int>::iterator it;
+
+//   int max_score = block_score;
+//   for(it = neighbor_blocks.begin(); it!=neighbor_blocks.end(); it++){
+//     int child_block = *it;
+//     if(!visited[child_block]){
+//       visited[child_block] = true;
+//       int child_score = varonoiBlockScore(map, child_block, visited);
+//       visited[child_block] = false;
+//       // BATTLEFRONT CONDITION
+//       if(true) {
+
+//       } else {
+//         // int value = ;
+//       }
+//     }
+//   }
+
+//   return 0;
+// }
+
+// int varonoiBlockScoreWrapper(const Map& map) {
+//   std::vector<bool> visited(map.numBlocks(),false);
+//   int block_id = map.getBlock(map.MyX(),map.MyY());
+//   return varonoiBlockScore(map, block_id, visited);
+// }
 
 pair<string, int> minimax (bool maxi, int depth, const Map &map) {
   int state = gameState(map);
