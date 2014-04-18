@@ -14,6 +14,13 @@ Map::Map() {
   // computeVaronoi();
 }
 
+void Map::printStats() const {
+  fprintf(stderr, "End Game:%d\n", endGame());
+  fprintf(stderr, "Num Blocks:%d\n", numBlocks());
+  fprintf(stderr, "\n\n");
+}
+
+
 
 void Map::computeVaronoi() {
   vector< vector<bool> > grid = GetWalls();
@@ -279,7 +286,7 @@ void Map::assignLow(pair<int, int> v) {
 
 
 //TODO
-bool Map::endGame() {
+bool Map::endGame() const {
   return component_id[player_one_x][player_one_y] != component_id[player_two_x][player_two_y];
 }
 
@@ -418,23 +425,23 @@ int Map::numBlocks() const {
   return num_blocks;
 }
 
-int Map::getBlock(int x, int y) {
+int Map::getBlock(int x, int y) const {
   return block_id[x][y];
 }
 
-int Map::blockSize(int block_id) {
+int Map::blockSize(int block_id) const {
   return block_size[block_id];
 }
 
-int Map::blockVaronoi(int block_id) {
+int Map::blockVaronoi(int block_id) const {
   return block_varonoi[block_id];
 }
 
-pair<int, int> Map::cutVertex(int block_id) {
+pair<int, int> Map::cutVertex(int block_id) const {
   return cut_location[block_id];
 }
 
-set<int> Map::neighborBlocks(int block_id) {
+set<int> Map::neighborBlocks(int block_id) const {
   return block_neighbors[block_id];
 }
 
