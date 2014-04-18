@@ -65,21 +65,15 @@ int varonoiScore(const Map& map) {
     for (set <pair<int, int> >::iterator it = my_set.begin(); it != my_set.end(); ++it) {
       x = (*it).first;
       y = (*it).second;
-      if (!map.IsWall(x, y-1) && !grid[x][y-1]) {
-        my_set_new.insert(make_pair(x, y-1));
-        grid[x][y-1] = true;
-      }
-      if (!map.IsWall(x+1, y) && !grid[x+1][y]) {
-        my_set_new.insert(make_pair(x+1, y));
-        grid[x+1][y] = true;
-      }
-      if (!map.IsWall(x, y+1) && !grid[x][y+1]) {
-        my_set_new.insert(make_pair(x, y+1));
-        grid[x][y+1] = true;
-      }
-      if (!map.IsWall(x-1, y) && !grid[x-1][y]) {
-        my_set_new.insert(make_pair(x-1, y));
-        grid[x-1][y] = true;
+
+      int newX[4] = {x, x+1, x, x-1};
+      int newY[4] = {y-1, y, y+1, y};
+
+      for(int i=0; i<4; i++){
+        if (!map.IsWall(newX[i], newY[i]) && !grid[newX[i]][newY[i]]) {
+          my_set_new.insert(make_pair(newX[i], newY[i]));
+          grid[newX[i]][newY[i]] = true;
+        }
       }
     }
 
@@ -87,21 +81,15 @@ int varonoiScore(const Map& map) {
     for (set <pair<int, int> >::iterator it = opp_set.begin(); it != opp_set.end(); ++it) {
       x = (*it).first;
       y = (*it).second;
-      if (!map.IsWall(x, y-1) && !grid[x][y-1]) {
-        opp_set_new.insert(make_pair(x, y-1));
-        grid[x][y-1] = true;
-      }
-      if (!map.IsWall(x+1, y) && !grid[x+1][y]) {
-        opp_set_new.insert(make_pair(x+1, y));
-        grid[x+1][y] = true;
-      }
-      if (!map.IsWall(x, y+1) && !grid[x][y+1]) {
-        opp_set_new.insert(make_pair(x, y+1));
-        grid[x][y+1] = true;
-      }
-      if (!map.IsWall(x-1, y) && !grid[x-1][y]) {
-        opp_set_new.insert(make_pair(x-1, y));
-        grid[x-1][y] = true;
+
+      int newX[4] = {x, x+1, x, x-1};
+      int newY[4] = {y-1, y, y+1, y};
+
+      for(int i=0; i<4; i++){
+        if (!map.IsWall(newX[i], newY[i]) && !grid[newX[i]][newY[i]]) {
+          opp_set_new.insert(make_pair(newX[i], newY[i]));
+          grid[newX[i]][newY[i]] = true;
+        }
       }
     }
 
@@ -127,6 +115,10 @@ int varonoiScore(const Map& map) {
   double end_time = CycleTimer::currentSeconds();
   vscoreTime += (end_time - start_time);
   return my_score - opp_score;
+}
+
+int varonoiBlockScore(const Map& map) {
+  return 0;
 }
 
 

@@ -16,7 +16,7 @@ java -jar engine/Tron.jar maps/empty-room.txt ./MyTronBot "java -jar example_bot
 
 To see the output in a visualizer, do
 
-1) java -jar engine/Tron.jar maps/empty-room.txt ./MyTronbot "java -jar example_bots/Chaser.jar" > match.out
+1) java -jar engine/Tron.jar maps/empty-room.txt ./MyTronBot "java -jar example_bots/Chaser.jar" > match.out
 
 2) ruby visualizer/format_output.rb match.out formatted_match.out
 
