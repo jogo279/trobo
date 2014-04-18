@@ -9,9 +9,9 @@ using namespace std;
 
 Map::Map() {
   ReadFromFile(stdin);
-  computeComponents();
-  computeBlocks();
-  computeVaronoi();
+  // computeComponents();
+  // computeBlocks();
+  // computeVaronoi();
 }
 
 
@@ -335,9 +335,9 @@ Map::Map(const Map &other, int player, string direction) {
       }
       break;
   }
-  computeComponents();
-  computeBlocks();
-  computeVaronoi();
+  // computeComponents();  
+  // computeBlocks();
+  // computeVaronoi();
 
 }
 
