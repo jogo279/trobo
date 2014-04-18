@@ -10,7 +10,7 @@ using namespace std;
 
 #define WIN 100000
 #define LOSE -100000
-#define DRAW -1
+#define DRAW 0
 #define IN_PROGRESS 2
 
 
@@ -161,7 +161,7 @@ pair<string, int> minimax (bool maxi, int depth, const Map &map) {
 }
 
 string MakeMove(const Map& map) {
-  return minimax(true, 3, map).first;
+  return minimax(true, 7, map).first;
 }
 
 // Ignore this function. It is just handling boring stuff for you, like
