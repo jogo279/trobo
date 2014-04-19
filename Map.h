@@ -57,14 +57,13 @@ class Map {
 
   std::vector< std::vector<bool> > GetWalls() const;
 
+  int garbage() const;
 
-
-
-  bool endGame() const;
+  bool endGame() const; 
 
   int numBlocks() const;
   int getBlock(int x, int y) const;
-  int blockSize(int block_id) const;
+  bool blockBattlefront(int block_id) const;
   int blockVaronoi(int block_id) const;
   std::pair<int, int> cutVertex(int block_id) const;//returns (-1,-1) if not cut vertex
   std::set<int> neighborBlocks(int block_id) const;
@@ -107,7 +106,7 @@ class Map {
   // Data structures for blocks
   int num_blocks;
   std::vector<std::vector<int> > block_id;
-  std::vector<int> block_size;
+  std::vector<bool> battlefront;
   std::vector<int> block_varonoi;
   std::vector< std::pair<int, int> > cut_location;
   std::vector< std::set<int> > block_neighbors;
