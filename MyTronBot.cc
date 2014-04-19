@@ -17,7 +17,7 @@ using namespace std;
 #define DRAW -1
 #define IN_PROGRESS 2
 
-#define DEFAULT_DEPTH 7
+#define DEFAULT_DEPTH 5
 
 #define MAX(a,b) ((a)>(b)?(a):(b))
 #define MIN(a,b) ((a)<(b)?(a):(b))
@@ -142,18 +142,22 @@ int varonoiBlockScore(const Map& map, int block_id, std::vector<bool> visited) {
     int child_block = *it;
     int total_score;
     if(!visited[child_block]){
+      // std::pair<int, int> loc = cutVertex(child_block);
+      // If child is a cut vertex, then starting point is the location of the cut vertex
+      // If child is a block, then parent must be a cut vertex, and starting point is the source cut vertex
       visited[child_block] = true;
       int child_score = varonoiBlockScore(map, child_block, visited);
       visited[child_block] = false;
       // BATTLEFRONT CONDITION
-      if(true) {
-        // If battlefront, find shortest path and update max
-        int distance = 0;
-        total_score = distance + child_score;
-      } else {
+      // if(blockBattlefront(child_block)) {
+      //   // If battlefront, find shortest path and update max
+      //   int distance = 0;
+      //   total_score = distance + child_score;
+      // } else {
         // Otherwise add value and update max
-        total_score = block_score + child_score;
-      }
+      printf("[block id %d] %d block score, %d child score\n", block_id, block_score, child_score);
+      total_score = block_score + child_score;
+      // }
       max_score = total_score > max_score ? total_score : max_score; 
     }
   }
@@ -163,7 +167,10 @@ int varonoiBlockScore(const Map& map, int block_id, std::vector<bool> visited) {
 
 int varonoiBlockScoreWrapper(const Map& map) {
   std::vector<bool> visited(map.numBlocks(),false);
-  int block_id = map.getBlock(map.MyX(),map.MyY());
+  int x = map.MyX(), y = map.MyY();
+  // std::cout << x << ", " << y << "lksdfjsdlkfsdf";
+  int block_id = map.getBlock(x,y);
+  visited[block_id] = true;
   return varonoiBlockScore(map, block_id, visited);
 }
 
@@ -177,7 +184,7 @@ pair<string, int> minimax (bool maxi, int depth, const Map &map) {
   int vscore_coeff = maxi ? 1 : -1;
 
   if(depth==0){
-      return make_pair("",varonoiScore(map));
+      return make_pair("",varonoiBlockScoreWrapper(map));
   } else {
     for(int i=0; i<4; i++){
       score[i] = vscore_coeff*minimax(!maxi, depth-1, Map(map, player, direction[i])).second;
@@ -275,11 +282,12 @@ int main(int argc, char* argv[]) {
 
       // fprintf(stderr, "abc\n");
       Map map;
+      fprintf(stderr, "Varonoi score  recursive on the starter map: %d\n", varonoiBlockScoreWrapper(map));
+      fprintf(stderr, "Varonoi score on the starter map: %d\n", varonoiScore(map));
       double start_time = CycleTimer::currentSeconds();
       // fprintf(stderr, "def\n");
       Map::MakeMove(MakeMove(map));
       double end_time = CycleTimer::currentSeconds();
-      fprintf(stderr, "Varonoi score on the starter map: %d\n", varonoiScore(map));
       fprintf(stderr, "Move took %.4f seconds\n", end_time - start_time);
       fprintf(stderr, "Spent %.4f seconds in varonoi function\n", vscoreTime);
     }
