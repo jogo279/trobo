@@ -61,6 +61,8 @@ class Map {
 
   bool endGame() const; 
 
+  int vertexScore(int i, int j);
+
   int numBlocks() const;
   int getBlock(int x, int y) const;
   bool blockBattlefront(int block_id) const;
