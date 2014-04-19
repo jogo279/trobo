@@ -12,8 +12,8 @@
 
 using namespace std;
 
-#define WIN 100000
-#define LOSE -100000
+#define WIN 1000000
+#define LOSE -1000000
 #define DRAW -1
 #define IN_PROGRESS 2
 
@@ -40,7 +40,7 @@ int gameState(const Map& map) {
 /* The varonia score of a map is the number of squares that I can reach before my opponent, 
  * less the number of squares that my opponent can reach before me. */
 int varonoiScore(const Map& map) {
-  set <pair<int, int> >::iterator it;
+
   double start_time = CycleTimer::currentSeconds();
 
   //check for endgame scenarios
@@ -62,7 +62,7 @@ int varonoiScore(const Map& map) {
     opp_set_new.clear();
 
     // add neighboring squares to my_set_new
-    for (it = my_set.begin(); it != my_set.end(); ++it) {
+    for (set <pair<int, int> >::iterator it = my_set.begin(); it != my_set.end(); ++it) {
       x = (*it).first;
       y = (*it).second;
 
@@ -72,13 +72,13 @@ int varonoiScore(const Map& map) {
       for(int i=0; i<4; i++){
         if (!map.IsWall(newX[i], newY[i]) && !grid[newX[i]][newY[i]]) {
           my_set_new.insert(make_pair(newX[i], newY[i]));
-          // grid[newX[i]][newY[i]] = true;
+          grid[newX[i]][newY[i]] = true;
         }
       }
     }
 
     // add neighboring squares to opp_set_new
-    for (it = opp_set.begin(); it != opp_set.end(); ++it) {
+    for (set <pair<int, int> >::iterator it = opp_set.begin(); it != opp_set.end(); ++it) {
       x = (*it).first;
       y = (*it).second;
 
@@ -88,22 +88,14 @@ int varonoiScore(const Map& map) {
       for(int i=0; i<4; i++){
         if (!map.IsWall(newX[i], newY[i]) && !grid[newX[i]][newY[i]]) {
           opp_set_new.insert(make_pair(newX[i], newY[i]));
-          // grid[newX[i]][newY[i]] = true;
+          grid[newX[i]][newY[i]] = true;
         }
       }
     }
 
-    for(it=my_set_new.begin(); it != my_set_new.end(); ++it) {
-      grid[(*it).first][(*it).second] = true;
-    }
-    for(it=opp_set_new.begin(); it != opp_set_new.end(); ++it) {
-      grid[(*it).first][(*it).second] = true;
-    }
-    // printf("My set size: %d, opp set size: %d\n", my_set_new.size(), opp_set_new.size());
-
     //remove squares that are in both of our sets--we are equidistant from these squares
     //see http://stackoverflow.com/questions/2874441/deleting-elements-from-stl-set-while-iterating
-    for (it = my_set_new.begin(); it != my_set_new.end(); ) {
+    for (set <pair<int, int> >::iterator it = my_set_new.begin(); it != my_set_new.end(); ) {
       set <pair<int, int> >::iterator it2 = opp_set_new.find(*it);
       if (it2 != opp_set_new.end()) {
         opp_set_new.erase(it2);
@@ -250,7 +242,6 @@ string MakeMove(const Map& map) {
     if(vm.count("ab"))
       return alphabeta(true, depth, map, INT_MIN, INT_MAX).first; 
     else
-      std::cout << minimax(true, depth, map).first << "ksdfd\n";
       return minimax(true, depth, map).first;
   }
 }

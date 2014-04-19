@@ -29,6 +29,16 @@ void Map::printStats() const {
 
 
 
+int Map::vertexScore(int i, int j) {
+  int edges = 0;
+  if (!IsWall(i-1,j)) edges ++;
+  if (!IsWall(i+1,j)) edges ++;
+  if (!IsWall(i,j-1)) edges ++;
+  if (!IsWall(i,j+1)) edges ++;
+  return 55 + 194*edges;
+}
+
+
 void Map::computeVaronoi() {
   grid = GetWalls();
   int x, y;
@@ -60,35 +70,10 @@ void Map::computeVaronoi() {
         if (!IsWall(newX[i], newY[i]) && !grid[newX[i]][newY[i]]) {
           my_set_new.insert(make_pair(newX[i], newY[i]));
 
-          block_varonoi[getBlock(newX[i], newY[i])] ++;
+          block_varonoi[getBlock(newX[i], newY[i])] += vertexScore(newX[i], newY[i]);
           if (block_varonoi[getBlock(newX[i], newY[i])] < 0) battlefront[getBlock(newX[i], newY[i])] = true;
         }
       }
-
-      // if (!IsWall(x, y-1) && !grid[x][y-1]) {
-      //   my_set_new.insert(make_pair(x, y-1));
-      //   grid[x][y-1] = true;
-      //   // block_varonoi[getBlock(x,y-1)] ++;
-      //   std::cout << x,y-1 << getBlock(x,y-1) << "\n";
-      // }
-      // if (!IsWall(x+1, y) && !grid[x+1][y]) {
-      //   my_set_new.insert(make_pair(x+1, y));
-      //   grid[x+1][y] = true;
-      //   // block_varonoi[getBlock(x+1,y)] ++;
-      //   std::cout << x+1,y << getBlock(x+1,y) << "\n";
-      // }
-      // if (!IsWall(x, y+1) && !grid[x][y+1]) {
-      //   my_set_new.insert(make_pair(x, y+1));
-      //   grid[x][y+1] = true;
-      //   // block_varonoi[getBlock(x,y+1)] ++;
-      //   std::cout << x,y+1 << getBlock(x,y+1) << "\n";
-      // }
-      // if (!IsWall(x-1, y) && !grid[x-1][y]) {
-      //   my_set_new.insert(make_pair(x-1, y));
-      //   grid[x-1][y] = true;
-      //   // block_varonoi[getBlock(x-1,y)] ++;
-      //   std::cout << x-1,y << getBlock(x-1,y) << "\n";
-      // }
     }
 
     // add neighboring squares to opp_set_new
@@ -103,35 +88,10 @@ void Map::computeVaronoi() {
         if (!IsWall(newX[i], newY[i]) && !grid[newX[i]][newY[i]]) {
           opp_set_new.insert(make_pair(newX[i], newY[i]));
 
-          block_varonoi[getBlock(newX[i], newY[i])] --;
+          block_varonoi[getBlock(newX[i], newY[i])] -= vertexScore(newX[i], newY[i]);
           if (block_varonoi[getBlock(newX[i], newY[i])] > 0) battlefront[getBlock(newX[i], newY[i])] = true;
         }
       }
-
-      // if (!IsWall(x, y-1) && !grid[x][y-1]) {
-      //   opp_set_new.insert(make_pair(x, y-1));
-      //   grid[x][y-1] = true;
-      //   // block_varonoi[getBlock(x,y-1)] --;
-      //   std::cout << x,y-1 << getBlock(x,y-1) << "\n";
-      // }
-      // if (!IsWall(x+1, y) && !grid[x+1][y]) {
-      //   opp_set_new.insert(make_pair(x+1, y));
-      //   grid[x+1][y] = true;
-      //   // block_varonoi[getBlock(x+1,y)] --;
-      //   std::cout << x+1,y << getBlock(x+1,y) << "\n";
-      // }
-      // if (!IsWall(x, y+1) && !grid[x][y+1]) {
-      //   opp_set_new.insert(make_pair(x, y+1));
-      //   grid[x][y+1] = true;
-      //   // block_varonoi[getBlock(x,y+1)] --;
-      //   std::cout << x,y+1 << getBlock(x,y+1) << "\n";
-      // }
-      // if (!IsWall(x-1, y) && !grid[x-1][y]) {
-      //   opp_set_new.insert(make_pair(x-1, y));
-      //   grid[x-1][y] = true;
-      //   // block_varonoi[getBlock(x-1,y)] --;
-      //   std::cout << x-1,y << getBlock(x-1,y) << "\n";
-      // }
     }
 
     //remove squares that are in both of our sets--we are equidistant from these squares
