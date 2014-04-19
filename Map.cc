@@ -4,14 +4,15 @@
 #include <cstdio>
 #include <cstdlib>
 #include <vector>
+#include <iostream>
 
 using namespace std;
 
 Map::Map() {
   ReadFromFile(stdin);
-  computeComponents();
-  computeBlocks();
-  computeVaronoi();
+  // computeComponents();
+  // computeBlocks();
+  // computeVaronoi();
 }
 
 void Map::printStats() const {
@@ -46,52 +47,86 @@ void Map::computeVaronoi() {
     for (set <pair<int, int> >::iterator it = my_set.begin(); it != my_set.end(); ++it) {
       x = (*it).first;
       y = (*it).second;
-      if (!IsWall(x, y-1) && !grid[x][y-1]) {
-        my_set_new.insert(make_pair(x, y-1));
-        grid[x][y-1] = true;
-        block_varonoi[getBlock(x,y-1)] ++;
+
+      int newX[4] = {x, x+1, x, x-1};
+      int newY[4] = {y-1, y, y+1, y};
+
+      for(int i=0; i<4; i++){
+        if (!IsWall(newX[i], newY[i]) && !grid[newX[i]][newY[i]]) {
+          my_set_new.insert(make_pair(newX[i], newY[i]));
+          grid[newX[i]][newY[i]] = true;
+          // block_varonoi[getBlock(x,y-1)] ++;
+          // std::cout << newX[i] << "," << newY[i]<<"," <<  getBlock(newX[i],newY[i]) << "\n";
+        }
       }
-      if (!IsWall(x+1, y) && !grid[x+1][y]) {
-        my_set_new.insert(make_pair(x+1, y));
-        grid[x+1][y] = true;
-        block_varonoi[getBlock(x+1,y)] ++;
-      }
-      if (!IsWall(x, y+1) && !grid[x][y+1]) {
-        my_set_new.insert(make_pair(x, y+1));
-        grid[x][y+1] = true;
-        block_varonoi[getBlock(x,y+1)] ++;
-      }
-      if (!IsWall(x-1, y) && !grid[x-1][y]) {
-        my_set_new.insert(make_pair(x-1, y));
-        grid[x-1][y] = true;
-        block_varonoi[getBlock(x-1,y)] ++;
-      }
+
+      // if (!IsWall(x, y-1) && !grid[x][y-1]) {
+      //   my_set_new.insert(make_pair(x, y-1));
+      //   grid[x][y-1] = true;
+      //   // block_varonoi[getBlock(x,y-1)] ++;
+      //   std::cout << x,y-1 << getBlock(x,y-1) << "\n";
+      // }
+      // if (!IsWall(x+1, y) && !grid[x+1][y]) {
+      //   my_set_new.insert(make_pair(x+1, y));
+      //   grid[x+1][y] = true;
+      //   // block_varonoi[getBlock(x+1,y)] ++;
+      //   std::cout << x+1,y << getBlock(x+1,y) << "\n";
+      // }
+      // if (!IsWall(x, y+1) && !grid[x][y+1]) {
+      //   my_set_new.insert(make_pair(x, y+1));
+      //   grid[x][y+1] = true;
+      //   // block_varonoi[getBlock(x,y+1)] ++;
+      //   std::cout << x,y+1 << getBlock(x,y+1) << "\n";
+      // }
+      // if (!IsWall(x-1, y) && !grid[x-1][y]) {
+      //   my_set_new.insert(make_pair(x-1, y));
+      //   grid[x-1][y] = true;
+      //   // block_varonoi[getBlock(x-1,y)] ++;
+      //   std::cout << x-1,y << getBlock(x-1,y) << "\n";
+      // }
     }
 
     // add neighboring squares to opp_set_new
     for (set <pair<int, int> >::iterator it = opp_set.begin(); it != opp_set.end(); ++it) {
       x = (*it).first;
       y = (*it).second;
-      if (!IsWall(x, y-1) && !grid[x][y-1]) {
-        opp_set_new.insert(make_pair(x, y-1));
-        grid[x][y-1] = true;
-        block_varonoi[getBlock(x,y-1)] --;
+
+      int newX[4] = {x, x+1, x, x-1};
+      int newY[4] = {y-1, y, y+1, y};
+
+      for(int i=0; i<4; i++){
+        if (!IsWall(newX[i], newY[i]) && !grid[newX[i]][newY[i]]) {
+          opp_set_new.insert(make_pair(newX[i], newY[i]));
+          grid[newX[i]][newY[i]] = true;
+          // block_varonoi[getBlock(x,y-1)] ++;
+          // std::cout << newX[i] << "," << newY[i]<<"," <<  getBlock(newX[i],newY[i]) << "\n";
+        }
       }
-      if (!IsWall(x+1, y) && !grid[x+1][y]) {
-        opp_set_new.insert(make_pair(x+1, y));
-        grid[x+1][y] = true;
-        block_varonoi[getBlock(x+1,y)] --;
-      }
-      if (!IsWall(x, y+1) && !grid[x][y+1]) {
-        opp_set_new.insert(make_pair(x, y+1));
-        grid[x][y+1] = true;
-        block_varonoi[getBlock(x,y+1)] --;
-      }
-      if (!IsWall(x-1, y) && !grid[x-1][y]) {
-        opp_set_new.insert(make_pair(x-1, y));
-        grid[x-1][y] = true;
-        block_varonoi[getBlock(x-1,y)] --;
-      }
+
+      // if (!IsWall(x, y-1) && !grid[x][y-1]) {
+      //   opp_set_new.insert(make_pair(x, y-1));
+      //   grid[x][y-1] = true;
+      //   // block_varonoi[getBlock(x,y-1)] --;
+      //   std::cout << x,y-1 << getBlock(x,y-1) << "\n";
+      // }
+      // if (!IsWall(x+1, y) && !grid[x+1][y]) {
+      //   opp_set_new.insert(make_pair(x+1, y));
+      //   grid[x+1][y] = true;
+      //   // block_varonoi[getBlock(x+1,y)] --;
+      //   std::cout << x+1,y << getBlock(x+1,y) << "\n";
+      // }
+      // if (!IsWall(x, y+1) && !grid[x][y+1]) {
+      //   opp_set_new.insert(make_pair(x, y+1));
+      //   grid[x][y+1] = true;
+      //   // block_varonoi[getBlock(x,y+1)] --;
+      //   std::cout << x,y+1 << getBlock(x,y+1) << "\n";
+      // }
+      // if (!IsWall(x-1, y) && !grid[x-1][y]) {
+      //   opp_set_new.insert(make_pair(x-1, y));
+      //   grid[x-1][y] = true;
+      //   // block_varonoi[getBlock(x-1,y)] --;
+      //   std::cout << x-1,y << getBlock(x-1,y) << "\n";
+      // }
     }
 
     // remove squares that are in both of our sets--we are equidistant from these squares
@@ -373,9 +408,9 @@ Map::Map(const Map &other, int player, string direction) {
       }
       break;
   }
-  computeComponents();  
-  computeBlocks();
-  computeVaronoi();
+  // computeComponents();  
+  // computeBlocks();
+  // computeVaronoi();
 }
 
 int Map::Width() const {
