@@ -17,7 +17,7 @@ using namespace std;
 #define DRAW -1
 #define IN_PROGRESS 2
 
-#define DEFAULT_DEPTH 3
+#define DEFAULT_DEPTH 5
 
 #define MAX(a,b) ((a)>(b)?(a):(b))
 #define MIN(a,b) ((a)<(b)?(a):(b))
@@ -31,7 +31,8 @@ int gameState(const Map& map) {
   if (map.MyX() == map.OpponentX() && map.MyY() == map.OpponentY()) return DRAW;
   bool my_status = map.IsWall(map.MyX(), map.MyY());
   bool opp_status = map.IsWall(map.OpponentX(), map.OpponentY());
-  if (my_status && opp_status) return DRAW;
+  bool collision_status = (map.MyX() == map.OpponentX() && map.MyY() == map.OpponentY());
+  if ((my_status && opp_status) || collision_status) return DRAW;
   if (!my_status && opp_status) return WIN;
   if (my_status && !opp_status) return LOSE;
   return IN_PROGRESS; 
@@ -177,16 +178,41 @@ int varonoiBlockScoreWrapper(const Map& map) {
   std::vector<bool> my_visited(map.numBlocks(),false);
   std::vector<bool> opp_visited(map.numBlocks(),false);
   // std::cout << x << ", " << y << "lksdfjsdlkfsdf";
-  int my_block_id = map.getBlock(map.MyX(),map.MyY());
-  my_visited[my_block_id] = true;
+  int my_score=0, opp_score=0, new_score;
+  int myX[4] = {map.MyX(), map.MyX()+1, map.MyX(), map.MyX()-1};
+  int myY[4] = {map.MyY()-1, map.MyY(), map.MyY()+1, map.MyY()};
+  int oppX[4] = {map.OpponentX(), map.OpponentX()+1, map.OpponentX(), map.OpponentX()-1};
+  int oppY[4] = {map.OpponentY()-1, map.OpponentY(), map.OpponentY()+1, map.OpponentY()};
+  for(int i=0; i<4; i++){
+    int my_block_id = map.getBlock(myX[i],myY[i]);
+    if(my_block_id >=0){
+      my_visited[my_block_id] = true;
+      new_score = varonoiBlockScore(map, my_block_id, my_visited, 1);
+      my_visited[my_block_id] = false;
 
-  int opp_block_id = map.getBlock(map.OpponentX(),map.OpponentY());
-  opp_visited[opp_block_id] = true;
+      my_score = MAX(my_score,new_score);
+    }
+    int opp_block_id = map.getBlock(oppX[i],oppY[i]);
+    if(opp_block_id >=0){
+      opp_visited[opp_block_id] = true;
+      new_score = varonoiBlockScore(map, opp_block_id, opp_visited, 2);
+      opp_visited[opp_block_id] = false;
 
-  map.printBlocks();
-  int my_score = varonoiBlockScore(map, my_block_id, my_visited, 1);
-  int opp_score = varonoiBlockScore(map, opp_block_id, opp_visited, 2);
-  fprintf(stderr, "my score: %d, opp score: %d\n", my_score, opp_score);
+      opp_score = MAX(opp_score,new_score);
+    }
+
+  }
+
+  // int my_block_id = map.getBlock(map.MyX(),map.MyY());
+  // my_visited[my_block_id] = true;
+
+  // int opp_block_id = map.getBlock(map.OpponentX(),map.OpponentY());
+  // opp_visited[opp_block_id] = true;
+
+  // map.printBlocks();
+  // my_score = varonoiBlockScore(map, my_block_id, my_visited, 1);
+  // opp_score = varonoiBlockScore(map, opp_block_id, opp_visited, 2);
+  // fprintf(stderr, "my score: %d, opp score: %d\n", my_score, opp_score);
   return (my_score - opp_score);
 }
 
@@ -270,7 +296,8 @@ string MakeMove(const Map& map) {
       return alphabeta(true, depth, map, INT_MIN, INT_MAX).first; 
     else{
       pair<string, int> result =  minimax(true, depth, map);
-      fprintf(stderr, "%s ksdfd\n", result.first.c_str());
+      // if(vm.count("verbose"))
+        fprintf(stderr, "%s ksdfd\n", result.first.c_str());
       return result.first;
     }
   }
