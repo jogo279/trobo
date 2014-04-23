@@ -12,12 +12,12 @@
 
 using namespace std;
 
-#define WIN 1000000
-#define LOSE -1000000
+#define WIN 100000
+#define LOSE -100000
 #define DRAW -1
 #define IN_PROGRESS 2
 
-#define DEFAULT_DEPTH 5
+#define DEFAULT_DEPTH 3
 
 #define MAX(a,b) ((a)>(b)?(a):(b))
 #define MIN(a,b) ((a)<(b)?(a):(b))
@@ -40,7 +40,7 @@ int gameState(const Map& map) {
 /* The varonia score of a map is the number of squares that I can reach before my opponent, 
  * less the number of squares that my opponent can reach before me. */
 int varonoiScore(const Map& map) {
-
+  set <pair<int, int> >::iterator it;
   double start_time = CycleTimer::currentSeconds();
 
   //check for endgame scenarios
@@ -62,7 +62,7 @@ int varonoiScore(const Map& map) {
     opp_set_new.clear();
 
     // add neighboring squares to my_set_new
-    for (set <pair<int, int> >::iterator it = my_set.begin(); it != my_set.end(); ++it) {
+    for (it = my_set.begin(); it != my_set.end(); ++it) {
       x = (*it).first;
       y = (*it).second;
 
@@ -72,13 +72,13 @@ int varonoiScore(const Map& map) {
       for(int i=0; i<4; i++){
         if (!map.IsWall(newX[i], newY[i]) && !grid[newX[i]][newY[i]]) {
           my_set_new.insert(make_pair(newX[i], newY[i]));
-          grid[newX[i]][newY[i]] = true;
+          // grid[newX[i]][newY[i]] = true;
         }
       }
     }
 
     // add neighboring squares to opp_set_new
-    for (set <pair<int, int> >::iterator it = opp_set.begin(); it != opp_set.end(); ++it) {
+    for (it = opp_set.begin(); it != opp_set.end(); ++it) {
       x = (*it).first;
       y = (*it).second;
 
@@ -88,14 +88,22 @@ int varonoiScore(const Map& map) {
       for(int i=0; i<4; i++){
         if (!map.IsWall(newX[i], newY[i]) && !grid[newX[i]][newY[i]]) {
           opp_set_new.insert(make_pair(newX[i], newY[i]));
-          grid[newX[i]][newY[i]] = true;
+          // grid[newX[i]][newY[i]] = true;
         }
       }
     }
 
+    for(it=my_set_new.begin(); it != my_set_new.end(); ++it) {
+      grid[(*it).first][(*it).second] = true;
+    }
+    for(it=opp_set_new.begin(); it != opp_set_new.end(); ++it) {
+      grid[(*it).first][(*it).second] = true;
+    }
+    // printf("My set size: %d, opp set size: %d\n", my_set_new.size(), opp_set_new.size());
+
     //remove squares that are in both of our sets--we are equidistant from these squares
     //see http://stackoverflow.com/questions/2874441/deleting-elements-from-stl-set-while-iterating
-    for (set <pair<int, int> >::iterator it = my_set_new.begin(); it != my_set_new.end(); ) {
+    for (it = my_set_new.begin(); it != my_set_new.end(); ) {
       set <pair<int, int> >::iterator it2 = opp_set_new.find(*it);
       if (it2 != opp_set_new.end()) {
         opp_set_new.erase(it2);
@@ -117,28 +125,36 @@ int varonoiScore(const Map& map) {
   return my_score - opp_score;
 }
 
-int varonoiBlockScore(const Map& map, int block_id, std::vector<bool> visited) {
-  std::pair<int,int> p = map.cutVertex(block_id);
+int varonoiBlockScore(const Map& map, int block_id, std::vector<bool> visited, int player) {
+  int block_score = map.blockVaronoi(block_id, player);
+
+  // fprintf(stderr, "running vblockscore on block id %d, has score %d:\n",block_id, block_score);
+  // std::pair<int,int> p = map.cutVertex(block_id);
+  if(map.blockBattlefront(block_id)){
+    // fprintf(stderr, "is battlefront! terminating early\n");
+    return block_score;
+  }
+
+
   // if(p.first == -1 && p.second == -1){
   //   // Starting point is a cut vertex, handle accordingly
   //   return 0;
   // }
-
   // Otherwise starting in a block
-  int block_score = map.blockVaronoi(block_id);
   std::set<int> neighbor_blocks = map.neighborBlocks(block_id);
   std::set<int>::iterator it;
 
   int max_score = block_score;
   for(it = neighbor_blocks.begin(); it!=neighbor_blocks.end(); it++){
-    int child_block = *it;
+    int child_block = *it; 
     int total_score;
     if(!visited[child_block]){
+      // fprintf(stderr, "exploring child %d:\n", child_block);
       // std::pair<int, int> loc = cutVertex(child_block);
       // If child is a cut vertex, then starting point is the location of the cut vertex
       // If child is a block, then parent must be a cut vertex, and starting point is the source cut vertex
       visited[child_block] = true;
-      int child_score = varonoiBlockScore(map, child_block, visited);
+      int child_score = varonoiBlockScore(map, child_block, visited, player);
       visited[child_block] = false;
       // BATTLEFRONT CONDITION
       // if(blockBattlefront(child_block)) {
@@ -147,7 +163,7 @@ int varonoiBlockScore(const Map& map, int block_id, std::vector<bool> visited) {
       //   total_score = distance + child_score;
       // } else {
         // Otherwise add value and update max
-      printf("[block id %d] %d block score, %d child score\n", block_id, block_score, child_score);
+      // fprintf(stderr, "[block id %d] %d block score,  child_id: %d, child score: %d\n", block_id, block_score, child_block, child_score);
       total_score = block_score + child_score;
       // }
       max_score = total_score > max_score ? total_score : max_score; 
@@ -158,17 +174,28 @@ int varonoiBlockScore(const Map& map, int block_id, std::vector<bool> visited) {
 }
 
 int varonoiBlockScoreWrapper(const Map& map) {
-  std::vector<bool> visited(map.numBlocks(),false);
-  int x = map.MyX(), y = map.MyY();
+  std::vector<bool> my_visited(map.numBlocks(),false);
+  std::vector<bool> opp_visited(map.numBlocks(),false);
   // std::cout << x << ", " << y << "lksdfjsdlkfsdf";
-  int block_id = map.getBlock(x,y);
-  visited[block_id] = true;
-  return varonoiBlockScore(map, block_id, visited);
+  int my_block_id = map.getBlock(map.MyX(),map.MyY());
+  my_visited[my_block_id] = true;
+
+  int opp_block_id = map.getBlock(map.OpponentX(),map.OpponentY());
+  opp_visited[opp_block_id] = true;
+
+  map.printBlocks();
+  int my_score = varonoiBlockScore(map, my_block_id, my_visited, 1);
+  int opp_score = varonoiBlockScore(map, opp_block_id, opp_visited, 2);
+  fprintf(stderr, "my score: %d, opp score: %d\n", my_score, opp_score);
+  return (my_score - opp_score);
 }
 
 pair<string, int> minimax (bool maxi, int depth, const Map &map) {
   int state = gameState(map);
-  if (state != IN_PROGRESS) return make_pair("-",state);
+  if (state != IN_PROGRESS) {
+    // fprintf(stderr, "Game no longer in progress\n");
+    return make_pair("-",state);
+  }
 
   string direction[4] = {"NORTH", "SOUTH", "EAST", "WEST"};
   int score[4];
@@ -237,12 +264,15 @@ string MakeMove(const Map& map) {
   int depth = vm.count("depth") ? vm["depth"].as<int>(): DEFAULT_DEPTH;
   if(vm.count("parallel")){
     // IMPLEMENT PARALLEL ALGORITHM HERE
-    return "E"; 
+    return minimax(true, depth, map).first; 
   } else{
     if(vm.count("ab"))
       return alphabeta(true, depth, map, INT_MIN, INT_MAX).first; 
-    else
-      return minimax(true, depth, map).first;
+    else{
+      pair<string, int> result =  minimax(true, depth, map);
+      fprintf(stderr, "%s ksdfd\n", result.first.c_str());
+      return result.first;
+    }
   }
 }
 
@@ -267,12 +297,14 @@ int main(int argc, char* argv[]) {
 
   // If in verbose mode, print all sorts of things
   if (vm.count("verbose")){
+  // if (true){
     // std::cout << "Trobo testing mode:\n";
     while (true) {
       vscoreTime = 0.;
 
       // fprintf(stderr, "abc\n");
       Map map;
+      fprintf(stderr, "\n\nStart of move: %d (should be %d)\n", map.IsWall(map.MyX(),map.MyY()), map.IsWall(0,0));
       fprintf(stderr, "Varonoi score  recursive on the starter map: %d\n", varonoiBlockScoreWrapper(map));
       fprintf(stderr, "Varonoi score on the starter map: %d\n", varonoiScore(map));
       double start_time = CycleTimer::currentSeconds();

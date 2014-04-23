@@ -21,37 +21,61 @@ void Map::printStats() const {
   fprintf(stderr, "End Game:%d\n", endGame());
   fprintf(stderr, "Num Blocks:%d\n", numBlocks());
   for (int i = 0; i < numBlocks(); i++) {
-    fprintf(stderr, "Varonoi for block %d is %d\n", i, blockVaronoi(i));
+    fprintf(stderr, "Varonoi for block %d is (my,opp)=(%d,%d)\n", i, blockVaronoi(i,1), blockVaronoi(i,2));
     fprintf(stderr, "Block %d battlefront status: %d\n", i, blockBattlefront(i));
   }
   fprintf(stderr, "\n\n");
 }
 
+void Map::printBlocks() const {
+  for (int j = 0; j < map_height; j++){
+    for (int i = 0; i < map_width; i++){
+      int id = getBlock(i,j);
+      if(id == -1)
+        fprintf(stderr, "#");
+      else if (i == player_one_x && j == player_one_y)
+        fprintf(stderr, "*");
+      else if (i == player_two_x && j == player_two_y)
+        fprintf(stderr, "$");
+      else
+        fprintf(stderr, "%d", id);
+    }
+    fprintf(stderr, "\n");
+  }
+}
+
 
 
 int Map::vertexScore(int i, int j) {
-  int edges = 0;
-  if (!IsWall(i-1,j)) edges ++;
-  if (!IsWall(i+1,j)) edges ++;
-  if (!IsWall(i,j-1)) edges ++;
-  if (!IsWall(i,j+1)) edges ++;
-  return 55 + 194*edges;
+  return 1;
+  // int edges = 0;
+  // if (!IsWall(i-1,j)) edges ++;
+  // if (!IsWall(i+1,j)) edges ++;
+  // if (!IsWall(i,j-1)) edges ++;
+  // if (!IsWall(i,j+1)) edges ++;
+  // return 55 + 194*edges;
 }
 
 
 void Map::computeVaronoi() {
+  // fprintf(stderr, "starting computation of vblocks\n");
   grid = GetWalls();
-  int x, y;
+  int x, y; 
 
   
 
-  block_varonoi = vector<int>(num_blocks, 0);
+  my_block_varonoi = vector<int>(num_blocks, 0);
+  opp_block_varonoi = vector<int>(num_blocks, 0);
 
   //my_set and opp_set are essentially the "frontiers" of two simultaneous BFSs
-  if (!IsWall(player_one_x, player_one_y))
+  if (!IsWall(player_one_x, player_one_y)){
     my_set.insert(make_pair(player_one_x, player_one_y));
-  if (!IsWall(player_two_x, player_two_y))
+    grid[player_one_x][player_one_y] = true;
+  }
+  if (!IsWall(player_two_x, player_two_y)){
     opp_set.insert(make_pair(player_two_x, player_two_y));
+    grid[player_two_x][player_two_y] = true;
+  }
 
 
   while (!my_set.empty() || !opp_set.empty()) {
@@ -68,10 +92,11 @@ void Map::computeVaronoi() {
 
       for(int i=0; i<4; i++){
         if (!IsWall(newX[i], newY[i]) && !grid[newX[i]][newY[i]]) {
+          // fprintf(stderr, "Adding %d,%d to player 1 in block %d\n", newX[i], newY[i], getBlock(newX[i], newY[i]));
           my_set_new.insert(make_pair(newX[i], newY[i]));
 
-          block_varonoi[getBlock(newX[i], newY[i])] += vertexScore(newX[i], newY[i]);
-          if (block_varonoi[getBlock(newX[i], newY[i])] < 0) battlefront[getBlock(newX[i], newY[i])] = true;
+          // block_varonoi[getBlock(newX[i], newY[i])] += vertexScore(newX[i], newY[i]);
+          // if (block_varonoi[getBlock(newX[i], newY[i])] < 0) battlefront[getBlock(newX[i], newY[i])] = true;
         }
       }
     }
@@ -86,10 +111,11 @@ void Map::computeVaronoi() {
 
       for(int i=0; i<4; i++){
         if (!IsWall(newX[i], newY[i]) && !grid[newX[i]][newY[i]]) {
+          // fprintf(stderr, "Adding %d,%d to player 2 in block %d\n", newX[i], newY[i], getBlock(newX[i], newY[i]));
           opp_set_new.insert(make_pair(newX[i], newY[i]));
 
-          block_varonoi[getBlock(newX[i], newY[i])] -= vertexScore(newX[i], newY[i]);
-          if (block_varonoi[getBlock(newX[i], newY[i])] > 0) battlefront[getBlock(newX[i], newY[i])] = true;
+          // block_varonoi[getBlock(newX[i], newY[i])] -= vertexScore(newX[i], newY[i]);
+          // if (block_varonoi[getBlock(newX[i], newY[i])] > 0) battlefront[getBlock(newX[i], newY[i])] = true;
         }
       }
     }
@@ -103,12 +129,17 @@ void Map::computeVaronoi() {
         opp_set_new.erase(it2);
         my_set_new.erase(it++);
       } else {
+        // fprintf(stderr, "Adding %d,%d to player 1 in block %d\n", (*it).first, (*it).second, getBlock((*it).first, (*it).second));
+        my_block_varonoi[getBlock((*it).first, (*it).second)] += vertexScore((*it).first, (*it).second);
         ++it;
       }
     }
 
     for (set <pair<int, int> >::iterator it = opp_set_new.begin(); it != opp_set_new.end(); it++) {
+      // fprintf(stderr, "Adding %d,%d to player 2 in block %d\n", (*it).first, (*it).second, getBlock((*it).first, (*it).second));
       grid[(*it).first][(*it).second] = true;
+      opp_block_varonoi[getBlock((*it).first, (*it).second)] += vertexScore((*it).first, (*it).second);
+      if (my_block_varonoi[getBlock((*it).first, (*it).second)] > 0) battlefront[getBlock((*it).first, (*it).second)] = true;
     }
 
     //update scores and sets
@@ -116,6 +147,8 @@ void Map::computeVaronoi() {
     opp_set = opp_set_new;
 
   }
+
+  // fprintf(stderr, "ending computation of vblocks\n");
 }
 
 
@@ -387,6 +420,15 @@ int Map::Height()  const {
   return map_height;
 }
 
+bool Map::IsPlayer(int x, int y) const {
+  if((x == player_one_x && y == player_one_y) || (x == player_two_x && y == player_two_y)) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
 bool Map::IsWall(int x, int y) const {
   if (x < 0 || y < 0 || x >= map_width || y >= map_height) {
     return true;
@@ -464,8 +506,8 @@ bool Map::blockBattlefront(int block_id) const {
   return battlefront[block_id];
 }
 
-int Map::blockVaronoi(int block_id) const {
-  return block_varonoi[block_id];
+int Map::blockVaronoi(int block_id, int player) const {
+  return player == 1 ? my_block_varonoi[block_id] : opp_block_varonoi[block_id];
 }
 
 pair<int, int> Map::cutVertex(int block_id) const {

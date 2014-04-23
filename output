@@ -1,82 +1,196 @@
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-varonoi took 0.0019 seconds
-3
-Move took 0.2019 seconds
-Spent 0.1511 seconds in varonoi function
+15 15
+###############
+#1            #
+#             #
+#             #
+#             #
+#             #
+#             #
+#             #
+#             #
+#             #
+#             #
+#             #
+#             #
+#            2#
+###############
+starting computation of vblocks
+Adding 1,2 to player 1 in block 0
+Adding 2,1 to player 1 in block 0
+Adding 12,13 to player 2 in block 0
+Adding 13,12 to player 2 in block 0
+Adding 1,3 to player 1 in block 0
+Adding 2,2 to player 1 in block 0
+Adding 3,1 to player 1 in block 0
+Adding 11,13 to player 2 in block 0
+Adding 12,12 to player 2 in block 0
+Adding 13,11 to player 2 in block 0
+Adding 1,4 to player 1 in block 0
+Adding 2,3 to player 1 in block 0
+Adding 3,2 to player 1 in block 0
+Adding 4,1 to player 1 in block 0
+Adding 10,13 to player 2 in block 0
+Adding 11,12 to player 2 in block 0
+Adding 12,11 to player 2 in block 0
+Adding 13,10 to player 2 in block 0
+Adding 1,5 to player 1 in block 0
+Adding 2,4 to player 1 in block 0
+Adding 3,3 to player 1 in block 0
+Adding 4,2 to player 1 in block 0
+Adding 5,1 to player 1 in block 0
+Adding 9,13 to player 2 in block 0
+Adding 10,12 to player 2 in block 0
+Adding 11,11 to player 2 in block 0
+Adding 12,10 to player 2 in block 0
+Adding 13,9 to player 2 in block 0
+Adding 1,6 to player 1 in block 0
+Adding 2,5 to player 1 in block 0
+Adding 3,4 to player 1 in block 0
+Adding 4,3 to player 1 in block 0
+Adding 5,2 to player 1 in block 0
+Adding 6,1 to player 1 in block 0
+Adding 8,13 to player 2 in block 0
+Adding 9,12 to player 2 in block 0
+Adding 10,11 to player 2 in block 0
+Adding 11,10 to player 2 in block 0
+Adding 12,9 to player 2 in block 0
+Adding 13,8 to player 2 in block 0
+Adding 1,7 to player 1 in block 0
+Adding 2,6 to player 1 in block 0
+Adding 3,5 to player 1 in block 0
+Adding 4,4 to player 1 in block 0
+Adding 5,3 to player 1 in block 0
+Adding 6,2 to player 1 in block 0
+Adding 7,1 to player 1 in block 0
+Adding 7,13 to player 2 in block 0
+Adding 8,12 to player 2 in block 0
+Adding 9,11 to player 2 in block 0
+Adding 10,10 to player 2 in block 0
+Adding 11,9 to player 2 in block 0
+Adding 12,8 to player 2 in block 0
+Adding 13,7 to player 2 in block 0
+Adding 1,8 to player 1 in block 0
+Adding 2,7 to player 1 in block 0
+Adding 3,6 to player 1 in block 0
+Adding 4,5 to player 1 in block 0
+Adding 5,4 to player 1 in block 0
+Adding 6,3 to player 1 in block 0
+Adding 7,2 to player 1 in block 0
+Adding 8,1 to player 1 in block 0
+Adding 6,13 to player 2 in block 0
+Adding 7,12 to player 2 in block 0
+Adding 8,11 to player 2 in block 0
+Adding 9,10 to player 2 in block 0
+Adding 10,9 to player 2 in block 0
+Adding 11,8 to player 2 in block 0
+Adding 12,7 to player 2 in block 0
+Adding 13,6 to player 2 in block 0
+Adding 1,9 to player 1 in block 0
+Adding 2,8 to player 1 in block 0
+Adding 3,7 to player 1 in block 0
+Adding 4,6 to player 1 in block 0
+Adding 5,5 to player 1 in block 0
+Adding 6,4 to player 1 in block 0
+Adding 7,3 to player 1 in block 0
+Adding 8,2 to player 1 in block 0
+Adding 9,1 to player 1 in block 0
+Adding 5,13 to player 2 in block 0
+Adding 6,12 to player 2 in block 0
+Adding 7,11 to player 2 in block 0
+Adding 8,10 to player 2 in block 0
+Adding 9,9 to player 2 in block 0
+Adding 10,8 to player 2 in block 0
+Adding 11,7 to player 2 in block 0
+Adding 12,6 to player 2 in block 0
+Adding 13,5 to player 2 in block 0
+Adding 1,10 to player 1 in block 0
+Adding 2,9 to player 1 in block 0
+Adding 3,8 to player 1 in block 0
+Adding 4,7 to player 1 in block 0
+Adding 5,6 to player 1 in block 0
+Adding 6,5 to player 1 in block 0
+Adding 7,4 to player 1 in block 0
+Adding 8,3 to player 1 in block 0
+Adding 9,2 to player 1 in block 0
+Adding 10,1 to player 1 in block 0
+Adding 4,13 to player 2 in block 0
+Adding 5,12 to player 2 in block 0
+Adding 6,11 to player 2 in block 0
+Adding 7,10 to player 2 in block 0
+Adding 8,9 to player 2 in block 0
+Adding 9,8 to player 2 in block 0
+Adding 10,7 to player 2 in block 0
+Adding 11,6 to player 2 in block 0
+Adding 12,5 to player 2 in block 0
+Adding 13,4 to player 2 in block 0
+Adding 1,11 to player 1 in block 0
+Adding 2,10 to player 1 in block 0
+Adding 3,9 to player 1 in block 0
+Adding 4,8 to player 1 in block 0
+Adding 5,7 to player 1 in block 0
+Adding 6,6 to player 1 in block 0
+Adding 7,5 to player 1 in block 0
+Adding 8,4 to player 1 in block 0
+Adding 9,3 to player 1 in block 0
+Adding 10,2 to player 1 in block 0
+Adding 11,1 to player 1 in block 0
+Adding 3,13 to player 2 in block 0
+Adding 4,12 to player 2 in block 0
+Adding 5,11 to player 2 in block 0
+Adding 6,10 to player 2 in block 0
+Adding 7,9 to player 2 in block 0
+Adding 8,8 to player 2 in block 0
+Adding 9,7 to player 2 in block 0
+Adding 10,6 to player 2 in block 0
+Adding 11,5 to player 2 in block 0
+Adding 12,4 to player 2 in block 0
+Adding 13,3 to player 2 in block 0
+Adding 1,12 to player 1 in block 0
+Adding 2,11 to player 1 in block 0
+Adding 3,10 to player 1 in block 0
+Adding 4,9 to player 1 in block 0
+Adding 5,8 to player 1 in block 0
+Adding 6,7 to player 1 in block 0
+Adding 7,6 to player 1 in block 0
+Adding 8,5 to player 1 in block 0
+Adding 9,4 to player 1 in block 0
+Adding 10,3 to player 1 in block 0
+Adding 11,2 to player 1 in block 0
+Adding 12,1 to player 1 in block 0
+Adding 2,13 to player 2 in block 0
+Adding 3,12 to player 2 in block 0
+Adding 4,11 to player 2 in block 0
+Adding 5,10 to player 2 in block 0
+Adding 6,9 to player 2 in block 0
+Adding 7,8 to player 2 in block 0
+Adding 8,7 to player 2 in block 0
+Adding 9,6 to player 2 in block 0
+Adding 10,5 to player 2 in block 0
+Adding 11,4 to player 2 in block 0
+Adding 12,3 to player 2 in block 0
+Adding 13,2 to player 2 in block 0
+ending computation of vblocks
+
+
+Start of move:
+###############
+#*000000000000#
+#0000000000000#
+#0000000000000#
+#0000000000000#
+#0000000000000#
+#0000000000000#
+#0000000000000#
+#0000000000000#
+#0000000000000#
+#0000000000000#
+#0000000000000#
+#0000000000000#
+#000000000000$#
+###############
+running vblockscore on block id 0, has score 77:
+is battlefront! terminating early
+running vblockscore on block id 0, has score 77:
+is battlefront! terminating early
+Varonoi score  recursive on the starter map: 0
+Varonoi score on the starter map: 0

@@ -28,6 +28,7 @@ class Map {
   // a wall, FALSE means it's not a wall, and is passable. Any spaces that are
   // not on the board are deemed to be walls.
   bool IsWall(int x, int y) const;
+  bool IsPlayer(int x, int y) const;
 
   // Get my X and Y position. These are zero-based.
   int MyX() const;
@@ -66,11 +67,12 @@ class Map {
   int numBlocks() const;
   int getBlock(int x, int y) const;
   bool blockBattlefront(int block_id) const;
-  int blockVaronoi(int block_id) const;
+  int blockVaronoi(int block_id, int player) const;
   std::pair<int, int> cutVertex(int block_id) const;//returns (-1,-1) if not cut vertex
   std::set<int> neighborBlocks(int block_id) const;
 
   void printStats() const;
+  void printBlocks() const;
 
  private:
   void ReadFromFile(FILE *file_handle);
@@ -109,7 +111,8 @@ class Map {
   int num_blocks;
   std::vector<std::vector<int> > block_id;
   std::vector<bool> battlefront;
-  std::vector<int> block_varonoi;
+  std::vector<int> my_block_varonoi;
+  std::vector<int> opp_block_varonoi;
   std::vector< std::pair<int, int> > cut_location;
   std::vector< std::set<int> > block_neighbors;
 
