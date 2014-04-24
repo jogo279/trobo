@@ -14,12 +14,12 @@ using namespace std;
 
 typedef pair<int,int> coord;
 
-#define WIN 100000
-#define LOSE -100000
-#define DRAW -1
+#define WIN 1000000
+#define LOSE -1000000
+#define DRAW 0
 #define IN_PROGRESS 2
 
-#define DEFAULT_DEPTH 3
+#define DEFAULT_DEPTH 8
 
 #define MAX(a,b) ((a)>(b)?(a):(b))
 #define MIN(a,b) ((a)<(b)?(a):(b))
@@ -40,94 +40,6 @@ int gameState(const Map& map) {
   if (!my_status && opp_status) return WIN;
   if (my_status && !opp_status) return LOSE;
   return IN_PROGRESS; 
-}
-
-/* The varonia score of a map is the number of squares that I can reach before my opponent, 
- * less the number of squares that my opponent can reach before me. */
-int varonoiScore(const Map& map) {
-  set <pair<int, int> >::iterator it;
-  double start_time = CycleTimer::currentSeconds();
-
-  //check for endgame scenarios
-  int state = gameState(map);
-  if (state != IN_PROGRESS) return state;
-
-  //otherwise return varonoi score 
-  vector< vector<bool> > grid = map.GetWalls();
-  int my_score = 0, opp_score = 0;
-  int x, y;
-
-  //my_set and opp_set are essentially the "frontiers" of two simultaneous BFSs
-  set< pair<int, int> > my_set, my_set_new, opp_set, opp_set_new;
-  my_set.insert(make_pair(map.MyX(), map.MyY()));
-  opp_set.insert(make_pair(map.OpponentX(), map.OpponentY()));
-
-  while (!my_set.empty() || !opp_set.empty()) {
-    my_set_new.clear();
-    opp_set_new.clear();
-
-    // add neighboring squares to my_set_new
-    for (it = my_set.begin(); it != my_set.end(); ++it) {
-      x = (*it).first;
-      y = (*it).second;
-
-      int newX[4] = {x, x+1, x, x-1};
-      int newY[4] = {y-1, y, y+1, y};
-
-      for(int i=0; i<4; i++){
-        if (!map.IsWall(newX[i], newY[i]) && !grid[newX[i]][newY[i]]) {
-          my_set_new.insert(make_pair(newX[i], newY[i]));
-          // grid[newX[i]][newY[i]] = true;
-        }
-      }
-    }
-
-    // add neighboring squares to opp_set_new
-    for (it = opp_set.begin(); it != opp_set.end(); ++it) {
-      x = (*it).first;
-      y = (*it).second;
-
-      int newX[4] = {x, x+1, x, x-1};
-      int newY[4] = {y-1, y, y+1, y};
-
-      for(int i=0; i<4; i++){
-        if (!map.IsWall(newX[i], newY[i]) && !grid[newX[i]][newY[i]]) {
-          opp_set_new.insert(make_pair(newX[i], newY[i]));
-          // grid[newX[i]][newY[i]] = true;
-        }
-      }
-    }
-
-    for(it=my_set_new.begin(); it != my_set_new.end(); ++it) {
-      grid[(*it).first][(*it).second] = true;
-    }
-    for(it=opp_set_new.begin(); it != opp_set_new.end(); ++it) {
-      grid[(*it).first][(*it).second] = true;
-    }
-    // printf("My set size: %d, opp set size: %d\n", my_set_new.size(), opp_set_new.size());
-
-    //remove squares that are in both of our sets--we are equidistant from these squares
-    //see http://stackoverflow.com/questions/2874441/deleting-elements-from-stl-set-while-iterating
-    for (it = my_set_new.begin(); it != my_set_new.end(); ) {
-      set <pair<int, int> >::iterator it2 = opp_set_new.find(*it);
-      if (it2 != opp_set_new.end()) {
-        opp_set_new.erase(it2);
-        my_set_new.erase(it++);
-      } else {
-        ++it;
-      }
-    }
-
-    //update scores and sets
-    my_set = my_set_new;
-    opp_set = opp_set_new;
-    my_score += my_set.size();
-    opp_score += opp_set.size();
-  }
-
-  double end_time = CycleTimer::currentSeconds();
-  vscoreTime += (end_time - start_time);
-  return my_score - opp_score;
 }
 
 int varonoiBlockScore(const Map& map, int block_id, std::vector<bool> visited, int player) {
@@ -220,12 +132,43 @@ int varonoiBlockScoreWrapper(const Map& map) {
   return (my_score - opp_score);
 }
 
+/* Once we've entered the endgame, we can ignore our opponent */
+pair<string, int> endgame (int depth, const Map &map) {
+  int state = gameState(map);
+  if (state != IN_PROGRESS) return make_pair("-", LOSE);
+
+  string direction[4] = {"NORTH", "SOUTH", "EAST", "WEST"};
+  int score[4];
+  if (depth==0) {
+    return make_pair("",varonoiBlockScoreWrapper(map)); 
+  } else {
+    for(int i=0; i<4; i++){
+      coord next = step(direction[i],map.MyX(),map.MyY());
+      if(map.IsEmpty(next.first, next.second)) {
+        score[i] = endgame(depth-1, Map(map, 1, direction[i])).second;
+      }
+      else {
+        score[i] = LOSE;
+      }
+    }    
+  }
+
+  int best_score = INT_MIN;
+  string best_dir = "";
+  for(int i=0; i<4; i++){
+    if(best_score < score[i]) {
+      best_score = score[i];
+      best_dir = direction[i];
+    }
+  }
+
+  return make_pair(best_dir, best_score);
+}
+
+
 pair<string, int> minimax (bool maxi, int depth, const Map &map) {
   int state = gameState(map);
-  if (state != IN_PROGRESS) {
-    // fprintf(stderr, "Game no longer in progress\n");
-    return make_pair("-",state);
-  }
+  if (state != IN_PROGRESS) return make_pair("-",state);
 
   string direction[4] = {"NORTH", "SOUTH", "EAST", "WEST"};
   int score[4];
@@ -237,16 +180,10 @@ pair<string, int> minimax (bool maxi, int depth, const Map &map) {
   } else {
     for(int i=0; i<4; i++){
       coord next = maxi ? step(direction[i],map.MyX(),map.MyY()) : step(direction[i],map.OpponentX(),map.OpponentY());
-      // if (maxi)
-        // fprintf(stderr, "Player %d Going %s from %d,%d to %d,%d\n", maxi, direction[i].c_str(), map.MyX(),map.MyY(), next.first, next.second);
-      // else
-        // fprintf(stderr, "Player %d Going %s from %d,%d to %d,%d\n", maxi, direction[i].c_str(), map.OpponentX(),map.OpponentY(), next.first, next.second);
       if(map.IsEmpty(next.first, next.second)) {
         score[i] = vscore_coeff*minimax(!maxi, depth-1, Map(map, player, direction[i])).second;
-        // fprintf(stderr, "Direction %s has score %d\n", direction[i].c_str(), score[i]);
       }
       else {
-        // fprintf(stderr, "Direction %s is a wall\n", direction[i].c_str());
         score[i] = LOSE;
       }
     }
@@ -254,11 +191,8 @@ pair<string, int> minimax (bool maxi, int depth, const Map &map) {
 
   int best_score = INT_MIN;
   string best_dir = "";
-
-  // fprintf(stderr, "Maxi? %d\n", maxi);
   for(int i=0; i<4; i++){
-    // fprintf(stderr, "score[%d]: [%d] ", i, score[i]);
-    if(best_score < score[i]){
+    if(best_score < score[i]) {
       best_score = score[i];
       best_dir = direction[i];
     }
@@ -278,7 +212,7 @@ pair<string, int> alphabeta (bool maxi, int depth, const Map &map, int a, int b)
   int player = maxi ? 1 : 0;
 
   if(depth==0){
-    return make_pair("",varonoiScore(map));
+    return make_pair("",varonoiBlockScoreWrapper(map));
   }
 
   if(maxi){
@@ -312,12 +246,14 @@ string MakeMove(const Map& map) {
     // IMPLEMENT PARALLEL ALGORITHM HERE
     return minimax(true, depth, map).first; 
   } else{
+    if (map.endGame()) {
+      return endgame(depth, map).first;
+    }
     if(vm.count("ab"))
       return alphabeta(true, depth, map, INT_MIN, INT_MAX).first; 
     else{
       pair<string, int> result =  minimax(true, depth, map);
-      // if(vm.count("verbose"))
-        fprintf(stderr, "%s ksdfd\n", result.first.c_str());
+      fprintf(stderr, "%s ksdfd\n", result.first.c_str());
       return result.first;
     }
   }
@@ -353,7 +289,6 @@ int main(int argc, char* argv[]) {
       fprintf(stderr, "%d\n",map.IsEmpty(7, 6));
       fprintf(stderr, "\n\nStart of move: %d (should be %d)\n", map.IsWall(map.MyX(),map.MyY()), map.IsWall(0,0));
       fprintf(stderr, "Varonoi score  recursive on the starter map: %d\n", varonoiBlockScoreWrapper(map));
-      fprintf(stderr, "Varonoi score on the starter map: %d\n", varonoiScore(map));
       double start_time = CycleTimer::currentSeconds();
       // fprintf(stderr, "def\n");
       Map::MakeMove(MakeMove(map));
