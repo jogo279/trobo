@@ -19,7 +19,7 @@ typedef pair<int,int> coord;
 #define DRAW -1
 #define IN_PROGRESS 2
 
-#define DEFAULT_DEPTH 3
+#define DEFAULT_DEPTH 6
 
 #define MAX(a,b) ((a)>(b)?(a):(b))
 #define MIN(a,b) ((a)<(b)?(a):(b))
@@ -278,12 +278,17 @@ pair<string, int> alphabeta (bool maxi, int depth, const Map &map, int a, int b)
   int player = maxi ? 1 : 0;
 
   if(depth==0){
-    return make_pair("",varonoiScore(map));
+    return make_pair("",varonoiBlockScoreWrapper(map));
   }
 
   if(maxi){
     for(int i=0; i<4; i++){
-      score[i] = alphabeta(!maxi, depth-1, Map(map, player, direction[i]), a, b).second;
+      coord next = step(direction[i],map.MyX(),map.MyY());
+      if(map.IsEmpty(next.first, next.second)) {
+        score[i] = alphabeta(!maxi, depth-1, Map(map, player, direction[i]), a, b).second;
+      } else {
+        score[i] = LOSE;
+      }
       if(a < score[i]){
         a = score[i];
         best_dir = direction[i];
@@ -294,7 +299,12 @@ pair<string, int> alphabeta (bool maxi, int depth, const Map &map, int a, int b)
     return make_pair(best_dir, a);
   } else {
     for(int i=0; i<4; i++){
-      score[i] = alphabeta(!maxi, depth-1, Map(map, player, direction[i]), a, b).second;
+      coord next = step(direction[i],map.OpponentX(),map.OpponentY());
+      if(map.IsEmpty(next.first, next.second)) {
+        score[i] = alphabeta(!maxi, depth-1, Map(map, player, direction[i]), a, b).second;
+      } else {
+        score[i] = WIN;
+      }
       if(b > score[i]){
         b = score[i];
         best_dir = direction[i];
@@ -356,7 +366,7 @@ int main(int argc, char* argv[]) {
       fprintf(stderr, "Varonoi score on the starter map: %d\n", varonoiScore(map));
       double start_time = CycleTimer::currentSeconds();
       // fprintf(stderr, "def\n");
-      Map::MakeMove(MakeMove(map));
+      // Map::MakeMove(MakeMove(map));
       double end_time = CycleTimer::currentSeconds();
       fprintf(stderr, "Move took %.4f seconds\n", end_time - start_time);
       fprintf(stderr, "Spent %.4f seconds in varonoi function\n", vscoreTime);
