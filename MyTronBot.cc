@@ -12,15 +12,19 @@
 
 using namespace std;
 
+typedef pair<int,int> coord;
+
 #define WIN 100000
 #define LOSE -100000
 #define DRAW -1
 #define IN_PROGRESS 2
 
-#define DEFAULT_DEPTH 5
+#define DEFAULT_DEPTH 3
 
 #define MAX(a,b) ((a)>(b)?(a):(b))
 #define MIN(a,b) ((a)<(b)?(a):(b))
+
+#define step(dir,x,y) ((dir)=="NORTH"?(coord(x,y-1)) : ((dir)=="EAST"?(coord(x+1,y)):((dir)=="SOUTH"?(coord(x,y+1)):coord(x-1,y))))
 
 namespace po = boost::program_options;
 po::variables_map vm;
@@ -232,18 +236,34 @@ pair<string, int> minimax (bool maxi, int depth, const Map &map) {
       return make_pair("",varonoiBlockScoreWrapper(map));
   } else {
     for(int i=0; i<4; i++){
-      score[i] = vscore_coeff*minimax(!maxi, depth-1, Map(map, player, direction[i])).second;
+      coord next = maxi ? step(direction[i],map.MyX(),map.MyY()) : step(direction[i],map.OpponentX(),map.OpponentY());
+      // if (maxi)
+        // fprintf(stderr, "Player %d Going %s from %d,%d to %d,%d\n", maxi, direction[i].c_str(), map.MyX(),map.MyY(), next.first, next.second);
+      // else
+        // fprintf(stderr, "Player %d Going %s from %d,%d to %d,%d\n", maxi, direction[i].c_str(), map.OpponentX(),map.OpponentY(), next.first, next.second);
+      if(map.IsEmpty(next.first, next.second)) {
+        score[i] = vscore_coeff*minimax(!maxi, depth-1, Map(map, player, direction[i])).second;
+        // fprintf(stderr, "Direction %s has score %d\n", direction[i].c_str(), score[i]);
+      }
+      else {
+        // fprintf(stderr, "Direction %s is a wall\n", direction[i].c_str());
+        score[i] = LOSE;
+      }
     }
   }
 
   int best_score = INT_MIN;
   string best_dir = "";
+
+  // fprintf(stderr, "Maxi? %d\n", maxi);
   for(int i=0; i<4; i++){
+    // fprintf(stderr, "score[%d]: [%d] ", i, score[i]);
     if(best_score < score[i]){
       best_score = score[i];
       best_dir = direction[i];
     }
   }
+  // fprintf(stderr,"\n");
 
   if (maxi) return make_pair(best_dir, best_score);
   return make_pair(best_dir, -1*best_score);
@@ -328,9 +348,9 @@ int main(int argc, char* argv[]) {
     // std::cout << "Trobo testing mode:\n";
     while (true) {
       vscoreTime = 0.;
-
-      // fprintf(stderr, "abc\n");
       Map map;
+
+      fprintf(stderr, "%d\n",map.IsEmpty(7, 6));
       fprintf(stderr, "\n\nStart of move: %d (should be %d)\n", map.IsWall(map.MyX(),map.MyY()), map.IsWall(0,0));
       fprintf(stderr, "Varonoi score  recursive on the starter map: %d\n", varonoiBlockScoreWrapper(map));
       fprintf(stderr, "Varonoi score on the starter map: %d\n", varonoiScore(map));

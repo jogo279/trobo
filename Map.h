@@ -29,6 +29,7 @@ class Map {
   // not on the board are deemed to be walls.
   bool IsWall(int x, int y) const;
   bool IsPlayer(int x, int y) const;
+  bool IsEmpty(int x, int y) const;
 
   // Get my X and Y position. These are zero-based.
   int MyX() const;

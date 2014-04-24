@@ -188,7 +188,7 @@ void Map::computeComponents() {
 
   for (int i = 0; i < map_height; i++)
     for (int j = 0; j < map_width; j++)
-      if (!IsWall(i,j) && !IsPlayer(i,j)) points.insert(make_pair(i,j));
+      if (IsEmpty(i,j)) points.insert(make_pair(i,j));
 
   num_components = 0;
   while(!points.empty()) {
@@ -234,7 +234,7 @@ void Map::computeBlocks() {
 
   for (int i = 0; i < map_height; i++)
     for (int j = 0; j < map_width; j++)
-      if (!IsWall(i,j) && !IsPlayer(i,j) && block_id[i][j] == -1) points.insert(make_pair(i,j));
+      if (IsEmpty(i,j) && block_id[i][j] == -1) points.insert(make_pair(i,j));
 
   // found the cut vertices--now fill in the remainder of the data structures
   while (!points.empty()) {
@@ -267,7 +267,7 @@ void Map::blockDFS(int x, int y, int block_idx) {
  void Map::blockDFSHelper(int x, int y, int block_idx) {
   if (points.find(make_pair(x,y)) != points.end()) {
     blockDFS(x,y,block_idx);
-  } else if (!IsWall(x,y) && !IsPlayer(x,y) && block_id[x][y] >= 0 && block_id[x][y] != block_idx) {
+  } else if (IsEmpty(x,y) && block_id[x][y] >= 0 && block_id[x][y] != block_idx) {
     block_neighbors[block_idx].insert(block_id[x][y]);
     block_neighbors[block_id[x][y]].insert(block_idx);
   }
@@ -285,7 +285,7 @@ void Map::calculateArticulations(int x, int y, int parent) {
 
   wx = x;
   wy = y+1;
-  if (!IsWall(wx, wy) && !IsPlayer(wx,wy)) {
+  if (IsEmpty(wx,wy)) {
     if (num[wx][wy] == -1) {
       children++;
       calculateArticulations(wx, wy, nodenum);
@@ -300,7 +300,7 @@ void Map::calculateArticulations(int x, int y, int parent) {
   }
   wx = x;
   wy = y-1;
-  if (!IsWall(wx, wy) && !IsPlayer(wx,wy)) {
+  if (IsEmpty(wx,wy)) {
     if (num[wx][wy] == -1) {
       children++;
       calculateArticulations(wx, wy, nodenum);
@@ -315,7 +315,7 @@ void Map::calculateArticulations(int x, int y, int parent) {
   }
   wx = x+1;
   wy = y;
-  if (!IsWall(wx, wy) && !IsPlayer(wx,wy)) {
+  if (IsEmpty(wx,wy)) {
     if (num[wx][wy] == -1) {
       children++;
       calculateArticulations(wx, wy, nodenum);
@@ -330,7 +330,7 @@ void Map::calculateArticulations(int x, int y, int parent) {
   }
   wx = x-1;
   wy = y;
-  if (!IsWall(wx, wy) && !IsPlayer(wx,wy)) {
+  if (IsEmpty(wx,wy)) {
     if (num[wx][wy] == -1) {
       children++;
       calculateArticulations(wx, wy, nodenum);
@@ -418,6 +418,10 @@ int Map::Width() const {
 
 int Map::Height()  const {
   return map_height;
+}
+
+bool Map::IsEmpty(int x, int y) const {
+  return !IsPlayer(x,y) && !IsWall(x,y);
 }
 
 bool Map::IsPlayer(int x, int y) const {
