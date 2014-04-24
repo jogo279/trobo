@@ -352,9 +352,18 @@ void Map::calculateArticulations(int x, int y, int parent) {
 
 
 
-//TODO
 bool Map::endGame() const {
-  return component_id[player_one_x][player_one_y] != component_id[player_two_x][player_two_y];
+  set<int> my_components;
+  my_components.insert(component_id[player_one_x][player_one_y-1]);
+  my_components.insert(component_id[player_one_x][player_one_y+1]);
+  my_components.insert(component_id[player_one_x+1][player_one_y]);
+  my_components.insert(component_id[player_one_x-1][player_one_y]);
+  my_components.erase(-1);
+  if (my_components.find(component_id[player_two_x][player_two_y-1]) != my_components.end()) return false;
+  if (my_components.find(component_id[player_two_x][player_two_y+1]) != my_components.end()) return false;
+  if (my_components.find(component_id[player_two_x+1][player_two_y]) != my_components.end()) return false;
+  if (my_components.find(component_id[player_two_x-1][player_two_y]) != my_components.end()) return false;
+  return true;
 }
 
 Map::Map(const Map &other, int player, string direction) {
