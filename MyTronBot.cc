@@ -277,12 +277,12 @@ pair<string, int> alphabeta (bool maxi, int cur_depth, int max_depth, const Map 
     return make_pair("",varonoiBlockScoreWrapper(map));
   }
 
-  // it = cache.find(move_seq);
-  // if (it != cache.end()) {
-  //   int best_guess = it->second;
-  //   indices.remove(best_guess);
-  //   indices.push_front(best_guess);
-  // }
+  it = cache.find(move_seq);
+  if (it != cache.end()) {
+    int best_guess = it->second;
+    indices.remove(best_guess);
+    indices.push_front(best_guess);
+  }
 
   if(maxi){
     for(std::list<int>::iterator it = indices.begin(); it !=indices.end(); ++it){
