@@ -1,0 +1,17 @@
++OK|15 15|################
+#             2#
+#              #
+# ##############
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+############## #
+#              #
+#1             #
+################
+|TroBo|Opponent|NSEWSWEWNWEWSWEWNWEWSWEWEWEWESESNEEEEEEENENEWSWSWSWSWEWSNEWESNWWWNWWWNNNWNSEWSNSNENSNENNNNEWSNSESESSESNSNSNWNSEESESNENNNNNENSESSSSSSSSWSNSNWWWSWSW|+OK

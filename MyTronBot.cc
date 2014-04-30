@@ -19,7 +19,8 @@ typedef pair<int,int> coord;
 #define DRAW 0
 #define IN_PROGRESS 2
 
-#define DEFAULT_DEPTH 8
+#define DEFAULT_TIME 1.0
+#define START_DEPTH 2
 
 #define MAX(a,b) ((a)>(b)?(a):(b))
 #define MIN(a,b) ((a)<(b)?(a):(b))
@@ -30,6 +31,12 @@ namespace po = boost::program_options;
 po::variables_map vm;
 
 double vscoreTime;
+double startTime, timeLimit;
+
+double timeLeft() {
+  return timeLimit - (CycleTimer::currentSeconds() - startTime);
+}
+
 
 int gameState(const Map& map) {
   if (map.MyX() == map.OpponentX() && map.MyY() == map.OpponentY()) return DRAW;
@@ -134,18 +141,23 @@ int varonoiBlockScoreWrapper(const Map& map) {
 
 /* Once we've entered the endgame, we can ignore our opponent */
 pair<string, int> endgame (int depth, const Map &map) {
+  if (timeLeft() < 0) return make_pair("T", LOSE);
   int state = gameState(map);
   if (state != IN_PROGRESS) return make_pair("-", LOSE);
 
   string direction[4] = {"NORTH", "SOUTH", "EAST", "WEST"};
   int score[4];
+  pair<string, int> child_eg;
+
   if (depth==0) {
     return make_pair("",varonoiBlockScoreWrapper(map)); 
   } else {
     for(int i=0; i<4; i++){
       coord next = step(direction[i],map.MyX(),map.MyY());
       if(map.IsEmpty(next.first, next.second)) {
-        score[i] = endgame(depth-1, Map(map, 1, direction[i])).second+1;
+        child_eg = endgame(depth-1, Map(map, 1, direction[i]));
+        if (child_eg.first == "T") return child_eg;
+        score[i] = child_eg.second + 1;
       }
       else {
         score[i] = LOSE;
@@ -167,11 +179,13 @@ pair<string, int> endgame (int depth, const Map &map) {
 
 
 pair<string, int> minimax (bool maxi, int depth, const Map &map) {
+  if (timeLeft() < 0) return make_pair("T", LOSE);
   int state = gameState(map);
   if (state != IN_PROGRESS) return make_pair("-",state);
 
   string direction[4] = {"NORTH", "SOUTH", "EAST", "WEST"};
   int score[4];
+  pair<string, int> child_mm;
   int player = maxi ? 1 : 0;
   int vscore_coeff = maxi ? 1 : -1;
 
@@ -181,7 +195,9 @@ pair<string, int> minimax (bool maxi, int depth, const Map &map) {
     for(int i=0; i<4; i++){
       coord next = maxi ? step(direction[i],map.MyX(),map.MyY()) : step(direction[i],map.OpponentX(),map.OpponentY());
       if(map.IsEmpty(next.first, next.second)) {
-        score[i] = vscore_coeff*minimax(!maxi, depth-1, Map(map, player, direction[i])).second;
+        child_mm = minimax(!maxi, depth-1, Map(map, player, direction[i]));
+        if (child_mm.first == "T") return child_mm;
+        score[i] = vscore_coeff*child_mm.second;
       }
       else {
         score[i] = LOSE;
@@ -204,10 +220,12 @@ pair<string, int> minimax (bool maxi, int depth, const Map &map) {
 }
 
 pair<string, int> alphabeta (bool maxi, int depth, const Map &map, int a, int b) {
+  if (timeLeft() < 0) return make_pair("T", LOSE);
   int state = gameState(map);
   if (state != IN_PROGRESS) return make_pair("-",state);
   string direction[4] = {"NORTH", "SOUTH", "EAST", "WEST"};
   int score[4];
+  pair<string, int> child_ab;
   string best_dir;
   int player = maxi ? 1 : 0;
 
@@ -219,7 +237,9 @@ pair<string, int> alphabeta (bool maxi, int depth, const Map &map, int a, int b)
     for(int i=0; i<4; i++){
       coord next = step(direction[i],map.MyX(),map.MyY());
       if(map.IsEmpty(next.first, next.second)) {
-        score[i] = alphabeta(!maxi, depth-1, Map(map, player, direction[i]), a, b).second;
+        child_ab = alphabeta(!maxi, depth-1, Map(map, player, direction[i]), a, b);
+        if (child_ab.first == "T") return child_ab;
+        score[i] = child_ab.second;
       } else {
         score[i] = LOSE;
       }
@@ -235,7 +255,9 @@ pair<string, int> alphabeta (bool maxi, int depth, const Map &map, int a, int b)
     for(int i=0; i<4; i++){
       coord next = step(direction[i],map.OpponentX(),map.OpponentY());
       if(map.IsEmpty(next.first, next.second)) {
-        score[i] = alphabeta(!maxi, depth-1, Map(map, player, direction[i]), a, b).second;
+        child_ab = alphabeta(!maxi, depth-1, Map(map, player, direction[i]), a, b);
+        if (child_ab.first == "T") return child_ab;
+        score[i] = child_ab.second;
       } else {
         score[i] = WIN;
       }
@@ -251,32 +273,42 @@ pair<string, int> alphabeta (bool maxi, int depth, const Map &map, int a, int b)
 }
 
 string MakeMove(const Map& map) {
-  int depth = vm.count("depth") ? vm["depth"].as<int>(): DEFAULT_DEPTH;
-  if(vm.count("parallel")){
-    // IMPLEMENT PARALLEL ALGORITHM HERE
-    return minimax(true, depth, map).first; 
-  } else{
-    if (map.endGame()) {
-      return endgame(depth, map).first;
+  startTime = CycleTimer::currentSeconds();
+  timeLimit =(vm.count("time") ? vm["time"].as<double>(): DEFAULT_TIME) * .99;//multiply by .99 to leave error margin
+
+  int depth = START_DEPTH;
+  string cur_move, temp;
+
+  while (timeLeft() > 0) {
+    if(vm.count("parallel")){
+      // IMPLEMENT PARALLEL ALGORITHM HERE
+      temp = minimax(true, depth, map).first; 
+    } else {
+      if (map.endGame()) {
+        temp = endgame(depth, map).first;
+      }
+      if(vm.count("ab"))
+        temp = alphabeta(true, depth, map, INT_MIN, INT_MAX).first; 
+      else{
+        temp = minimax(true, depth, map).first;
+      }
     }
-    if(vm.count("ab"))
-      return alphabeta(true, depth, map, INT_MIN, INT_MAX).first; 
-    else{
-      pair<string, int> result =  minimax(true, depth, map);
-      fprintf(stderr, "%s ksdfd\n", result.first.c_str());
-      return result.first;
-    }
+    if (temp != "T") cur_move = temp;
+    depth +=2;
+    fprintf(stderr, "Depth: %d, Move: %s, Time Left: %.4f\n", depth, temp.c_str(), timeLeft());
   }
+  return cur_move;
 }
 
 // Ignore this function. It is just handling boring stuff for you, like
 // communicating with the Tron tournament engine.
 int main(int argc, char* argv[]) {
+
   po::options_description desc("Options");   
   desc.add_options()
     ("help,h", "Print help messages")
     ("verbose,v", "Turn on verbose testing / benchmark")
-    ("depth,d", po::value<int>(), "Maximum search depth")
+    ("time,t", po::value<int>(), "Time limit (ms)")
     ("parallel,p", "Use parallel algorithm")
     ("ab", "alphabeta pruning");
 
