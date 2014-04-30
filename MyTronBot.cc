@@ -9,6 +9,8 @@
 #include <iostream> 
 #include "CycleTimer.h"
 #include <boost/program_options.hpp>
+#include <unordered_map>
+#include <list>
 
 using namespace std;
 
@@ -32,6 +34,42 @@ po::variables_map vm;
 
 double vscoreTime;
 double startTime, timeLimit;
+unordered_map<int, char> cache;
+int counter;
+
+int updateMoveSeq(int move_seq, int move, int depth) {
+  return move_seq + (move << 2*depth);
+}
+
+/* Given a history of moves, and a current move (at a current depth), cache
+ * the move and return the new move_seq */
+void cacheMove(int move_seq, string move_str, int depth) {
+  char move;
+  int new_move_seq;
+  int c = (int)move_str[0];
+  switch (c) {
+    case 'n':
+    case 'N':
+      move = 0;
+      break;
+    case 's':
+    case 'S':
+      move = 1;
+      break;
+    case 'e':
+    case 'E':
+      move = 2;
+      break;
+    case 'w':
+    case 'W':
+      move = 3;
+      break;
+    default:
+      return;
+      break;
+  }
+  cache[move_seq] = move;
+}
 
 double timeLeft() {
   return timeLimit - (CycleTimer::currentSeconds() - startTime);
@@ -140,7 +178,7 @@ int varonoiBlockScoreWrapper(const Map& map) {
 }
 
 /* Once we've entered the endgame, we can ignore our opponent */
-pair<string, int> endgame (int depth, const Map &map) {
+pair<string, int> endgame (int cur_depth, int max_depth, const Map &map, int move_seq) {
   if (timeLeft() < 0) return make_pair("T", LOSE);
   int state = gameState(map);
   if (state != IN_PROGRESS) return make_pair("-", LOSE);
@@ -149,13 +187,13 @@ pair<string, int> endgame (int depth, const Map &map) {
   int score[4];
   pair<string, int> child_eg;
 
-  if (depth==0) {
+  if (cur_depth==max_depth) {
     return make_pair("",varonoiBlockScoreWrapper(map)); 
   } else {
     for(int i=0; i<4; i++){
       coord next = step(direction[i],map.MyX(),map.MyY());
       if(map.IsEmpty(next.first, next.second)) {
-        child_eg = endgame(depth-1, Map(map, 1, direction[i]));
+        child_eg = endgame(cur_depth+1, max_depth, Map(map, 1, direction[i]), updateMoveSeq(move_seq, i, cur_depth));
         if (child_eg.first == "T") return child_eg;
         score[i] = child_eg.second + 1;
       }
@@ -174,11 +212,12 @@ pair<string, int> endgame (int depth, const Map &map) {
     }
   }
 
+  cacheMove(move_seq, best_dir, cur_depth);
   return make_pair(best_dir, best_score);
 }
 
 
-pair<string, int> minimax (bool maxi, int depth, const Map &map) {
+pair<string, int> minimax (bool maxi, int cur_depth, int max_depth, const Map &map, int move_seq) {
   if (timeLeft() < 0) return make_pair("T", LOSE);
   int state = gameState(map);
   if (state != IN_PROGRESS) return make_pair("-",state);
@@ -189,13 +228,13 @@ pair<string, int> minimax (bool maxi, int depth, const Map &map) {
   int player = maxi ? 1 : 0;
   int vscore_coeff = maxi ? 1 : -1;
 
-  if(depth==0){
+  if(cur_depth==max_depth){
       return make_pair("",varonoiBlockScoreWrapper(map));
   } else {
     for(int i=0; i<4; i++){
       coord next = maxi ? step(direction[i],map.MyX(),map.MyY()) : step(direction[i],map.OpponentX(),map.OpponentY());
       if(map.IsEmpty(next.first, next.second)) {
-        child_mm = minimax(!maxi, depth-1, Map(map, player, direction[i]));
+        child_mm = minimax(!maxi, cur_depth+1, max_depth, Map(map, player, direction[i]), updateMoveSeq(move_seq, i, cur_depth));
         if (child_mm.first == "T") return child_mm;
         score[i] = vscore_coeff*child_mm.second;
       }
@@ -214,12 +253,13 @@ pair<string, int> minimax (bool maxi, int depth, const Map &map) {
     }
   }
   // fprintf(stderr,"\n");
-
+  cacheMove(move_seq, best_dir, cur_depth);
   if (maxi) return make_pair(best_dir, best_score);
   return make_pair(best_dir, -1*best_score);
 }
 
-pair<string, int> alphabeta (bool maxi, int depth, const Map &map, int a, int b) {
+pair<string, int> alphabeta (bool maxi, int cur_depth, int max_depth, const Map &map, int a, int b, int move_seq) {
+  counter++;
   if (timeLeft() < 0) return make_pair("T", LOSE);
   int state = gameState(map);
   if (state != IN_PROGRESS) return make_pair("-",state);
@@ -228,16 +268,28 @@ pair<string, int> alphabeta (bool maxi, int depth, const Map &map, int a, int b)
   pair<string, int> child_ab;
   string best_dir;
   int player = maxi ? 1 : 0;
+  std::unordered_map<int, char>::iterator it;
+  std::list<int> indices;
+  for (int i = 0; i < 4; i++) indices.push_back(i);
+  int i, best_guess;
 
-  if(depth==0){
+  if(cur_depth == max_depth){
     return make_pair("",varonoiBlockScoreWrapper(map));
   }
 
+  // it = cache.find(move_seq);
+  // if (it != cache.end()) {
+  //   int best_guess = it->second;
+  //   indices.remove(best_guess);
+  //   indices.push_front(best_guess);
+  // }
+
   if(maxi){
-    for(int i=0; i<4; i++){
+    for(std::list<int>::iterator it = indices.begin(); it !=indices.end(); ++it){
+      i = *it;
       coord next = step(direction[i],map.MyX(),map.MyY());
       if(map.IsEmpty(next.first, next.second)) {
-        child_ab = alphabeta(!maxi, depth-1, Map(map, player, direction[i]), a, b);
+        child_ab = alphabeta(!maxi, cur_depth+1, max_depth, Map(map, player, direction[i]), a, b, updateMoveSeq(move_seq, i, cur_depth));
         if (child_ab.first == "T") return child_ab;
         score[i] = child_ab.second;
       } else {
@@ -250,12 +302,14 @@ pair<string, int> alphabeta (bool maxi, int depth, const Map &map, int a, int b)
       if (b<=a)
         break;
     }
+    cacheMove(move_seq, best_dir, cur_depth);
     return make_pair(best_dir, a);
   } else {
-    for(int i=0; i<4; i++){
+    for(std::list<int>::iterator it = indices.begin(); it !=indices.end(); ++it){
+      i = *it;
       coord next = step(direction[i],map.OpponentX(),map.OpponentY());
       if(map.IsEmpty(next.first, next.second)) {
-        child_ab = alphabeta(!maxi, depth-1, Map(map, player, direction[i]), a, b);
+        child_ab = alphabeta(!maxi, cur_depth+1, max_depth, Map(map, player, direction[i]), a, b, updateMoveSeq(move_seq, i, cur_depth));
         if (child_ab.first == "T") return child_ab;
         score[i] = child_ab.second;
       } else {
@@ -268,6 +322,7 @@ pair<string, int> alphabeta (bool maxi, int depth, const Map &map, int a, int b)
       if (b<=a)
         break;
     }
+    cacheMove(move_seq, best_dir, cur_depth);
     return make_pair(best_dir, b);
   }
 }
@@ -282,20 +337,23 @@ string MakeMove(const Map& map) {
   while (timeLeft() > 0) {
     if(vm.count("parallel")){
       // IMPLEMENT PARALLEL ALGORITHM HERE
-      temp = minimax(true, depth, map).first; 
+      temp = minimax(true, 0, depth, map, 0).first; 
     } else {
       if (map.endGame()) {
-        temp = endgame(depth, map).first;
+        temp = endgame(0, depth, map, 0).first;
       }
-      if(vm.count("ab"))
-        temp = alphabeta(true, depth, map, INT_MIN, INT_MAX).first; 
-      else{
-        temp = minimax(true, depth, map).first;
+      if(vm.count("ab")) {
+        temp = alphabeta(true, 0, depth, map, INT_MIN, INT_MAX, 0).first;
+        
+      } else {
+        temp = minimax(true, 0, depth, map, 0).first;
       }
     }
     if (temp != "T") cur_move = temp;
+    fprintf(stderr, "Calls to alphabeta: %d\n", counter);
+    counter=0;
     depth +=2;
-    fprintf(stderr, "Depth: %d, Move: %s, Time Left: %.4f\n", depth, temp.c_str(), timeLeft());
+    //fprintf(stderr, "Depth: %d, Move: %s, Time Left: %.4f\n", depth, temp.c_str(), timeLeft());
   }
   return cur_move;
 }
@@ -343,6 +401,8 @@ int main(int argc, char* argv[]) {
       // Otherwise we are on trobo competition mode
       Map map;
       Map::MakeMove(MakeMove(map));
+      cache.clear();
+      counter=0;
     }
   } 
   return 0;

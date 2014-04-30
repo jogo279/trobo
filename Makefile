@@ -4,7 +4,7 @@
 # don't worry about it. Just use Visual C++ Express Edition or
 # Dev-C++ to work on your code.
 
-CXXFLAGS +=-g -lboost_program_options
+CXXFLAGS +=-g -lboost_program_options -std=c++11
 
 MyTronBot: MyTronBot.o Map.o
 	g++ $(CXXFLAGS) -o MyTronBot MyTronBot.o Map.o
