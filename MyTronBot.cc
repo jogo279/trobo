@@ -30,6 +30,7 @@ namespace po = boost::program_options;
 po::variables_map vm;
 
 double vscoreTime;
+int nodeCount;
 
 int gameState(const Map& map) {
   if (map.MyX() == map.OpponentX() && map.MyY() == map.OpponentY()) return DRAW;
@@ -167,6 +168,7 @@ pair<string, int> endgame (int depth, const Map &map) {
 
 
 pair<string, int> minimax (bool maxi, int depth, const Map &map) {
+  nodeCount++;
   int state = gameState(map);
   if (state != IN_PROGRESS) return make_pair("-",state);
 
@@ -204,6 +206,7 @@ pair<string, int> minimax (bool maxi, int depth, const Map &map) {
 }
 
 pair<string, int> alphabeta (bool maxi, int depth, const Map &map, int a, int b) {
+  nodeCount++;
   int state = gameState(map);
   if (state != IN_PROGRESS) return make_pair("-",state);
   string direction[4] = {"NORTH", "SOUTH", "EAST", "WEST"};
@@ -295,13 +298,14 @@ int main(int argc, char* argv[]) {
     while (true) {
       vscoreTime = 0.;
       Map map;
+      nodeCount=0;
 
-      fprintf(stderr, "%d\n",map.IsEmpty(7, 6));
       fprintf(stderr, "\n\nStart of move: %d (should be %d)\n", map.IsWall(map.MyX(),map.MyY()), map.IsWall(0,0));
       fprintf(stderr, "Varonoi score  recursive on the starter map: %d\n", varonoiBlockScoreWrapper(map));
       double start_time = CycleTimer::currentSeconds();
       // fprintf(stderr, "def\n");
-      // Map::MakeMove(MakeMove(map));
+      Map::MakeMove(MakeMove(map));
+      fprintf(stderr, "Nodecount: %d\n",nodeCount);
       double end_time = CycleTimer::currentSeconds();
       fprintf(stderr, "Move took %.4f seconds\n", end_time - start_time);
       fprintf(stderr, "Spent %.4f seconds in varonoi function\n", vscoreTime);
