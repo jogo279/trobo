@@ -253,20 +253,40 @@ pair<string, int> alphabeta (bool maxi, int depth, const Map &map, int a, int b)
   }
 }
 
+pair<string, int> parallel_minimax (bool maxi, int depth, const Map &map) {
+  return pair<string,int>("N",1);
+}
+
+pair<string, int> parallel_alphabeta (bool maxi, int depth, const Map &map, int a, int b) {
+  return pair<string,int>("N",1);;
+}
+
 string MakeMove(const Map& map) {
   int depth = vm.count("depth") ? vm["depth"].as<int>(): DEFAULT_DEPTH;
   if(vm.count("parallel")){
-    // IMPLEMENT PARALLEL ALGORITHM HERE
-    return minimax(true, depth, map).first; 
-  } else{
     if (map.endGame()) {
+      // Todo: parallel endgame?
       return endgame(depth, map).first;
     }
-    if(vm.count("ab"))
+    if(vm.count("ab")){
+      // Implement parallel AB here
+      return parallel_alphabeta(true, depth, map, INT_MIN, INT_MAX).first;
+    } else {
+      // Implement parallel minimax here
+      return parallel_minimax(true, depth, map).first; 
+    }
+  } else{
+    if (map.endGame()) {
+      // Sequential endgame
+      return endgame(depth, map).first;
+    } else if(vm.count("ab")){
+      // Sequential alphabeta
       return alphabeta(true, depth, map, INT_MIN, INT_MAX).first; 
+    }
     else{
+      // Sequential minimax
       pair<string, int> result =  minimax(true, depth, map);
-      fprintf(stderr, "%s ksdfd\n", result.first.c_str());
+      // fprintf(stderr, "%s ksdfd\n", result.first.c_str());
       return result.first;
     }
   }
@@ -281,7 +301,9 @@ int main(int argc, char* argv[]) {
     ("verbose,v", "Turn on verbose testing / benchmark")
     ("depth,d", po::value<int>(), "Maximum search depth")
     ("parallel,p", "Use parallel algorithm")
-    ("ab", "alphabeta pruning");
+    ("ab", "alphabeta pruning")
+    ("minimax", "standard minimax")
+    ("numworkers,n", "Number of CILK workers");
 
   po::store(po::parse_command_line(argc, argv, desc), vm);
 
