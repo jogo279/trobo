@@ -331,15 +331,15 @@ int main(int argc, char* argv[]) {
       Map map;
       nodeCount=0;
 
-      fprintf(stderr, "\n\nStart of move: %d (should be %d)\n", map.IsWall(map.MyX(),map.MyY()), map.IsWall(0,0));
-      fprintf(stderr, "Varonoi score  recursive on the starter map: %d\n", varonoiBlockScoreWrapper(map));
+      // fprintf(stderr, "\n\nStart of move: %d (should be %d)\n", map.IsWall(map.MyX(),map.MyY()), map.IsWall(0,0));
+      // fprintf(stderr, "Varonoi score  recursive on the starter map: %d\n", varonoiBlockScoreWrapper(map));
       double start_time = CycleTimer::currentSeconds();
       // fprintf(stderr, "def\n");
       Map::MakeMove(MakeMove(map));
-      fprintf(stderr, "Nodecount: %d\n",nodeCount);
+      // fprintf(stderr, "Nodecount: %d\n",nodeCount);
       double end_time = CycleTimer::currentSeconds();
       fprintf(stderr, "Move took %.4f seconds\n", end_time - start_time);
-      fprintf(stderr, "Spent %.4f seconds in varonoi function\n", vscoreTime);
+      // fprintf(stderr, "Spent %.4f seconds in varonoi function\n", vscoreTime);
     }
   } else {
     while (true) {
