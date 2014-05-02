@@ -9,6 +9,8 @@
 #include <iostream> 
 #include "CycleTimer.h"
 #include <boost/program_options.hpp>
+#include <cilk/cilk.h>
+#include <cilk/cilk_api.h>
 
 using namespace std;
 
@@ -303,9 +305,16 @@ int main(int argc, char* argv[]) {
     ("parallel,p", "Use parallel algorithm")
     ("ab", "alphabeta pruning")
     ("minimax", "standard minimax")
-    ("numworkers,n", "Number of CILK workers");
+    ("numworkers,n", po::value<string>(), "Number of CILK workers");
 
   po::store(po::parse_command_line(argc, argv, desc), vm);
+
+  if (vm.count("numworkers") && 0!= __cilkrts_set_param("nworkers",vm["numworkers"].as<string>().c_str())) {
+    printf("Failed to set worker count\n");
+    return 1;
+  } else if (vm.count("numworkers")) {
+    printf("Using %s workers\n", vm["numworkers"].as<string>().c_str());
+  }
 
   if (vm.count("help")) {
     std::cout << "Trobo options" << std::endl 
