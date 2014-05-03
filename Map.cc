@@ -11,8 +11,21 @@ using namespace std;
 Map::Map() {
   ReadFromFile(stdin);
   computeComponents();
-  computeBlocks();
-  computeVaronoi();
+}
+
+int Map::Score() const {
+  return score;
+}
+
+int Map::State() const {
+  if (MyX() == OpponentX() && MyY() == OpponentY()) return DRAW;
+  bool my_status = IsWall(MyX(), MyY());
+  bool opp_status = IsWall(OpponentX(), OpponentY());
+  bool collision_status = (MyX() == OpponentX() && MyY() == OpponentY());
+  if ((my_status && opp_status) || collision_status) return DRAW;
+  if (!my_status && opp_status) return WIN;
+  if (my_status && !opp_status) return LOSE;
+  return IN_PROGRESS; 
 }
 
 void Map::printStats() const {
@@ -366,7 +379,7 @@ bool Map::endGame() const {
   return true;
 }
 
-Map::Map(const Map &other, int player, string direction) {
+Map::Map(const Map &other, int player, string direction, bool computeScore) {
 
   player_one_x = other.MyX();
   player_one_y = other.MyY();
@@ -416,9 +429,13 @@ Map::Map(const Map &other, int player, string direction) {
       }
       break;
   }
-  computeComponents();  
-  computeBlocks();
-  computeVaronoi();
+
+  computeComponents();
+  if (computeScore) {
+    computeBlocks();
+    computeVaronoi();
+    varonoiBlockScoreWrapper();
+  }
 }
 
 int Map::Width() const {
@@ -531,11 +548,6 @@ set<int> Map::neighborBlocks(int block_id) const {
   return block_neighbors[block_id];
 }
 
-
-
-
-
-
 void Map::ReadFromFile(FILE *file_handle) {
   int x, y, c;
   int num_items = fscanf(file_handle, "%d %d\n", &map_width, &map_height);
@@ -600,4 +612,59 @@ void Map::ReadFromFile(FILE *file_handle) {
       return;
     }
   }
+}
+
+int Map::varonoiBlockScore(int block_id, std::vector<bool> visited, int player) {
+  int block_score = blockVaronoi(block_id, player);
+
+  if(blockBattlefront(block_id)) return block_score;
+
+  set<int> neighbor_blocks = neighborBlocks(block_id);
+  set<int>::iterator it;
+
+  int max_score = block_score;
+  for(it = neighbor_blocks.begin(); it!=neighbor_blocks.end(); it++){
+    int child_block = *it; 
+    int total_score;
+    if(!visited[child_block]) {
+      visited[child_block] = true;
+      int child_score = varonoiBlockScore(child_block, visited, player);
+      visited[child_block] = false;
+      total_score = block_score + child_score;
+      max_score = total_score > max_score ? total_score : max_score; 
+    }
+  }
+
+  return max_score;
+}
+
+void Map::varonoiBlockScoreWrapper() {
+  vector<bool> my_visited(numBlocks(),false);
+  vector<bool> opp_visited(numBlocks(),false);
+
+  int my_score=0, opp_score=0, new_score;
+  int myX[4] = {player_one_x, player_one_x+1, player_one_x, player_one_x-1};
+  int myY[4] = {player_one_y-1, player_one_y, player_one_y+1, player_one_y};
+  int oppX[4] = {player_two_x, player_two_x+1, player_two_x, player_two_x-1};
+  int oppY[4] = {player_two_y-1, player_two_y, player_two_y+1, player_two_y};
+  for(int i=0; i<4; i++){
+    int my_block_id = getBlock(myX[i],myY[i]);
+    if(my_block_id >=0){
+      my_visited[my_block_id] = true;
+      new_score = varonoiBlockScore(my_block_id, my_visited, 1);
+      my_visited[my_block_id] = false;
+
+      my_score = MAX(my_score,new_score);
+    }
+    int opp_block_id = getBlock(oppX[i],oppY[i]);
+    if(opp_block_id >=0){
+      opp_visited[opp_block_id] = true;
+      new_score = varonoiBlockScore(opp_block_id, opp_visited, 2);
+      opp_visited[opp_block_id] = false;
+
+      opp_score = MAX(opp_score,new_score);
+    }
+
+  }
+  score = my_score - opp_score;
 }

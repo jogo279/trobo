@@ -7,6 +7,14 @@
 #include <vector>
 #include <utility>
 #include <set>
+#include <climits>
+
+#define MAX(a,b) ((a)>(b)?(a):(b))
+#define MIN(a,b) ((a)<(b)?(a):(b))
+#define WIN 1000000
+#define LOSE -1000000
+#define DRAW 0
+#define IN_PROGRESS 2
 
 class Map {
  public:
@@ -15,7 +23,11 @@ class Map {
   Map();
 
   // Constructs a map by taking a base map, and applying a move to a player
-  Map(const Map &other, int player, std::string direction);
+  Map(const Map &other, int player, std::string direction, bool computeScore);
+
+  // Returns the heuristic score of the board
+  int Score() const;
+  int State() const;
 
 
   // Returns the width of the Tron map.
@@ -91,7 +103,12 @@ class Map {
   void findComponent(std::pair<int, int> point, int idx);
   void computeComponents();
 
+  int varonoiBlockScore(int block_id, std::vector<bool> visited, int player);
+  void varonoiBlockScoreWrapper();
+
  private:
+  int score;
+
   // Indicates whether or not each cell in the board is passable.
   std::vector<std::vector<bool> > is_wall;
 
@@ -130,5 +147,8 @@ class Map {
   std::set< std::pair<int, int> > opp_set;
   std::set< std::pair<int, int> > opp_set_new;
   std::vector<std::vector<bool> > grid;
+
+  // Data structures for Block Varonoi
+
 
 };
