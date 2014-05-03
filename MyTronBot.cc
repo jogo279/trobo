@@ -35,10 +35,9 @@ namespace po = boost::program_options;
 po::variables_map vm;
 
 double vscoreTime;
-<<<<<<< HEAD
+
 double startTime, timeLimit;
 unordered_map<int, char> cache;
-int counter;
 
 int updateMoveSeq(int move_seq, int move, int depth) {
   return move_seq + (move << 2*depth);
@@ -77,10 +76,6 @@ void cacheMove(int move_seq, string move_str, int depth) {
 double timeLeft() {
   return timeLimit - (CycleTimer::currentSeconds() - startTime);
 }
-
-=======
-int nodeCount;
->>>>>>> 457c2cbad777c386d2cb27315d0ea22205b110a4
 
 int gameState(const Map& map) {
   if (map.MyX() == map.OpponentX() && map.MyY() == map.OpponentY()) return DRAW;
@@ -222,14 +217,8 @@ pair<string, int> endgame (int cur_depth, int max_depth, const Map &map, int mov
   return make_pair(best_dir, best_score);
 }
 
-
-<<<<<<< HEAD
 pair<string, int> minimax (bool maxi, int cur_depth, int max_depth, const Map &map, int move_seq) {
   if (timeLeft() < 0) return make_pair("T", LOSE);
-=======
-pair<string, int> minimax (bool maxi, int depth, const Map &map) {
-  nodeCount++;
->>>>>>> 457c2cbad777c386d2cb27315d0ea22205b110a4
   int state = gameState(map);
   if (state != IN_PROGRESS) return make_pair("-",state);
 
@@ -270,7 +259,6 @@ pair<string, int> minimax (bool maxi, int depth, const Map &map) {
 }
 
 pair<string, int> alphabeta (bool maxi, int cur_depth, int max_depth, const Map &map, int a, int b, int move_seq) {
-  counter++;
   if (timeLeft() < 0) return make_pair("T", LOSE);
   int state = gameState(map);
   if (state != IN_PROGRESS) return make_pair("-",state);
@@ -369,8 +357,6 @@ string MakeMove(const Map& map) {
       }
     }
     if (temp != "T") cur_move = temp;
-    fprintf(stderr, "Calls to alphabeta: %d\n", counter);
-    counter=0;
     depth +=2;
     //fprintf(stderr, "Depth: %d, Move: %s, Time Left: %.4f\n", depth, temp.c_str(), timeLeft());
   }
@@ -413,14 +399,12 @@ int main(int argc, char* argv[]) {
     while (true) {
       vscoreTime = 0.;
       Map map;
-      nodeCount=0;
 
       // fprintf(stderr, "\n\nStart of move: %d (should be %d)\n", map.IsWall(map.MyX(),map.MyY()), map.IsWall(0,0));
       // fprintf(stderr, "Varonoi score  recursive on the starter map: %d\n", varonoiBlockScoreWrapper(map));
       double start_time = CycleTimer::currentSeconds();
       // fprintf(stderr, "def\n");
       Map::MakeMove(MakeMove(map));
-      // fprintf(stderr, "Nodecount: %d\n",nodeCount);
       double end_time = CycleTimer::currentSeconds();
       fprintf(stderr, "Move took %.4f seconds\n", end_time - start_time);
       // fprintf(stderr, "Spent %.4f seconds in varonoi function\n", vscoreTime);
@@ -431,7 +415,6 @@ int main(int argc, char* argv[]) {
       Map map;
       Map::MakeMove(MakeMove(map));
       cache.clear();
-      counter=0;
     }
   } 
   return 0;

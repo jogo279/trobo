@@ -4,9 +4,9 @@
 # don't worry about it. Just use Visual C++ Express Edition or
 # Dev-C++ to work on your code.
 
-
 CILK=~ericwong/cilkplus-4_8-install/bin/g++ -fcilkplus -lcilkrts
-CXXFLAGS +=-g -lboost_program_options
+
+CXXFLAGS +=-g -lboost_program_options -std=c++11
 
 MyTronBot: MyTronBot.o Map.o
 	$(CILK) $(CXXFLAGS) -o MyTronBot MyTronBot.o Map.o
