@@ -142,11 +142,52 @@ pair<string, int> minimax (bool maxi, int cur_depth, int max_depth, const Map &m
       best_dir = direction[i];
     }
   }
-  // fprintf(stderr,"\n");
+
   cacheMove(move_seq, best_dir, cur_depth);
   if (maxi) return make_pair(best_dir, best_score);
   return make_pair(best_dir, -1*best_score);
 }
+
+pair<string, int> parallel_minimax (bool maxi, int cur_depth, int max_depth, const Map &map, int move_seq) {
+  if (timeLeft() < 0) return make_pair("T", LOSE);
+  if (map.State() != IN_PROGRESS) return make_pair("-",map.State());
+
+  string direction[4] = {"NORTH", "SOUTH", "EAST", "WEST"};
+  pair<string, int> child_mm[4];//TODO: avoid false sharing--pad this or use some kind of cilk primative
+  int player = maxi ? 1 : 0;
+  int vscore_coeff = maxi ? 1 : -1;
+
+  if(cur_depth==max_depth){
+      return make_pair("",map.Score());
+  } else {
+    cilk_for(int i=0; i<4; i++){
+      coord next = maxi ? step(direction[i],map.MyX(),map.MyY()) : step(direction[i],map.OpponentX(),map.OpponentY());
+      if(map.IsEmpty(next.first, next.second)) {
+        child_mm[i] = parallel_minimax(!maxi, cur_depth+1, max_depth, Map(map, player, direction[i], cur_depth==max_depth-1), updateMoveSeq(move_seq, i, cur_depth));
+      } else {
+        child_mm[i] = make_pair("-", maxi ? LOSE : WIN);
+      }
+    }
+  }
+
+  int best_score = INT_MIN;
+  int cur_score;
+  string best_dir = "";
+  for(int i=0; i<4; i++){
+    if (child_mm[i].first == "T") return child_mm[i];
+    cur_score = vscore_coeff*child_mm[i].second;
+    if(best_score < cur_score) {
+      best_score = cur_score;
+      best_dir = direction[i];
+    }
+  }
+
+
+  cacheMove(move_seq, best_dir, cur_depth);//TODO: make cache thread-safe
+  if (maxi) return make_pair(best_dir, best_score);
+  return make_pair(best_dir, -1*best_score);
+}
+
 
 pair<string, int> alphabeta (bool maxi, int cur_depth, int max_depth, const Map &map, int a, int b, int move_seq) {
   if (timeLeft() < 0) return make_pair("T", LOSE);
@@ -217,14 +258,6 @@ pair<string, int> alphabeta (bool maxi, int cur_depth, int max_depth, const Map 
   }
 }
 
-pair<string, int> parallel_minimax (bool maxi, int depth, const Map &map) {
-  return pair<string,int>("N",1);
-}
-
-pair<string, int> parallel_alphabeta (bool maxi, int depth, const Map &map, int a, int b) {
-  return pair<string,int>("N",1);;
-}
-
 string MakeMove(const Map& map) {
   startTime = CycleTimer::currentSeconds();
   timeLimit =(vm.count("time") ? vm["time"].as<double>(): DEFAULT_TIME) * .99;//multiply by .99 to leave error margin
@@ -233,19 +266,20 @@ string MakeMove(const Map& map) {
   string cur_move, temp;
 
   while (timeLeft() > 0) {
-    if(vm.count("parallel")){
-      // IMPLEMENT PARALLEL ALGORITHM HERE
-      temp = minimax(true, 0, depth, map, 0).first; 
-    } else {
-      if (map.endGame()) {
+    if (map.endGame()) {
+      if (vm.count("parallel")) {
+        //TODO: parallel endgame
+        temp = endgame(0, depth, map, 0).first;
+      } else {
         temp = endgame(0, depth, map, 0).first;
       }
-      if(vm.count("ab")) {
-        temp = alphabeta(true, 0, depth, map, INT_MIN, INT_MAX, 0).first;
-        
+    } else if (vm.count("ab")) {
+      temp = alphabeta(true, 0, depth, map, INT_MIN, INT_MAX, 0).first;
+    } else {
+      if(vm.count("parallel")) {
+        temp = parallel_minimax(true, 0, depth, map, 0).first;
       } else {
         temp = minimax(true, 0, depth, map, 0).first;
-        fprintf(stderr, "done\n");
       }
     }
     if (temp != "T") cur_move = temp;
