@@ -11,6 +11,8 @@
 #include <boost/program_options.hpp>
 #include <unordered_map>
 #include <list>
+#include <cilk/cilk.h>
+#include <cilk/cilk_api.h>
 
 using namespace std;
 
@@ -33,6 +35,7 @@ namespace po = boost::program_options;
 po::variables_map vm;
 
 double vscoreTime;
+<<<<<<< HEAD
 double startTime, timeLimit;
 unordered_map<int, char> cache;
 int counter;
@@ -75,6 +78,9 @@ double timeLeft() {
   return timeLimit - (CycleTimer::currentSeconds() - startTime);
 }
 
+=======
+int nodeCount;
+>>>>>>> 457c2cbad777c386d2cb27315d0ea22205b110a4
 
 int gameState(const Map& map) {
   if (map.MyX() == map.OpponentX() && map.MyY() == map.OpponentY()) return DRAW;
@@ -217,8 +223,13 @@ pair<string, int> endgame (int cur_depth, int max_depth, const Map &map, int mov
 }
 
 
+<<<<<<< HEAD
 pair<string, int> minimax (bool maxi, int cur_depth, int max_depth, const Map &map, int move_seq) {
   if (timeLeft() < 0) return make_pair("T", LOSE);
+=======
+pair<string, int> minimax (bool maxi, int depth, const Map &map) {
+  nodeCount++;
+>>>>>>> 457c2cbad777c386d2cb27315d0ea22205b110a4
   int state = gameState(map);
   if (state != IN_PROGRESS) return make_pair("-",state);
 
@@ -327,6 +338,14 @@ pair<string, int> alphabeta (bool maxi, int cur_depth, int max_depth, const Map 
   }
 }
 
+pair<string, int> parallel_minimax (bool maxi, int depth, const Map &map) {
+  return pair<string,int>("N",1);
+}
+
+pair<string, int> parallel_alphabeta (bool maxi, int depth, const Map &map, int a, int b) {
+  return pair<string,int>("N",1);;
+}
+
 string MakeMove(const Map& map) {
   startTime = CycleTimer::currentSeconds();
   timeLimit =(vm.count("time") ? vm["time"].as<double>(): DEFAULT_TIME) * .99;//multiply by .99 to leave error margin
@@ -368,9 +387,18 @@ int main(int argc, char* argv[]) {
     ("verbose,v", "Turn on verbose testing / benchmark")
     ("time,t", po::value<int>(), "Time limit (ms)")
     ("parallel,p", "Use parallel algorithm")
-    ("ab", "alphabeta pruning");
+    ("ab", "alphabeta pruning")
+    ("minimax", "standard minimax")
+    ("numworkers,n", po::value<string>(), "Number of CILK workers");
 
   po::store(po::parse_command_line(argc, argv, desc), vm);
+
+  if (vm.count("numworkers") && 0!= __cilkrts_set_param("nworkers",vm["numworkers"].as<string>().c_str())) {
+    printf("Failed to set worker count\n");
+    return 1;
+  } else if (vm.count("numworkers")) {
+    printf("Using %s workers\n", vm["numworkers"].as<string>().c_str());
+  }
 
   if (vm.count("help")) {
     std::cout << "Trobo options" << std::endl 
@@ -385,16 +413,17 @@ int main(int argc, char* argv[]) {
     while (true) {
       vscoreTime = 0.;
       Map map;
+      nodeCount=0;
 
-      fprintf(stderr, "%d\n",map.IsEmpty(7, 6));
-      fprintf(stderr, "\n\nStart of move: %d (should be %d)\n", map.IsWall(map.MyX(),map.MyY()), map.IsWall(0,0));
-      fprintf(stderr, "Varonoi score  recursive on the starter map: %d\n", varonoiBlockScoreWrapper(map));
+      // fprintf(stderr, "\n\nStart of move: %d (should be %d)\n", map.IsWall(map.MyX(),map.MyY()), map.IsWall(0,0));
+      // fprintf(stderr, "Varonoi score  recursive on the starter map: %d\n", varonoiBlockScoreWrapper(map));
       double start_time = CycleTimer::currentSeconds();
       // fprintf(stderr, "def\n");
-      // Map::MakeMove(MakeMove(map));
+      Map::MakeMove(MakeMove(map));
+      // fprintf(stderr, "Nodecount: %d\n",nodeCount);
       double end_time = CycleTimer::currentSeconds();
       fprintf(stderr, "Move took %.4f seconds\n", end_time - start_time);
-      fprintf(stderr, "Spent %.4f seconds in varonoi function\n", vscoreTime);
+      // fprintf(stderr, "Spent %.4f seconds in varonoi function\n", vscoreTime);
     }
   } else {
     while (true) {
