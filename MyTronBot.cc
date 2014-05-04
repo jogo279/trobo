@@ -10,10 +10,6 @@
 #include <boost/program_options.hpp>
 #include <unordered_map>
 #include <list>
-#include <cilk/cilk.h>
-#include <cilk/cilk_api.h> 
-#include <cilk/reducer_max.h>
-#include <cilk/reducer_opadd.h>
 
 using namespace std;
 

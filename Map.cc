@@ -435,6 +435,7 @@ Map::Map(const Map &other, int player, string direction, bool computeScore) {
     computeBlocks();
     computeVaronoi();
     varonoiBlockScoreWrapper();
+    // parallelVaronoiBlockScoreWrapper();
   }
 }
 
@@ -667,4 +668,38 @@ void Map::varonoiBlockScoreWrapper() {
 
   }
   score = my_score - opp_score;
+}
+
+void Map::parallelVaronoiBlockScoreWrapper() {
+  vector<bool> my_visited(numBlocks(),false);
+  vector<bool> opp_visited(numBlocks(),false);
+
+  cilk::reducer_max<int> my_score, opp_score;
+  int new_score;
+
+  int myX[4] = {player_one_x, player_one_x+1, player_one_x, player_one_x-1};
+  int myY[4] = {player_one_y-1, player_one_y, player_one_y+1, player_one_y};
+  int oppX[4] = {player_two_x, player_two_x+1, player_two_x, player_two_x-1};
+  int oppY[4] = {player_two_y-1, player_two_y, player_two_y+1, player_two_y};
+
+  cilk_for(int i=0; i<4; i++){
+    int my_block_id = getBlock(myX[i],myY[i]);
+    if(my_block_id >=0){
+      my_visited[my_block_id] = true;
+      new_score = varonoiBlockScore(my_block_id, my_visited, 1);
+      my_visited[my_block_id] = false;
+
+      my_score.calc_max(new_score);
+    }
+    int opp_block_id = getBlock(oppX[i],oppY[i]);
+    if(opp_block_id >=0){
+      opp_visited[opp_block_id] = true;
+      new_score = varonoiBlockScore(opp_block_id, opp_visited, 2);
+      opp_visited[opp_block_id] = false;
+
+      opp_score.calc_max(new_score);
+    }
+
+  }
+  score = my_score.get_value() - opp_score.get_value();
 }

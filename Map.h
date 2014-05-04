@@ -8,6 +8,10 @@
 #include <utility>
 #include <set>
 #include <climits>
+#include <cilk/cilk.h>
+#include <cilk/cilk_api.h> 
+#include <cilk/reducer_max.h>
+#include <cilk/reducer_opadd.h>
 
 #define MAX(a,b) ((a)>(b)?(a):(b))
 #define MIN(a,b) ((a)<(b)?(a):(b))
@@ -105,6 +109,7 @@ class Map {
 
   int varonoiBlockScore(int block_id, std::vector<bool> visited, int player);
   void varonoiBlockScoreWrapper();
+  void parallelVaronoiBlockScoreWrapper();
 
  private:
   int score;
