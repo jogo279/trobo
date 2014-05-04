@@ -21,6 +21,7 @@ typedef pair<int,int> coord;
 
 #define DEFAULT_TIME 1.0
 #define START_DEPTH 6
+#define STOP_DEPTH 32
 
 #define step(dir,x,y) ((dir)=="NORTH"?(coord(x,y-1)) : ((dir)=="EAST"?(coord(x+1,y)):((dir)=="SOUTH"?(coord(x,y+1)):coord(x-1,y))))
 
@@ -105,8 +106,38 @@ pair<string, int> endgame (int cur_depth, int max_depth, const Map &map, int mov
     }
   }
 
-  cacheMove(move_seq, best_dir, cur_depth);
+  if (vm.count("ab")) cacheMove(move_seq, best_dir, cur_depth);
   return make_pair(best_dir, best_score);
+}
+
+pair<string, int> parallel_endgame (int cur_depth, int max_depth, const Map &map, int move_seq) {
+  if (timeLeft() < 0) return make_pair("T", LOSE);
+  if (map.State() != IN_PROGRESS) return make_pair("-", LOSE);
+
+  string direction[4] = {"NORTH", "SOUTH", "EAST", "WEST"};
+
+  cilk::reducer_max_index<int, int> best_move;
+  cilk::reducer_opadd<int> timeout;
+
+  if (cur_depth==max_depth) {
+    return make_pair("",map.Score()); 
+  } else {
+    cilk_for(int i=0; i<4; i++){
+      coord next = step(direction[i],map.MyX(),map.MyY());
+      pair<string, int> child_eg;
+      if(map.IsEmpty(next.first, next.second)) {
+        child_eg = parallel_endgame(cur_depth+1, max_depth, Map(map, 1, direction[i], cur_depth==max_depth-1), updateMoveSeq(move_seq, i, cur_depth));
+      } else {
+        child_eg= make_pair("-", LOSE);
+      }
+      best_move.calc_max(i, child_eg.second);
+      if (child_eg.first=="T") timeout += 1;
+    }    
+  }
+
+  if (timeout.get_value() > 0) return make_pair("T", LOSE);
+  //if (vm.count("ab")) cacheMove(move_seq, best_dir, cur_depth);
+  return make_pair(direction[best_move.get_index()], best_move.get_value());
 }
 
 pair<string, int> minimax (bool maxi, int cur_depth, int max_depth, const Map &map, int move_seq) {
@@ -171,16 +202,17 @@ pair<string, int> parallel_minimax (bool maxi, int cur_depth, int max_depth, con
       pair<string, int> child_mm;
       if(map.IsEmpty(next.first, next.second)) {
         child_mm = parallel_minimax(!maxi, cur_depth+1, max_depth, Map(map, player, direction[i], cur_depth==max_depth-1), updateMoveSeq(move_seq, i, cur_depth));
+        child_mm.second *= vscore_coeff;
       } else {
-        child_mm = make_pair("-", maxi ? LOSE : WIN);
+        child_mm = make_pair("-", LOSE);
       }
-      best_move.calc_max(i, vscore_coeff*child_mm.second);
+      best_move.calc_max(i, child_mm.second);
       if (child_mm.first=="T") timeout += 1;
     }
   }
 
   if (timeout.get_value() > 0) return make_pair("T", LOSE);
-  return make_pair(direction[best_move.get_index()], best_move.get_value());
+  return make_pair(direction[best_move.get_index()], vscore_coeff*best_move.get_value());
 }
 
 
@@ -260,11 +292,10 @@ string MakeMove(const Map& map) {
   int depth = START_DEPTH;
   string cur_move, temp;
 
-  while (timeLeft() > 0) {
+  while (timeLeft() > 0 && depth < STOP_DEPTH) {
     if (map.endGame()) {
       if (vm.count("parallel")) {
-        //TODO: parallel endgame
-        temp = endgame(0, depth, map, 0).first;
+        temp = parallel_endgame(0, depth, map, 0).first;
       } else {
         temp = endgame(0, depth, map, 0).first;
       }
