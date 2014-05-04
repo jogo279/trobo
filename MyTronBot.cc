@@ -6,7 +6,6 @@
 #include <utility>
 #include <cstdio>
 #include <iostream> 
-#include "CycleTimer.h"
 #include <boost/program_options.hpp>
 #include <unordered_map>
 #include <list>

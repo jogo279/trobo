@@ -430,13 +430,18 @@ Map::Map(const Map &other, int player, string direction, bool computeScore) {
       break;
   }
 
+  double start_time= CycleTimer::currentSeconds();
   computeComponents();
+  double end_time = CycleTimer::currentSeconds();;
+  fprintf(stderr, "calculation took %.4f seconds\n", end_time - start_time);
   if (computeScore) {
     computeBlocks();
-    computeVaronoi();
+    computeVaronoi()
+
     varonoiBlockScoreWrapper();
     // parallelVaronoiBlockScoreWrapper();
   }
+
 }
 
 int Map::Width() const {
@@ -682,24 +687,45 @@ void Map::parallelVaronoiBlockScoreWrapper() {
   int oppX[4] = {player_two_x, player_two_x+1, player_two_x, player_two_x-1};
   int oppY[4] = {player_two_y-1, player_two_y, player_two_y+1, player_two_y};
 
-  cilk_for(int i=0; i<4; i++){
-    int my_block_id = getBlock(myX[i],myY[i]);
-    if(my_block_id >=0){
-      my_visited[my_block_id] = true;
-      new_score = varonoiBlockScore(my_block_id, my_visited, 1);
-      my_visited[my_block_id] = false;
+  cilk_for(int i=0; i<8; i++){
+    if(i<4){
+      int my_block_id = getBlock(myX[i],myY[i]);
+      if(my_block_id >=0){
+        my_visited[my_block_id] = true;
+        new_score = varonoiBlockScore(my_block_id, my_visited, 1);
+        my_visited[my_block_id] = false;
 
-      my_score.calc_max(new_score);
+        my_score.calc_max(new_score);
+      }
+    } else {
+      int opp_block_id = getBlock(oppX[i-4],oppY[i-4]);
+      if(opp_block_id >=0){
+        opp_visited[opp_block_id] = true;
+        new_score = varonoiBlockScore(opp_block_id, opp_visited, 2);
+        opp_visited[opp_block_id] = false;
+
+        opp_score.calc_max(new_score);
+      }
     }
-    int opp_block_id = getBlock(oppX[i],oppY[i]);
-    if(opp_block_id >=0){
-      opp_visited[opp_block_id] = true;
-      new_score = varonoiBlockScore(opp_block_id, opp_visited, 2);
-      opp_visited[opp_block_id] = false;
-
-      opp_score.calc_max(new_score);
-    }
-
   }
+
+  // for(int i=0; i<4; i++){
+  //   int my_block_id = getBlock(myX[i],myY[i]);
+  //   if(my_block_id >=0){
+  //     my_visited[my_block_id] = true;
+  //     new_score = varonoiBlockScore(my_block_id, my_visited, 1);
+  //     my_visited[my_block_id] = false;
+
+  //     my_score.calc_max(new_score);
+  //   }
+  //   int opp_block_id = getBlock(oppX[i],oppY[i]);
+  //   if(opp_block_id >=0){
+  //     opp_visited[opp_block_id] = true;
+  //     new_score = varonoiBlockScore(opp_block_id, opp_visited, 2);
+  //     opp_visited[opp_block_id] = false;
+  //     opp_score.calc_max(new_score);
+  //   }
+  // }
+
   score = my_score.get_value() - opp_score.get_value();
 }
