@@ -11,14 +11,16 @@
 #include <unordered_map>
 #include <list>
 #include <cilk/cilk.h>
-#include <cilk/cilk_api.h>
+#include <cilk/cilk_api.h> 
+#include <cilk/reducer_max.h>
+#include <cilk/reducer_opadd.h>
 
 using namespace std;
 
 typedef pair<int,int> coord;
 
 #define DEFAULT_TIME 1.0
-#define START_DEPTH 2
+#define START_DEPTH 6
 
 #define step(dir,x,y) ((dir)=="NORTH"?(coord(x,y-1)) : ((dir)=="EAST"?(coord(x+1,y)):((dir)=="SOUTH"?(coord(x,y+1)):coord(x-1,y))))
 
@@ -148,44 +150,37 @@ pair<string, int> minimax (bool maxi, int cur_depth, int max_depth, const Map &m
   return make_pair(best_dir, -1*best_score);
 }
 
+
 pair<string, int> parallel_minimax (bool maxi, int cur_depth, int max_depth, const Map &map, int move_seq) {
   if (timeLeft() < 0) return make_pair("T", LOSE);
   if (map.State() != IN_PROGRESS) return make_pair("-",map.State());
 
   string direction[4] = {"NORTH", "SOUTH", "EAST", "WEST"};
-  pair<string, int> child_mm[4];//TODO: avoid false sharing--pad this or use some kind of cilk primative
   int player = maxi ? 1 : 0;
   int vscore_coeff = maxi ? 1 : -1;
+
+
+  cilk::reducer_max_index<int, int> best_move;
+  cilk::reducer_opadd<int> timeout;
 
   if(cur_depth==max_depth){
       return make_pair("",map.Score());
   } else {
     cilk_for(int i=0; i<4; i++){
       coord next = maxi ? step(direction[i],map.MyX(),map.MyY()) : step(direction[i],map.OpponentX(),map.OpponentY());
+      pair<string, int> child_mm;
       if(map.IsEmpty(next.first, next.second)) {
-        child_mm[i] = parallel_minimax(!maxi, cur_depth+1, max_depth, Map(map, player, direction[i], cur_depth==max_depth-1), updateMoveSeq(move_seq, i, cur_depth));
+        child_mm = parallel_minimax(!maxi, cur_depth+1, max_depth, Map(map, player, direction[i], cur_depth==max_depth-1), updateMoveSeq(move_seq, i, cur_depth));
       } else {
-        child_mm[i] = make_pair("-", maxi ? LOSE : WIN);
+        child_mm = make_pair("-", maxi ? LOSE : WIN);
       }
+      best_move.calc_max(i, vscore_coeff*child_mm.second);
+      if (child_mm.first=="T") timeout += 1;
     }
   }
 
-  int best_score = INT_MIN;
-  int cur_score;
-  string best_dir = "";
-  for(int i=0; i<4; i++){
-    if (child_mm[i].first == "T") return child_mm[i];
-    cur_score = vscore_coeff*child_mm[i].second;
-    if(best_score < cur_score) {
-      best_score = cur_score;
-      best_dir = direction[i];
-    }
-  }
-
-
-  cacheMove(move_seq, best_dir, cur_depth);//TODO: make cache thread-safe
-  if (maxi) return make_pair(best_dir, best_score);
-  return make_pair(best_dir, -1*best_score);
+  if (timeout.get_value() > 0) return make_pair("T", LOSE);
+  return make_pair(direction[best_move.get_index()], best_move.get_value());
 }
 
 
@@ -283,7 +278,7 @@ string MakeMove(const Map& map) {
       }
     }
     if (temp != "T") cur_move = temp;
-    depth +=2;
+    depth ++;
     fprintf(stderr, "Depth: %d, Move: %s, Time Left: %.4f\n", depth, temp.c_str(), timeLeft());
   }
   return cur_move;
