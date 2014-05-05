@@ -9,6 +9,7 @@
 #include <boost/program_options.hpp>
 #include <unordered_map>
 #include <list>
+#include <bitset>
 
 using namespace std;
 
@@ -19,6 +20,19 @@ typedef pair<int,int> coord;
 #define STOP_DEPTH 32
 
 #define step(dir,x,y) ((dir)=="NORTH"?(coord(x,y-1)) : ((dir)=="EAST"?(coord(x+1,y)):((dir)=="SOUTH"?(coord(x,y+1)):coord(x-1,y))))
+
+typedef unsigned long long cache_key;
+// Last 8 bits are the length, remaining bits are the key
+#define CACHE_SIZE (8*sizeof(cache_key))
+#define LEN_SIZE (8)
+#define SEQ_SIZE (CACHE_SIZE-8)
+#define MOVE_LEN_MASK (0xFFULL << SEQ_SIZE)
+#define MOVE_SEQ_MASK (~MOVE_LEN_MASK)
+#define MOVE_LEN(x) (0xFFULL & (x >> SEQ_SIZE))
+#define MOVE_SEQ(x) (MOVE_SEQ_MASK & x)
+#define INC_LEN(x) (x + (1ULL << SEQ_SIZE))
+#define SET_LEN(x,l) (MOVE_SEQ(x) | (l << SEQ_SIZE))
+#define SET_SEQ(x,s) ((MOVE_LEN_MASK & x) | (s & MOVE_SEQ_MASK))
 
 namespace po = boost::program_options;
 po::variables_map vm;
@@ -280,6 +294,75 @@ pair<string, int> alphabeta (bool maxi, int cur_depth, int max_depth, const Map 
   }
 }
 
+pair<string, int> parallel_alphabeta (bool maxi, int cur_depth, int max_depth, const Map &map, int a, int b, int move_seq) {
+  if (timeLeft() < 0) return make_pair("T", LOSE);
+  if (map.State() != IN_PROGRESS) return make_pair("-",map.State());
+  string direction[4] = {"NORTH", "SOUTH", "EAST", "WEST"};
+  int score[4];
+  pair<string, int> child_ab;
+  string best_dir;
+  int player = maxi ? 1 : 0;
+  std::unordered_map<int, char>::iterator it;
+  std::list<int> indices;
+  for (int i = 0; i < 4; i++) indices.push_back(i);
+  int i, best_guess;
+
+  if(cur_depth == max_depth){
+    return make_pair("",map.Score());
+  }
+
+  it = cache.find(move_seq);
+  if (it != cache.end()) {
+    int best_guess = it->second;
+    indices.remove(best_guess);
+    indices.push_front(best_guess);
+  }
+
+  if(maxi){
+    for(std::list<int>::iterator it = indices.begin(); it !=indices.end(); ++it){
+      i = *it;
+      coord next = step(direction[i],map.MyX(),map.MyY());
+      if(map.IsEmpty(next.first, next.second)) {
+        bool leaf = cur_depth==max_depth-1;
+        child_ab = alphabeta(!maxi, cur_depth+1, max_depth, Map(map, player, direction[i], leaf), a, b, updateMoveSeq(move_seq, i, cur_depth));
+        if (child_ab.first == "T") return child_ab;
+        score[i] = child_ab.second;
+      } else {
+        score[i] = LOSE;
+      }
+      if(a < score[i]){
+        a = score[i];
+        best_dir = direction[i];
+      }
+      if (b<=a)
+        break;
+    }
+    cacheMove(move_seq, best_dir, cur_depth);
+    return make_pair(best_dir, a);
+  } else {
+    for(std::list<int>::iterator it = indices.begin(); it !=indices.end(); ++it){
+      i = *it;
+      coord next = step(direction[i],map.OpponentX(),map.OpponentY());
+      if(map.IsEmpty(next.first, next.second)) {
+        bool leaf = cur_depth==max_depth-1;
+        child_ab = alphabeta(!maxi, cur_depth+1, max_depth, Map(map, player, direction[i], leaf), a, b, updateMoveSeq(move_seq, i, cur_depth));
+        if (child_ab.first == "T") return child_ab;
+        score[i] = child_ab.second;
+      } else {
+        score[i] = WIN;
+      }
+      if(b > score[i]){
+        b = score[i];
+        best_dir = direction[i];
+      }
+      if (b<=a)
+        break;
+    }
+    cacheMove(move_seq, best_dir, cur_depth);
+    return make_pair(best_dir, b);
+  }
+}
+
 string MakeMove(const Map& map) {
   startTime = CycleTimer::currentSeconds();
   timeLimit =(vm.count("time") ? vm["time"].as<double>(): DEFAULT_TIME) * .99;//multiply by .99 to leave error margin
@@ -295,7 +378,11 @@ string MakeMove(const Map& map) {
         temp = endgame(0, depth, map, 0).first;
       }
     } else if (vm.count("ab")) {
-      temp = alphabeta(true, 0, depth, map, INT_MIN, INT_MAX, 0).first;
+      if(vm.count("parallel")) {
+        temp = parallel_alphabeta(true,0,depth, map, INT_MIN, INT_MAX,0).first;
+      } else {
+        temp = alphabeta(true, 0, depth, map, INT_MIN, INT_MAX, 0).first;
+      }
     } else {
       if(vm.count("parallel")) {
         temp = parallel_minimax(true, 0, depth, map, 0).first;
@@ -322,15 +409,30 @@ int main(int argc, char* argv[]) {
     ("parallel,p", "Use parallel algorithm")
     ("ab", "alphabeta pruning")
     ("minimax", "standard minimax")
-    ("numworkers,n", po::value<string>(), "Number of CILK workers");
+    ("numworkers,n", po::value<string>(), "Number of CILK workers")
+    ("test", "debugging line");
 
   po::store(po::parse_command_line(argc, argv, desc), vm);
 
   if (vm.count("numworkers") && 0!= __cilkrts_set_param("nworkers",vm["numworkers"].as<string>().c_str())) {
-    printf("Failed to set worker count\n");
+    fprintf(stderr, "Failed to set worker count\n");
     return 1;
   } else if (vm.count("numworkers")) {
-    printf("Using %s workers\n", vm["numworkers"].as<string>().c_str());
+    fprintf(stderr, "Using %s workers\n", vm["numworkers"].as<string>().c_str());
+  }
+
+  if (vm.count("test")) {
+    fprintf(stderr, "Cache size: %d, length size: %d, seq size: %d\n", CACHE_SIZE, LEN_SIZE, SEQ_SIZE);
+    std::cout << bitset<CACHE_SIZE>(MOVE_LEN_MASK) << '\n' << bitset<CACHE_SIZE>(MOVE_SEQ_MASK) << '\n';
+    cache_key a = 0ULL;
+    std::cout << bitset<CACHE_SIZE>(INC_LEN(a)) << '\n';
+    std::cout << bitset<CACHE_SIZE>(SET_SEQ(a,0xF0F0ULL)) << '\n';
+    std::cout << bitset<CACHE_SIZE>(SET_LEN(a,0xF0ULL)) << '\n';
+    cache_key b = SET_LEN(SET_SEQ(a,0xF0F0ULL),0xF0ULL);
+    std::cout << bitset<CACHE_SIZE>(b) << '\n';
+    std::cout << bitset<CACHE_SIZE>(MOVE_LEN(b)) << '\n';
+    std::cout << bitset<CACHE_SIZE>(MOVE_SEQ(b)) << '\n';
+    return 0;
   }
 
   if (vm.count("help")) {

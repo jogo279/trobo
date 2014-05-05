@@ -436,7 +436,7 @@ Map::Map(const Map &other, int player, string direction, bool computeScore) {
   fprintf(stderr, "calculation took %.4f seconds\n", end_time - start_time);
   if (computeScore) {
     computeBlocks();
-    computeVaronoi()
+    computeVaronoi();
 
     varonoiBlockScoreWrapper();
     // parallelVaronoiBlockScoreWrapper();
