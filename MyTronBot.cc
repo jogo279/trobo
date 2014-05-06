@@ -11,6 +11,8 @@
 #include <list>
 #include <bitset>
 
+#include "tbb/concurrent_hash_map.h"
+
 using namespace std;
 
 typedef pair<int,int> coord;
@@ -25,13 +27,19 @@ typedef unsigned long long cache_key;
 // Last 8 bits are the length, remaining bits are the key
 #define CACHE_SIZE (8*sizeof(cache_key))
 #define LEN_SIZE (8)
-#define SEQ_SIZE (CACHE_SIZE-8)
+#define SEQ_SIZE (CACHE_SIZE-LEN_SIZE)
 #define MOVE_LEN_MASK (0xFFULL << SEQ_SIZE)
 #define MOVE_SEQ_MASK (~MOVE_LEN_MASK)
+
+// Returns the length of the move sequence
 #define MOVE_LEN(x) (0xFFULL & (x >> SEQ_SIZE))
+// Returns the move sequence
 #define MOVE_SEQ(x) (MOVE_SEQ_MASK & x)
+// Increments the length of the move sequence by 1
 #define INC_LEN(x) (x + (1ULL << SEQ_SIZE))
+// Sets the length of the move sequence to l
 #define SET_LEN(x,l) (MOVE_SEQ(x) | (l << SEQ_SIZE))
+// Sets the move sequence to s
 #define SET_SEQ(x,s) ((MOVE_LEN_MASK & x) | (s & MOVE_SEQ_MASK))
 
 namespace po = boost::program_options;
