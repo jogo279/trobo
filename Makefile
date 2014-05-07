@@ -7,7 +7,7 @@
 CILK=/afs/andrew/usr7/ericwong/cilkplus-4_8-install/bin/g++ -fcilkplus -lcilkrts
 #TBB=-I tbb42_20140122oss/include -L tbbzip/lib -ltbb
 
-CXXFLAGS +=-g -lboost_program_options -std=c++11
+CXXFLAGS +=-O2 -lboost_program_options -std=c++11
 
 MyTronBot: MyTronBot.o Map.o
 	$(CILK) $(CXXFLAGS) $(TBB) -o MyTronBot MyTronBot.o Map.o

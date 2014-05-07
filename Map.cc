@@ -433,7 +433,7 @@ Map::Map(const Map &other, int player, string direction, bool computeScore) {
   double start_time= CycleTimer::currentSeconds();
   computeComponents();
   double end_time = CycleTimer::currentSeconds();;
-  // fprintf(stderr, "calculation took %.4f seconds\n", end_time - start_time);
+  
   if (computeScore) {
     computeBlocks();
     computeVaronoi();

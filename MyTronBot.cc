@@ -48,6 +48,7 @@ po::variables_map vm;
 double vscoreTime;
 
 double startTime, timeLimit;
+int cache_count;
 unordered_map<int, char> cache;
 
 int updateMoveSeq(cache_key move_seq, int move, int depth) {
@@ -57,6 +58,7 @@ int updateMoveSeq(cache_key move_seq, int move, int depth) {
 /* Given a history of moves, and a current move (at a current depth), cache
  * the move and return the new move_seq */
 void cacheMove(cache_key move_seq, string move_str) {
+  cache_count++;
   char move;
   // cache_key new_move_seq;
   int c = (int)move_str[0];
@@ -123,7 +125,7 @@ pair<string, int> endgame (int cur_depth, int max_depth, const Map &map, cache_k
     }
   }
 
-  if (vm.count("ab")) cacheMove(move_seq, best_dir);
+  // if (vm.count("ab")) cacheMove(move_seq, best_dir);
   return make_pair(best_dir, best_score);
 }
 
@@ -193,7 +195,7 @@ pair<string, int> minimax (bool maxi, int cur_depth, int max_depth, const Map &m
     }
   }
 
-  cacheMove(move_seq, best_dir);
+  // cacheMove(move_seq, best_dir);
   if (maxi) return make_pair(best_dir, best_score);
   return make_pair(best_dir, -1*best_score);
 }
@@ -242,8 +244,8 @@ pair<string, int> alphabeta (bool maxi, int cur_depth, int max_depth, const Map 
   string best_dir;
   int player = maxi ? 1 : 0;
   std::unordered_map<int, char>::iterator it;
-  std::list<int> indices;
-  for (int i = 0; i < 4; i++) indices.push_back(i);
+  std::list<int> ord_children;
+  for (int i = 0; i < 4; i++) ord_children.push_back(i);
   int i, best_guess;
 
   if(cur_depth == max_depth){
@@ -253,12 +255,12 @@ pair<string, int> alphabeta (bool maxi, int cur_depth, int max_depth, const Map 
   it = cache.find(move_seq);
   if (it != cache.end()) {
     int best_guess = it->second;
-    indices.remove(best_guess);
-    indices.push_front(best_guess);
+    ord_children.remove(best_guess);
+    ord_children.push_front(best_guess);
   }
 
   if(maxi){
-    for(std::list<int>::iterator it = indices.begin(); it !=indices.end(); ++it){
+    for(std::list<int>::iterator it = ord_children.begin(); it !=ord_children.end(); ++it){
       i = *it;
       coord next = step(direction[i],map.MyX(),map.MyY());
       if(map.IsEmpty(next.first, next.second)) {
@@ -279,7 +281,7 @@ pair<string, int> alphabeta (bool maxi, int cur_depth, int max_depth, const Map 
     cacheMove(move_seq, best_dir);
     return make_pair(best_dir, a);
   } else {
-    for(std::list<int>::iterator it = indices.begin(); it !=indices.end(); ++it){
+    for(std::list<int>::iterator it = ord_children.begin(); it !=ord_children.end(); ++it){
       i = *it;
       coord next = step(direction[i],map.OpponentX(),map.OpponentY());
       if(map.IsEmpty(next.first, next.second)) {
@@ -305,71 +307,68 @@ pair<string, int> alphabeta (bool maxi, int cur_depth, int max_depth, const Map 
 pair<string, int> parallel_alphabeta (bool maxi, int cur_depth, int max_depth, const Map &map, int a, int b, cache_key move_seq, reducer_list &write_buffer) {
   if (timeLeft() < 0 && !vm.count("depth")) return make_pair("T", LOSE);
   if (map.State() != IN_PROGRESS) return make_pair("-",map.State());
+  if(cur_depth == max_depth) return make_pair("",map.Score());
+
   string direction[4] = {"NORTH", "SOUTH", "EAST", "WEST"};
-  int score[4];
-  pair<string, int> child_ab;
-  string best_dir;
   int player = maxi ? 1 : 0;
-  std::unordered_map<int, char>::iterator it;
-  std::list<int> indices;
-  for (int i = 0; i < 4; i++) indices.push_back(i);
-  int i, best_guess;
+  int best_guess = -1;
+  std::vector<int> ord_children;
 
-  if(cur_depth == max_depth){
-    return make_pair("",map.Score());
-  }
-
-  it = cache.find(move_seq);
+  std::unordered_map<int, char>::iterator it = cache.find(move_seq);
   if (it != cache.end()) {
-    int best_guess = it->second;
-    indices.remove(best_guess);
-    indices.push_front(best_guess);
+    best_guess = it->second;
+    ord_children.push_back(best_guess);
   }
+
+  for (int i = 0; i < 4; i++) {
+    coord next = maxi ? step(direction[i],map.MyX(),map.MyY()) : step(direction[i], map.OpponentX(), map.OpponentY());
+    if(map.IsEmpty(next.first, next.second) && best_guess != i) ord_children.push_back(i);
+  }
+
+  if (ord_children.size() == 0) return make_pair("L", maxi ? LOSE : WIN);
 
   if(maxi){
-    for(std::list<int>::iterator it = indices.begin(); it !=indices.end(); ++it){
-      i = *it;
-      coord next = step(direction[i],map.MyX(),map.MyY());
-      if(map.IsEmpty(next.first, next.second)) {
-        bool leaf = cur_depth==max_depth-1;
-        child_ab = alphabeta(!maxi, cur_depth+1, max_depth, Map(map, player, direction[i], leaf), a, b, updateMoveSeq(move_seq, i, cur_depth));
-        if (child_ab.first == "T") return child_ab;
-        score[i] = child_ab.second;
-      } else {
-        score[i] = LOSE;
+    pair<string, int> child_ab = parallel_alphabeta(!maxi, cur_depth + 1, max_depth, Map(map, player, direction[ord_children[0]], cur_depth==max_depth-1), a, b, updateMoveSeq(move_seq, ord_children[0], cur_depth), write_buffer);
+    cilk::reducer_max_index<int, int> best_move;
+    cilk::reducer_opadd<int> timeout;
+    best_move.calc_max(ord_children[0], child_ab.second);
+    
+    if (child_ab.first == "T") return child_ab;
+    if(a < child_ab.second) a = child_ab.second;
+    
+    if (b>a && ord_children.size()>1) {
+      cilk_for(int i = 1; i < ord_children.size(); i++) {
+        pair<string, int> child_ab_parr = parallel_alphabeta(!maxi, cur_depth + 1, max_depth, Map(map, player, direction[ord_children[i]], cur_depth==max_depth-1), a, b, updateMoveSeq(move_seq, ord_children[i], cur_depth), write_buffer);
+        if (child_ab_parr.first == "T") timeout += 1;
+        best_move.calc_max(ord_children[i], child_ab_parr.second);
       }
-      if(a < score[i]){
-        a = score[i];
-        best_dir = direction[i];
-      }
-      if (b<=a)
-        break;
     }
-    write_buffer.push_back(std::pair<int,string>(move_seq, best_dir));
-    // cacheMove(move_seq, best_dir, cur_depth);
-    return make_pair(best_dir, a);
+
+    if (timeout.get_value() > 0) return make_pair("T", LOSE);
+    write_buffer.push_back(std::pair<int,string>(move_seq, direction[best_move.get_index()]));
+    // cacheMove(move_seq, direction[best_move.get_index()], cur_depth);
+    return make_pair(direction[best_move.get_index()], best_move.get_value());
+
   } else {
-    for(std::list<int>::iterator it = indices.begin(); it !=indices.end(); ++it){
-      i = *it;
-      coord next = step(direction[i],map.OpponentX(),map.OpponentY());
-      if(map.IsEmpty(next.first, next.second)) {
-        bool leaf = cur_depth==max_depth-1;
-        child_ab = alphabeta(!maxi, cur_depth+1, max_depth, Map(map, player, direction[i], leaf), a, b, updateMoveSeq(move_seq, i, cur_depth));
-        if (child_ab.first == "T") return child_ab;
-        score[i] = child_ab.second;
-      } else {
-        score[i] = WIN;
+    pair<string, int> child_ab = parallel_alphabeta(!maxi, cur_depth + 1, max_depth, Map(map, player, direction[ord_children[0]], cur_depth==max_depth-1), a, b, updateMoveSeq(move_seq, ord_children[0], cur_depth), write_buffer);
+    cilk::reducer_min_index<int, int> best_move;
+    cilk::reducer_opadd<int> timeout;
+    best_move.calc_min(ord_children[0], child_ab.second);
+    if (child_ab.first == "T") return child_ab;
+    if(b > child_ab.second) b = child_ab.second;
+    
+    if (b>a && ord_children.size() > 1) {
+      cilk_for(int i = 1; i < ord_children.size(); i++) {
+        pair<string, int> child_ab_parr = parallel_alphabeta(!maxi, cur_depth + 1, max_depth, Map(map, player, direction[ord_children[i]], cur_depth==max_depth-1), a, b, updateMoveSeq(move_seq, ord_children[i], cur_depth), write_buffer);
+        if (child_ab_parr.first == "T") timeout += 1;
+        best_move.calc_min(ord_children[i], child_ab_parr.second);
       }
-      if(b > score[i]){
-        b = score[i];
-        best_dir = direction[i];
-      }
-      if (b<=a)
-        break;
     }
-    write_buffer.push_back(std::pair<int,string>(move_seq, best_dir));
-    // cacheMove(move_seq, best_dir, cur_depth);
-    return make_pair(best_dir, b);
+
+    if (timeout.get_value() > 0) return make_pair("T", LOSE);
+    write_buffer.push_back(std::pair<int,string>(move_seq, direction[best_move.get_index()]));
+    // cacheMove(move_seq, direction[best_move.get_index()], cur_depth);
+    return make_pair(direction[best_move.get_index()], best_move.get_value());
   }
 }
 
@@ -382,6 +381,7 @@ string MakeMove(const Map& map) {
 
   // If only benching a particular depth
   if(vm.count("depth")) {
+    depth = vm["depth"].as<int>();
     if (map.endGame()) {
       if (vm.count("parallel")) {
         temp = parallel_endgame(0, depth, map, 1).first;
@@ -419,12 +419,20 @@ string MakeMove(const Map& map) {
       }
     } else if (vm.count("ab")) {
       if(vm.count("parallel")) {
+        double start_time = CycleTimer::currentSeconds();
+
         reducer_list write_buffer;
         temp = parallel_alphabeta(true,0,depth, map, INT_MIN, INT_MAX,1, write_buffer).first;
+        double end_time = CycleTimer::currentSeconds();
+        fprintf(stderr, "parallel ab took %.4f seconds\n", end_time - start_time);
+        start_time = CycleTimer::currentSeconds();
         const std::list<std::pair<int,string>> &write_buffer_list = write_buffer.get_value();
+        fprintf(stderr,"Size of list: %d\n", write_buffer_list.size());
         for(std::list<std::pair<int,string>>::const_iterator i=write_buffer_list.begin(); i!= write_buffer_list.end(); i++){
           cacheMove((*i).first,((*i).second));
         }
+        end_time = CycleTimer::currentSeconds();
+        fprintf(stderr, "caching all moves took %.4f seconds\n", end_time - start_time);
       } else {
         temp = alphabeta(true, 0, depth, map, INT_MIN, INT_MAX, 1).first;
       }
@@ -456,7 +464,7 @@ int main(int argc, char* argv[]) {
     ("minimax", "standard minimax")
     ("numworkers,n", po::value<string>(), "Number of CILK workers")
     ("test", "debugging line")
-    ("depth,d","Search to a particular depth d");
+    ("depth,d", po::value<int>(), "Search to a particular depth d");
 
   po::store(po::parse_command_line(argc, argv, desc), vm);
 
@@ -486,6 +494,7 @@ int main(int argc, char* argv[]) {
               << desc << std::endl; 
     return 0;
   }
+      cache_count=0;
 
   // If in verbose mode, print all sorts of things
   if (vm.count("verbose")){
@@ -502,6 +511,7 @@ int main(int argc, char* argv[]) {
       Map::MakeMove(MakeMove(map));
       double end_time = CycleTimer::currentSeconds();
       fprintf(stderr, "Move took %.4f seconds\n", end_time - start_time);
+      fprintf(stderr, "cache size: %d\n", cache_count);
       // fprintf(stderr, "Spent %.4f seconds in varonoi function\n", vscoreTime);
     }
   } else {
