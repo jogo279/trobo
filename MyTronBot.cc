@@ -50,15 +50,15 @@ double vscoreTime;
 double startTime, timeLimit;
 unordered_map<int, char> cache;
 
-int updateMoveSeq(int move_seq, int move, int depth) {
-  return move_seq + (move << 2*depth);
+int updateMoveSeq(cache_key move_seq, int move, int depth) {
+  return move_seq + (cache_key)(move << 2*depth);
 }
 
 /* Given a history of moves, and a current move (at a current depth), cache
  * the move and return the new move_seq */
-void cacheMove(int move_seq, string move_str) {
+void cacheMove(cache_key move_seq, string move_str) {
   char move;
-  int new_move_seq;
+  // cache_key new_move_seq;
   int c = (int)move_str[0];
   switch (c) {
     case 'n':
@@ -89,7 +89,7 @@ double timeLeft() {
 }
 
 /* Once we've entered the endgame, we can ignore our opponent */
-pair<string, int> endgame (int cur_depth, int max_depth, const Map &map, int move_seq) {
+pair<string, int> endgame (int cur_depth, int max_depth, const Map &map, cache_key move_seq) {
   if (timeLeft() < 0 && !vm.count("depth")) return make_pair("T", LOSE);
   if (map.State() != IN_PROGRESS) return make_pair("-", LOSE);
 
@@ -127,7 +127,7 @@ pair<string, int> endgame (int cur_depth, int max_depth, const Map &map, int mov
   return make_pair(best_dir, best_score);
 }
 
-pair<string, int> parallel_endgame (int cur_depth, int max_depth, const Map &map, int move_seq) {
+pair<string, int> parallel_endgame (int cur_depth, int max_depth, const Map &map, cache_key move_seq) {
   if (timeLeft() < 0 && !vm.count("depth")) return make_pair("T", LOSE);
   if (map.State() != IN_PROGRESS) return make_pair("-", LOSE);
 
@@ -157,7 +157,7 @@ pair<string, int> parallel_endgame (int cur_depth, int max_depth, const Map &map
   return make_pair(direction[best_move.get_index()], best_move.get_value());
 }
 
-pair<string, int> minimax (bool maxi, int cur_depth, int max_depth, const Map &map, int move_seq) {
+pair<string, int> minimax (bool maxi, int cur_depth, int max_depth, const Map &map, cache_key move_seq) {
   if (timeLeft() < 0 && !vm.count("depth")) return make_pair("T", LOSE);
   if (map.State() != IN_PROGRESS) return make_pair("-",map.State());
 
@@ -199,7 +199,7 @@ pair<string, int> minimax (bool maxi, int cur_depth, int max_depth, const Map &m
 }
 
 
-pair<string, int> parallel_minimax (bool maxi, int cur_depth, int max_depth, const Map &map, int move_seq) {
+pair<string, int> parallel_minimax (bool maxi, int cur_depth, int max_depth, const Map &map, cache_key move_seq) {
   if (timeLeft() < 0 && !vm.count("depth")) return make_pair("T", LOSE);
   if (map.State() != IN_PROGRESS) return make_pair("-",map.State());
 
@@ -233,7 +233,7 @@ pair<string, int> parallel_minimax (bool maxi, int cur_depth, int max_depth, con
 }
 
 
-pair<string, int> alphabeta (bool maxi, int cur_depth, int max_depth, const Map &map, int a, int b, int move_seq) {
+pair<string, int> alphabeta (bool maxi, int cur_depth, int max_depth, const Map &map, int a, int b, cache_key move_seq) {
   if (timeLeft() < 0 && !vm.count("depth")) return make_pair("T", LOSE);
   if (map.State() != IN_PROGRESS) return make_pair("-",map.State());
   string direction[4] = {"NORTH", "SOUTH", "EAST", "WEST"};
@@ -302,7 +302,7 @@ pair<string, int> alphabeta (bool maxi, int cur_depth, int max_depth, const Map 
   }
 }
 
-pair<string, int> parallel_alphabeta (bool maxi, int cur_depth, int max_depth, const Map &map, int a, int b, int move_seq, reducer_list &write_buffer) {
+pair<string, int> parallel_alphabeta (bool maxi, int cur_depth, int max_depth, const Map &map, int a, int b, cache_key move_seq, reducer_list &write_buffer) {
   if (timeLeft() < 0 && !vm.count("depth")) return make_pair("T", LOSE);
   if (map.State() != IN_PROGRESS) return make_pair("-",map.State());
   string direction[4] = {"NORTH", "SOUTH", "EAST", "WEST"};
@@ -384,26 +384,26 @@ string MakeMove(const Map& map) {
   if(vm.count("depth")) {
     if (map.endGame()) {
       if (vm.count("parallel")) {
-        temp = parallel_endgame(0, depth, map, 0).first;
+        temp = parallel_endgame(0, depth, map, 1).first;
       } else {
-        temp = endgame(0, depth, map, 0).first;
+        temp = endgame(0, depth, map, 1).first;
       }
     } else if (vm.count("ab")) {
       if(vm.count("parallel")) {
         reducer_list write_buffer;
-        temp = parallel_alphabeta(true,0,depth, map, INT_MIN, INT_MAX,0, write_buffer).first;
+        temp = parallel_alphabeta(true,0,depth, map, INT_MIN, INT_MAX,1, write_buffer).first;
         const std::list<std::pair<int,string>> &write_buffer_list = write_buffer.get_value();
         for(std::list<std::pair<int,string>>::const_iterator i=write_buffer_list.begin(); i!= write_buffer_list.end(); i++){
           cacheMove((*i).first,((*i).second));
         }
       } else {
-        temp = alphabeta(true, 0, depth, map, INT_MIN, INT_MAX, 0).first;
+        temp = alphabeta(true, 0, depth, map, INT_MIN, INT_MAX, 1).first;
       }
     } else {
       if(vm.count("parallel")) {
-        temp = parallel_minimax(true, 0, depth, map, 0).first;
+        temp = parallel_minimax(true, 0, depth, map, 1).first;
       } else {
-        temp = minimax(true, 0, depth, map, 0).first;
+        temp = minimax(true, 0, depth, map, 1).first;
       }
     }
     // fprintf(stdout, "lkasdfdskl %s\n", temp.c_str());
@@ -413,26 +413,26 @@ string MakeMove(const Map& map) {
   while (timeLeft() > 0 && depth < STOP_DEPTH) {
     if (map.endGame()) {
       if (vm.count("parallel")) {
-        temp = parallel_endgame(0, depth, map, 0).first;
+        temp = parallel_endgame(0, depth, map, 1).first;
       } else {
-        temp = endgame(0, depth, map, 0).first;
+        temp = endgame(0, depth, map, 1).first;
       }
     } else if (vm.count("ab")) {
       if(vm.count("parallel")) {
         reducer_list write_buffer;
-        temp = parallel_alphabeta(true,0,depth, map, INT_MIN, INT_MAX,0, write_buffer).first;
+        temp = parallel_alphabeta(true,0,depth, map, INT_MIN, INT_MAX,1, write_buffer).first;
         const std::list<std::pair<int,string>> &write_buffer_list = write_buffer.get_value();
         for(std::list<std::pair<int,string>>::const_iterator i=write_buffer_list.begin(); i!= write_buffer_list.end(); i++){
           cacheMove((*i).first,((*i).second));
         }
       } else {
-        temp = alphabeta(true, 0, depth, map, INT_MIN, INT_MAX, 0).first;
+        temp = alphabeta(true, 0, depth, map, INT_MIN, INT_MAX, 1).first;
       }
     } else {
       if(vm.count("parallel")) {
-        temp = parallel_minimax(true, 0, depth, map, 0).first;
+        temp = parallel_minimax(true, 0, depth, map, 1).first;
       } else {
-        temp = minimax(true, 0, depth, map, 0).first;
+        temp = minimax(true, 0, depth, map, 1).first;
       }
     }
     if (temp != "T") cur_move = temp;
