@@ -20,7 +20,7 @@ do
 		out1=$($exe $allflags $seqminiflags < "$i" 2> errFile)
 		cat errFile
 
-		echo "Sequential bot with ab pruning: "
+		echo "Sequential ab bot: "
 		out2=$($exe $allflags $seqabflags < "$i" 2> errFile)
 		cat errFile
 
@@ -28,23 +28,23 @@ do
 		out3=$($exe $allflags $parminiflags < "$i" 2> errFile)
 		cat errFile
 
-		echo "Parallel minimax bot: "
-		out4=$($exe $allflags $seqminiflags < "$i" 2> errFile)
+		echo "Parallel ab bot: "
+		out4=$($exe $allflags $parabflags < "$i" 2> errFile)
 		cat errFile
 
 		if [ "$out1" != "$out2" ]
 		then
-			echo "Outputs do not agree! Sequential bot: $out1 vs. Parallel bot: $out2"
+			echo "Outputs do not agree! Sequential minimax bot: $out1 vs. sequential ab bot: $out2"
 			break
 		fi
 		if [ "$out1" != "$out3" ]
 		then
-			echo "Outputs do not agree! Sequential bot: $out1 vs. Parallel bot: $out3"
+			echo "Outputs do not agree! Sequential minimax bot: $out1 vs. Parallel minimax bot: $out3"
 			break
 		fi
 		if [ "$out1" != "$out4" ]
 		then
-			echo "Outputs do not agree! Sequential bot: $out1 vs. Parallel bot: $out4"
+			echo "Outputs do not agree! Sequential minimax bot: $out1 vs. Parallel ab bot: $out4"
 			break
 		fi
 		echo "-----------------------------------"

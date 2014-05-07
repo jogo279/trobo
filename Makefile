@@ -5,7 +5,7 @@
 # Dev-C++ to work on your code.
 
 CILK=/afs/andrew/usr7/ericwong/cilkplus-4_8-install/bin/g++ -fcilkplus -lcilkrts
-TBB=-I tbb42_20140122oss/include -L tbbzip/lib
+#TBB=-I tbb42_20140122oss/include -L tbbzip/lib -ltbb
 
 CXXFLAGS +=-g -lboost_program_options -std=c++11
 
