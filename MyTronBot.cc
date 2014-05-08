@@ -49,7 +49,7 @@ double vscoreTime;
 
 double startTime, timeLimit;
 int cache_count;
-unordered_map<int, char> cache;
+unordered_map<cache_key, char> cache;
 
 int updateMoveSeq(cache_key move_seq, int move, int depth) {
   // return move_seq + (cache_key)(move << 2*depth);
@@ -60,7 +60,7 @@ int updateMoveSeq(cache_key move_seq, int move, int depth) {
  * the move and return the new move_seq */
 void cacheMove(cache_key move_seq, string move_str) {
   cache_count++;
-  fprintf(stderr, "size: %d, key: %d\n", cache_count, move_seq);
+  fprintf(stderr, "size: %d, count: %d, key: %d\n", cache.size(),cache_count, move_seq);
   char move;
   // cache_key new_move_seq;
   int c = (int)move_str[0];
@@ -245,7 +245,7 @@ pair<string, int> alphabeta (bool maxi, int cur_depth, int max_depth, const Map 
   pair<string, int> child_ab;
   string best_dir;
   int player = maxi ? 1 : 0;
-  std::unordered_map<int, char>::iterator it;
+  std::unordered_map<cache_key, char>::iterator it;
   std::list<int> ord_children;
   for (int i = 0; i < 4; i++) ord_children.push_back(i);
   int i, best_guess;
@@ -317,7 +317,7 @@ pair<string, int> parallel_alphabeta (bool maxi, int cur_depth, int max_depth, c
   int best_guess = -1;
   std::vector<int> ord_children;
 
-  std::unordered_map<int, char>::iterator it = cache.find(move_seq);
+  std::unordered_map<cache_key, char>::iterator it = cache.find(move_seq);
   if (it != cache.end()) {
     coord next = maxi ? step(direction[it->second],map.MyX(),map.MyY()) : step(direction[it->second], map.OpponentX(), map.OpponentY());
     if (map.IsEmpty(next.first, next.second)) {
@@ -344,7 +344,7 @@ pair<string, int> parallel_alphabeta (bool maxi, int cur_depth, int max_depth, c
     if(a < child_ab.second) a = child_ab.second;
     
     if (b>a && ord_children.size()>1) {
-      for(int i = 1; i < ord_children.size(); i++) {
+      cilk_for(int i = 1; i < ord_children.size(); i++) {
         pair<string, int> child_ab_parr = parallel_alphabeta(!maxi, cur_depth + 1, max_depth, Map(map, player, direction[ord_children[i]], cur_depth==max_depth-1), a, b, updateMoveSeq(move_seq, ord_children[i], cur_depth), write_buffer);
         if (child_ab_parr.first == "T") timeout += 1;
         best_move.calc_max(ord_children[i], child_ab_parr.second);
@@ -365,7 +365,7 @@ pair<string, int> parallel_alphabeta (bool maxi, int cur_depth, int max_depth, c
     if(b > child_ab.second) b = child_ab.second;
     
     if (b>a && ord_children.size() > 1) {
-      for(int i = 1; i < ord_children.size(); i++) {
+      cilk_for(int i = 1; i < ord_children.size(); i++) {
         pair<string, int> child_ab_parr = parallel_alphabeta(!maxi, cur_depth + 1, max_depth, Map(map, player, direction[ord_children[i]], cur_depth==max_depth-1), a, b, updateMoveSeq(move_seq, ord_children[i], cur_depth), write_buffer);
         if (child_ab_parr.first == "T") timeout += 1;
         best_move.calc_min(ord_children[i], child_ab_parr.second);
@@ -398,11 +398,17 @@ string MakeMove(const Map& map) {
     } else if (vm.count("ab")) {
       if(vm.count("parallel")) {
         reducer_list write_buffer;
+        // double start_time = CycleTimer::currentSeconds();
         temp = parallel_alphabeta(true,0,depth, map, INT_MIN, INT_MAX,1, write_buffer).first;
+        // double end_time = CycleTimer::currentSeconds();
+        // fprintf(stderr, "parallel ab took %.4f seconds\n", end_time - start_time);
+        // start_time = CycleTimer::currentSeconds();
         const std::list<std::pair<int,string>> &write_buffer_list = write_buffer.get_value();
         for(std::list<std::pair<int,string>>::const_iterator i=write_buffer_list.begin(); i!= write_buffer_list.end(); i++){
           cacheMove((*i).first,((*i).second));
         }
+        // end_time = CycleTimer::currentSeconds();
+        // fprintf(stderr, "pcaching took %.4f seconds\n", end_time - start_time);
       } else {
         temp = alphabeta(true, 0, depth, map, INT_MIN, INT_MAX, 1).first;
       }
@@ -426,20 +432,20 @@ string MakeMove(const Map& map) {
       }
     } else if (vm.count("ab")) {
       if(vm.count("parallel")) {
-        double start_time = CycleTimer::currentSeconds();
+        // double start_time = CycleTimer::currentSeconds();
 
         reducer_list write_buffer;
         temp = parallel_alphabeta(true,0,depth, map, INT_MIN, INT_MAX,1, write_buffer).first;
-        double end_time = CycleTimer::currentSeconds();
-        fprintf(stderr, "parallel ab took %.4f seconds\n", end_time - start_time);
-        start_time = CycleTimer::currentSeconds();
+        // double end_time = CycleTimer::currentSeconds();
+        // fprintf(stderr, "parallel ab took %.4f seconds\n", end_time - start_time);
+        // start_time = CycleTimer::currentSeconds();
         const std::list<std::pair<int,string>> &write_buffer_list = write_buffer.get_value();
-        fprintf(stderr,"Size of list: %d\n", write_buffer_list.size());
+        // fprintf(stderr,"Size of list: %d\n", write_buffer_list.size());
         for(std::list<std::pair<int,string>>::const_iterator i=write_buffer_list.begin(); i!= write_buffer_list.end(); i++){
           cacheMove((*i).first,((*i).second));
         }
-        end_time = CycleTimer::currentSeconds();
-        fprintf(stderr, "caching all moves took %.4f seconds\n", end_time - start_time);
+        // end_time = CycleTimer::currentSeconds();
+        // fprintf(stderr, "caching all moves took %.4f seconds\n", end_time - start_time);
       } else {
         temp = alphabeta(true, 0, depth, map, INT_MIN, INT_MAX, 1).first;
       }
