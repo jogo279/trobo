@@ -1,0 +1,11 @@
+# maketron: builds my submission file
+
+FILE=~/Desktop/Tron.zip
+
+# Remove it if its already there.
+if [ -e $FILE ]; then
+   rm $FILE
+fi
+
+# Build the new one.
+zip -rq $FILE engine maps *.py *.txt README
