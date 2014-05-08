@@ -316,8 +316,11 @@ pair<string, int> parallel_alphabeta (bool maxi, int cur_depth, int max_depth, c
 
   std::unordered_map<int, char>::iterator it = cache.find(move_seq);
   if (it != cache.end()) {
-    best_guess = it->second;
-    ord_children.push_back(best_guess);
+    coord next = maxi ? step(direction[it->second],map.MyX(),map.MyY()) : step(direction[it->second], map.OpponentX(), map.OpponentY());
+    if (map.IsEmpty(next.first, next.second)) {
+      best_guess = it->second;
+      ord_children.push_back(best_guess);
+    }
   }
 
   for (int i = 0; i < 4; i++) {
