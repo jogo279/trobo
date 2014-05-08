@@ -52,13 +52,15 @@ int cache_count;
 unordered_map<int, char> cache;
 
 int updateMoveSeq(cache_key move_seq, int move, int depth) {
-  return move_seq + (cache_key)(move << 2*depth);
+  // return move_seq + (cache_key)(move << 2*depth);
+  return (move_seq << 2)+move;
 }
 
 /* Given a history of moves, and a current move (at a current depth), cache
  * the move and return the new move_seq */
 void cacheMove(cache_key move_seq, string move_str) {
   cache_count++;
+  fprintf(stderr, "size: %d, key: %d\n", cache_count, move_seq);
   char move;
   // cache_key new_move_seq;
   int c = (int)move_str[0];
@@ -516,7 +518,7 @@ int main(int argc, char* argv[]) {
       Map::MakeMove(MakeMove(map));
       double end_time = CycleTimer::currentSeconds();
       fprintf(stderr, "Move took %.4f seconds\n", end_time - start_time);
-      fprintf(stderr, "cache size: %d\n", cache.size());
+      fprintf(stderr, "cache size: %d, counter: %d\n", cache.size(), cache_count);
       // fprintf(stderr, "Spent %.4f seconds in varonoi function\n", vscoreTime);
     }
   } else {
