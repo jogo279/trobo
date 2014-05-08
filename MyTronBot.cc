@@ -60,10 +60,10 @@ int updateMoveSeq(cache_key move_seq, int move, int depth) {
  * the move and return the new move_seq */
 void cacheMove(cache_key move_seq, string move_str) {
   cache_count++;
-  fprintf(stderr, "size: %d, count: %d, key: %d\n", cache.size(),cache_count, move_seq);
   char move;
   // cache_key new_move_seq;
   int c = (int)move_str[0];
+  // fprintf(stderr, "size: %d, count: %d, key: %d, move %s\n", cache.size(),cache_count, move_seq, move_str.c_str());
   switch (c) {
     case 'n':
     case 'N':
@@ -109,6 +109,7 @@ pair<string, int> endgame (int cur_depth, int max_depth, const Map &map, cache_k
       if(map.IsEmpty(next.first, next.second)) {
         bool leaf = cur_depth==max_depth-1;
         child_eg = endgame(cur_depth+1, max_depth, Map(map, 1, direction[i], leaf), updateMoveSeq(move_seq, i, cur_depth));
+        child_eg.second++;
         if (child_eg.first == "T") return child_eg;
         score[i] = child_eg.second;
       }
@@ -148,6 +149,7 @@ pair<string, int> parallel_endgame (int cur_depth, int max_depth, const Map &map
       pair<string, int> child_eg;
       if(map.IsEmpty(next.first, next.second)) {
         child_eg = parallel_endgame(cur_depth+1, max_depth, Map(map, 1, direction[i], cur_depth==max_depth-1), updateMoveSeq(move_seq, i, cur_depth));
+        child_eg.second++;
       } else {
         child_eg= make_pair("-", LOSE);
       }
@@ -262,6 +264,7 @@ pair<string, int> alphabeta (bool maxi, int cur_depth, int max_depth, const Map 
   }
 
   if(maxi){
+    int local_max = INT_MIN;
     for(std::list<int>::iterator it = ord_children.begin(); it !=ord_children.end(); ++it){
       i = *it;
       coord next = step(direction[i],map.MyX(),map.MyY());
@@ -273,9 +276,13 @@ pair<string, int> alphabeta (bool maxi, int cur_depth, int max_depth, const Map 
       } else {
         score[i] = LOSE;
       }
+      if(local_max < score[i]){
+        local_max = score[i];
+        best_dir = direction[i];
+      }
       if(a < score[i]){
         a = score[i];
-        best_dir = direction[i];
+        // best_dir = direction[i];
       }
       if (b<=a)
         break;
@@ -283,6 +290,7 @@ pair<string, int> alphabeta (bool maxi, int cur_depth, int max_depth, const Map 
     cacheMove(move_seq, best_dir);
     return make_pair(best_dir, a);
   } else {
+    int local_min=INT_MAX;
     for(std::list<int>::iterator it = ord_children.begin(); it !=ord_children.end(); ++it){
       i = *it;
       coord next = step(direction[i],map.OpponentX(),map.OpponentY());
@@ -294,9 +302,13 @@ pair<string, int> alphabeta (bool maxi, int cur_depth, int max_depth, const Map 
       } else {
         score[i] = WIN;
       }
+      if(local_min > score[i]){
+        local_min = score[i];
+        best_dir = direction[i];
+      }
       if(b > score[i]){
         b = score[i];
-        best_dir = direction[i];
+        // best_dir = direction[i];
       }
       if (b<=a)
         break;
@@ -458,7 +470,7 @@ string MakeMove(const Map& map) {
     }
     if (temp != "T") cur_move = temp;
     depth ++;
-    fprintf(stderr, "Depth: %d, Move: %s, Time Left: %.4f\n", depth, temp.c_str(), timeLeft());
+    // fprintf(stderr, "Depth: %d, Move: %s, Time Left: %.4f\n", depth, temp.c_str(), timeLeft());
   }
   return cur_move;
 }
