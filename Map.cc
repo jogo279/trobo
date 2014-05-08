@@ -535,6 +535,8 @@ int Map::numBlocks() const {
 }
 
 int Map::getBlock(int x, int y) const {
+  // fprintf(stderr, "x: %d, y: %d, playerx: %d, playery: %d\n",x,y, MyX(), MyY());
+  // fprintf(stderr, "x: %d, y: %d\n",MyX(),MyY());
   return block_id[x][y];
 }
 

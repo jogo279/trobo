@@ -309,6 +309,7 @@ pair<string, int> parallel_alphabeta (bool maxi, int cur_depth, int max_depth, c
   if (map.State() != IN_PROGRESS) return make_pair("-",map.State());
   if(cur_depth == max_depth) return make_pair("",map.Score());
 
+
   string direction[4] = {"NORTH", "SOUTH", "EAST", "WEST"};
   int player = maxi ? 1 : 0;
   int best_guess = -1;
@@ -317,10 +318,13 @@ pair<string, int> parallel_alphabeta (bool maxi, int cur_depth, int max_depth, c
   std::unordered_map<int, char>::iterator it = cache.find(move_seq);
   if (it != cache.end()) {
     best_guess = it->second;
-    ord_children.push_back(best_guess);
+    coord next = maxi ? step(direction[best_guess],map.MyX(),map.MyY()) : step(direction[best_guess], map.OpponentX(), map.OpponentY());
+    if(map.IsEmpty(next.first, next.second))
+      ord_children.push_back(best_guess);
   }
 
   for (int i = 0; i < 4; i++) {
+    // fprintf(stderr, "i: %d, best guess: %d\n",i,best_guess);
     coord next = maxi ? step(direction[i],map.MyX(),map.MyY()) : step(direction[i], map.OpponentX(), map.OpponentY());
     if(map.IsEmpty(next.first, next.second) && best_guess != i) ord_children.push_back(i);
   }
@@ -337,7 +341,7 @@ pair<string, int> parallel_alphabeta (bool maxi, int cur_depth, int max_depth, c
     if(a < child_ab.second) a = child_ab.second;
     
     if (b>a && ord_children.size()>1) {
-      cilk_for(int i = 1; i < ord_children.size(); i++) {
+      for(int i = 1; i < ord_children.size(); i++) {
         pair<string, int> child_ab_parr = parallel_alphabeta(!maxi, cur_depth + 1, max_depth, Map(map, player, direction[ord_children[i]], cur_depth==max_depth-1), a, b, updateMoveSeq(move_seq, ord_children[i], cur_depth), write_buffer);
         if (child_ab_parr.first == "T") timeout += 1;
         best_move.calc_max(ord_children[i], child_ab_parr.second);
@@ -358,7 +362,7 @@ pair<string, int> parallel_alphabeta (bool maxi, int cur_depth, int max_depth, c
     if(b > child_ab.second) b = child_ab.second;
     
     if (b>a && ord_children.size() > 1) {
-      cilk_for(int i = 1; i < ord_children.size(); i++) {
+      for(int i = 1; i < ord_children.size(); i++) {
         pair<string, int> child_ab_parr = parallel_alphabeta(!maxi, cur_depth + 1, max_depth, Map(map, player, direction[ord_children[i]], cur_depth==max_depth-1), a, b, updateMoveSeq(move_seq, ord_children[i], cur_depth), write_buffer);
         if (child_ab_parr.first == "T") timeout += 1;
         best_move.calc_min(ord_children[i], child_ab_parr.second);
@@ -511,7 +515,7 @@ int main(int argc, char* argv[]) {
       Map::MakeMove(MakeMove(map));
       double end_time = CycleTimer::currentSeconds();
       fprintf(stderr, "Move took %.4f seconds\n", end_time - start_time);
-      fprintf(stderr, "cache size: %d\n", cache_count);
+      fprintf(stderr, "cache size: %d\n", cache.size());
       // fprintf(stderr, "Spent %.4f seconds in varonoi function\n", vscoreTime);
     }
   } else {
