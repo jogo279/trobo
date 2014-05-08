@@ -1,11 +1,13 @@
 infile = File.open(ARGV[0], "r")
 outfile = File.new(ARGV[1], "w")
 
-outstring = "+OK|15 15|"
+
 
 dimensions = infile.gets
 width = dimensions.split[0].to_i
 height = dimensions.split[1].to_i
+
+outstring = "+OK|#{width} #{height}|"
 
 i = 0
 while i < height do

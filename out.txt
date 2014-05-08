@@ -1,0 +1,209 @@
+Maximum depth: 10
+maps/15x16.txt at depth 10
+Sequential ab bot: 
+Move took 1.5807 seconds
+cache size: 5332, counter: 6633
+Parallel ab bot: 
+Move took 0.3622 seconds
+cache size: 7031, counter: 7031
+-----------------------------------
+maps/apocalyptic.txt at depth 10
+Sequential ab bot: 
+Move took 0.0722 seconds
+cache size: 133, counter: 201
+Parallel ab bot: 
+Move took 0.0931 seconds
+cache size: 212, counter: 212
+-----------------------------------
+maps/big-room.txt at depth 10
+Sequential ab bot: 
+Move took 0.2041 seconds
+cache size: 281, counter: 361
+Parallel ab bot: 
+Move took 0.1759 seconds
+cache size: 363, counter: 363
+-----------------------------------
+maps/box.txt at depth 10
+Sequential ab bot: 
+Move took 0.0674 seconds
+cache size: 292, counter: 372
+Parallel ab bot: 
+Move took 0.0606 seconds
+cache size: 374, counter: 374
+-----------------------------------
+maps/center.txt at depth 10
+Sequential ab bot: 
+Move took 2.0756 seconds
+cache size: 2876, counter: 3594
+Parallel ab bot: 
+Move took 0.6242 seconds
+cache size: 5335, counter: 5335
+-----------------------------------
+maps/divider.txt at depth 10
+Sequential ab bot: 
+Move took 18.7985 seconds
+cache size: 0, counter: 0
+Parallel ab bot: 
+Move took 2.5790 seconds
+cache size: 0, counter: 0
+-----------------------------------
+maps/duel-small.txt at depth 10
+Sequential ab bot: 
+Move took 0.6662 seconds
+cache size: 3043, counter: 3729
+Parallel ab bot: 
+Move took 0.1926 seconds
+cache size: 5709, counter: 5709
+-----------------------------------
+maps/empty-room.txt at depth 10
+Sequential ab bot: 
+Move took 0.0675 seconds
+cache size: 282, counter: 362
+Parallel ab bot: 
+Move took 0.0654 seconds
+cache size: 364, counter: 364
+-----------------------------------
+maps/error-room.txt at depth 10
+Sequential ab bot: 
+Move took 0.2859 seconds
+cache size: 0, counter: 0
+Parallel ab bot: 
+Move took 0.0436 seconds
+cache size: 0, counter: 0
+-----------------------------------
+maps/gate.txt at depth 10
+Sequential ab bot: 
+Move took 0.0090 seconds
+cache size: 57, counter: 89
+Parallel ab bot: 
+Move took 0.0152 seconds
+cache size: 87, counter: 87
+-----------------------------------
+maps/giant-room.txt at depth 10
+Sequential ab bot: 
+Move took 0.9375 seconds
+cache size: 281, counter: 361
+Parallel ab bot: 
+Move took 0.7838 seconds
+cache size: 363, counter: 363
+-----------------------------------
+maps/huge-room.txt at depth 10
+Sequential ab bot: 
+Move took 0.9483 seconds
+cache size: 281, counter: 361
+Parallel ab bot: 
+Move took 0.7814 seconds
+cache size: 363, counter: 363
+-----------------------------------
+maps/joust.txt at depth 10
+Sequential ab bot: 
+Move took 0.0774 seconds
+cache size: 141, counter: 213
+Parallel ab bot: 
+Move took 0.0709 seconds
+cache size: 213, counter: 213
+-----------------------------------
+maps/keyhole.txt at depth 10
+Sequential ab bot: 
+Move took 1.5460 seconds
+cache size: 2263, counter: 3096
+Parallel ab bot: 
+Move took 0.4629 seconds
+cache size: 4591, counter: 4591
+-----------------------------------
+maps/oval.txt at depth 10
+Sequential ab bot: 
+Move took 0.3996 seconds
+cache size: 1940, counter: 2461
+Parallel ab bot: 
+Move took 0.1614 seconds
+cache size: 4314, counter: 4314
+-----------------------------------
+maps/playground.txt at depth 10
+Sequential ab bot: 
+Move took 3.9503 seconds
+cache size: 0, counter: 0
+Parallel ab bot: 
+Move took 0.5189 seconds
+cache size: 0, counter: 0
+-----------------------------------
+maps/plus.txt at depth 10
+Sequential ab bot: 
+Move took 0.0298 seconds
+cache size: 154, counter: 219
+Parallel ab bot: 
+Move took 0.0246 seconds
+cache size: 224, counter: 224
+-----------------------------------
+maps/quadrant.txt at depth 10
+Sequential ab bot: 
+Move took 0.2999 seconds
+cache size: 1554, counter: 2295
+Parallel ab bot: 
+Move took 0.1846 seconds
+cache size: 7240, counter: 7240
+-----------------------------------
+maps/ring.txt at depth 10
+Sequential ab bot: 
+Move took 0.0034 seconds
+cache size: 36, counter: 50
+Parallel ab bot: 
+Move took 0.0071 seconds
+cache size: 50, counter: 50
+-----------------------------------
+maps/test.txt at depth 10
+Sequential ab bot: 
+Move took 0.0004 seconds
+cache size: 0, counter: 0
+Parallel ab bot: 
+Move took 0.0035 seconds
+cache size: 0, counter: 0
+-----------------------------------
+maps/toronto.txt at depth 10
+Sequential ab bot: 
+Move took 0.0229 seconds
+cache size: 152, counter: 214
+Parallel ab bot: 
+Move took 0.0262 seconds
+cache size: 302, counter: 302
+-----------------------------------
+maps/toronto2.txt at depth 10
+Sequential ab bot: 
+Move took 0.0501 seconds
+cache size: 207, counter: 272
+Parallel ab bot: 
+Move took 0.0580 seconds
+cache size: 278, counter: 278
+-----------------------------------
+maps/triangle.txt at depth 10
+Sequential ab bot: 
+Move took 0.1780 seconds
+cache size: 751, counter: 983
+Parallel ab bot: 
+Move took 0.1602 seconds
+cache size: 1004, counter: 1004
+-----------------------------------
+maps/trix.txt at depth 10
+Sequential ab bot: 
+Move took 0.0275 seconds
+cache size: 143, counter: 166
+Parallel ab bot: 
+Move took 0.0411 seconds
+cache size: 169, counter: 169
+-----------------------------------
+maps/u.txt at depth 10
+Sequential ab bot: 
+Move took 0.1754 seconds
+cache size: 1108, counter: 1491
+Parallel ab bot: 
+Move took 0.0894 seconds
+cache size: 1962, counter: 1962
+-----------------------------------
+maps/vee.txt at depth 10
+Sequential ab bot: 
+Move took 0.0016 seconds
+cache size: 19, counter: 27
+Parallel ab bot: 
+Move took 0.0101 seconds
+cache size: 27, counter: 27
+-----------------------------------
