@@ -1,4 +1,4 @@
-depth="20"
+depth="10"
 allflags="-v -d $depth"
 seqminiflags="--minimax"
 seqabflags="--ab"
@@ -32,17 +32,22 @@ do
 		out4=$($exe $allflags $parabflags < "$i" 2> errFile)
 		cat errFile
 
-		if [ "$out1" != "$out2" ]
-		then
-			echo "Outputs do not agree! Sequential minimax bot: $out1 vs. sequential ab bot: $out2"
-			break
-		fi
-		if [ "$out1" != "$out3" ]
-		then
-			echo "Outputs do not agree! Sequential minimax bot: $out1 vs. Parallel minimax bot: $out3"
-			break
-		fi
-		if [ "$out1" != "$out4" ]
+		# if [ "$out1" != "$out2" ]
+		# then
+		# 	echo "Outputs do not agree! Sequential minimax bot: $out1 vs. sequential ab bot: $out2"
+		# 	break
+		# fi
+		# if [ "$out1" != "$out3" ]
+		# then
+		# 	echo "Outputs do not agree! Sequential minimax bot: $out1 vs. Parallel minimax bot: $out3"
+		# 	break
+		# fi
+		# if [ "$out1" != "$out4" ]
+		# then
+		# 	echo "Outputs do not agree! Sequential minimax bot: $out1 vs. Parallel ab bot: $out4"
+		# 	break
+		# fi
+		if [ "$out2" != "$out4" ]
 		then
 			echo "Outputs do not agree! Sequential minimax bot: $out1 vs. Parallel ab bot: $out4"
 			break

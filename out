@@ -1,365 +1,209 @@
-Maximum depth: 7
-maps/15x16.txt at depth 7
-Sequential bot minimax: 
-Move took 0.9156 seconds
-cache size: 0
+Maximum depth: 10
+maps/15x16.txt at depth 10
 Sequential ab bot: 
-Move took 0.7033 seconds
-cache size: 496
-Parallel minimax bot: 
-Move took 0.1332 seconds
-cache size: 0
+Move took 1.6580 seconds
+cache size: 3832
 Parallel ab bot: 
-Move took 0.2304 seconds
-cache size: 507
+Move took 1.7953 seconds
+cache size: 4849
 -----------------------------------
-maps/apocalyptic.txt at depth 7
-Sequential bot minimax: 
-Move took 0.3773 seconds
-cache size: 0
+maps/apocalyptic.txt at depth 10
 Sequential ab bot: 
-Move took 0.1206 seconds
-cache size: 60
-Parallel minimax bot: 
-Move took 0.0610 seconds
-cache size: 0
+Move took 0.0737 seconds
+cache size: 116
 Parallel ab bot: 
-Move took 0.1635 seconds
-cache size: 60
+Move took 0.0849 seconds
+cache size: 167
 -----------------------------------
-maps/big-room.txt at depth 7
-Sequential bot minimax: 
-Move took 0.7511 seconds
-cache size: 0
+maps/big-room.txt at depth 10
 Sequential ab bot: 
-Move took 0.2563 seconds
-cache size: 68
-Parallel minimax bot: 
-Move took 0.1197 seconds
-cache size: 0
+Move took 0.2082 seconds
+cache size: 226
 Parallel ab bot: 
-Move took 0.2589 seconds
-cache size: 68
+Move took 0.2135 seconds
+cache size: 264
 -----------------------------------
-maps/box.txt at depth 7
-Sequential bot minimax: 
-Move took 0.2040 seconds
-cache size: 0
+maps/box.txt at depth 10
 Sequential ab bot: 
+Move took 0.0691 seconds
+cache size: 235
+Parallel ab bot: 
 Move took 0.0700 seconds
-cache size: 68
-Parallel minimax bot: 
-Move took 0.0382 seconds
-cache size: 0
-Parallel ab bot: 
-Move took 0.0794 seconds
-cache size: 68
+cache size: 274
 -----------------------------------
-maps/center.txt at depth 7
-Sequential bot minimax: 
-Move took 4.2624 seconds
-cache size: 0
+maps/center.txt at depth 10
 Sequential ab bot: 
-Move took 1.7447 seconds
-cache size: 480
-Parallel minimax bot: 
-Move took 0.6366 seconds
-cache size: 0
+Move took 2.1592 seconds
+cache size: 2182
 Parallel ab bot: 
-Move took 0.6644 seconds
-cache size: 623
+Move took 3.5717 seconds
+cache size: 3624
 -----------------------------------
-maps/divider.txt at depth 7
-Sequential bot minimax: 
-Move took 6.3621 seconds
-cache size: 0
+maps/divider.txt at depth 10
 Sequential ab bot: 
-Move took 6.3658 seconds
-cache size: 0
-Parallel minimax bot: 
-Move took 0.9006 seconds
+Move took 19.4929 seconds
 cache size: 0
 Parallel ab bot: 
-Move took 0.8955 seconds
+Move took 2.9207 seconds
 cache size: 0
 -----------------------------------
-maps/duel-small.txt at depth 7
-Sequential bot minimax: 
-Move took 1.2022 seconds
-cache size: 0
+maps/duel-small.txt at depth 10
 Sequential ab bot: 
-Move took 0.5033 seconds
-cache size: 484
-Parallel minimax bot: 
-Move took 0.2041 seconds
-cache size: 0
+Move took 0.6797 seconds
+cache size: 2286
 Parallel ab bot: 
-Move took 0.1878 seconds
-cache size: 625
+Move took 1.1814 seconds
+cache size: 4163
 -----------------------------------
-maps/empty-room.txt at depth 7
-Sequential bot minimax: 
-Move took 0.2196 seconds
-cache size: 0
+maps/empty-room.txt at depth 10
 Sequential ab bot: 
-Move took 0.0753 seconds
-cache size: 68
-Parallel minimax bot: 
-Move took 0.0453 seconds
-cache size: 0
+Move took 0.0701 seconds
+cache size: 227
 Parallel ab bot: 
-Move took 0.0811 seconds
-cache size: 68
+Move took 0.0710 seconds
+cache size: 265
 -----------------------------------
-maps/error-room.txt at depth 7
-Sequential bot minimax: 
-Move took 0.1608 seconds
-cache size: 0
+maps/error-room.txt at depth 10
 Sequential ab bot: 
-Move took 0.1605 seconds
-cache size: 0
-Parallel minimax bot: 
-Move took 0.0337 seconds
+Move took 0.2952 seconds
 cache size: 0
 Parallel ab bot: 
-Move took 0.0247 seconds
+Move took 0.0466 seconds
 cache size: 0
 -----------------------------------
-maps/gate.txt at depth 7
-Sequential bot minimax: 
-Move took 0.0624 seconds
-cache size: 0
+maps/gate.txt at depth 10
 Sequential ab bot: 
-Move took 0.0198 seconds
-cache size: 34
-Parallel minimax bot: 
-Move took 0.0187 seconds
-cache size: 0
+Move took 0.0092 seconds
+cache size: 53
 Parallel ab bot: 
-Move took 0.0343 seconds
-cache size: 33
+Move took 0.0091 seconds
+cache size: 66
 -----------------------------------
-maps/giant-room.txt at depth 7
-Sequential bot minimax: 
-Move took 3.5734 seconds
-cache size: 0
+maps/giant-room.txt at depth 10
 Sequential ab bot: 
-Move took 1.2272 seconds
-cache size: 68
-Parallel minimax bot: 
-Move took 0.5552 seconds
-cache size: 0
+Move took 0.9810 seconds
+cache size: 226
 Parallel ab bot: 
-Move took 1.5481 seconds
-cache size: 68
+Move took 0.9848 seconds
+cache size: 264
 -----------------------------------
-maps/huge-room.txt at depth 7
-Sequential bot minimax: 
-Move took 3.5707 seconds
-cache size: 0
+maps/huge-room.txt at depth 10
 Sequential ab bot: 
-Move took 1.2276 seconds
-cache size: 68
-Parallel minimax bot: 
-Move took 0.5558 seconds
-cache size: 0
+Move took 0.9862 seconds
+cache size: 226
 Parallel ab bot: 
-Move took 1.3043 seconds
-cache size: 68
+Move took 0.9909 seconds
+cache size: 264
 -----------------------------------
-maps/joust.txt at depth 7
-Sequential bot minimax: 
-Move took 0.7373 seconds
-cache size: 0
+maps/joust.txt at depth 10
 Sequential ab bot: 
-Move took 0.1227 seconds
-cache size: 50
-Parallel minimax bot: 
-Move took 0.1319 seconds
-cache size: 0
-Parallel ab bot: 
-Move took 0.1334 seconds
-cache size: 50
------------------------------------
-maps/keyhole.txt at depth 7
-Sequential bot minimax: 
-Move took 10.1615 seconds
-cache size: 0
-Sequential ab bot: 
-Move took 1.2874 seconds
-cache size: 364
-Parallel minimax bot: 
-Move took 1.4332 seconds
-cache size: 0
-Parallel ab bot: 
-Move took 0.4733 seconds
-cache size: 534
------------------------------------
-maps/oval.txt at depth 7
-Sequential bot minimax: 
-Move took 0.8143 seconds
-cache size: 0
-Sequential ab bot: 
-Move took 0.1353 seconds
-cache size: 151
-Parallel minimax bot: 
-Move took 0.1184 seconds
-cache size: 0
-Parallel ab bot: 
-Move took 0.0992 seconds
-cache size: 209
------------------------------------
-maps/playground.txt at depth 7
-Sequential bot minimax: 
-Move took 1.9111 seconds
-cache size: 0
-Sequential ab bot: 
-Move took 1.9067 seconds
-cache size: 0
-Parallel minimax bot: 
-Move took 0.2726 seconds
-cache size: 0
-Parallel ab bot: 
-Move took 0.2665 seconds
-cache size: 0
------------------------------------
-maps/plus.txt at depth 7
-Sequential bot minimax: 
-Move took 0.1655 seconds
-cache size: 0
-Sequential ab bot: 
-Move took 0.0479 seconds
-cache size: 50
-Parallel minimax bot: 
-Move took 0.0280 seconds
-cache size: 0
-Parallel ab bot: 
-Move took 0.0392 seconds
-cache size: 55
------------------------------------
-maps/quadrant.txt at depth 7
-Sequential bot minimax: 
-Move took 2.2801 seconds
-cache size: 0
-Sequential ab bot: 
-Move took 0.3041 seconds
-cache size: 401
-Parallel minimax bot: 
-Move took 0.3232 seconds
-cache size: 0
-Parallel ab bot: 
-Move took 0.1585 seconds
-cache size: 767
------------------------------------
-maps/ring.txt at depth 7
-Sequential bot minimax: 
-Move took 0.0114 seconds
-cache size: 0
-Sequential ab bot: 
-Move took 0.0096 seconds
-cache size: 27
-Parallel minimax bot: 
-Move took 0.0110 seconds
-cache size: 0
-Parallel ab bot: 
-Move took 0.0199 seconds
-cache size: 27
------------------------------------
-maps/test.txt at depth 7
-Sequential bot minimax: 
-Move took 0.0018 seconds
-cache size: 0
-Sequential ab bot: 
-Move took 0.0018 seconds
-cache size: 0
-Parallel minimax bot: 
-Move took 0.0093 seconds
-cache size: 0
-Parallel ab bot: 
-Move took 0.0023 seconds
-cache size: 0
------------------------------------
-maps/toronto2.txt at depth 7
-Sequential bot minimax: 
-Move took 0.1920 seconds
-cache size: 0
-Sequential ab bot: 
-Move took 0.0544 seconds
-cache size: 57
-Parallel minimax bot: 
-Move took 0.0401 seconds
-cache size: 0
-Parallel ab bot: 
-Move took 0.0746 seconds
-cache size: 57
------------------------------------
-maps/toronto.txt at depth 7
-Sequential bot minimax: 
-Move took 0.1028 seconds
-cache size: 0
-Sequential ab bot: 
-Move took 0.0381 seconds
-cache size: 82
-Parallel minimax bot: 
-Move took 0.0192 seconds
-cache size: 0
-Parallel ab bot: 
-Move took 0.0301 seconds
-cache size: 109
------------------------------------
-maps/triangle.txt at depth 7
-Sequential bot minimax: 
-Move took 0.2252 seconds
-cache size: 0
-Sequential ab bot: 
-Move took 0.1819 seconds
-cache size: 157
-Parallel minimax bot: 
-Move took 0.0353 seconds
-cache size: 0
-Parallel ab bot: 
-Move took 0.2299 seconds
-cache size: 157
------------------------------------
-maps/trix.txt at depth 7
-Sequential bot minimax: 
-Move took 0.0326 seconds
-cache size: 0
-Sequential ab bot: 
-Move took 0.0277 seconds
-cache size: 37
-Parallel minimax bot: 
-Move took 0.0121 seconds
-cache size: 0
-Parallel ab bot: 
 Move took 0.0782 seconds
-cache size: 37
+cache size: 124
+Parallel ab bot: 
+Move took 0.0786 seconds
+cache size: 148
 -----------------------------------
-maps/u.txt at depth 7
-Sequential bot minimax: 
-Move took 0.3457 seconds
-cache size: 0
+maps/keyhole.txt at depth 10
 Sequential ab bot: 
-Move took 0.2029 seconds
-cache size: 318
-Parallel minimax bot: 
-Move took 0.0516 seconds
+Move took 1.6145 seconds
+cache size: 1597
+Parallel ab bot: 
+Move took 2.6352 seconds
+cache size: 3083
+-----------------------------------
+maps/oval.txt at depth 10
+Sequential ab bot: 
+Move took 0.4101 seconds
+cache size: 1438
+Parallel ab bot: 
+Move took 0.7725 seconds
+cache size: 3174
+-----------------------------------
+maps/playground.txt at depth 10
+Sequential ab bot: 
+Move took 4.0660 seconds
 cache size: 0
 Parallel ab bot: 
-Move took 0.1395 seconds
-cache size: 419
------------------------------------
-maps/vee.txt at depth 7
-Sequential bot minimax: 
-Move took 0.0080 seconds
+Move took 0.5951 seconds
 cache size: 0
+-----------------------------------
+maps/plus.txt at depth 10
 Sequential ab bot: 
-Move took 0.0080 seconds
-cache size: 23
-Parallel minimax bot: 
-Move took 0.0063 seconds
+Move took 0.0310 seconds
+cache size: 111
+Parallel ab bot: 
+Move took 0.0311 seconds
+cache size: 127
+-----------------------------------
+maps/quadrant.txt at depth 10
+Sequential ab bot: 
+Move took 0.3081 seconds
+cache size: 1224
+Parallel ab bot: 
+Move took 1.0421 seconds
+cache size: 5137
+-----------------------------------
+maps/ring.txt at depth 10
+Sequential ab bot: 
+Move took 0.0034 seconds
+cache size: 32
+Parallel ab bot: 
+Move took 0.0034 seconds
+cache size: 39
+-----------------------------------
+maps/test.txt at depth 10
+Sequential ab bot: 
+Move took 0.0004 seconds
 cache size: 0
 Parallel ab bot: 
-Move took 0.0145 seconds
-cache size: 23
+Move took 0.0027 seconds
+cache size: 0
+-----------------------------------
+maps/toronto2.txt at depth 10
+Sequential ab bot: 
+Move took 0.0517 seconds
+cache size: 166
+Parallel ab bot: 
+Move took 0.0525 seconds
+cache size: 203
+-----------------------------------
+maps/toronto.txt at depth 10
+Sequential ab bot: 
+Move took 0.0236 seconds
+cache size: 119
+Parallel ab bot: 
+Move took 0.0346 seconds
+cache size: 196
+-----------------------------------
+maps/triangle.txt at depth 10
+Sequential ab bot: 
+Move took 0.1849 seconds
+cache size: 475
+Parallel ab bot: 
+Move took 0.1900 seconds
+cache size: 539
+-----------------------------------
+maps/trix.txt at depth 10
+Sequential ab bot: 
+Move took 0.0287 seconds
+cache size: 110
+Parallel ab bot: 
+Move took 0.0291 seconds
+cache size: 125
+-----------------------------------
+maps/u.txt at depth 10
+Sequential ab bot: 
+Move took 0.1825 seconds
+cache size: 903
+Parallel ab bot: 
+Move took 0.2475 seconds
+cache size: 1512
+-----------------------------------
+maps/vee.txt at depth 10
+Sequential ab bot: 
+Move took 0.0016 seconds
+cache size: 15
+Parallel ab bot: 
+Move took 0.0016 seconds
+cache size: 19
 -----------------------------------
