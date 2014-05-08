@@ -60,10 +60,10 @@ int updateMoveSeq(cache_key move_seq, int move, int depth) {
  * the move and return the new move_seq */
 void cacheMove(cache_key move_seq, string move_str) {
   cache_count++;
-  fprintf(stderr, "size: %d, count: %d, key: %d\n", cache.size(),cache_count, move_seq);
   char move;
   // cache_key new_move_seq;
   int c = (int)move_str[0];
+  // fprintf(stderr, "size: %d, count: %d, key: %d, move %s\n", cache.size(),cache_count, move_seq, move_str.c_str());
   switch (c) {
     case 'n':
     case 'N':
@@ -262,6 +262,7 @@ pair<string, int> alphabeta (bool maxi, int cur_depth, int max_depth, const Map 
   }
 
   if(maxi){
+    int local_max = INT_MIN;
     for(std::list<int>::iterator it = ord_children.begin(); it !=ord_children.end(); ++it){
       i = *it;
       coord next = step(direction[i],map.MyX(),map.MyY());
@@ -273,9 +274,13 @@ pair<string, int> alphabeta (bool maxi, int cur_depth, int max_depth, const Map 
       } else {
         score[i] = LOSE;
       }
+      if(local_max < score[i]){
+        local_max = score[i];
+        best_dir = direction[i];
+      }
       if(a < score[i]){
         a = score[i];
-        best_dir = direction[i];
+        // best_dir = direction[i];
       }
       if (b<=a)
         break;
@@ -283,6 +288,7 @@ pair<string, int> alphabeta (bool maxi, int cur_depth, int max_depth, const Map 
     cacheMove(move_seq, best_dir);
     return make_pair(best_dir, a);
   } else {
+    int local_min=INT_MAX;
     for(std::list<int>::iterator it = ord_children.begin(); it !=ord_children.end(); ++it){
       i = *it;
       coord next = step(direction[i],map.OpponentX(),map.OpponentY());
@@ -294,9 +300,13 @@ pair<string, int> alphabeta (bool maxi, int cur_depth, int max_depth, const Map 
       } else {
         score[i] = WIN;
       }
+      if(local_min > score[i]){
+        local_min = score[i];
+        best_dir = direction[i];
+      }
       if(b > score[i]){
         b = score[i];
-        best_dir = direction[i];
+        // best_dir = direction[i];
       }
       if (b<=a)
         break;
