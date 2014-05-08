@@ -180,7 +180,7 @@ pair<string, int> minimax (bool maxi, int cur_depth, int max_depth, const Map &m
   } else {
     for(int i=0; i<4; i++){
       coord next = maxi ? step(direction[i],map.MyX(),map.MyY()) : step(direction[i],map.OpponentX(),map.OpponentY());
-      if(map.IsEmpty(next.first, next.second)) {
+      if(map.IsEmpty(next.first, next.second) || (!maxi && !map.IsWall(next.first,next.second))) {
         bool leaf = cur_depth==max_depth-1;
         child_mm = minimax(!maxi, cur_depth+1, max_depth, Map(map, player, direction[i], leaf), updateMoveSeq(move_seq, i, cur_depth));
         if (child_mm.first == "T") return child_mm;
@@ -225,7 +225,7 @@ pair<string, int> parallel_minimax (bool maxi, int cur_depth, int max_depth, con
     cilk_for(int i=0; i<4; i++){
       coord next = maxi ? step(direction[i],map.MyX(),map.MyY()) : step(direction[i],map.OpponentX(),map.OpponentY());
       pair<string, int> child_mm;
-      if(map.IsEmpty(next.first, next.second)) {
+      if(map.IsEmpty(next.first, next.second) || (!maxi && !map.IsWall(next.first,next.second))) {
         child_mm = parallel_minimax(!maxi, cur_depth+1, max_depth, Map(map, player, direction[i], cur_depth==max_depth-1), updateMoveSeq(move_seq, i, cur_depth));
         child_mm.second *= vscore_coeff;
       } else {
@@ -296,7 +296,7 @@ pair<string, int> alphabeta (bool maxi, int cur_depth, int max_depth, const Map 
     for(std::list<int>::iterator it = ord_children.begin(); it !=ord_children.end(); ++it){
       i = *it;
       coord next = step(direction[i],map.OpponentX(),map.OpponentY());
-      if(map.IsWall(next.first, next.second)) {
+      if(!map.IsWall(next.first, next.second)) {
         bool leaf = cur_depth==max_depth-1;
         child_ab = alphabeta(!maxi, cur_depth+1, max_depth, Map(map, player, direction[i], leaf), a, b, updateMoveSeq(move_seq, i, cur_depth));
         if (child_ab.first == "T") return child_ab;
@@ -343,7 +343,7 @@ pair<string, int> parallel_alphabeta (bool maxi, int cur_depth, int max_depth, c
   for (int i = 0; i < 4; i++) {
     // fprintf(stderr, "i: %d, best guess: %d\n",i,best_guess);
     coord next = maxi ? step(direction[i],map.MyX(),map.MyY()) : step(direction[i], map.OpponentX(), map.OpponentY());
-    if(map.IsEmpty(next.first, next.second) && best_guess != i) ord_children.push_back(i);
+    if((map.IsEmpty(next.first, next.second) || (!maxi && !map.IsWall(next.first,next.second))) && best_guess != i) ord_children.push_back(i);
   }
 
   if (ord_children.size() == 0) return make_pair("L", maxi ? LOSE : WIN);
@@ -451,7 +451,7 @@ pair<string, int> parallel_alphabeta_abort (bool maxi, int cur_depth, int max_de
   std::unordered_map<cache_key, char>::iterator it = cache.find(move_seq);
   if (it != cache.end()) {
     coord next = maxi ? step(direction[it->second],map.MyX(),map.MyY()) : step(direction[it->second], map.OpponentX(), map.OpponentY());
-    if (map.IsEmpty(next.first, next.second)) {
+    if (map.IsEmpty(next.first, next.second) || (!maxi && !map.IsWall(next.first,next.second))) {
       best_guess = it->second;
       ord_children.push_back(best_guess);
     }
@@ -459,7 +459,7 @@ pair<string, int> parallel_alphabeta_abort (bool maxi, int cur_depth, int max_de
 
   for (int i = 0; i < 4; i++) {
     coord next = maxi ? step(direction[i],map.MyX(),map.MyY()) : step(direction[i], map.OpponentX(), map.OpponentY());
-    if(map.IsEmpty(next.first, next.second) && best_guess != i) ord_children.push_back(i);
+    if((map.IsEmpty(next.first, next.second) || (!maxi && !map.IsWall(next.first,next.second))) && best_guess != i) ord_children.push_back(i);
   }
 
   if (ord_children.size() == 0) return make_pair("N", best_score);
