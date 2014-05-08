@@ -1,5 +1,7 @@
 
 #include "Map.h"
+#include "Abort.h"
+#include "ABState.h"
 #include <string>
 #include <vector>
 #include <set>
@@ -11,6 +13,7 @@
 #include <bitset>
 #include <unordered_map>
 #include <cilk/reducer_list.h>
+#include <mutex>
 
 using namespace std;
 
@@ -391,6 +394,92 @@ pair<string, int> parallel_alphabeta (bool maxi, int cur_depth, int max_depth, c
   }
 }
 
+pair<string, int> parallel_alphabeta_abort (bool maxi, int cur_depth, int max_depth, const Map &map, ABState *prev, cache_key move_seq, reducer_list &write_buffer, Abort *abort) {
+  Abort my_abort = Abort(abort);
+
+  ABState cur = ABState();
+  cur.setA(prev->getA());
+  cur.setB(prev->getB());
+
+  std::mutex m;
+  string best_move;
+  int best_score = maxi ? LOSE : WIN;
+  bool timeout = false;
+
+  auto inlet = [&] (string ret_mv, int ret_sc) {
+    if (ret_mv == "T") {
+      timeout = true;
+      return;
+    }
+    if (ret_mv == "A") return;
+
+    m.lock();
+    if (prev->getA() > cur.getA()) cur.setA(prev->getA());
+    if (prev->getB() < cur.getB()) cur.setB(prev->getB());
+    //fprintf(stderr, "made the inlet with %s %d\n", ret_mv.c_str(), ret_sc);
+    if (maxi) {
+      if (ret_sc > best_score) {
+        best_score = ret_sc;
+        best_move = ret_mv;
+        if (ret_sc >= cur.getB()) my_abort.abort();
+        if (ret_sc > cur.getA()) cur.setA(ret_sc);
+      }
+    } else {
+      if (ret_sc < best_score) {
+        best_score = ret_sc;
+        best_move = ret_mv;
+        if (ret_sc <= cur.getA()) my_abort.abort();
+        if (ret_sc < cur.getB()) cur.setB(ret_sc);
+      }
+    }
+    m.unlock();
+    return;
+  };
+
+
+  if (my_abort.isAborted()) return make_pair("A", LOSE);
+  if (timeLeft() < 0 && !vm.count("depth")) return make_pair("T", LOSE);
+  if (map.State() != IN_PROGRESS) return make_pair("-",map.State());
+  if(cur_depth == max_depth) return make_pair("-",map.Score());
+
+
+  string direction[4] = {"NORTH", "SOUTH", "EAST", "WEST"};
+  int player = maxi ? 1 : 0;
+  int best_guess = -1;
+  std::vector<int> ord_children;
+
+  std::unordered_map<cache_key, char>::iterator it = cache.find(move_seq);
+  if (it != cache.end()) {
+    coord next = maxi ? step(direction[it->second],map.MyX(),map.MyY()) : step(direction[it->second], map.OpponentX(), map.OpponentY());
+    if (map.IsEmpty(next.first, next.second)) {
+      best_guess = it->second;
+      ord_children.push_back(best_guess);
+    }
+  }
+
+  for (int i = 0; i < 4; i++) {
+    coord next = maxi ? step(direction[i],map.MyX(),map.MyY()) : step(direction[i], map.OpponentX(), map.OpponentY());
+    if(map.IsEmpty(next.first, next.second) && best_guess != i) ord_children.push_back(i);
+  }
+
+  if (ord_children.size() == 0) return make_pair("N", best_score);
+
+
+  cilk_for(int i = 0; i < ord_children.size(); i++) {
+    pair<string, int> child = parallel_alphabeta_abort(!maxi, cur_depth + 1, max_depth, Map(map, player, direction[ord_children[i]], cur_depth==max_depth-1), &cur, updateMoveSeq(move_seq, ord_children[i], cur_depth), write_buffer, &my_abort);
+    if (child.first == "T") inlet("T", 0);
+    inlet(direction[ord_children[i]], child.second);
+  }
+
+  if (timeout) {
+    return make_pair("T", LOSE);
+  }
+  write_buffer.push_back(std::pair<int,string>(move_seq, best_move));
+  //printf("I'm going %s\n", best_move.c_str());
+  return make_pair(best_move, best_score);
+}
+
+
 string MakeMove(const Map& map) {
   startTime = CycleTimer::currentSeconds();
   timeLimit =(vm.count("time") ? vm["time"].as<double>(): DEFAULT_TIME) * .99;//multiply by .99 to leave error margin
@@ -410,17 +499,16 @@ string MakeMove(const Map& map) {
     } else if (vm.count("ab")) {
       if(vm.count("parallel")) {
         reducer_list write_buffer;
-        // double start_time = CycleTimer::currentSeconds();
-        temp = parallel_alphabeta(true,0,depth, map, INT_MIN, INT_MAX,1, write_buffer).first;
-        // double end_time = CycleTimer::currentSeconds();
-        // fprintf(stderr, "parallel ab took %.4f seconds\n", end_time - start_time);
-        // start_time = CycleTimer::currentSeconds();
+        if (vm.count("abort")) {
+          ABState init = ABState();
+          temp = parallel_alphabeta_abort(true,0,depth, map, &init, 1, write_buffer, NULL).first;
+        } else {
+          temp = parallel_alphabeta(true,0,depth, map, INT_MIN, INT_MAX,1, write_buffer).first;
+        }
         const std::list<std::pair<int,string>> &write_buffer_list = write_buffer.get_value();
         for(std::list<std::pair<int,string>>::const_iterator i=write_buffer_list.begin(); i!= write_buffer_list.end(); i++){
           cacheMove((*i).first,((*i).second));
         }
-        // end_time = CycleTimer::currentSeconds();
-        // fprintf(stderr, "pcaching took %.4f seconds\n", end_time - start_time);
       } else {
         temp = alphabeta(true, 0, depth, map, INT_MIN, INT_MAX, 1).first;
       }
@@ -444,20 +532,17 @@ string MakeMove(const Map& map) {
       }
     } else if (vm.count("ab")) {
       if(vm.count("parallel")) {
-        // double start_time = CycleTimer::currentSeconds();
-
         reducer_list write_buffer;
-        temp = parallel_alphabeta(true,0,depth, map, INT_MIN, INT_MAX,1, write_buffer).first;
-        // double end_time = CycleTimer::currentSeconds();
-        // fprintf(stderr, "parallel ab took %.4f seconds\n", end_time - start_time);
-        // start_time = CycleTimer::currentSeconds();
+        if (vm.count("abort")) {
+          ABState init = ABState();
+          temp = parallel_alphabeta_abort(true,0,depth, map, &init, 1, write_buffer, NULL).first;
+        } else {
+          temp = parallel_alphabeta(true,0,depth, map, INT_MIN, INT_MAX,1, write_buffer).first;
+        }
         const std::list<std::pair<int,string>> &write_buffer_list = write_buffer.get_value();
-        // fprintf(stderr,"Size of list: %d\n", write_buffer_list.size());
         for(std::list<std::pair<int,string>>::const_iterator i=write_buffer_list.begin(); i!= write_buffer_list.end(); i++){
           cacheMove((*i).first,((*i).second));
         }
-        // end_time = CycleTimer::currentSeconds();
-        // fprintf(stderr, "caching all moves took %.4f seconds\n", end_time - start_time);
       } else {
         temp = alphabeta(true, 0, depth, map, INT_MIN, INT_MAX, 1).first;
       }
@@ -470,7 +555,7 @@ string MakeMove(const Map& map) {
     }
     if (temp != "T") cur_move = temp;
     depth ++;
-    // fprintf(stderr, "Depth: %d, Move: %s, Time Left: %.4f\n", depth, temp.c_str(), timeLeft());
+    fprintf(stderr, "Depth: %d, Move: %s, Time Left: %.4f\n", depth, temp.c_str(), timeLeft());
   }
   return cur_move;
 }
@@ -486,6 +571,7 @@ int main(int argc, char* argv[]) {
     ("time,t", po::value<int>(), "Time limit (ms)")
     ("parallel,p", "Use parallel algorithm")
     ("ab", "alphabeta pruning")
+    ("abort", "abort")
     ("minimax", "standard minimax")
     ("numworkers,n", po::value<string>(), "Number of CILK workers")
     ("test", "debugging line")
