@@ -109,6 +109,7 @@ pair<string, int> endgame (int cur_depth, int max_depth, const Map &map, cache_k
       if(map.IsEmpty(next.first, next.second)) {
         bool leaf = cur_depth==max_depth-1;
         child_eg = endgame(cur_depth+1, max_depth, Map(map, 1, direction[i], leaf), updateMoveSeq(move_seq, i, cur_depth));
+        child_eg.second++;
         if (child_eg.first == "T") return child_eg;
         score[i] = child_eg.second;
       }
@@ -148,6 +149,7 @@ pair<string, int> parallel_endgame (int cur_depth, int max_depth, const Map &map
       pair<string, int> child_eg;
       if(map.IsEmpty(next.first, next.second)) {
         child_eg = parallel_endgame(cur_depth+1, max_depth, Map(map, 1, direction[i], cur_depth==max_depth-1), updateMoveSeq(move_seq, i, cur_depth));
+        child_eg.second++;
       } else {
         child_eg= make_pair("-", LOSE);
       }
@@ -468,7 +470,7 @@ string MakeMove(const Map& map) {
     }
     if (temp != "T") cur_move = temp;
     depth ++;
-    fprintf(stderr, "Depth: %d, Move: %s, Time Left: %.4f\n", depth, temp.c_str(), timeLeft());
+    // fprintf(stderr, "Depth: %d, Move: %s, Time Left: %.4f\n", depth, temp.c_str(), timeLeft());
   }
   return cur_move;
 }

@@ -1,209 +1,50 @@
-Maximum depth: 10
-maps/15x16.txt at depth 10
-Sequential ab bot: 
-Move took 1.6626 seconds
-cache size: 6633, counter: 6633
-Parallel ab bot: 
-Move took 0.4152 seconds
-cache size: 7031, counter: 7031
------------------------------------
-maps/apocalyptic.txt at depth 10
-Sequential ab bot: 
-Move took 0.0729 seconds
-cache size: 201, counter: 201
-Parallel ab bot: 
-Move took 0.1807 seconds
-cache size: 212, counter: 212
------------------------------------
-maps/big-room.txt at depth 10
-Sequential ab bot: 
-Move took 0.2103 seconds
-cache size: 361, counter: 361
-Parallel ab bot: 
-Move took 0.2330 seconds
-cache size: 363, counter: 363
------------------------------------
-maps/box.txt at depth 10
-Sequential ab bot: 
-Move took 0.0705 seconds
-cache size: 372, counter: 372
-Parallel ab bot: 
-Move took 0.0634 seconds
-cache size: 374, counter: 374
------------------------------------
-maps/center.txt at depth 10
-Sequential ab bot: 
-Move took 2.1415 seconds
-cache size: 3594, counter: 3594
-Parallel ab bot: 
-Move took 0.6751 seconds
-cache size: 5335, counter: 5335
------------------------------------
-maps/divider.txt at depth 10
-Sequential ab bot: 
-Move took 19.6050 seconds
-cache size: 0, counter: 0
-Parallel ab bot: 
-Move took 2.8608 seconds
-cache size: 0, counter: 0
------------------------------------
-maps/duel-small.txt at depth 10
-Sequential ab bot: 
-Move took 0.6940 seconds
-cache size: 3729, counter: 3729
-Parallel ab bot: 
-Move took 0.2137 seconds
-cache size: 5709, counter: 5709
------------------------------------
-maps/empty-room.txt at depth 10
-Sequential ab bot: 
-Move took 0.0699 seconds
-cache size: 362, counter: 362
-Parallel ab bot: 
-Move took 0.0663 seconds
-cache size: 364, counter: 364
------------------------------------
-maps/error-room.txt at depth 10
-Sequential ab bot: 
-Move took 0.2976 seconds
-cache size: 0, counter: 0
-Parallel ab bot: 
-Move took 0.0470 seconds
-cache size: 0, counter: 0
------------------------------------
-maps/gate.txt at depth 10
-Sequential ab bot: 
-Move took 0.0090 seconds
-cache size: 89, counter: 89
-Parallel ab bot: 
-Move took 0.0222 seconds
-cache size: 87, counter: 87
------------------------------------
-maps/giant-room.txt at depth 10
-Sequential ab bot: 
-Move took 0.9706 seconds
-cache size: 361, counter: 361
-Parallel ab bot: 
-Move took 0.8021 seconds
-cache size: 363, counter: 363
------------------------------------
-maps/huge-room.txt at depth 10
-Sequential ab bot: 
-Move took 0.9703 seconds
-cache size: 361, counter: 361
-Parallel ab bot: 
-Move took 0.8049 seconds
-cache size: 363, counter: 363
------------------------------------
-maps/joust.txt at depth 10
-Sequential ab bot: 
-Move took 0.0793 seconds
-cache size: 213, counter: 213
-Parallel ab bot: 
-Move took 0.0765 seconds
-cache size: 213, counter: 213
------------------------------------
-maps/keyhole.txt at depth 10
-Sequential ab bot: 
-Move took 1.6400 seconds
-cache size: 3096, counter: 3096
-Parallel ab bot: 
-Move took 0.5005 seconds
-cache size: 4591, counter: 4591
------------------------------------
-maps/oval.txt at depth 10
-Sequential ab bot: 
-Move took 0.4107 seconds
-cache size: 2461, counter: 2461
-Parallel ab bot: 
-Move took 0.1726 seconds
-cache size: 4314, counter: 4314
------------------------------------
-maps/playground.txt at depth 10
-Sequential ab bot: 
-Move took 4.0914 seconds
-cache size: 0, counter: 0
-Parallel ab bot: 
-Move took 0.5950 seconds
-cache size: 0, counter: 0
------------------------------------
-maps/plus.txt at depth 10
-Sequential ab bot: 
-Move took 0.0307 seconds
-cache size: 219, counter: 219
-Parallel ab bot: 
-Move took 0.0289 seconds
-cache size: 224, counter: 224
------------------------------------
-maps/quadrant.txt at depth 10
-Sequential ab bot: 
-Move took 0.3081 seconds
-cache size: 2295, counter: 2295
-Parallel ab bot: 
-Move took 0.1998 seconds
-cache size: 7240, counter: 7240
------------------------------------
-maps/ring.txt at depth 10
-Sequential ab bot: 
-Move took 0.0034 seconds
-cache size: 50, counter: 50
-Parallel ab bot: 
-Move took 0.0126 seconds
-cache size: 50, counter: 50
------------------------------------
-maps/test.txt at depth 10
-Sequential ab bot: 
-Move took 0.0004 seconds
-cache size: 0, counter: 0
-Parallel ab bot: 
-Move took 0.0073 seconds
-cache size: 0, counter: 0
------------------------------------
-maps/toronto2.txt at depth 10
-Sequential ab bot: 
-Move took 0.0509 seconds
-cache size: 272, counter: 272
-Parallel ab bot: 
-Move took 0.0585 seconds
-cache size: 278, counter: 278
------------------------------------
-maps/toronto.txt at depth 10
-Sequential ab bot: 
-Move took 0.0237 seconds
-cache size: 214, counter: 214
-Parallel ab bot: 
-Move took 0.0220 seconds
-cache size: 302, counter: 302
------------------------------------
-maps/triangle.txt at depth 10
-Sequential ab bot: 
-Move took 0.1846 seconds
-cache size: 983, counter: 983
-Parallel ab bot: 
-Move took 0.2150 seconds
-cache size: 1004, counter: 1004
------------------------------------
-maps/trix.txt at depth 10
-Sequential ab bot: 
-Move took 0.0288 seconds
-cache size: 166, counter: 166
-Parallel ab bot: 
-Move took 0.0678 seconds
-cache size: 169, counter: 169
------------------------------------
-maps/u.txt at depth 10
-Sequential ab bot: 
-Move took 0.1820 seconds
-cache size: 1491, counter: 1491
-Parallel ab bot: 
-Move took 0.1048 seconds
-cache size: 1962, counter: 1962
------------------------------------
-maps/vee.txt at depth 10
-Sequential ab bot: 
-Move took 0.0016 seconds
-cache size: 27, counter: 27
-Parallel ab bot: 
-Move took 0.0031 seconds
-cache size: 27, counter: 27
------------------------------------
+25 24
+#########################
+#       #######         #
+# #######     #         #
+###############         #
+## ######################
+##  ################  ###
+##  ################ ## #
+##  ##################  #
+##  ################### #
+##  ################### #
+##  ##########  ####### #
+#2  ################### #
+#1##################### #
+# ##################### #
+# ################## ## #
+# ################## #  #
+# ###############  ###  #
+# ############### ####  #
+# # ##################  #
+# #######################
+# #######################
+# ######               ##
+#      ##################
+#########################
+25 24
+#########################
+#       #######         #
+# #######     #         #
+###############         #
+## ######################
+##  ################  ###
+##  ################ ## #
+##  ##################  #
+##  ################### #
+##  ################### #
+##  ##########  ####### #
+##2 ################### #
+####################### #
+#1##################### #
+# ################## ## #
+# ################## #  #
+# ###############  ###  #
+# ############### ####  #
+# # ##################  #
+# #######################
+# #######################
+# ######               ##
+#      ##################
+#########################
