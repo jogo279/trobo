@@ -463,9 +463,11 @@ pair<string, int> parallel_alphabeta_abort (bool maxi, int cur_depth, int max_de
   }
 
   if (ord_children.size() == 0) return make_pair("N", best_score);
+  pair<string, int> first_child = parallel_alphabeta_abort(!maxi, cur_depth + 1, max_depth, Map(map, player, direction[ord_children[0]], cur_depth==max_depth-1), &cur, updateMoveSeq(move_seq, ord_children[0], cur_depth), write_buffer, &my_abort);
+  if (first_child.first == "T") inlet("T", 0);
+  inlet(direction[ord_children[0]], first_child.second);
 
-
-  cilk_for(int i = 0; i < ord_children.size(); i++) {
+  cilk_for(int i = 1; i < ord_children.size(); i++) {
     pair<string, int> child = parallel_alphabeta_abort(!maxi, cur_depth + 1, max_depth, Map(map, player, direction[ord_children[i]], cur_depth==max_depth-1), &cur, updateMoveSeq(move_seq, ord_children[i], cur_depth), write_buffer, &my_abort);
     if (child.first == "T") inlet("T", 0);
     inlet(direction[ord_children[i]], child.second);
