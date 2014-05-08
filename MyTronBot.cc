@@ -1,6 +1,5 @@
 
 #include "Map.h"
-#include "Abort.h"
 #include "ABState.h"
 #include <string>
 #include <vector>
@@ -297,7 +296,7 @@ pair<string, int> alphabeta (bool maxi, int cur_depth, int max_depth, const Map 
     for(std::list<int>::iterator it = ord_children.begin(); it !=ord_children.end(); ++it){
       i = *it;
       coord next = step(direction[i],map.OpponentX(),map.OpponentY());
-      if(map.IsEmpty(next.first, next.second)) {
+      if(map.IsWall(next.first, next.second)) {
         bool leaf = cur_depth==max_depth-1;
         child_ab = alphabeta(!maxi, cur_depth+1, max_depth, Map(map, player, direction[i], leaf), a, b, updateMoveSeq(move_seq, i, cur_depth));
         if (child_ab.first == "T") return child_ab;
@@ -394,10 +393,9 @@ pair<string, int> parallel_alphabeta (bool maxi, int cur_depth, int max_depth, c
   }
 }
 
-pair<string, int> parallel_alphabeta_abort (bool maxi, int cur_depth, int max_depth, const Map &map, ABState *prev, cache_key move_seq, reducer_list &write_buffer, Abort *abort) {
-  Abort my_abort = Abort(abort);
+pair<string, int> parallel_alphabeta_abort (bool maxi, int cur_depth, int max_depth, const Map &map, ABState *prev, cache_key move_seq, reducer_list &write_buffer) {
+  ABState cur = ABState(prev);
 
-  ABState cur = ABState();
   cur.setA(prev->getA());
   cur.setB(prev->getB());
 
@@ -421,14 +419,14 @@ pair<string, int> parallel_alphabeta_abort (bool maxi, int cur_depth, int max_de
       if (ret_sc > best_score) {
         best_score = ret_sc;
         best_move = ret_mv;
-        if (ret_sc >= cur.getB()) my_abort.abort();
+        if (ret_sc >= cur.getB()) cur.abort();
         if (ret_sc > cur.getA()) cur.setA(ret_sc);
       }
     } else {
       if (ret_sc < best_score) {
         best_score = ret_sc;
         best_move = ret_mv;
-        if (ret_sc <= cur.getA()) my_abort.abort();
+        if (ret_sc <= cur.getA()) cur.abort();
         if (ret_sc < cur.getB()) cur.setB(ret_sc);
       }
     }
@@ -436,8 +434,10 @@ pair<string, int> parallel_alphabeta_abort (bool maxi, int cur_depth, int max_de
     return;
   };
 
+  std::tuple<int,int,bool> state = cur.bestAB();
 
-  if (my_abort.isAborted()) return make_pair("A", LOSE);
+  // if(std::get<2>(state)) return make_pair("A", LOSE);
+  if (cur.isAborted()) return make_pair("A", LOSE);
   if (timeLeft() < 0 && !vm.count("depth")) return make_pair("T", LOSE);
   if (map.State() != IN_PROGRESS) return make_pair("-",map.State());
   if(cur_depth == max_depth) return make_pair("-",map.Score());
@@ -463,12 +463,12 @@ pair<string, int> parallel_alphabeta_abort (bool maxi, int cur_depth, int max_de
   }
 
   if (ord_children.size() == 0) return make_pair("N", best_score);
-  pair<string, int> first_child = parallel_alphabeta_abort(!maxi, cur_depth + 1, max_depth, Map(map, player, direction[ord_children[0]], cur_depth==max_depth-1), &cur, updateMoveSeq(move_seq, ord_children[0], cur_depth), write_buffer, &my_abort);
+  pair<string, int> first_child = parallel_alphabeta_abort(!maxi, cur_depth + 1, max_depth, Map(map, player, direction[ord_children[0]], cur_depth==max_depth-1), &cur, updateMoveSeq(move_seq, ord_children[0], cur_depth), write_buffer);
   if (first_child.first == "T") inlet("T", 0);
   inlet(direction[ord_children[0]], first_child.second);
 
   cilk_for(int i = 1; i < ord_children.size(); i++) {
-    pair<string, int> child = parallel_alphabeta_abort(!maxi, cur_depth + 1, max_depth, Map(map, player, direction[ord_children[i]], cur_depth==max_depth-1), &cur, updateMoveSeq(move_seq, ord_children[i], cur_depth), write_buffer, &my_abort);
+    pair<string, int> child = parallel_alphabeta_abort(!maxi, cur_depth + 1, max_depth, Map(map, player, direction[ord_children[i]], cur_depth==max_depth-1), &cur, updateMoveSeq(move_seq, ord_children[i], cur_depth), write_buffer);
     if (child.first == "T") inlet("T", 0);
     inlet(direction[ord_children[i]], child.second);
   }
@@ -502,8 +502,8 @@ string MakeMove(const Map& map) {
       if(vm.count("parallel")) {
         reducer_list write_buffer;
         if (vm.count("abort")) {
-          ABState init = ABState();
-          temp = parallel_alphabeta_abort(true,0,depth, map, &init, 1, write_buffer, NULL).first;
+          ABState init = ABState(NULL);
+          temp = parallel_alphabeta_abort(true,0,depth, map, &init, 1, write_buffer).first;
         } else {
           temp = parallel_alphabeta(true,0,depth, map, INT_MIN, INT_MAX,1, write_buffer).first;
         }
@@ -536,8 +536,8 @@ string MakeMove(const Map& map) {
       if(vm.count("parallel")) {
         reducer_list write_buffer;
         if (vm.count("abort")) {
-          ABState init = ABState();
-          temp = parallel_alphabeta_abort(true,0,depth, map, &init, 1, write_buffer, NULL).first;
+          ABState init = ABState(NULL);
+          temp = parallel_alphabeta_abort(true,0,depth, map, &init, 1, write_buffer).first;
         } else {
           temp = parallel_alphabeta(true,0,depth, map, INT_MIN, INT_MAX,1, write_buffer).first;
         }
