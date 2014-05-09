@@ -1,0 +1,265 @@
+Maximum depth: 
+maps/15x16.txt
+Sequential ab bot: 
+Depth: 14, Move: T, Time Left: -0.0007
+0.9908
+Parallel ab bot: 
+Depth: 16, Move: T, Time Left: -0.0034
+0.9935
+Parallel ab abort bot: 
+Depth: 16, Move: T, Time Left: -0.0036
+0.9938
+-----------------------------------
+maps/apocalyptic.txt
+Sequential ab bot: 
+Depth: 17, Move: T, Time Left: -0.0003
+0.9904
+Parallel ab bot: 
+Depth: 17, Move: T, Time Left: -0.0004
+0.9906
+Parallel ab abort bot: 
+Depth: 16, Move: T, Time Left: -0.0003
+0.9905
+-----------------------------------
+maps/big-room.txt
+Sequential ab bot: 
+Depth: 14, Move: T, Time Left: -0.0005
+0.9906
+Parallel ab bot: 
+Depth: 15, Move: T, Time Left: -0.0004
+0.9905
+Parallel ab abort bot: 
+Depth: 14, Move: T, Time Left: -0.0005
+0.9907
+-----------------------------------
+maps/box.txt
+Sequential ab bot: 
+Depth: 14, Move: T, Time Left: -0.0010
+0.9911
+Parallel ab bot: 
+Depth: 16, Move: T, Time Left: -0.0002
+0.9903
+Parallel ab abort bot: 
+Depth: 16, Move: T, Time Left: -0.0004
+0.9905
+-----------------------------------
+maps/center.txt
+Sequential ab bot: 
+Depth: 12, Move: T, Time Left: -0.0002
+0.9904
+Parallel ab bot: 
+Depth: 13, Move: T, Time Left: -0.0008
+0.9909
+Parallel ab abort bot: 
+Depth: 13, Move: T, Time Left: -0.0023
+0.9924
+-----------------------------------
+maps/divider.txt
+Sequential ab bot: 
+Depth: 8, Move: T, Time Left: -0.0004
+0.9905
+Parallel ab bot: 
+Depth: 10, Move: T, Time Left: -0.0026
+0.9928
+Parallel ab abort bot: 
+Depth: 10, Move: T, Time Left: -0.0068
+0.9970
+-----------------------------------
+maps/duel-small.txt
+Sequential ab bot: 
+Depth: 14, Move: T, Time Left: -0.0003
+0.9904
+Parallel ab bot: 
+Depth: 15, Move: T, Time Left: -0.0063
+0.9964
+Parallel ab abort bot: 
+Depth: 16, Move: T, Time Left: -0.0009
+0.9911
+-----------------------------------
+maps/empty-room.txt
+Sequential ab bot: 
+Depth: 17, Move: T, Time Left: -0.0002
+0.9903
+Parallel ab bot: 
+Depth: 18, Move: T, Time Left: -0.0011
+0.9912
+Parallel ab abort bot: 
+Depth: 18, Move: T, Time Left: -0.0011
+0.9912
+-----------------------------------
+maps/gate.txt
+Sequential ab bot: 
+Depth: 24, Move: T, Time Left: -0.0005
+0.9906
+Parallel ab bot: 
+Depth: 23, Move: T, Time Left: -0.0002
+0.9903
+Parallel ab abort bot: 
+Depth: 22, Move: T, Time Left: -0.0048
+0.9949
+-----------------------------------
+maps/giant-room.txt
+Sequential ab bot: 
+Depth: 11, Move: T, Time Left: -0.0002
+0.9903
+Parallel ab bot: 
+Depth: 10, Move: T, Time Left: -0.0043
+0.9945
+Parallel ab abort bot: 
+Depth: 11, Move: T, Time Left: -0.0010
+0.9911
+-----------------------------------
+maps/joust.txt
+Sequential ab bot: 
+Depth: 15, Move: T, Time Left: -0.0004
+0.9906
+Parallel ab bot: 
+Depth: 16, Move: T, Time Left: -0.0001
+0.9903
+Parallel ab abort bot: 
+Depth: 16, Move: T, Time Left: -0.0000
+0.9902
+-----------------------------------
+maps/keyhole.txt
+Sequential ab bot: 
+Depth: 11, Move: T, Time Left: -0.0003
+0.9904
+Parallel ab bot: 
+Depth: 13, Move: T, Time Left: -0.0060
+0.9962
+Parallel ab abort bot: 
+Depth: 13, Move: T, Time Left: -0.0025
+0.9927
+-----------------------------------
+maps/oval.txt
+Sequential ab bot: 
+Depth: 14, Move: T, Time Left: -0.0002
+0.9903
+Parallel ab bot: 
+Depth: 14, Move: T, Time Left: -0.0097
+0.9998
+Parallel ab abort bot: 
+Depth: 15, Move: T, Time Left: -0.0008
+0.9909
+-----------------------------------
+maps/playground.txt
+Sequential ab bot: 
+Depth: 9, Move: T, Time Left: -0.0002
+0.9903
+Parallel ab bot: 
+Depth: 11, Move: T, Time Left: -0.0103
+1.0004
+Parallel ab abort bot: 
+Depth: 11, Move: T, Time Left: -0.0041
+0.9943
+-----------------------------------
+maps/plus.txt
+Sequential ab bot: 
+Depth: 17, Move: T, Time Left: -0.0006
+0.9908
+Parallel ab bot: 
+Depth: 19, Move: T, Time Left: -0.0009
+0.9910
+Parallel ab abort bot: 
+Depth: 19, Move: T, Time Left: -0.0010
+0.9912
+-----------------------------------
+maps/quadrant.txt
+Sequential ab bot: 
+Depth: 13, Move: T, Time Left: -0.0004
+0.9905
+Parallel ab bot: 
+Depth: 15, Move: T, Time Left: -0.0020
+0.9921
+Parallel ab abort bot: 
+Depth: 15, Move: T, Time Left: -0.0023
+0.9925
+-----------------------------------
+maps/ring.txt
+Sequential ab bot: 
+Depth: 24, Move: T, Time Left: -0.0010
+0.9911
+Parallel ab bot: 
+Depth: 27, Move: T, Time Left: -0.0041
+0.9943
+Parallel ab abort bot: 
+Depth: 27, Move: T, Time Left: -0.0039
+0.9941
+-----------------------------------
+maps/test.txt
+Sequential ab bot: 
+Depth: 17, Move: T, Time Left: -0.0003
+0.9904
+Parallel ab bot: 
+Depth: 18, Move: T, Time Left: -0.0004
+0.9906
+Parallel ab abort bot: 
+Depth: 18, Move: T, Time Left: -0.0002
+0.9904
+-----------------------------------
+maps/toronto2.txt
+Sequential ab bot: 
+Depth: 18, Move: T, Time Left: -0.0002
+0.9903
+Parallel ab bot: 
+Depth: 18, Move: T, Time Left: -0.0005
+0.9906
+Parallel ab abort bot: 
+Depth: 18, Move: T, Time Left: -0.0004
+0.9906
+-----------------------------------
+maps/toronto.txt
+Sequential ab bot: 
+Depth: 20, Move: T, Time Left: -0.0006
+0.9907
+Parallel ab bot: 
+Depth: 22, Move: T, Time Left: -0.0020
+0.9921
+Parallel ab abort bot: 
+Depth: 22, Move: T, Time Left: -0.0008
+0.9910
+-----------------------------------
+maps/triangle.txt
+Sequential ab bot: 
+Depth: 17, Move: T, Time Left: -0.0003
+0.9904
+Parallel ab bot: 
+Depth: 18, Move: T, Time Left: -0.0008
+0.9909
+Parallel ab abort bot: 
+Depth: 17, Move: T, Time Left: -0.0023
+0.9924
+-----------------------------------
+maps/trix.txt
+Sequential ab bot: 
+Depth: 19, Move: T, Time Left: -0.0006
+0.9907
+Parallel ab bot: 
+Depth: 19, Move: T, Time Left: -0.0025
+0.9927
+Parallel ab abort bot: 
+Depth: 19, Move: T, Time Left: -0.0028
+0.9929
+-----------------------------------
+maps/u.txt
+Sequential ab bot: 
+Depth: 18, Move: T, Time Left: -0.0003
+0.9904
+Parallel ab bot: 
+Depth: 20, Move: T, Time Left: -0.0011
+0.9913
+Parallel ab abort bot: 
+Depth: 20, Move: T, Time Left: -0.0009
+0.9910
+-----------------------------------
+maps/vee.txt
+Sequential ab bot: 
+Depth: 24, Move: T, Time Left: -0.0005
+0.9906
+Parallel ab bot: 
+Depth: 25, Move: T, Time Left: -0.0005
+0.9906
+Parallel ab abort bot: 
+Depth: 25, Move: T, Time Left: -0.0001
+0.9902
+-----------------------------------
