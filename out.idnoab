@@ -1,0 +1,1664 @@
+Maximum depth: 
+maps/15x16.txt
+Sequential bot minimax: 
+Depth: 7, Move: EAST, Time Left: 0.9260
+Depth: 8, Move: EAST, Time Left: 0.7583
+Depth: 9, Move: EAST, Time Left: 0.3253
+Depth: 10, Move: T, Time Left: -0.0000
+Move took 0.9901 seconds
+cache size: 0, counter: 0
+Parallel minimax bot: 
+Depth: 7, Move: EAST, Time Left: 0.9728
+Depth: 8, Move: EAST, Time Left: 0.9471
+Depth: 9, Move: EAST, Time Left: 0.8815
+Depth: 10, Move: EAST, Time Left: 0.7075
+Depth: 11, Move: EAST, Time Left: 0.2680
+Depth: 12, Move: T, Time Left: -0.0011
+Move took 0.9912 seconds
+cache size: 0, counter: 0
+Sequential ab bot: 
+Depth: 7, Move: EAST, Time Left: 0.9360
+Depth: 8, Move: EAST, Time Left: 0.9205
+Depth: 9, Move: EAST, Time Left: 0.8969
+Depth: 10, Move: EAST, Time Left: 0.8559
+Depth: 11, Move: EAST, Time Left: 0.7877
+Depth: 12, Move: EAST, Time Left: 0.6171
+Depth: 13, Move: EAST, Time Left: 0.4317
+Depth: 14, Move: T, Time Left: -0.0001
+Move took 0.9902 seconds
+cache size: 2992, counter: 5594
+Parallel ab bot: 
+Depth: 7, Move: EAST, Time Left: 0.9659
+Depth: 8, Move: EAST, Time Left: 0.9526
+Depth: 9, Move: EAST, Time Left: 0.9395
+Depth: 10, Move: EAST, Time Left: 0.9193
+Depth: 11, Move: EAST, Time Left: 0.8895
+Depth: 12, Move: EAST, Time Left: 0.8267
+Depth: 13, Move: EAST, Time Left: 0.7611
+Depth: 14, Move: EAST, Time Left: 0.5880
+Depth: 15, Move: EAST, Time Left: 0.3725
+Depth: 16, Move: T, Time Left: -0.0038
+Move took 0.9939 seconds
+cache size: 12598, counter: 20265
+Parallel ab abort bot: 
+Depth: 7, Move: EAST, Time Left: 0.9633
+Depth: 8, Move: EAST, Time Left: 0.9485
+Depth: 9, Move: EAST, Time Left: 0.9243
+Depth: 10, Move: EAST, Time Left: 0.8800
+Depth: 11, Move: EAST, Time Left: 0.8257
+Depth: 12, Move: EAST, Time Left: 0.7166
+Depth: 13, Move: EAST, Time Left: 0.6038
+Depth: 14, Move: EAST, Time Left: 0.3077
+Depth: 15, Move: T, Time Left: -0.0036
+Move took 0.9938 seconds
+cache size: 10905, counter: 14927
+-----------------------------------
+maps/apocalyptic.txt
+Sequential bot minimax: 
+Depth: 7, Move: NORTH, Time Left: 0.9541
+Depth: 8, Move: NORTH, Time Left: 0.8890
+Depth: 9, Move: NORTH, Time Left: 0.7724
+Depth: 10, Move: NORTH, Time Left: 0.5629
+Depth: 11, Move: NORTH, Time Left: 0.1884
+Depth: 12, Move: T, Time Left: -0.0002
+Move took 0.9903 seconds
+cache size: 0, counter: 0
+Parallel minimax bot: 
+Depth: 7, Move: NORTH, Time Left: 0.9808
+Depth: 8, Move: NORTH, Time Left: 0.9704
+Depth: 9, Move: NORTH, Time Left: 0.9524
+Depth: 10, Move: NORTH, Time Left: 0.9207
+Depth: 11, Move: NORTH, Time Left: 0.8647
+Depth: 12, Move: NORTH, Time Left: 0.7675
+Depth: 13, Move: NORTH, Time Left: 0.5958
+Depth: 14, Move: NORTH, Time Left: 0.2571
+Depth: 15, Move: T, Time Left: -0.0197
+Move took 1.0098 seconds
+cache size: 0, counter: 0
+Sequential ab bot: 
+Depth: 7, Move: NORTH, Time Left: 0.9750
+Depth: 8, Move: NORTH, Time Left: 0.9599
+Depth: 9, Move: NORTH, Time Left: 0.9392
+Depth: 10, Move: NORTH, Time Left: 0.9100
+Depth: 11, Move: NORTH, Time Left: 0.8696
+Depth: 12, Move: NORTH, Time Left: 0.8085
+Depth: 13, Move: NORTH, Time Left: 0.7306
+Depth: 14, Move: NORTH, Time Left: 0.5988
+Depth: 15, Move: NORTH, Time Left: 0.4093
+Depth: 16, Move: NORTH, Time Left: 0.1893
+Depth: 17, Move: T, Time Left: -0.0001
+Move took 0.9903 seconds
+cache size: 932, counter: 2907
+Parallel ab bot: 
+Depth: 7, Move: NORTH, Time Left: 0.9685
+Depth: 8, Move: NORTH, Time Left: 0.9486
+Depth: 9, Move: NORTH, Time Left: 0.9215
+Depth: 10, Move: NORTH, Time Left: 0.8848
+Depth: 11, Move: NORTH, Time Left: 0.8348
+Depth: 12, Move: NORTH, Time Left: 0.7610
+Depth: 13, Move: NORTH, Time Left: 0.6664
+Depth: 14, Move: NORTH, Time Left: 0.5233
+Depth: 15, Move: NORTH, Time Left: 0.3190
+Depth: 16, Move: NORTH, Time Left: 0.0879
+Depth: 17, Move: T, Time Left: -0.0003
+Move took 0.9904 seconds
+cache size: 850, counter: 2587
+Parallel ab abort bot: 
+Depth: 7, Move: NORTH, Time Left: 0.9610
+Depth: 8, Move: NORTH, Time Left: 0.9254
+Depth: 9, Move: NORTH, Time Left: 0.8868
+Depth: 10, Move: NORTH, Time Left: 0.7999
+Depth: 11, Move: NORTH, Time Left: 0.7367
+Depth: 12, Move: NORTH, Time Left: 0.6485
+Depth: 13, Move: NORTH, Time Left: 0.4740
+Depth: 14, Move: NORTH, Time Left: 0.2621
+Depth: 15, Move: NORTH, Time Left: 0.0112
+Depth: 16, Move: T, Time Left: -0.0023
+Move took 0.9924 seconds
+cache size: 685, counter: 1801
+-----------------------------------
+maps/big-room.txt
+Sequential bot minimax: 
+Depth: 7, Move: SOUTH, Time Left: 0.9396
+Depth: 8, Move: SOUTH, Time Left: 0.8184
+Depth: 9, Move: SOUTH, Time Left: 0.5261
+Depth: 10, Move: T, Time Left: -0.0002
+Move took 0.9903 seconds
+cache size: 0, counter: 0
+Parallel minimax bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9789
+Depth: 8, Move: SOUTH, Time Left: 0.9591
+Depth: 9, Move: SOUTH, Time Left: 0.9135
+Depth: 10, Move: SOUTH, Time Left: 0.7998
+Depth: 11, Move: SOUTH, Time Left: 0.5251
+Depth: 12, Move: T, Time Left: -0.0015
+Move took 0.9917 seconds
+cache size: 0, counter: 0
+Sequential ab bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9655
+Depth: 8, Move: SOUTH, Time Left: 0.9295
+Depth: 9, Move: SOUTH, Time Left: 0.8780
+Depth: 10, Move: SOUTH, Time Left: 0.7878
+Depth: 11, Move: SOUTH, Time Left: 0.6875
+Depth: 12, Move: SOUTH, Time Left: 0.5288
+Depth: 13, Move: SOUTH, Time Left: 0.3138
+Depth: 14, Move: T, Time Left: -0.0001
+Move took 0.9902 seconds
+cache size: 929, counter: 2130
+Parallel ab bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9438
+Depth: 8, Move: SOUTH, Time Left: 0.9133
+Depth: 9, Move: SOUTH, Time Left: 0.8724
+Depth: 10, Move: SOUTH, Time Left: 0.7807
+Depth: 11, Move: SOUTH, Time Left: 0.6867
+Depth: 12, Move: SOUTH, Time Left: 0.5535
+Depth: 13, Move: SOUTH, Time Left: 0.3845
+Depth: 14, Move: T, Time Left: -0.0005
+Move took 0.9906 seconds
+cache size: 1070, counter: 2390
+Parallel ab abort bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9477
+Depth: 8, Move: SOUTH, Time Left: 0.9118
+Depth: 9, Move: SOUTH, Time Left: 0.8601
+Depth: 10, Move: SOUTH, Time Left: 0.7446
+Depth: 11, Move: SOUTH, Time Left: 0.6090
+Depth: 12, Move: SOUTH, Time Left: 0.4265
+Depth: 13, Move: SOUTH, Time Left: 0.1120
+Depth: 14, Move: T, Time Left: -0.0020
+Move took 0.9921 seconds
+cache size: 1331, counter: 2324
+-----------------------------------
+maps/box.txt
+Sequential bot minimax: 
+Depth: 7, Move: SOUTH, Time Left: 0.9741
+Depth: 8, Move: SOUTH, Time Left: 0.9362
+Depth: 9, Move: SOUTH, Time Left: 0.8446
+Depth: 10, Move: SOUTH, Time Left: 0.6205
+Depth: 11, Move: SOUTH, Time Left: 0.0665
+Depth: 12, Move: T, Time Left: -0.0001
+Move took 0.9902 seconds
+cache size: 0, counter: 0
+Parallel minimax bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9823
+Depth: 8, Move: SOUTH, Time Left: 0.9763
+Depth: 9, Move: SOUTH, Time Left: 0.9624
+Depth: 10, Move: SOUTH, Time Left: 0.9286
+Depth: 11, Move: SOUTH, Time Left: 0.8458
+Depth: 12, Move: SOUTH, Time Left: 0.6509
+Depth: 13, Move: SOUTH, Time Left: 0.1706
+Depth: 14, Move: T, Time Left: -0.0067
+Move took 0.9968 seconds
+cache size: 0, counter: 0
+Sequential ab bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9843
+Depth: 8, Move: SOUTH, Time Left: 0.9759
+Depth: 9, Move: SOUTH, Time Left: 0.9635
+Depth: 10, Move: SOUTH, Time Left: 0.9353
+Depth: 11, Move: SOUTH, Time Left: 0.9026
+Depth: 12, Move: SOUTH, Time Left: 0.7940
+Depth: 13, Move: SOUTH, Time Left: 0.6160
+Depth: 14, Move: T, Time Left: -0.0001
+Move took 0.9902 seconds
+cache size: 4589, counter: 6632
+Parallel ab bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9811
+Depth: 8, Move: SOUTH, Time Left: 0.9714
+Depth: 9, Move: SOUTH, Time Left: 0.9585
+Depth: 10, Move: SOUTH, Time Left: 0.9313
+Depth: 11, Move: SOUTH, Time Left: 0.9019
+Depth: 12, Move: SOUTH, Time Left: 0.8135
+Depth: 13, Move: SOUTH, Time Left: 0.6760
+Depth: 14, Move: SOUTH, Time Left: 0.2472
+Depth: 15, Move: SOUTH, Time Left: 0.0359
+Depth: 16, Move: T, Time Left: -0.0004
+Move took 0.9904 seconds
+cache size: 8475, counter: 11784
+Parallel ab abort bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9748
+Depth: 8, Move: SOUTH, Time Left: 0.9634
+Depth: 9, Move: SOUTH, Time Left: 0.9461
+Depth: 10, Move: SOUTH, Time Left: 0.9159
+Depth: 11, Move: SOUTH, Time Left: 0.8737
+Depth: 12, Move: SOUTH, Time Left: 0.7317
+Depth: 13, Move: SOUTH, Time Left: 0.5013
+Depth: 14, Move: T, Time Left: -0.0027
+Move took 0.9928 seconds
+cache size: 6751, counter: 9468
+-----------------------------------
+maps/center.txt
+Sequential bot minimax: 
+Depth: 7, Move: EAST, Time Left: 0.7365
+Depth: 8, Move: NORTH, Time Left: 0.0399
+Depth: 9, Move: T, Time Left: -0.0001
+Move took 0.9902 seconds
+cache size: 0, counter: 0
+Parallel minimax bot: 
+Depth: 7, Move: EAST, Time Left: 0.9407
+Depth: 8, Move: NORTH, Time Left: 0.8295
+Depth: 9, Move: NORTH, Time Left: 0.5324
+Depth: 10, Move: T, Time Left: -0.0023
+Move took 0.9924 seconds
+cache size: 0, counter: 0
+Sequential ab bot: 
+Depth: 7, Move: EAST, Time Left: 0.8723
+Depth: 8, Move: NORTH, Time Left: 0.7338
+Depth: 9, Move: NORTH, Time Left: 0.6141
+Depth: 10, Move: NORTH, Time Left: 0.3507
+Depth: 11, Move: NORTH, Time Left: 0.0532
+Depth: 12, Move: T, Time Left: -0.0003
+Move took 0.9904 seconds
+cache size: 1140, counter: 2036
+Parallel ab bot: 
+Depth: 7, Move: EAST, Time Left: 0.9314
+Depth: 8, Move: NORTH, Time Left: 0.8573
+Depth: 9, Move: NORTH, Time Left: 0.7982
+Depth: 10, Move: NORTH, Time Left: 0.7040
+Depth: 11, Move: NORTH, Time Left: 0.5977
+Depth: 12, Move: NORTH, Time Left: 0.3286
+Depth: 13, Move: T, Time Left: -0.0018
+Move took 0.9920 seconds
+cache size: 3818, counter: 6306
+Parallel ab abort bot: 
+Depth: 7, Move: EAST, Time Left: 0.9327
+Depth: 8, Move: NORTH, Time Left: 0.8605
+Depth: 9, Move: NORTH, Time Left: 0.7993
+Depth: 10, Move: NORTH, Time Left: 0.6744
+Depth: 11, Move: NORTH, Time Left: 0.5049
+Depth: 12, Move: NORTH, Time Left: 0.1379
+Depth: 13, Move: T, Time Left: -0.0024
+Move took 0.9925 seconds
+cache size: 3200, counter: 5024
+-----------------------------------
+maps/divider.txt
+Sequential bot minimax: 
+Depth: 7, Move: NORTH, Time Left: 0.6027
+Depth: 8, Move: T, Time Left: -0.0003
+Move took 0.9904 seconds
+cache size: 0, counter: 0
+Parallel minimax bot: 
+Depth: 7, Move: NORTH, Time Left: 0.9059
+Depth: 8, Move: NORTH, Time Left: 0.7485
+Depth: 9, Move: NORTH, Time Left: 0.3251
+Depth: 10, Move: T, Time Left: -0.0054
+Move took 0.9955 seconds
+cache size: 0, counter: 0
+Sequential ab bot: 
+Depth: 7, Move: NORTH, Time Left: 0.6010
+Depth: 8, Move: T, Time Left: -0.0004
+Move took 0.9905 seconds
+cache size: 0, counter: 0
+Parallel ab bot: 
+Depth: 7, Move: NORTH, Time Left: 0.9284
+Depth: 8, Move: NORTH, Time Left: 0.7647
+Depth: 9, Move: NORTH, Time Left: 0.3314
+Depth: 10, Move: T, Time Left: -0.0060
+Move took 0.9961 seconds
+cache size: 0, counter: 0
+Parallel ab abort bot: 
+Depth: 7, Move: NORTH, Time Left: 0.9228
+Depth: 8, Move: NORTH, Time Left: 0.7614
+Depth: 9, Move: NORTH, Time Left: 0.3410
+Depth: 10, Move: T, Time Left: -0.0022
+Move took 0.9923 seconds
+cache size: 0, counter: 0
+-----------------------------------
+maps/duel-small.txt
+Sequential bot minimax: 
+Depth: 7, Move: EAST, Time Left: 0.9104
+Depth: 8, Move: SOUTH, Time Left: 0.6942
+Depth: 9, Move: SOUTH, Time Left: 0.0825
+Depth: 10, Move: T, Time Left: -0.0001
+Move took 0.9901 seconds
+cache size: 0, counter: 0
+Parallel minimax bot: 
+Depth: 7, Move: EAST, Time Left: 0.9711
+Depth: 8, Move: SOUTH, Time Left: 0.9371
+Depth: 9, Move: SOUTH, Time Left: 0.8474
+Depth: 10, Move: SOUTH, Time Left: 0.6026
+Depth: 11, Move: T, Time Left: -0.0006
+Move took 0.9907 seconds
+cache size: 0, counter: 0
+Sequential ab bot: 
+Depth: 7, Move: EAST, Time Left: 0.9536
+Depth: 8, Move: SOUTH, Time Left: 0.9089
+Depth: 9, Move: SOUTH, Time Left: 0.8732
+Depth: 10, Move: SOUTH, Time Left: 0.7976
+Depth: 11, Move: SOUTH, Time Left: 0.7058
+Depth: 12, Move: SOUTH, Time Left: 0.5043
+Depth: 13, Move: SOUTH, Time Left: 0.1729
+Depth: 14, Move: T, Time Left: -0.0001
+Move took 0.9902 seconds
+cache size: 3887, counter: 7030
+Parallel ab bot: 
+Depth: 7, Move: EAST, Time Left: 0.9677
+Depth: 8, Move: SOUTH, Time Left: 0.9405
+Depth: 9, Move: SOUTH, Time Left: 0.9243
+Depth: 10, Move: SOUTH, Time Left: 0.8937
+Depth: 11, Move: SOUTH, Time Left: 0.8615
+Depth: 12, Move: SOUTH, Time Left: 0.7798
+Depth: 13, Move: SOUTH, Time Left: 0.6879
+Depth: 14, Move: SOUTH, Time Left: 0.4760
+Depth: 15, Move: SOUTH, Time Left: 0.0199
+Depth: 16, Move: T, Time Left: -0.0003
+Move took 0.9904 seconds
+cache size: 23608, counter: 31043
+Parallel ab abort bot: 
+Depth: 7, Move: WEST, Time Left: 0.9686
+Depth: 8, Move: SOUTH, Time Left: 0.9466
+Depth: 9, Move: SOUTH, Time Left: 0.9250
+Depth: 10, Move: SOUTH, Time Left: 0.8769
+Depth: 11, Move: SOUTH, Time Left: 0.8128
+Depth: 12, Move: SOUTH, Time Left: 0.7014
+Depth: 13, Move: SOUTH, Time Left: 0.5860
+Depth: 14, Move: SOUTH, Time Left: 0.4057
+Depth: 15, Move: SOUTH, Time Left: 0.0659
+Depth: 16, Move: T, Time Left: -0.0012
+Move took 0.9913 seconds
+cache size: 12250, counter: 20503
+-----------------------------------
+maps/empty-room.txt
+Sequential bot minimax: 
+Depth: 7, Move: SOUTH, Time Left: 0.9736
+Depth: 8, Move: SOUTH, Time Left: 0.9341
+Depth: 9, Move: SOUTH, Time Left: 0.8416
+Depth: 10, Move: SOUTH, Time Left: 0.6081
+Depth: 11, Move: SOUTH, Time Left: 0.0317
+Depth: 12, Move: T, Time Left: -0.0001
+Move took 0.9902 seconds
+cache size: 0, counter: 0
+Parallel minimax bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9778
+Depth: 8, Move: SOUTH, Time Left: 0.9714
+Depth: 9, Move: SOUTH, Time Left: 0.9502
+Depth: 10, Move: SOUTH, Time Left: 0.9132
+Depth: 11, Move: SOUTH, Time Left: 0.8240
+Depth: 12, Move: SOUTH, Time Left: 0.6137
+Depth: 13, Move: SOUTH, Time Left: 0.1045
+Depth: 14, Move: T, Time Left: -0.0009
+Move took 0.9910 seconds
+cache size: 0, counter: 0
+Sequential ab bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9840
+Depth: 8, Move: SOUTH, Time Left: 0.9752
+Depth: 9, Move: SOUTH, Time Left: 0.9623
+Depth: 10, Move: SOUTH, Time Left: 0.9329
+Depth: 11, Move: SOUTH, Time Left: 0.9000
+Depth: 12, Move: SOUTH, Time Left: 0.8500
+Depth: 13, Move: SOUTH, Time Left: 0.7783
+Depth: 14, Move: SOUTH, Time Left: 0.6187
+Depth: 15, Move: SOUTH, Time Left: 0.4293
+Depth: 16, Move: SOUTH, Time Left: 0.1307
+Depth: 17, Move: T, Time Left: -0.0001
+Move took 0.9902 seconds
+cache size: 2872, counter: 7021
+Parallel ab bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9740
+Depth: 8, Move: SOUTH, Time Left: 0.9638
+Depth: 9, Move: SOUTH, Time Left: 0.9503
+Depth: 10, Move: SOUTH, Time Left: 0.9202
+Depth: 11, Move: SOUTH, Time Left: 0.8898
+Depth: 12, Move: SOUTH, Time Left: 0.8468
+Depth: 13, Move: SOUTH, Time Left: 0.7921
+Depth: 14, Move: SOUTH, Time Left: 0.6851
+Depth: 15, Move: SOUTH, Time Left: 0.5724
+Depth: 16, Move: SOUTH, Time Left: 0.4171
+Depth: 17, Move: SOUTH, Time Left: 0.2194
+Depth: 18, Move: T, Time Left: -0.0013
+Move took 0.9914 seconds
+cache size: 5557, counter: 12591
+Parallel ab abort bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9769
+Depth: 8, Move: SOUTH, Time Left: 0.9648
+Depth: 9, Move: SOUTH, Time Left: 0.9472
+Depth: 10, Move: SOUTH, Time Left: 0.9157
+Depth: 11, Move: SOUTH, Time Left: 0.8705
+Depth: 12, Move: SOUTH, Time Left: 0.8123
+Depth: 13, Move: SOUTH, Time Left: 0.7094
+Depth: 14, Move: SOUTH, Time Left: 0.5611
+Depth: 15, Move: SOUTH, Time Left: 0.3526
+Depth: 16, Move: SOUTH, Time Left: 0.0770
+Depth: 17, Move: T, Time Left: -0.0011
+Move took 0.9912 seconds
+cache size: 5393, counter: 9308
+-----------------------------------
+maps/error-room.txt
+Sequential bot minimax: 
+Depth: 7, Move: SOUTH, Time Left: 0.9760
+Depth: 8, Move: SOUTH, Time Left: 0.9442
+Depth: 9, Move: SOUTH, Time Left: 0.8746
+Depth: 10, Move: SOUTH, Time Left: 0.7285
+Depth: 11, Move: SOUTH, Time Left: 0.4314
+Depth: 12, Move: T, Time Left: -0.0000
+Move took 0.9901 seconds
+cache size: 0, counter: 0
+Parallel minimax bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9805
+Depth: 8, Move: SOUTH, Time Left: 0.9754
+Depth: 9, Move: SOUTH, Time Left: 0.9646
+Depth: 10, Move: SOUTH, Time Left: 0.9424
+Depth: 11, Move: SOUTH, Time Left: 0.8976
+Depth: 12, Move: SOUTH, Time Left: 0.8127
+Depth: 13, Move: SOUTH, Time Left: 0.6536
+Depth: 14, Move: SOUTH, Time Left: 0.3760
+Depth: 15, Move: T, Time Left: -0.0005
+Move took 0.9906 seconds
+cache size: 0, counter: 0
+Sequential ab bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9758
+Depth: 8, Move: SOUTH, Time Left: 0.9438
+Depth: 9, Move: SOUTH, Time Left: 0.8736
+Depth: 10, Move: SOUTH, Time Left: 0.7264
+Depth: 11, Move: SOUTH, Time Left: 0.4269
+Depth: 12, Move: T, Time Left: -0.0000
+Move took 0.9901 seconds
+cache size: 0, counter: 0
+Parallel ab bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9863
+Depth: 8, Move: SOUTH, Time Left: 0.9812
+Depth: 9, Move: SOUTH, Time Left: 0.9667
+Depth: 10, Move: SOUTH, Time Left: 0.9444
+Depth: 11, Move: SOUTH, Time Left: 0.8993
+Depth: 12, Move: SOUTH, Time Left: 0.8167
+Depth: 13, Move: SOUTH, Time Left: 0.6568
+Depth: 14, Move: SOUTH, Time Left: 0.3839
+Depth: 15, Move: T, Time Left: -0.0006
+Move took 0.9907 seconds
+cache size: 0, counter: 0
+Parallel ab abort bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9854
+Depth: 8, Move: SOUTH, Time Left: 0.9780
+Depth: 9, Move: SOUTH, Time Left: 0.9673
+Depth: 10, Move: SOUTH, Time Left: 0.9447
+Depth: 11, Move: SOUTH, Time Left: 0.8969
+Depth: 12, Move: SOUTH, Time Left: 0.8089
+Depth: 13, Move: SOUTH, Time Left: 0.6451
+Depth: 14, Move: SOUTH, Time Left: 0.3645
+Depth: 15, Move: T, Time Left: -0.0005
+Move took 0.9906 seconds
+cache size: 0, counter: 0
+-----------------------------------
+maps/gate.txt
+Sequential bot minimax: 
+Depth: 7, Move: NORTH, Time Left: 0.9828
+Depth: 8, Move: NORTH, Time Left: 0.9712
+Depth: 9, Move: NORTH, Time Left: 0.9530
+Depth: 10, Move: NORTH, Time Left: 0.9218
+Depth: 11, Move: NORTH, Time Left: 0.8675
+Depth: 12, Move: NORTH, Time Left: 0.7802
+Depth: 13, Move: NORTH, Time Left: 0.6414
+Depth: 14, Move: NORTH, Time Left: 0.4127
+Depth: 15, Move: NORTH, Time Left: 0.0392
+Depth: 16, Move: T, Time Left: -0.0001
+Move took 0.9901 seconds
+cache size: 0, counter: 0
+Parallel minimax bot: 
+Depth: 7, Move: NORTH, Time Left: 0.9829
+Depth: 8, Move: NORTH, Time Left: 0.9807
+Depth: 9, Move: NORTH, Time Left: 0.9776
+Depth: 10, Move: NORTH, Time Left: 0.9725
+Depth: 11, Move: NORTH, Time Left: 0.9641
+Depth: 12, Move: NORTH, Time Left: 0.9510
+Depth: 13, Move: NORTH, Time Left: 0.9303
+Depth: 14, Move: NORTH, Time Left: 0.8905
+Depth: 15, Move: NORTH, Time Left: 0.8379
+Depth: 16, Move: NORTH, Time Left: 0.7468
+Depth: 17, Move: NORTH, Time Left: 0.6019
+Depth: 18, Move: NORTH, Time Left: 0.3736
+Depth: 19, Move: NORTH, Time Left: 0.0063
+Depth: 20, Move: T, Time Left: -0.0009
+Move took 0.9910 seconds
+cache size: 0, counter: 0
+Sequential ab bot: 
+Depth: 7, Move: NORTH, Time Left: 0.9873
+Depth: 8, Move: NORTH, Time Left: 0.9835
+Depth: 9, Move: NORTH, Time Left: 0.9787
+Depth: 10, Move: NORTH, Time Left: 0.9720
+Depth: 11, Move: NORTH, Time Left: 0.9633
+Depth: 12, Move: NORTH, Time Left: 0.9516
+Depth: 13, Move: NORTH, Time Left: 0.9371
+Depth: 14, Move: NORTH, Time Left: 0.9179
+Depth: 15, Move: NORTH, Time Left: 0.8936
+Depth: 16, Move: NORTH, Time Left: 0.8620
+Depth: 17, Move: NORTH, Time Left: 0.8216
+Depth: 18, Move: NORTH, Time Left: 0.7695
+Depth: 19, Move: NORTH, Time Left: 0.7041
+Depth: 20, Move: NORTH, Time Left: 0.6194
+Depth: 21, Move: NORTH, Time Left: 0.5111
+Depth: 22, Move: NORTH, Time Left: 0.3725
+Depth: 23, Move: NORTH, Time Left: 0.1996
+Depth: 24, Move: T, Time Left: -0.0001
+Move took 0.9901 seconds
+cache size: 2030, counter: 11654
+Parallel ab bot: 
+Depth: 7, Move: NORTH, Time Left: 0.9837
+Depth: 8, Move: NORTH, Time Left: 0.9780
+Depth: 9, Move: NORTH, Time Left: 0.9705
+Depth: 10, Move: NORTH, Time Left: 0.9602
+Depth: 11, Move: NORTH, Time Left: 0.9466
+Depth: 12, Move: NORTH, Time Left: 0.9289
+Depth: 13, Move: NORTH, Time Left: 0.9062
+Depth: 14, Move: NORTH, Time Left: 0.8767
+Depth: 15, Move: NORTH, Time Left: 0.8396
+Depth: 16, Move: NORTH, Time Left: 0.7913
+Depth: 17, Move: NORTH, Time Left: 0.7300
+Depth: 18, Move: NORTH, Time Left: 0.6511
+Depth: 19, Move: NORTH, Time Left: 0.5527
+Depth: 20, Move: NORTH, Time Left: 0.4248
+Depth: 21, Move: NORTH, Time Left: 0.2634
+Depth: 22, Move: NORTH, Time Left: 0.0569
+Depth: 23, Move: T, Time Left: -0.0002
+Move took 0.9902 seconds
+cache size: 1542, counter: 7314
+Parallel ab abort bot: 
+Depth: 7, Move: NORTH, Time Left: 0.9818
+Depth: 8, Move: NORTH, Time Left: 0.9742
+Depth: 9, Move: NORTH, Time Left: 0.9642
+Depth: 10, Move: NORTH, Time Left: 0.9490
+Depth: 11, Move: NORTH, Time Left: 0.9309
+Depth: 12, Move: NORTH, Time Left: 0.9088
+Depth: 13, Move: NORTH, Time Left: 0.8769
+Depth: 14, Move: NORTH, Time Left: 0.8344
+Depth: 15, Move: NORTH, Time Left: 0.7776
+Depth: 16, Move: NORTH, Time Left: 0.7142
+Depth: 17, Move: NORTH, Time Left: 0.6285
+Depth: 18, Move: NORTH, Time Left: 0.5172
+Depth: 19, Move: NORTH, Time Left: 0.3776
+Depth: 20, Move: NORTH, Time Left: 0.2104
+Depth: 21, Move: T, Time Left: -0.0015
+Move took 0.9915 seconds
+cache size: 1625, counter: 5520
+-----------------------------------
+maps/giant-room.txt
+Sequential bot minimax: 
+Depth: 7, Move: SOUTH, Time Left: 0.7554
+Depth: 8, Move: SOUTH, Time Left: 0.1915
+Depth: 9, Move: T, Time Left: -0.0003
+Move took 0.9904 seconds
+cache size: 0, counter: 0
+Parallel minimax bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9261
+Depth: 8, Move: SOUTH, Time Left: 0.8341
+Depth: 9, Move: SOUTH, Time Left: 0.6194
+Depth: 10, Move: SOUTH, Time Left: 0.1083
+Depth: 11, Move: T, Time Left: -0.0166
+Move took 1.0067 seconds
+cache size: 0, counter: 0
+Sequential ab bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9060
+Depth: 8, Move: SOUTH, Time Left: 0.7829
+Depth: 9, Move: SOUTH, Time Left: 0.6010
+Depth: 10, Move: SOUTH, Time Left: 0.1834
+Depth: 11, Move: T, Time Left: -0.0007
+Move took 0.9908 seconds
+cache size: 216, counter: 428
+Parallel ab bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.8826
+Depth: 8, Move: SOUTH, Time Left: 0.7478
+Depth: 9, Move: SOUTH, Time Left: 0.5653
+Depth: 10, Move: SOUTH, Time Left: 0.1482
+Depth: 11, Move: T, Time Left: -0.0008
+Move took 0.9909 seconds
+cache size: 212, counter: 416
+Parallel ab abort bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.7871
+Depth: 8, Move: SOUTH, Time Left: 0.6233
+Depth: 9, Move: SOUTH, Time Left: 0.3724
+Depth: 10, Move: T, Time Left: -0.0062
+Move took 0.9963 seconds
+cache size: 225, counter: 361
+-----------------------------------
+maps/huge-room.txt
+Sequential bot minimax: 
+Depth: 7, Move: SOUTH, Time Left: 0.7539
+Depth: 8, Move: SOUTH, Time Left: 0.1876
+Depth: 9, Move: T, Time Left: -0.0001
+Move took 0.9902 seconds
+cache size: 0, counter: 0
+Parallel minimax bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9380
+Depth: 8, Move: SOUTH, Time Left: 0.8452
+Depth: 9, Move: SOUTH, Time Left: 0.6397
+Depth: 10, Move: SOUTH, Time Left: 0.1411
+Depth: 11, Move: T, Time Left: -0.0142
+Move took 1.0044 seconds
+cache size: 0, counter: 0
+Sequential ab bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9059
+Depth: 8, Move: SOUTH, Time Left: 0.7825
+Depth: 9, Move: SOUTH, Time Left: 0.6005
+Depth: 10, Move: SOUTH, Time Left: 0.1834
+Depth: 11, Move: T, Time Left: -0.0003
+Move took 0.9904 seconds
+cache size: 215, counter: 423
+Parallel ab bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.8401
+Depth: 8, Move: SOUTH, Time Left: 0.7067
+Depth: 9, Move: SOUTH, Time Left: 0.5254
+Depth: 10, Move: SOUTH, Time Left: 0.1184
+Depth: 11, Move: T, Time Left: -0.0027
+Move took 0.9928 seconds
+cache size: 204, counter: 394
+Parallel ab abort bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.7716
+Depth: 8, Move: SOUTH, Time Left: 0.6065
+Depth: 9, Move: SOUTH, Time Left: 0.3611
+Depth: 10, Move: T, Time Left: -0.0057
+Move took 0.9958 seconds
+cache size: 218, counter: 355
+-----------------------------------
+maps/joust.txt
+Sequential bot minimax: 
+Depth: 7, Move: SOUTH, Time Left: 0.9392
+Depth: 8, Move: SOUTH, Time Left: 0.8171
+Depth: 9, Move: SOUTH, Time Left: 0.5230
+Depth: 10, Move: T, Time Left: -0.0004
+Move took 0.9905 seconds
+cache size: 0, counter: 0
+Parallel minimax bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9773
+Depth: 8, Move: SOUTH, Time Left: 0.9578
+Depth: 9, Move: SOUTH, Time Left: 0.9121
+Depth: 10, Move: SOUTH, Time Left: 0.7998
+Depth: 11, Move: SOUTH, Time Left: 0.5293
+Depth: 12, Move: T, Time Left: -0.0095
+Move took 0.9996 seconds
+cache size: 0, counter: 0
+Sequential ab bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9779
+Depth: 8, Move: SOUTH, Time Left: 0.9574
+Depth: 9, Move: SOUTH, Time Left: 0.9264
+Depth: 10, Move: SOUTH, Time Left: 0.8741
+Depth: 11, Move: SOUTH, Time Left: 0.7951
+Depth: 12, Move: SOUTH, Time Left: 0.6641
+Depth: 13, Move: SOUTH, Time Left: 0.4668
+Depth: 14, Move: SOUTH, Time Left: 0.1348
+Depth: 15, Move: T, Time Left: -0.0003
+Move took 0.9904 seconds
+cache size: 958, counter: 2533
+Parallel ab bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9637
+Depth: 8, Move: SOUTH, Time Left: 0.9399
+Depth: 9, Move: SOUTH, Time Left: 0.9063
+Depth: 10, Move: SOUTH, Time Left: 0.8557
+Depth: 11, Move: SOUTH, Time Left: 0.7856
+Depth: 12, Move: SOUTH, Time Left: 0.6818
+Depth: 13, Move: SOUTH, Time Left: 0.5375
+Depth: 14, Move: SOUTH, Time Left: 0.3251
+Depth: 15, Move: SOUTH, Time Left: 0.0315
+Depth: 16, Move: T, Time Left: -0.0005
+Move took 0.9906 seconds
+cache size: 1367, counter: 3605
+Parallel ab abort bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9602
+Depth: 8, Move: SOUTH, Time Left: 0.9274
+Depth: 9, Move: SOUTH, Time Left: 0.8660
+Depth: 10, Move: SOUTH, Time Left: 0.7984
+Depth: 11, Move: SOUTH, Time Left: 0.6891
+Depth: 12, Move: SOUTH, Time Left: 0.5547
+Depth: 13, Move: SOUTH, Time Left: 0.3688
+Depth: 14, Move: SOUTH, Time Left: 0.1250
+Depth: 15, Move: T, Time Left: -0.0007
+Move took 0.9908 seconds
+cache size: 1037, counter: 2683
+-----------------------------------
+maps/keyhole.txt
+Sequential bot minimax: 
+Depth: 7, Move: NORTH, Time Left: 0.3966
+Depth: 8, Move: T, Time Left: -0.0001
+Move took 0.9902 seconds
+cache size: 0, counter: 0
+Parallel minimax bot: 
+Depth: 7, Move: NORTH, Time Left: 0.8972
+Depth: 8, Move: NORTH, Time Left: 0.6393
+Depth: 9, Move: T, Time Left: -0.0040
+Move took 0.9941 seconds
+cache size: 0, counter: 0
+Sequential ab bot: 
+Depth: 7, Move: NORTH, Time Left: 0.8944
+Depth: 8, Move: NORTH, Time Left: 0.8009
+Depth: 9, Move: NORTH, Time Left: 0.6692
+Depth: 10, Move: NORTH, Time Left: 0.3285
+Depth: 11, Move: T, Time Left: -0.0001
+Move took 0.9902 seconds
+cache size: 1168, counter: 2096
+Parallel ab bot: 
+Depth: 7, Move: NORTH, Time Left: 0.9533
+Depth: 8, Move: NORTH, Time Left: 0.9169
+Depth: 9, Move: NORTH, Time Left: 0.8764
+Depth: 10, Move: NORTH, Time Left: 0.7688
+Depth: 11, Move: NORTH, Time Left: 0.6502
+Depth: 12, Move: NORTH, Time Left: 0.4732
+Depth: 13, Move: T, Time Left: -0.0037
+Move took 0.9939 seconds
+cache size: 6960, counter: 10640
+Parallel ab abort bot: 
+Depth: 7, Move: NORTH, Time Left: 0.9401
+Depth: 8, Move: NORTH, Time Left: 0.8754
+Depth: 9, Move: NORTH, Time Left: 0.7853
+Depth: 10, Move: NORTH, Time Left: 0.6437
+Depth: 11, Move: NORTH, Time Left: 0.4720
+Depth: 12, Move: NORTH, Time Left: 0.2320
+Depth: 13, Move: T, Time Left: -0.0026
+Move took 0.9927 seconds
+cache size: 3643, counter: 6082
+-----------------------------------
+maps/oval.txt
+Sequential bot minimax: 
+Depth: 7, Move: SOUTH, Time Left: 0.9302
+Depth: 8, Move: EAST, Time Left: 0.7822
+Depth: 9, Move: SOUTH, Time Left: 0.4070
+Depth: 10, Move: T, Time Left: -0.0001
+Move took 0.9902 seconds
+cache size: 0, counter: 0
+Parallel minimax bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9674
+Depth: 8, Move: EAST, Time Left: 0.9444
+Depth: 9, Move: SOUTH, Time Left: 0.8867
+Depth: 10, Move: EAST, Time Left: 0.7460
+Depth: 11, Move: SOUTH, Time Left: 0.3954
+Depth: 12, Move: T, Time Left: -0.0083
+Move took 0.9984 seconds
+cache size: 0, counter: 0
+Sequential ab bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9823
+Depth: 8, Move: EAST, Time Left: 0.9572
+Depth: 9, Move: SOUTH, Time Left: 0.9098
+Depth: 10, Move: EAST, Time Left: 0.7683
+Depth: 11, Move: EAST, Time Left: 0.6302
+Depth: 12, Move: EAST, Time Left: 0.3994
+Depth: 13, Move: EAST, Time Left: 0.0759
+Depth: 14, Move: T, Time Left: -0.0001
+Move took 0.9901 seconds
+cache size: 4257, counter: 6437
+Parallel ab bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9827
+Depth: 8, Move: EAST, Time Left: 0.9626
+Depth: 9, Move: SOUTH, Time Left: 0.9314
+Depth: 10, Move: EAST, Time Left: 0.8666
+Depth: 11, Move: EAST, Time Left: 0.7978
+Depth: 12, Move: EAST, Time Left: 0.6727
+Depth: 13, Move: EAST, Time Left: 0.5286
+Depth: 14, Move: EAST, Time Left: 0.0405
+Depth: 15, Move: T, Time Left: -0.0004
+Move took 0.9905 seconds
+cache size: 16872, counter: 21189
+Parallel ab abort bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9800
+Depth: 8, Move: WEST, Time Left: 0.9563
+Depth: 9, Move: SOUTH, Time Left: 0.9195
+Depth: 10, Move: WEST, Time Left: 0.8475
+Depth: 11, Move: WEST, Time Left: 0.7947
+Depth: 12, Move: WEST, Time Left: 0.6735
+Depth: 13, Move: WEST, Time Left: 0.5060
+Depth: 14, Move: WEST, Time Left: -0.0004
+Move took 0.9905 seconds
+cache size: 13794, counter: 18391
+-----------------------------------
+maps/playground.txt
+Sequential bot minimax: 
+Depth: 7, Move: SOUTH, Time Left: 0.8398
+Depth: 8, Move: WEST, Time Left: 0.4842
+Depth: 9, Move: T, Time Left: -0.0000
+Move took 0.9901 seconds
+cache size: 0, counter: 0
+Parallel minimax bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9561
+Depth: 8, Move: WEST, Time Left: 0.9032
+Depth: 9, Move: WEST, Time Left: 0.7825
+Depth: 10, Move: WEST, Time Left: 0.5175
+Depth: 11, Move: T, Time Left: -0.0015
+Move took 0.9916 seconds
+cache size: 0, counter: 0
+Sequential ab bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.8399
+Depth: 8, Move: WEST, Time Left: 0.4842
+Depth: 9, Move: T, Time Left: -0.0001
+Move took 0.9902 seconds
+cache size: 0, counter: 0
+Parallel ab bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9655
+Depth: 8, Move: WEST, Time Left: 0.9103
+Depth: 9, Move: WEST, Time Left: 0.7891
+Depth: 10, Move: WEST, Time Left: 0.5256
+Depth: 11, Move: T, Time Left: -0.0026
+Move took 0.9927 seconds
+cache size: 0, counter: 0
+Parallel ab abort bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9132
+Depth: 8, Move: WEST, Time Left: 0.8599
+Depth: 9, Move: WEST, Time Left: 0.7469
+Depth: 10, Move: WEST, Time Left: 0.4917
+Depth: 11, Move: T, Time Left: -0.0017
+Move took 0.9918 seconds
+cache size: 0, counter: 0
+-----------------------------------
+maps/plus.txt
+Sequential bot minimax: 
+Depth: 7, Move: EAST, Time Left: 0.9781
+Depth: 8, Move: EAST, Time Left: 0.9463
+Depth: 9, Move: EAST, Time Left: 0.8587
+Depth: 10, Move: EAST, Time Left: 0.6522
+Depth: 11, Move: EAST, Time Left: 0.1698
+Depth: 12, Move: T, Time Left: -0.0001
+Move took 0.9902 seconds
+cache size: 0, counter: 0
+Parallel minimax bot: 
+Depth: 7, Move: EAST, Time Left: 0.9796
+Depth: 8, Move: EAST, Time Left: 0.9731
+Depth: 9, Move: EAST, Time Left: 0.9596
+Depth: 10, Move: EAST, Time Left: 0.9285
+Depth: 11, Move: EAST, Time Left: 0.8567
+Depth: 12, Move: EAST, Time Left: 0.6953
+Depth: 13, Move: EAST, Time Left: 0.3320
+Depth: 14, Move: T, Time Left: -0.0024
+Move took 0.9925 seconds
+cache size: 0, counter: 0
+Sequential ab bot: 
+Depth: 7, Move: EAST, Time Left: 0.9866
+Depth: 8, Move: EAST, Time Left: 0.9789
+Depth: 9, Move: EAST, Time Left: 0.9691
+Depth: 10, Move: EAST, Time Left: 0.9538
+Depth: 11, Move: EAST, Time Left: 0.9317
+Depth: 12, Move: EAST, Time Left: 0.8970
+Depth: 13, Move: EAST, Time Left: 0.8325
+Depth: 14, Move: EAST, Time Left: 0.7515
+Depth: 15, Move: EAST, Time Left: 0.5616
+Depth: 16, Move: EAST, Time Left: 0.3611
+Depth: 17, Move: T, Time Left: -0.0001
+Move took 0.9902 seconds
+cache size: 3513, counter: 7623
+Parallel ab bot: 
+Depth: 7, Move: EAST, Time Left: 0.9744
+Depth: 8, Move: EAST, Time Left: 0.9673
+Depth: 9, Move: EAST, Time Left: 0.9595
+Depth: 10, Move: EAST, Time Left: 0.9475
+Depth: 11, Move: EAST, Time Left: 0.9328
+Depth: 12, Move: EAST, Time Left: 0.9122
+Depth: 13, Move: EAST, Time Left: 0.8742
+Depth: 14, Move: EAST, Time Left: 0.8331
+Depth: 15, Move: EAST, Time Left: 0.7492
+Depth: 16, Move: EAST, Time Left: 0.6652
+Depth: 17, Move: EAST, Time Left: 0.4323
+Depth: 18, Move: EAST, Time Left: 0.1618
+Depth: 19, Move: T, Time Left: -0.0012
+Move took 0.9913 seconds
+cache size: 10899, counter: 19509
+Parallel ab abort bot: 
+Depth: 7, Move: EAST, Time Left: 0.9833
+Depth: 8, Move: EAST, Time Left: 0.9685
+Depth: 9, Move: EAST, Time Left: 0.9468
+Depth: 10, Move: EAST, Time Left: 0.9264
+Depth: 11, Move: EAST, Time Left: 0.8985
+Depth: 12, Move: EAST, Time Left: 0.8693
+Depth: 13, Move: EAST, Time Left: 0.8184
+Depth: 14, Move: EAST, Time Left: 0.7321
+Depth: 15, Move: EAST, Time Left: 0.6296
+Depth: 16, Move: EAST, Time Left: 0.5021
+Depth: 17, Move: EAST, Time Left: 0.2514
+Depth: 18, Move: T, Time Left: -0.0021
+Move took 0.9922 seconds
+cache size: 8022, counter: 14776
+-----------------------------------
+maps/quadrant.txt
+Sequential bot minimax: 
+Depth: 7, Move: SOUTH, Time Left: 0.8116
+Depth: 8, Move: SOUTH, Time Left: 0.3715
+Depth: 9, Move: T, Time Left: -0.0001
+Move took 0.9902 seconds
+cache size: 0, counter: 0
+Parallel minimax bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9564
+Depth: 8, Move: SOUTH, Time Left: 0.8915
+Depth: 9, Move: SOUTH, Time Left: 0.7386
+Depth: 10, Move: SOUTH, Time Left: 0.3869
+Depth: 11, Move: T, Time Left: -0.0008
+Move took 0.9910 seconds
+cache size: 0, counter: 0
+Sequential ab bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9615
+Depth: 8, Move: SOUTH, Time Left: 0.9316
+Depth: 9, Move: SOUTH, Time Left: 0.8898
+Depth: 10, Move: SOUTH, Time Left: 0.6830
+Depth: 11, Move: SOUTH, Time Left: 0.5283
+Depth: 12, Move: SOUTH, Time Left: 0.2283
+Depth: 13, Move: T, Time Left: -0.0000
+Move took 0.9901 seconds
+cache size: 4613, counter: 7610
+Parallel ab bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9728
+Depth: 8, Move: SOUTH, Time Left: 0.9601
+Depth: 9, Move: SOUTH, Time Left: 0.9446
+Depth: 10, Move: SOUTH, Time Left: 0.8664
+Depth: 11, Move: SOUTH, Time Left: 0.8059
+Depth: 12, Move: SOUTH, Time Left: 0.6705
+Depth: 13, Move: SOUTH, Time Left: 0.6082
+Depth: 14, Move: SOUTH, Time Left: 0.2376
+Depth: 15, Move: T, Time Left: -0.0028
+Move took 0.9929 seconds
+cache size: 21203, counter: 28894
+Parallel ab abort bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9695
+Depth: 8, Move: SOUTH, Time Left: 0.9480
+Depth: 9, Move: SOUTH, Time Left: 0.9158
+Depth: 10, Move: SOUTH, Time Left: 0.8276
+Depth: 11, Move: SOUTH, Time Left: 0.7481
+Depth: 12, Move: SOUTH, Time Left: 0.5243
+Depth: 13, Move: SOUTH, Time Left: 0.4029
+Depth: 14, Move: SOUTH, Time Left: 0.0327
+Depth: 15, Move: T, Time Left: -0.0011
+Move took 0.9912 seconds
+cache size: 16613, counter: 23178
+-----------------------------------
+maps/ring.txt
+Sequential bot minimax: 
+Depth: 7, Move: WEST, Time Left: 0.9882
+Depth: 8, Move: WEST, Time Left: 0.9860
+Depth: 9, Move: WEST, Time Left: 0.9835
+Depth: 10, Move: WEST, Time Left: 0.9800
+Depth: 11, Move: WEST, Time Left: 0.9748
+Depth: 12, Move: WEST, Time Left: 0.9665
+Depth: 13, Move: WEST, Time Left: 0.9529
+Depth: 14, Move: WEST, Time Left: 0.9245
+Depth: 15, Move: WEST, Time Left: 0.8631
+Depth: 16, Move: WEST, Time Left: 0.7191
+Depth: 17, Move: WEST, Time Left: 0.3865
+Depth: 18, Move: T, Time Left: -0.0001
+Move took 0.9902 seconds
+cache size: 0, counter: 0
+Parallel minimax bot: 
+Depth: 7, Move: WEST, Time Left: 0.9810
+Depth: 8, Move: WEST, Time Left: 0.9804
+Depth: 9, Move: WEST, Time Left: 0.9797
+Depth: 10, Move: WEST, Time Left: 0.9787
+Depth: 11, Move: WEST, Time Left: 0.9775
+Depth: 12, Move: WEST, Time Left: 0.9758
+Depth: 13, Move: WEST, Time Left: 0.9733
+Depth: 14, Move: WEST, Time Left: 0.9686
+Depth: 15, Move: WEST, Time Left: 0.9591
+Depth: 16, Move: WEST, Time Left: 0.9372
+Depth: 17, Move: WEST, Time Left: 0.8867
+Depth: 18, Move: WEST, Time Left: 0.7629
+Depth: 19, Move: WEST, Time Left: 0.4539
+Depth: 20, Move: T, Time Left: -0.0006
+Move took 0.9907 seconds
+cache size: 0, counter: 0
+Sequential ab bot: 
+Depth: 7, Move: WEST, Time Left: 0.9884
+Depth: 8, Move: WEST, Time Left: 0.9870
+Depth: 9, Move: WEST, Time Left: 0.9855
+Depth: 10, Move: WEST, Time Left: 0.9835
+Depth: 11, Move: WEST, Time Left: 0.9811
+Depth: 12, Move: WEST, Time Left: 0.9779
+Depth: 13, Move: WEST, Time Left: 0.9738
+Depth: 14, Move: WEST, Time Left: 0.9678
+Depth: 15, Move: WEST, Time Left: 0.9596
+Depth: 16, Move: WEST, Time Left: 0.9469
+Depth: 17, Move: WEST, Time Left: 0.9286
+Depth: 18, Move: WEST, Time Left: 0.8990
+Depth: 19, Move: WEST, Time Left: 0.8529
+Depth: 20, Move: WEST, Time Left: 0.7776
+Depth: 21, Move: WEST, Time Left: 0.6758
+Depth: 22, Move: WEST, Time Left: 0.5262
+Depth: 23, Move: WEST, Time Left: 0.3149
+Depth: 24, Move: T, Time Left: -0.0000
+Move took 0.9901 seconds
+cache size: 3929, counter: 11460
+Parallel ab bot: 
+Depth: 7, Move: WEST, Time Left: 0.9807
+Depth: 8, Move: WEST, Time Left: 0.9786
+Depth: 9, Move: WEST, Time Left: 0.9764
+Depth: 10, Move: WEST, Time Left: 0.9737
+Depth: 11, Move: WEST, Time Left: 0.9705
+Depth: 12, Move: WEST, Time Left: 0.9665
+Depth: 13, Move: WEST, Time Left: 0.9617
+Depth: 14, Move: WEST, Time Left: 0.9556
+Depth: 15, Move: WEST, Time Left: 0.9482
+Depth: 16, Move: WEST, Time Left: 0.9382
+Depth: 17, Move: WEST, Time Left: 0.9255
+Depth: 18, Move: WEST, Time Left: 0.9086
+Depth: 19, Move: WEST, Time Left: 0.8854
+Depth: 20, Move: WEST, Time Left: 0.8525
+Depth: 21, Move: WEST, Time Left: 0.8119
+Depth: 22, Move: WEST, Time Left: 0.7592
+Depth: 23, Move: WEST, Time Left: 0.6891
+Depth: 24, Move: WEST, Time Left: 0.5897
+Depth: 25, Move: WEST, Time Left: 0.4635
+Depth: 26, Move: WEST, Time Left: 0.2933
+Depth: 27, Move: WEST, Time Left: 0.0558
+Depth: 28, Move: T, Time Left: -0.0010
+Move took 0.9911 seconds
+cache size: 13233, counter: 39689
+Parallel ab abort bot: 
+Depth: 7, Move: WEST, Time Left: 0.9854
+Depth: 8, Move: WEST, Time Left: 0.9832
+Depth: 9, Move: WEST, Time Left: 0.9807
+Depth: 10, Move: WEST, Time Left: 0.9772
+Depth: 11, Move: WEST, Time Left: 0.9732
+Depth: 12, Move: WEST, Time Left: 0.9678
+Depth: 13, Move: WEST, Time Left: 0.9614
+Depth: 14, Move: WEST, Time Left: 0.9527
+Depth: 15, Move: WEST, Time Left: 0.9423
+Depth: 16, Move: WEST, Time Left: 0.9238
+Depth: 17, Move: WEST, Time Left: 0.9037
+Depth: 18, Move: WEST, Time Left: 0.8723
+Depth: 19, Move: WEST, Time Left: 0.8262
+Depth: 20, Move: WEST, Time Left: 0.7596
+Depth: 21, Move: WEST, Time Left: 0.6691
+Depth: 22, Move: WEST, Time Left: 0.5808
+Depth: 23, Move: WEST, Time Left: 0.4354
+Depth: 24, Move: WEST, Time Left: 0.2554
+Depth: 25, Move: WEST, Time Left: 0.0059
+Depth: 26, Move: T, Time Left: -0.0011
+Move took 0.9912 seconds
+cache size: 11037, counter: 22834
+-----------------------------------
+maps/test.txt
+Sequential bot minimax: 
+Depth: 7, Move: EAST, Time Left: 0.9877
+Depth: 8, Move: EAST, Time Left: 0.9839
+Depth: 9, Move: EAST, Time Left: 0.9778
+Depth: 10, Move: EAST, Time Left: 0.9687
+Depth: 11, Move: EAST, Time Left: 0.9547
+Depth: 12, Move: EAST, Time Left: 0.9396
+Depth: 13, Move: EAST, Time Left: 0.9209
+Depth: 14, Move: EAST, Time Left: 0.9045
+Depth: 15, Move: EAST, Time Left: 0.8879
+Depth: 16, Move: EAST, Time Left: 0.8721
+Depth: 17, Move: EAST, Time Left: 0.8563
+Depth: 18, Move: EAST, Time Left: 0.8405
+Depth: 19, Move: EAST, Time Left: 0.8247
+Depth: 20, Move: EAST, Time Left: 0.8089
+Depth: 21, Move: EAST, Time Left: 0.7931
+Depth: 22, Move: EAST, Time Left: 0.7772
+Depth: 23, Move: EAST, Time Left: 0.7614
+Depth: 24, Move: EAST, Time Left: 0.7456
+Depth: 25, Move: EAST, Time Left: 0.7298
+Depth: 26, Move: EAST, Time Left: 0.7140
+Depth: 27, Move: EAST, Time Left: 0.6982
+Depth: 28, Move: EAST, Time Left: 0.6822
+Depth: 29, Move: EAST, Time Left: 0.6664
+Depth: 30, Move: EAST, Time Left: 0.6506
+Depth: 31, Move: EAST, Time Left: 0.6348
+Depth: 32, Move: EAST, Time Left: 0.6190
+Move took 0.3711 seconds
+cache size: 0, counter: 0
+Parallel minimax bot: 
+Depth: 7, Move: EAST, Time Left: 0.9823
+Depth: 8, Move: EAST, Time Left: 0.9813
+Depth: 9, Move: EAST, Time Left: 0.9800
+Depth: 10, Move: EAST, Time Left: 0.9782
+Depth: 11, Move: EAST, Time Left: 0.9756
+Depth: 12, Move: EAST, Time Left: 0.9724
+Depth: 13, Move: EAST, Time Left: 0.9690
+Depth: 14, Move: EAST, Time Left: 0.9660
+Depth: 15, Move: EAST, Time Left: 0.9630
+Depth: 16, Move: EAST, Time Left: 0.9601
+Depth: 17, Move: EAST, Time Left: 0.9573
+Depth: 18, Move: EAST, Time Left: 0.9545
+Depth: 19, Move: EAST, Time Left: 0.9517
+Depth: 20, Move: EAST, Time Left: 0.9488
+Depth: 21, Move: EAST, Time Left: 0.9459
+Depth: 22, Move: EAST, Time Left: 0.9430
+Depth: 23, Move: EAST, Time Left: 0.9401
+Depth: 24, Move: EAST, Time Left: 0.9373
+Depth: 25, Move: EAST, Time Left: 0.9344
+Depth: 26, Move: EAST, Time Left: 0.9315
+Depth: 27, Move: EAST, Time Left: 0.9286
+Depth: 28, Move: EAST, Time Left: 0.9257
+Depth: 29, Move: EAST, Time Left: 0.9228
+Depth: 30, Move: EAST, Time Left: 0.9199
+Depth: 31, Move: EAST, Time Left: 0.9171
+Depth: 32, Move: EAST, Time Left: 0.9142
+Move took 0.0759 seconds
+cache size: 0, counter: 0
+Sequential ab bot: 
+Depth: 7, Move: EAST, Time Left: 0.9877
+Depth: 8, Move: EAST, Time Left: 0.9840
+Depth: 9, Move: EAST, Time Left: 0.9780
+Depth: 10, Move: EAST, Time Left: 0.9690
+Depth: 11, Move: EAST, Time Left: 0.9552
+Depth: 12, Move: EAST, Time Left: 0.9403
+Depth: 13, Move: EAST, Time Left: 0.9218
+Depth: 14, Move: EAST, Time Left: 0.9055
+Depth: 15, Move: EAST, Time Left: 0.8892
+Depth: 16, Move: EAST, Time Left: 0.8735
+Depth: 17, Move: EAST, Time Left: 0.8579
+Depth: 18, Move: EAST, Time Left: 0.8422
+Depth: 19, Move: EAST, Time Left: 0.8266
+Depth: 20, Move: EAST, Time Left: 0.8110
+Depth: 21, Move: EAST, Time Left: 0.7953
+Depth: 22, Move: EAST, Time Left: 0.7797
+Depth: 23, Move: EAST, Time Left: 0.7641
+Depth: 24, Move: EAST, Time Left: 0.7484
+Depth: 25, Move: EAST, Time Left: 0.7328
+Depth: 26, Move: EAST, Time Left: 0.7171
+Depth: 27, Move: EAST, Time Left: 0.7015
+Depth: 28, Move: EAST, Time Left: 0.6859
+Depth: 29, Move: EAST, Time Left: 0.6702
+Depth: 30, Move: EAST, Time Left: 0.6546
+Depth: 31, Move: EAST, Time Left: 0.6388
+Depth: 32, Move: EAST, Time Left: 0.6232
+Move took 0.3669 seconds
+cache size: 0, counter: 0
+Parallel ab bot: 
+Depth: 7, Move: EAST, Time Left: 0.9767
+Depth: 8, Move: EAST, Time Left: 0.9758
+Depth: 9, Move: EAST, Time Left: 0.9744
+Depth: 10, Move: EAST, Time Left: 0.9726
+Depth: 11, Move: EAST, Time Left: 0.9701
+Depth: 12, Move: EAST, Time Left: 0.9673
+Depth: 13, Move: EAST, Time Left: 0.9626
+Depth: 14, Move: EAST, Time Left: 0.9596
+Depth: 15, Move: EAST, Time Left: 0.9566
+Depth: 16, Move: EAST, Time Left: 0.9537
+Depth: 17, Move: EAST, Time Left: 0.9509
+Depth: 18, Move: EAST, Time Left: 0.9480
+Depth: 19, Move: EAST, Time Left: 0.9452
+Depth: 20, Move: EAST, Time Left: 0.9423
+Depth: 21, Move: EAST, Time Left: 0.9394
+Depth: 22, Move: EAST, Time Left: 0.9365
+Depth: 23, Move: EAST, Time Left: 0.9337
+Depth: 24, Move: EAST, Time Left: 0.9308
+Depth: 25, Move: EAST, Time Left: 0.9279
+Depth: 26, Move: EAST, Time Left: 0.9250
+Depth: 27, Move: EAST, Time Left: 0.9222
+Depth: 28, Move: EAST, Time Left: 0.9193
+Depth: 29, Move: EAST, Time Left: 0.9165
+Depth: 30, Move: EAST, Time Left: 0.9129
+Depth: 31, Move: EAST, Time Left: 0.9100
+Depth: 32, Move: EAST, Time Left: 0.9071
+Move took 0.0830 seconds
+cache size: 0, counter: 0
+Parallel ab abort bot: 
+Depth: 7, Move: EAST, Time Left: 0.9827
+Depth: 8, Move: EAST, Time Left: 0.9817
+Depth: 9, Move: EAST, Time Left: 0.9804
+Depth: 10, Move: EAST, Time Left: 0.9786
+Depth: 11, Move: EAST, Time Left: 0.9761
+Depth: 12, Move: EAST, Time Left: 0.9733
+Depth: 13, Move: EAST, Time Left: 0.9699
+Depth: 14, Move: EAST, Time Left: 0.9670
+Depth: 15, Move: EAST, Time Left: 0.9639
+Depth: 16, Move: EAST, Time Left: 0.9610
+Depth: 17, Move: EAST, Time Left: 0.9581
+Depth: 18, Move: EAST, Time Left: 0.9553
+Depth: 19, Move: EAST, Time Left: 0.9524
+Depth: 20, Move: EAST, Time Left: 0.9496
+Depth: 21, Move: EAST, Time Left: 0.9468
+Depth: 22, Move: EAST, Time Left: 0.9440
+Depth: 23, Move: EAST, Time Left: 0.9411
+Depth: 24, Move: EAST, Time Left: 0.9382
+Depth: 25, Move: EAST, Time Left: 0.9353
+Depth: 26, Move: EAST, Time Left: 0.9325
+Depth: 27, Move: EAST, Time Left: 0.9296
+Depth: 28, Move: EAST, Time Left: 0.9267
+Depth: 29, Move: EAST, Time Left: 0.9238
+Depth: 30, Move: EAST, Time Left: 0.9210
+Depth: 31, Move: EAST, Time Left: 0.9181
+Depth: 32, Move: EAST, Time Left: 0.9152
+Move took 0.0749 seconds
+cache size: 0, counter: 0
+-----------------------------------
+maps/toronto2.txt
+Sequential bot minimax: 
+Depth: 7, Move: SOUTH, Time Left: 0.9711
+Depth: 8, Move: SOUTH, Time Left: 0.9348
+Depth: 9, Move: SOUTH, Time Left: 0.8671
+Depth: 10, Move: SOUTH, Time Left: 0.7163
+Depth: 11, Move: SOUTH, Time Left: 0.3746
+Depth: 12, Move: T, Time Left: -0.0000
+Move took 0.9901 seconds
+cache size: 0, counter: 0
+Parallel minimax bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9797
+Depth: 8, Move: SOUTH, Time Left: 0.9739
+Depth: 9, Move: SOUTH, Time Left: 0.9635
+Depth: 10, Move: SOUTH, Time Left: 0.9409
+Depth: 11, Move: SOUTH, Time Left: 0.8900
+Depth: 12, Move: SOUTH, Time Left: 0.7891
+Depth: 13, Move: SOUTH, Time Left: 0.5920
+Depth: 14, Move: SOUTH, Time Left: 0.1844
+Depth: 15, Move: T, Time Left: -0.0065
+Move took 0.9966 seconds
+cache size: 0, counter: 0
+Sequential ab bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9849
+Depth: 8, Move: SOUTH, Time Left: 0.9755
+Depth: 9, Move: SOUTH, Time Left: 0.9663
+Depth: 10, Move: SOUTH, Time Left: 0.9254
+Depth: 11, Move: SOUTH, Time Left: 0.8925
+Depth: 12, Move: SOUTH, Time Left: 0.8573
+Depth: 13, Move: SOUTH, Time Left: 0.8091
+Depth: 14, Move: SOUTH, Time Left: 0.6728
+Depth: 15, Move: SOUTH, Time Left: 0.5310
+Depth: 16, Move: SOUTH, Time Left: 0.3678
+Depth: 17, Move: SOUTH, Time Left: 0.1576
+Depth: 18, Move: T, Time Left: -0.0001
+Move took 0.9902 seconds
+cache size: 3114, counter: 7191
+Parallel ab bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9757
+Depth: 8, Move: SOUTH, Time Left: 0.9624
+Depth: 9, Move: SOUTH, Time Left: 0.9499
+Depth: 10, Move: SOUTH, Time Left: 0.9014
+Depth: 11, Move: SOUTH, Time Left: 0.8640
+Depth: 12, Move: SOUTH, Time Left: 0.8252
+Depth: 13, Move: SOUTH, Time Left: 0.7753
+Depth: 14, Move: SOUTH, Time Left: 0.6374
+Depth: 15, Move: SOUTH, Time Left: 0.5012
+Depth: 16, Move: SOUTH, Time Left: 0.3404
+Depth: 17, Move: SOUTH, Time Left: 0.1375
+Depth: 18, Move: T, Time Left: -0.0005
+Move took 0.9906 seconds
+cache size: 3004, counter: 6909
+Parallel ab abort bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9781
+Depth: 8, Move: SOUTH, Time Left: 0.9641
+Depth: 9, Move: SOUTH, Time Left: 0.9468
+Depth: 10, Move: SOUTH, Time Left: 0.8939
+Depth: 11, Move: SOUTH, Time Left: 0.8372
+Depth: 12, Move: SOUTH, Time Left: 0.7846
+Depth: 13, Move: SOUTH, Time Left: 0.6856
+Depth: 14, Move: SOUTH, Time Left: 0.5221
+Depth: 15, Move: SOUTH, Time Left: 0.3434
+Depth: 16, Move: SOUTH, Time Left: 0.1053
+Depth: 17, Move: T, Time Left: -0.0010
+Move took 0.9911 seconds
+cache size: 2804, counter: 5427
+-----------------------------------
+maps/toronto.txt
+Sequential bot minimax: 
+Depth: 7, Move: NORTH, Time Left: 0.9738
+Depth: 8, Move: NORTH, Time Left: 0.9535
+Depth: 9, Move: NORTH, Time Left: 0.9288
+Depth: 10, Move: NORTH, Time Left: 0.8847
+Depth: 11, Move: NORTH, Time Left: 0.7997
+Depth: 12, Move: NORTH, Time Left: 0.6876
+Depth: 13, Move: NORTH, Time Left: 0.5148
+Depth: 14, Move: NORTH, Time Left: 0.1867
+Depth: 15, Move: T, Time Left: -0.0001
+Move took 0.9902 seconds
+cache size: 0, counter: 0
+Parallel minimax bot: 
+Depth: 7, Move: NORTH, Time Left: 0.9842
+Depth: 8, Move: NORTH, Time Left: 0.9809
+Depth: 9, Move: NORTH, Time Left: 0.9760
+Depth: 10, Move: NORTH, Time Left: 0.9666
+Depth: 11, Move: NORTH, Time Left: 0.9535
+Depth: 12, Move: NORTH, Time Left: 0.9364
+Depth: 13, Move: NORTH, Time Left: 0.9059
+Depth: 14, Move: NORTH, Time Left: 0.8534
+Depth: 15, Move: NORTH, Time Left: 0.7556
+Depth: 16, Move: SOUTH, Time Left: 0.6004
+Depth: 17, Move: NORTH, Time Left: 0.4132
+Depth: 18, Move: NORTH, Time Left: 0.0946
+Depth: 19, Move: T, Time Left: -0.0058
+Move took 0.9959 seconds
+cache size: 0, counter: 0
+Sequential ab bot: 
+Depth: 7, Move: NORTH, Time Left: 0.9837
+Depth: 8, Move: NORTH, Time Left: 0.9785
+Depth: 9, Move: NORTH, Time Left: 0.9727
+Depth: 10, Move: NORTH, Time Left: 0.9580
+Depth: 11, Move: NORTH, Time Left: 0.9416
+Depth: 12, Move: NORTH, Time Left: 0.9149
+Depth: 13, Move: NORTH, Time Left: 0.8726
+Depth: 14, Move: NORTH, Time Left: 0.7998
+Depth: 15, Move: NORTH, Time Left: 0.7570
+Depth: 16, Move: SOUTH, Time Left: 0.6055
+Depth: 17, Move: NORTH, Time Left: 0.4360
+Depth: 18, Move: NORTH, Time Left: 0.3259
+Depth: 19, Move: NORTH, Time Left: 0.2115
+Depth: 20, Move: T, Time Left: -0.0002
+Move took 0.9903 seconds
+cache size: 3287, counter: 8044
+Parallel ab bot: 
+Depth: 7, Move: NORTH, Time Left: 0.9780
+Depth: 8, Move: NORTH, Time Left: 0.9747
+Depth: 9, Move: NORTH, Time Left: 0.9711
+Depth: 10, Move: NORTH, Time Left: 0.9634
+Depth: 11, Move: NORTH, Time Left: 0.9535
+Depth: 12, Move: NORTH, Time Left: 0.9346
+Depth: 13, Move: NORTH, Time Left: 0.8894
+Depth: 14, Move: NORTH, Time Left: 0.8387
+Depth: 15, Move: NORTH, Time Left: 0.8145
+Depth: 16, Move: SOUTH, Time Left: 0.7097
+Depth: 17, Move: NORTH, Time Left: 0.6018
+Depth: 18, Move: NORTH, Time Left: 0.5485
+Depth: 19, Move: NORTH, Time Left: 0.4973
+Depth: 20, Move: SOUTH, Time Left: 0.3167
+Depth: 21, Move: NORTH, Time Left: 0.1556
+Depth: 22, Move: T, Time Left: -0.0035
+Move took 0.9936 seconds
+cache size: 6733, counter: 16677
+Parallel ab abort bot: 
+Depth: 7, Move: NORTH, Time Left: 0.9830
+Depth: 8, Move: NORTH, Time Left: 0.9794
+Depth: 9, Move: NORTH, Time Left: 0.9738
+Depth: 10, Move: NORTH, Time Left: 0.9650
+Depth: 11, Move: NORTH, Time Left: 0.9530
+Depth: 12, Move: NORTH, Time Left: 0.9330
+Depth: 13, Move: NORTH, Time Left: 0.8878
+Depth: 14, Move: NORTH, Time Left: 0.8245
+Depth: 15, Move: NORTH, Time Left: 0.7872
+Depth: 16, Move: SOUTH, Time Left: 0.6889
+Depth: 17, Move: WEST, Time Left: 0.5956
+Depth: 18, Move: WEST, Time Left: 0.5126
+Depth: 19, Move: WEST, Time Left: 0.4422
+Depth: 20, Move: SOUTH, Time Left: 0.2331
+Depth: 21, Move: WEST, Time Left: 0.0521
+Depth: 22, Move: T, Time Left: -0.0011
+Move took 0.9912 seconds
+cache size: 7658, counter: 17104
+-----------------------------------
+maps/triangle.txt
+Sequential bot minimax: 
+Depth: 7, Move: EAST, Time Left: 0.9727
+Depth: 8, Move: EAST, Time Left: 0.9308
+Depth: 9, Move: EAST, Time Left: 0.8306
+Depth: 10, Move: EAST, Time Left: 0.5818
+Depth: 11, Move: T, Time Left: -0.0001
+Move took 0.9902 seconds
+cache size: 0, counter: 0
+Parallel minimax bot: 
+Depth: 7, Move: EAST, Time Left: 0.9762
+Depth: 8, Move: EAST, Time Left: 0.9695
+Depth: 9, Move: EAST, Time Left: 0.9540
+Depth: 10, Move: EAST, Time Left: 0.9162
+Depth: 11, Move: EAST, Time Left: 0.8182
+Depth: 12, Move: NORTH, Time Left: 0.5946
+Depth: 13, Move: NORTH, Time Left: 0.0576
+Depth: 14, Move: T, Time Left: -0.0028
+Move took 0.9929 seconds
+cache size: 0, counter: 0
+Sequential ab bot: 
+Depth: 7, Move: EAST, Time Left: 0.9745
+Depth: 8, Move: EAST, Time Left: 0.9653
+Depth: 9, Move: EAST, Time Left: 0.9515
+Depth: 10, Move: EAST, Time Left: 0.9330
+Depth: 11, Move: EAST, Time Left: 0.9069
+Depth: 12, Move: EAST, Time Left: 0.8634
+Depth: 13, Move: EAST, Time Left: 0.7998
+Depth: 14, Move: EAST, Time Left: 0.6917
+Depth: 15, Move: EAST, Time Left: 0.5323
+Depth: 16, Move: EAST, Time Left: 0.1665
+Depth: 17, Move: T, Time Left: -0.0000
+Move took 0.9901 seconds
+cache size: 3223, counter: 7294
+Parallel ab bot: 
+Depth: 7, Move: EAST, Time Left: 0.9700
+Depth: 8, Move: EAST, Time Left: 0.9616
+Depth: 9, Move: EAST, Time Left: 0.9497
+Depth: 10, Move: EAST, Time Left: 0.9319
+Depth: 11, Move: EAST, Time Left: 0.9077
+Depth: 12, Move: EAST, Time Left: 0.8719
+Depth: 13, Move: EAST, Time Left: 0.8248
+Depth: 14, Move: EAST, Time Left: 0.7554
+Depth: 15, Move: EAST, Time Left: 0.6602
+Depth: 16, Move: EAST, Time Left: 0.4716
+Depth: 17, Move: EAST, Time Left: 0.1837
+Depth: 18, Move: T, Time Left: -0.0012
+Move took 0.9913 seconds
+cache size: 6967, counter: 13700
+Parallel ab abort bot: 
+Depth: 7, Move: EAST, Time Left: 0.9570
+Depth: 8, Move: EAST, Time Left: 0.9371
+Depth: 9, Move: EAST, Time Left: 0.9206
+Depth: 10, Move: EAST, Time Left: 0.8945
+Depth: 11, Move: EAST, Time Left: 0.8561
+Depth: 12, Move: EAST, Time Left: 0.7948
+Depth: 13, Move: EAST, Time Left: 0.6933
+Depth: 14, Move: EAST, Time Left: 0.5703
+Depth: 15, Move: EAST, Time Left: 0.3388
+Depth: 16, Move: EAST, Time Left: 0.0096
+Depth: 17, Move: T, Time Left: -0.0013
+Move took 0.9914 seconds
+cache size: 4715, counter: 8331
+-----------------------------------
+maps/trix.txt
+Sequential bot minimax: 
+Depth: 7, Move: EAST, Time Left: 0.9867
+Depth: 8, Move: SOUTH, Time Left: 0.9805
+Depth: 9, Move: SOUTH, Time Left: 0.9683
+Depth: 10, Move: SOUTH, Time Left: 0.9421
+Depth: 11, Move: SOUTH, Time Left: 0.8845
+Depth: 12, Move: SOUTH, Time Left: 0.7523
+Depth: 13, Move: SOUTH, Time Left: 0.4495
+Depth: 14, Move: T, Time Left: -0.0001
+Move took 0.9902 seconds
+cache size: 0, counter: 0
+Parallel minimax bot: 
+Depth: 7, Move: EAST, Time Left: 0.9862
+Depth: 8, Move: SOUTH, Time Left: 0.9849
+Depth: 9, Move: SOUTH, Time Left: 0.9827
+Depth: 10, Move: SOUTH, Time Left: 0.9785
+Depth: 11, Move: SOUTH, Time Left: 0.9697
+Depth: 12, Move: SOUTH, Time Left: 0.9501
+Depth: 13, Move: SOUTH, Time Left: 0.9056
+Depth: 14, Move: SOUTH, Time Left: 0.8016
+Depth: 15, Move: SOUTH, Time Left: 0.5739
+Depth: 16, Move: SOUTH, Time Left: 0.0655
+Depth: 17, Move: T, Time Left: -0.0019
+Move took 0.9920 seconds
+cache size: 0, counter: 0
+Sequential ab bot: 
+Depth: 7, Move: EAST, Time Left: 0.9870
+Depth: 8, Move: EAST, Time Left: 0.9842
+Depth: 9, Move: EAST, Time Left: 0.9789
+Depth: 10, Move: EAST, Time Left: 0.9657
+Depth: 11, Move: EAST, Time Left: 0.9568
+Depth: 12, Move: EAST, Time Left: 0.9427
+Depth: 13, Move: EAST, Time Left: 0.9172
+Depth: 14, Move: EAST, Time Left: 0.8709
+Depth: 15, Move: EAST, Time Left: 0.8271
+Depth: 16, Move: EAST, Time Left: 0.7398
+Depth: 17, Move: EAST, Time Left: 0.6236
+Depth: 18, Move: EAST, Time Left: 0.3903
+Depth: 19, Move: T, Time Left: -0.0000
+Move took 0.9901 seconds
+cache size: 3985, counter: 7351
+Parallel ab bot: 
+Depth: 7, Move: EAST, Time Left: 0.9763
+Depth: 8, Move: EAST, Time Left: 0.9723
+Depth: 9, Move: EAST, Time Left: 0.9643
+Depth: 10, Move: EAST, Time Left: 0.9454
+Depth: 11, Move: EAST, Time Left: 0.9331
+Depth: 12, Move: EAST, Time Left: 0.9160
+Depth: 13, Move: EAST, Time Left: 0.8856
+Depth: 14, Move: EAST, Time Left: 0.8428
+Depth: 15, Move: EAST, Time Left: 0.7974
+Depth: 16, Move: EAST, Time Left: 0.7213
+Depth: 17, Move: EAST, Time Left: 0.6198
+Depth: 18, Move: EAST, Time Left: 0.4535
+Depth: 19, Move: T, Time Left: -0.0023
+Move took 0.9924 seconds
+cache size: 5271, counter: 8919
+Parallel ab abort bot: 
+Depth: 7, Move: EAST, Time Left: 0.9832
+Depth: 8, Move: EAST, Time Left: 0.9781
+Depth: 9, Move: EAST, Time Left: 0.9685
+Depth: 10, Move: EAST, Time Left: 0.9437
+Depth: 11, Move: EAST, Time Left: 0.9220
+Depth: 12, Move: EAST, Time Left: 0.8967
+Depth: 13, Move: EAST, Time Left: 0.8525
+Depth: 14, Move: EAST, Time Left: 0.7959
+Depth: 15, Move: EAST, Time Left: 0.6954
+Depth: 16, Move: EAST, Time Left: 0.5923
+Depth: 17, Move: EAST, Time Left: 0.4343
+Depth: 18, Move: EAST, Time Left: 0.1708
+Depth: 19, Move: T, Time Left: -0.0017
+Move took 0.9918 seconds
+cache size: 4009, counter: 7128
+-----------------------------------
+maps/u.txt
+Sequential bot minimax: 
+Depth: 7, Move: WEST, Time Left: 0.9517
+Depth: 8, Move: WEST, Time Left: 0.8861
+Depth: 9, Move: WEST, Time Left: 0.7752
+Depth: 10, Move: WEST, Time Left: 0.5683
+Depth: 11, Move: WEST, Time Left: 0.1741
+Depth: 12, Move: T, Time Left: -0.0001
+Move took 0.9902 seconds
+cache size: 0, counter: 0
+Parallel minimax bot: 
+Depth: 7, Move: WEST, Time Left: 0.9816
+Depth: 8, Move: WEST, Time Left: 0.9716
+Depth: 9, Move: WEST, Time Left: 0.9545
+Depth: 10, Move: WEST, Time Left: 0.9237
+Depth: 11, Move: WEST, Time Left: 0.8649
+Depth: 12, Move: WEST, Time Left: 0.7569
+Depth: 13, Move: WEST, Time Left: 0.5508
+Depth: 14, Move: SOUTH, Time Left: 0.1272
+Depth: 15, Move: T, Time Left: -0.0009
+Move took 0.9910 seconds
+cache size: 0, counter: 0
+Sequential ab bot: 
+Depth: 7, Move: WEST, Time Left: 0.9650
+Depth: 8, Move: WEST, Time Left: 0.9549
+Depth: 9, Move: WEST, Time Left: 0.9418
+Depth: 10, Move: WEST, Time Left: 0.9210
+Depth: 11, Move: WEST, Time Left: 0.8954
+Depth: 12, Move: WEST, Time Left: 0.8578
+Depth: 13, Move: WEST, Time Left: 0.8077
+Depth: 14, Move: SOUTH, Time Left: 0.5956
+Depth: 15, Move: SOUTH, Time Left: 0.4685
+Depth: 16, Move: SOUTH, Time Left: 0.3224
+Depth: 17, Move: SOUTH, Time Left: 0.1322
+Depth: 18, Move: T, Time Left: -0.0001
+Move took 0.9901 seconds
+cache size: 3931, counter: 9460
+Parallel ab bot: 
+Depth: 7, Move: WEST, Time Left: 0.9707
+Depth: 8, Move: WEST, Time Left: 0.9636
+Depth: 9, Move: WEST, Time Left: 0.9543
+Depth: 10, Move: WEST, Time Left: 0.9404
+Depth: 11, Move: WEST, Time Left: 0.9233
+Depth: 12, Move: WEST, Time Left: 0.8995
+Depth: 13, Move: WEST, Time Left: 0.8703
+Depth: 14, Move: SOUTH, Time Left: 0.7457
+Depth: 15, Move: SOUTH, Time Left: 0.6611
+Depth: 16, Move: SOUTH, Time Left: 0.5837
+Depth: 17, Move: SOUTH, Time Left: 0.4868
+Depth: 18, Move: SOUTH, Time Left: 0.3263
+Depth: 19, Move: SOUTH, Time Left: 0.1479
+Depth: 20, Move: T, Time Left: -0.0010
+Move took 0.9911 seconds
+cache size: 6384, counter: 17395
+Parallel ab abort bot: 
+Depth: 7, Move: WEST, Time Left: 0.9699
+Depth: 8, Move: WEST, Time Left: 0.9532
+Depth: 9, Move: WEST, Time Left: 0.9348
+Depth: 10, Move: WEST, Time Left: 0.9045
+Depth: 11, Move: WEST, Time Left: 0.8760
+Depth: 12, Move: WEST, Time Left: 0.8248
+Depth: 13, Move: WEST, Time Left: 0.7666
+Depth: 14, Move: SOUTH, Time Left: 0.6354
+Depth: 15, Move: SOUTH, Time Left: 0.5178
+Depth: 16, Move: SOUTH, Time Left: 0.3758
+Depth: 17, Move: SOUTH, Time Left: 0.1985
+Depth: 18, Move: T, Time Left: -0.0021
+Move took 0.9922 seconds
+cache size: 6808, counter: 12981
+-----------------------------------
+maps/vee.txt
+Sequential bot minimax: 
+Depth: 7, Move: SOUTH, Time Left: 0.9887
+Depth: 8, Move: SOUTH, Time Left: 0.9872
+Depth: 9, Move: SOUTH, Time Left: 0.9856
+Depth: 10, Move: SOUTH, Time Left: 0.9837
+Depth: 11, Move: SOUTH, Time Left: 0.9818
+Depth: 12, Move: SOUTH, Time Left: 0.9792
+Depth: 13, Move: SOUTH, Time Left: 0.9752
+Depth: 14, Move: SOUTH, Time Left: 0.9686
+Depth: 15, Move: SOUTH, Time Left: 0.9569
+Depth: 16, Move: SOUTH, Time Left: 0.9284
+Depth: 17, Move: SOUTH, Time Left: 0.8575
+Depth: 18, Move: SOUTH, Time Left: 0.6846
+Depth: 19, Move: SOUTH, Time Left: 0.2585
+Depth: 20, Move: T, Time Left: -0.0001
+Move took 0.9902 seconds
+cache size: 0, counter: 0
+Parallel minimax bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9870
+Depth: 8, Move: SOUTH, Time Left: 0.9863
+Depth: 9, Move: SOUTH, Time Left: 0.9855
+Depth: 10, Move: SOUTH, Time Left: 0.9847
+Depth: 11, Move: SOUTH, Time Left: 0.9838
+Depth: 12, Move: SOUTH, Time Left: 0.9829
+Depth: 13, Move: SOUTH, Time Left: 0.9817
+Depth: 14, Move: SOUTH, Time Left: 0.9801
+Depth: 15, Move: SOUTH, Time Left: 0.9777
+Depth: 16, Move: SOUTH, Time Left: 0.9728
+Depth: 17, Move: SOUTH, Time Left: 0.9612
+Depth: 18, Move: SOUTH, Time Left: 0.9341
+Depth: 19, Move: SOUTH, Time Left: 0.8687
+Depth: 20, Move: SOUTH, Time Left: 0.7007
+Depth: 21, Move: SOUTH, Time Left: 0.2651
+Depth: 22, Move: T, Time Left: -0.0042
+Move took 0.9943 seconds
+cache size: 0, counter: 0
+Sequential ab bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9890
+Depth: 8, Move: SOUTH, Time Left: 0.9875
+Depth: 9, Move: SOUTH, Time Left: 0.9863
+Depth: 10, Move: SOUTH, Time Left: 0.9849
+Depth: 11, Move: SOUTH, Time Left: 0.9834
+Depth: 12, Move: SOUTH, Time Left: 0.9815
+Depth: 13, Move: SOUTH, Time Left: 0.9792
+Depth: 14, Move: SOUTH, Time Left: 0.9761
+Depth: 15, Move: SOUTH, Time Left: 0.9721
+Depth: 16, Move: SOUTH, Time Left: 0.9646
+Depth: 17, Move: SOUTH, Time Left: 0.9536
+Depth: 18, Move: SOUTH, Time Left: 0.9367
+Depth: 19, Move: SOUTH, Time Left: 0.9133
+Depth: 20, Move: SOUTH, Time Left: 0.8726
+Depth: 21, Move: SOUTH, Time Left: 0.7861
+Depth: 22, Move: SOUTH, Time Left: 0.4324
+Depth: 23, Move: SOUTH, Time Left: 0.2488
+Depth: 24, Move: T, Time Left: -0.0001
+Move took 0.9902 seconds
+cache size: 4130, counter: 7525
+Parallel ab bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9860
+Depth: 8, Move: SOUTH, Time Left: 0.9839
+Depth: 9, Move: SOUTH, Time Left: 0.9821
+Depth: 10, Move: SOUTH, Time Left: 0.9802
+Depth: 11, Move: SOUTH, Time Left: 0.9782
+Depth: 12, Move: SOUTH, Time Left: 0.9753
+Depth: 13, Move: SOUTH, Time Left: 0.9720
+Depth: 14, Move: SOUTH, Time Left: 0.9673
+Depth: 15, Move: SOUTH, Time Left: 0.9611
+Depth: 16, Move: SOUTH, Time Left: 0.9506
+Depth: 17, Move: SOUTH, Time Left: 0.9367
+Depth: 18, Move: SOUTH, Time Left: 0.9182
+Depth: 19, Move: SOUTH, Time Left: 0.8941
+Depth: 20, Move: SOUTH, Time Left: 0.8584
+Depth: 21, Move: SOUTH, Time Left: 0.7959
+Depth: 22, Move: SOUTH, Time Left: 0.6166
+Depth: 23, Move: SOUTH, Time Left: 0.4902
+Depth: 24, Move: SOUTH, Time Left: 0.0970
+Depth: 25, Move: T, Time Left: -0.0007
+Move took 0.9908 seconds
+cache size: 9745, counter: 14702
+Parallel ab abort bot: 
+Depth: 7, Move: SOUTH, Time Left: 0.9875
+Depth: 8, Move: SOUTH, Time Left: 0.9858
+Depth: 9, Move: SOUTH, Time Left: 0.9840
+Depth: 10, Move: SOUTH, Time Left: 0.9821
+Depth: 11, Move: SOUTH, Time Left: 0.9799
+Depth: 12, Move: SOUTH, Time Left: 0.9770
+Depth: 13, Move: SOUTH, Time Left: 0.9730
+Depth: 14, Move: SOUTH, Time Left: 0.9675
+Depth: 15, Move: SOUTH, Time Left: 0.9588
+Depth: 16, Move: SOUTH, Time Left: 0.9461
+Depth: 17, Move: SOUTH, Time Left: 0.9254
+Depth: 18, Move: SOUTH, Time Left: 0.9025
+Depth: 19, Move: SOUTH, Time Left: 0.8660
+Depth: 20, Move: SOUTH, Time Left: 0.8177
+Depth: 21, Move: SOUTH, Time Left: 0.7277
+Depth: 22, Move: SOUTH, Time Left: 0.6060
+Depth: 23, Move: SOUTH, Time Left: 0.4069
+Depth: 24, Move: T, Time Left: -0.0029
+Move took 0.9930 seconds
+cache size: 7059, counter: 11062
+-----------------------------------

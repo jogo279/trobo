@@ -23,24 +23,6 @@
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 0
-Depth 2 ==> South
-depth: 4, dir: West, alpha: 0
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 0
-Depth 6 ==> West
-depth: 8, dir: West, alpha: 0
-Depth 8 ==> West
-depth: 10, dir: West, alpha: 0
-Depth 10 ==> West
-depth: 12, dir: South, alpha: 0
-Depth 12 ==> South
-depth: 14, dir: South, alpha: 0
-Depth 14 ==> South
-depth: 16, dir: South, alpha: 0
-Depth 16 ==> South
-depth: 18, dir: South, alpha: 0
-Depth 18 ==> South
 25 24
 #########################
 #                       #
@@ -66,24 +48,6 @@ Depth 18 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 0
-Depth 2 ==> South
-depth: 4, dir: West, alpha: 0
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 0
-Depth 6 ==> West
-depth: 8, dir: West, alpha: 0
-Depth 8 ==> West
-depth: 10, dir: South, alpha: 0
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 0
-Depth 12 ==> South
-depth: 14, dir: South, alpha: 0
-Depth 14 ==> South
-depth: 16, dir: South, alpha: 0
-Depth 16 ==> South
-depth: 18, dir: South, alpha: 0
-Depth 18 ==> South
 25 24
 #########################
 #                       #
@@ -109,24 +73,6 @@ Depth 18 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 0
-Depth 2 ==> South
-depth: 4, dir: West, alpha: 0
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 0
-Depth 6 ==> West
-depth: 8, dir: West, alpha: 0
-Depth 8 ==> West
-depth: 10, dir: West, alpha: 0
-Depth 10 ==> West
-depth: 12, dir: South, alpha: 0
-Depth 12 ==> South
-depth: 14, dir: South, alpha: 0
-Depth 14 ==> South
-depth: 16, dir: South, alpha: 0
-Depth 16 ==> South
-depth: 18, dir: South, alpha: 0
-Depth 18 ==> South
 25 24
 #########################
 #                       #
@@ -152,24 +98,6 @@ Depth 18 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: -20
-Depth 2 ==> South
-depth: 4, dir: West, alpha: -22
-Depth 4 ==> West
-depth: 6, dir: East, alpha: -18
-Depth 6 ==> East
-depth: 8, dir: East, alpha: -18
-Depth 8 ==> East
-depth: 10, dir: East, alpha: 2
-Depth 10 ==> East
-depth: 12, dir: East, alpha: 2
-Depth 12 ==> East
-depth: 14, dir: East, alpha: 2
-Depth 14 ==> East
-depth: 16, dir: East, alpha: 2
-Depth 16 ==> East
-depth: 18, dir: East, alpha: 2
-Depth 18 ==> East
 25 24
 #########################
 #                       #
@@ -195,24 +123,6 @@ Depth 18 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: -22
-Depth 2 ==> South
-depth: 4, dir: North, alpha: -18
-Depth 4 ==> North
-depth: 6, dir: North, alpha: -18
-Depth 6 ==> North
-depth: 8, dir: North, alpha: 4
-Depth 8 ==> North
-depth: 10, dir: North, alpha: 4
-Depth 10 ==> North
-depth: 12, dir: North, alpha: 4
-Depth 12 ==> North
-depth: 14, dir: North, alpha: 4
-Depth 14 ==> North
-depth: 16, dir: North, alpha: 6
-Depth 16 ==> North
-depth: 18, dir: North, alpha: 6
-Depth 18 ==> North
 25 24
 #########################
 #                       #
@@ -238,24 +148,6 @@ Depth 18 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -18
-Depth 2 ==> East
-depth: 4, dir: North, alpha: -18
-Depth 4 ==> North
-depth: 6, dir: North, alpha: 4
-Depth 6 ==> North
-depth: 8, dir: North, alpha: 4
-Depth 8 ==> North
-depth: 10, dir: North, alpha: 4
-Depth 10 ==> North
-depth: 12, dir: North, alpha: 4
-Depth 12 ==> North
-depth: 14, dir: North, alpha: 6
-Depth 14 ==> North
-depth: 16, dir: North, alpha: 12
-Depth 16 ==> North
-depth: 18, dir: North, alpha: 6
-Depth 18 ==> North
 25 24
 #########################
 #                       #
@@ -281,24 +173,6 @@ Depth 18 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -18
-Depth 2 ==> East
-depth: 4, dir: North, alpha: 4
-Depth 4 ==> North
-depth: 6, dir: North, alpha: 4
-Depth 6 ==> North
-depth: 8, dir: North, alpha: 4
-Depth 8 ==> North
-depth: 10, dir: North, alpha: 4
-Depth 10 ==> North
-depth: 12, dir: North, alpha: 6
-Depth 12 ==> North
-depth: 14, dir: North, alpha: 12
-Depth 14 ==> North
-depth: 16, dir: North, alpha: 18
-Depth 16 ==> North
-depth: 18, dir: North, alpha: 16
-Depth 18 ==> North
 25 24
 #########################
 #                       #
@@ -324,24 +198,6 @@ Depth 18 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: 4
-Depth 2 ==> East
-depth: 4, dir: North, alpha: 4
-Depth 4 ==> North
-depth: 6, dir: North, alpha: 4
-Depth 6 ==> North
-depth: 8, dir: North, alpha: 4
-Depth 8 ==> North
-depth: 10, dir: North, alpha: 6
-Depth 10 ==> North
-depth: 12, dir: North, alpha: 12
-Depth 12 ==> North
-depth: 14, dir: North, alpha: 18
-Depth 14 ==> North
-depth: 16, dir: North, alpha: 18
-Depth 16 ==> North
-depth: 18, dir: North, alpha: 18
-Depth 18 ==> North
 25 24
 #########################
 #                       #
@@ -367,26 +223,6 @@ Depth 18 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: 4
-Depth 2 ==> East
-depth: 4, dir: North, alpha: 4
-Depth 4 ==> North
-depth: 6, dir: North, alpha: 4
-Depth 6 ==> North
-depth: 8, dir: North, alpha: 6
-Depth 8 ==> North
-depth: 10, dir: North, alpha: 12
-Depth 10 ==> North
-depth: 12, dir: North, alpha: 18
-Depth 12 ==> North
-depth: 14, dir: North, alpha: 18
-Depth 14 ==> North
-depth: 16, dir: North, alpha: 18
-Depth 16 ==> North
-depth: 18, dir: North, alpha: 18
-Depth 18 ==> North
-depth: 20, dir: North, alpha: 18
-Depth 20 ==> North
 25 24
 #########################
 #                       #
@@ -412,24 +248,6 @@ Depth 20 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: 4
-Depth 2 ==> East
-depth: 4, dir: North, alpha: 4
-Depth 4 ==> North
-depth: 6, dir: North, alpha: 6
-Depth 6 ==> North
-depth: 8, dir: North, alpha: 12
-Depth 8 ==> North
-depth: 10, dir: North, alpha: 18
-Depth 10 ==> North
-depth: 12, dir: North, alpha: 18
-Depth 12 ==> North
-depth: 14, dir: North, alpha: 18
-Depth 14 ==> North
-depth: 16, dir: North, alpha: 18
-Depth 16 ==> North
-depth: 18, dir: North, alpha: 18
-Depth 18 ==> North
 25 24
 #########################
 #                       #
@@ -455,26 +273,6 @@ Depth 18 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: 4
-Depth 2 ==> East
-depth: 4, dir: East, alpha: 6
-Depth 4 ==> East
-depth: 6, dir: East, alpha: 12
-Depth 6 ==> East
-depth: 8, dir: East, alpha: 18
-Depth 8 ==> East
-depth: 10, dir: East, alpha: 18
-Depth 10 ==> East
-depth: 12, dir: East, alpha: 18
-Depth 12 ==> East
-depth: 14, dir: East, alpha: 22
-Depth 14 ==> East
-depth: 16, dir: East, alpha: 22
-Depth 16 ==> East
-depth: 18, dir: East, alpha: 10
-Depth 18 ==> East
-depth: 20, dir: East, alpha: 8
-Depth 20 ==> East
 25 24
 #########################
 #                       #
@@ -500,24 +298,6 @@ Depth 20 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 6
-Depth 2 ==> South
-depth: 4, dir: South, alpha: 12
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 18
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 18
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 18
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 22
-Depth 12 ==> South
-depth: 14, dir: South, alpha: 22
-Depth 14 ==> South
-depth: 16, dir: South, alpha: 22
-Depth 16 ==> South
-depth: 18, dir: South, alpha: 24
-Depth 18 ==> South
 25 24
 #########################
 #                       #
@@ -543,24 +323,6 @@ Depth 18 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 12
-Depth 2 ==> South
-depth: 4, dir: South, alpha: 18
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 18
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 18
-Depth 8 ==> South
-depth: 10, dir: East, alpha: 22
-Depth 10 ==> East
-depth: 12, dir: East, alpha: 22
-Depth 12 ==> East
-depth: 14, dir: East, alpha: 22
-Depth 14 ==> East
-depth: 16, dir: East, alpha: 28
-Depth 16 ==> East
-depth: 18, dir: East, alpha: 20
-Depth 18 ==> East
 25 24
 #########################
 #                       #
@@ -586,24 +348,6 @@ Depth 18 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 16
-Depth 2 ==> South
-depth: 4, dir: South, alpha: 18
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 18
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 26
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 26
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 28
-Depth 12 ==> South
-depth: 14, dir: South, alpha: 28
-Depth 14 ==> South
-depth: 16, dir: South, alpha: 24
-Depth 16 ==> South
-depth: 18, dir: South, alpha: 24
-Depth 18 ==> South
 25 24
 #########################
 #                       #
@@ -629,24 +373,6 @@ Depth 18 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 18
-Depth 2 ==> South
-depth: 4, dir: South, alpha: 18
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 26
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 26
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 28
-Depth 10 ==> South
-depth: 12, dir: West, alpha: 28
-Depth 12 ==> West
-depth: 14, dir: West, alpha: 24
-Depth 14 ==> West
-depth: 16, dir: West, alpha: 24
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 18
-Depth 18 ==> West
 25 24
 #########################
 #                       #
@@ -672,26 +398,6 @@ Depth 18 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: -120
-Depth 2 ==> South
-depth: 4, dir: South, alpha: -104
-Depth 4 ==> South
-depth: 6, dir: South, alpha: -88
-Depth 6 ==> South
-depth: 8, dir: South, alpha: -68
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 28
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 26
-Depth 12 ==> South
-depth: 14, dir: South, alpha: 26
-Depth 14 ==> South
-depth: 16, dir: South, alpha: 22
-Depth 16 ==> South
-depth: 18, dir: South, alpha: 22
-Depth 18 ==> South
-depth: 20, dir: South, alpha: 18
-Depth 20 ==> South
 25 24
 #########################
 #                       #
@@ -717,26 +423,6 @@ Depth 20 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: -104
-Depth 2 ==> South
-depth: 4, dir: South, alpha: -88
-Depth 4 ==> South
-depth: 6, dir: South, alpha: -68
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 30
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 26
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 26
-Depth 12 ==> South
-depth: 14, dir: East, alpha: 22
-Depth 14 ==> East
-depth: 16, dir: East, alpha: 22
-Depth 16 ==> East
-depth: 18, dir: East, alpha: 18
-Depth 18 ==> East
-depth: 20, dir: East, alpha: 18
-Depth 20 ==> East
 25 24
 #########################
 #                       #
@@ -762,24 +448,6 @@ Depth 20 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: -82
-Depth 2 ==> South
-depth: 4, dir: South, alpha: -66
-Depth 4 ==> South
-depth: 6, dir: South, alpha: -46
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 26
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 26
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 28
-Depth 12 ==> South
-depth: 14, dir: South, alpha: 28
-Depth 14 ==> South
-depth: 16, dir: South, alpha: 24
-Depth 16 ==> South
-depth: 18, dir: South, alpha: 24
-Depth 18 ==> South
 25 24
 #########################
 #                       #
@@ -805,24 +473,6 @@ Depth 18 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: -46
-Depth 2 ==> South
-depth: 4, dir: South, alpha: -28
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 34
-Depth 6 ==> South
-depth: 8, dir: West, alpha: 34
-Depth 8 ==> West
-depth: 10, dir: West, alpha: 28
-Depth 10 ==> West
-depth: 12, dir: West, alpha: 28
-Depth 12 ==> West
-depth: 14, dir: West, alpha: 28
-Depth 14 ==> West
-depth: 16, dir: West, alpha: 28
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 32
-Depth 18 ==> West
 25 24
 #########################
 #                       #
@@ -848,26 +498,6 @@ Depth 18 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: -42
-Depth 2 ==> South
-depth: 4, dir: South, alpha: -8
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 34
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 28
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 28
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 28
-Depth 12 ==> South
-depth: 14, dir: South, alpha: 28
-Depth 14 ==> South
-depth: 16, dir: South, alpha: 32
-Depth 16 ==> South
-depth: 18, dir: South, alpha: 32
-Depth 18 ==> South
-depth: 20, dir: South, alpha: 34
-Depth 20 ==> South
 25 24
 #########################
 #                       #
@@ -893,26 +523,6 @@ Depth 20 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 34
-Depth 2 ==> South
-depth: 4, dir: South, alpha: 34
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 28
-Depth 6 ==> South
-depth: 8, dir: East, alpha: 28
-Depth 8 ==> East
-depth: 10, dir: East, alpha: 28
-Depth 10 ==> East
-depth: 12, dir: East, alpha: 28
-Depth 12 ==> East
-depth: 14, dir: South, alpha: 32
-Depth 14 ==> South
-depth: 16, dir: South, alpha: 32
-Depth 16 ==> South
-depth: 18, dir: South, alpha: 34
-Depth 18 ==> South
-depth: 20, dir: South, alpha: 34
-Depth 20 ==> South
 25 24
 #########################
 #                       #
@@ -938,26 +548,6 @@ Depth 20 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 34
-Depth 2 ==> South
-depth: 4, dir: East, alpha: 28
-Depth 4 ==> East
-depth: 6, dir: East, alpha: 20
-Depth 6 ==> East
-depth: 8, dir: South, alpha: 22
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 22
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 32
-Depth 12 ==> South
-depth: 14, dir: South, alpha: 32
-Depth 14 ==> South
-depth: 16, dir: South, alpha: 34
-Depth 16 ==> South
-depth: 18, dir: South, alpha: 34
-Depth 18 ==> South
-depth: 20, dir: South, alpha: 34
-Depth 20 ==> South
 25 24
 #########################
 #                       #
@@ -983,24 +573,6 @@ Depth 20 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 20
-Depth 2 ==> West
-depth: 4, dir: West, alpha: 20
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 32
-Depth 6 ==> West
-depth: 8, dir: West, alpha: 34
-Depth 8 ==> West
-depth: 10, dir: West, alpha: 34
-Depth 10 ==> West
-depth: 12, dir: West, alpha: 34
-Depth 12 ==> West
-depth: 14, dir: West, alpha: 34
-Depth 14 ==> West
-depth: 16, dir: West, alpha: 34
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 34
-Depth 18 ==> West
 25 24
 #########################
 #                       #
@@ -1026,26 +598,6 @@ Depth 18 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 20
-Depth 2 ==> West
-depth: 4, dir: West, alpha: 34
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 34
-Depth 6 ==> West
-depth: 8, dir: West, alpha: 34
-Depth 8 ==> West
-depth: 10, dir: West, alpha: 34
-Depth 10 ==> West
-depth: 12, dir: West, alpha: 34
-Depth 12 ==> West
-depth: 14, dir: West, alpha: 34
-Depth 14 ==> West
-depth: 16, dir: West, alpha: 34
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 36
-Depth 18 ==> West
-depth: 20, dir: West, alpha: 34
-Depth 20 ==> West
 25 24
 #########################
 #                       #
@@ -1071,24 +623,6 @@ Depth 20 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 34
-Depth 2 ==> West
-depth: 4, dir: West, alpha: 34
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 34
-Depth 6 ==> West
-depth: 8, dir: West, alpha: 34
-Depth 8 ==> West
-depth: 10, dir: West, alpha: 34
-Depth 10 ==> West
-depth: 12, dir: West, alpha: 34
-Depth 12 ==> West
-depth: 14, dir: West, alpha: 34
-Depth 14 ==> West
-depth: 16, dir: West, alpha: 36
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 34
-Depth 18 ==> West
 25 24
 #########################
 #                       #
@@ -1114,26 +648,6 @@ Depth 18 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 34
-Depth 2 ==> West
-depth: 4, dir: West, alpha: 34
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 34
-Depth 6 ==> West
-depth: 8, dir: West, alpha: 34
-Depth 8 ==> West
-depth: 10, dir: West, alpha: 34
-Depth 10 ==> West
-depth: 12, dir: West, alpha: 34
-Depth 12 ==> West
-depth: 14, dir: North, alpha: 36
-Depth 14 ==> North
-depth: 16, dir: North, alpha: 34
-Depth 16 ==> North
-depth: 18, dir: North, alpha: 34
-Depth 18 ==> North
-depth: 20, dir: North, alpha: 34
-Depth 20 ==> North
 25 24
 #########################
 #                       #
@@ -1159,26 +673,6 @@ Depth 20 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 34
-Depth 2 ==> West
-depth: 4, dir: West, alpha: 34
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 34
-Depth 6 ==> West
-depth: 8, dir: West, alpha: 34
-Depth 8 ==> West
-depth: 10, dir: West, alpha: 34
-Depth 10 ==> West
-depth: 12, dir: North, alpha: 36
-Depth 12 ==> North
-depth: 14, dir: North, alpha: 34
-Depth 14 ==> North
-depth: 16, dir: North, alpha: 34
-Depth 16 ==> North
-depth: 18, dir: North, alpha: 34
-Depth 18 ==> North
-depth: 20, dir: North, alpha: 34
-Depth 20 ==> North
 25 24
 #########################
 #                       #
@@ -1204,26 +698,6 @@ Depth 20 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 34
-Depth 2 ==> West
-depth: 4, dir: West, alpha: 34
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 34
-Depth 6 ==> West
-depth: 8, dir: West, alpha: 34
-Depth 8 ==> West
-depth: 10, dir: North, alpha: 36
-Depth 10 ==> North
-depth: 12, dir: North, alpha: 34
-Depth 12 ==> North
-depth: 14, dir: North, alpha: 34
-Depth 14 ==> North
-depth: 16, dir: North, alpha: 34
-Depth 16 ==> North
-depth: 18, dir: North, alpha: 34
-Depth 18 ==> North
-depth: 20, dir: North, alpha: 32
-Depth 20 ==> North
 25 24
 #########################
 #                       #
@@ -1249,26 +723,6 @@ Depth 20 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 34
-Depth 2 ==> West
-depth: 4, dir: West, alpha: 34
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 34
-Depth 6 ==> West
-depth: 8, dir: North, alpha: 36
-Depth 8 ==> North
-depth: 10, dir: North, alpha: 34
-Depth 10 ==> North
-depth: 12, dir: North, alpha: 34
-Depth 12 ==> North
-depth: 14, dir: North, alpha: 34
-Depth 14 ==> North
-depth: 16, dir: North, alpha: 34
-Depth 16 ==> North
-depth: 18, dir: North, alpha: 32
-Depth 18 ==> North
-depth: 20, dir: North, alpha: 34
-Depth 20 ==> North
 25 24
 #########################
 #                       #
@@ -1294,26 +748,6 @@ Depth 20 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 34
-Depth 2 ==> West
-depth: 4, dir: West, alpha: 34
-Depth 4 ==> West
-depth: 6, dir: North, alpha: 36
-Depth 6 ==> North
-depth: 8, dir: North, alpha: 34
-Depth 8 ==> North
-depth: 10, dir: North, alpha: 34
-Depth 10 ==> North
-depth: 12, dir: North, alpha: 34
-Depth 12 ==> North
-depth: 14, dir: North, alpha: 34
-Depth 14 ==> North
-depth: 16, dir: North, alpha: 32
-Depth 16 ==> North
-depth: 18, dir: North, alpha: 34
-Depth 18 ==> North
-depth: 20, dir: North, alpha: 34
-Depth 20 ==> North
 25 24
 #########################
 #                       #
@@ -1339,26 +773,6 @@ Depth 20 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 34
-Depth 2 ==> West
-depth: 4, dir: West, alpha: 36
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 34
-Depth 6 ==> West
-depth: 8, dir: West, alpha: 34
-Depth 8 ==> West
-depth: 10, dir: West, alpha: 34
-Depth 10 ==> West
-depth: 12, dir: West, alpha: 34
-Depth 12 ==> West
-depth: 14, dir: West, alpha: 32
-Depth 14 ==> West
-depth: 16, dir: West, alpha: 34
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 34
-Depth 18 ==> West
-depth: 20, dir: West, alpha: 34
-Depth 20 ==> West
 25 24
 #########################
 #                       #
@@ -1384,26 +798,6 @@ Depth 20 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 36
-Depth 2 ==> West
-depth: 4, dir: West, alpha: 34
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 34
-Depth 6 ==> West
-depth: 8, dir: West, alpha: 34
-Depth 8 ==> West
-depth: 10, dir: West, alpha: 34
-Depth 10 ==> West
-depth: 12, dir: West, alpha: 32
-Depth 12 ==> West
-depth: 14, dir: West, alpha: 34
-Depth 14 ==> West
-depth: 16, dir: West, alpha: 34
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 34
-Depth 18 ==> West
-depth: 20, dir: West, alpha: 34
-Depth 20 ==> West
 25 24
 #########################
 #                       #
@@ -1429,26 +823,6 @@ Depth 20 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 34
-Depth 2 ==> West
-depth: 4, dir: North, alpha: 34
-Depth 4 ==> North
-depth: 6, dir: North, alpha: 34
-Depth 6 ==> North
-depth: 8, dir: North, alpha: 34
-Depth 8 ==> North
-depth: 10, dir: North, alpha: 32
-Depth 10 ==> North
-depth: 12, dir: North, alpha: 34
-Depth 12 ==> North
-depth: 14, dir: North, alpha: 34
-Depth 14 ==> North
-depth: 16, dir: North, alpha: 34
-Depth 16 ==> North
-depth: 18, dir: North, alpha: 34
-Depth 18 ==> North
-depth: 20, dir: North, alpha: 36
-Depth 20 ==> North
 25 24
 #########################
 #                       #
@@ -1474,28 +848,6 @@ Depth 20 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 34
-Depth 2 ==> West
-depth: 4, dir: West, alpha: 34
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 34
-Depth 6 ==> West
-depth: 8, dir: West, alpha: 32
-Depth 8 ==> West
-depth: 10, dir: West, alpha: 34
-Depth 10 ==> West
-depth: 12, dir: West, alpha: 34
-Depth 12 ==> West
-depth: 14, dir: West, alpha: 34
-Depth 14 ==> West
-depth: 16, dir: West, alpha: 34
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 36
-Depth 18 ==> West
-depth: 20, dir: West, alpha: 36
-Depth 20 ==> West
-depth: 22, dir: West, alpha: 38
-Depth 22 ==> West
 25 24
 #########################
 #                       #
@@ -1521,28 +873,6 @@ Depth 22 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 34
-Depth 2 ==> West
-depth: 4, dir: South, alpha: 34
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 32
-Depth 6 ==> South
-depth: 8, dir: West, alpha: 34
-Depth 8 ==> West
-depth: 10, dir: West, alpha: 34
-Depth 10 ==> West
-depth: 12, dir: West, alpha: 34
-Depth 12 ==> West
-depth: 14, dir: West, alpha: 34
-Depth 14 ==> West
-depth: 16, dir: West, alpha: 36
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 36
-Depth 18 ==> West
-depth: 20, dir: West, alpha: 38
-Depth 20 ==> West
-depth: 22, dir: West, alpha: 38
-Depth 22 ==> West
 25 24
 #########################
 #                       #
@@ -1568,26 +898,6 @@ Depth 22 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 34
-Depth 2 ==> South
-depth: 4, dir: South, alpha: 34
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 34
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 34
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 34
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 34
-Depth 12 ==> South
-depth: 14, dir: West, alpha: 36
-Depth 14 ==> West
-depth: 16, dir: West, alpha: 36
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 38
-Depth 18 ==> West
-depth: 20, dir: West, alpha: 38
-Depth 20 ==> West
 25 24
 #########################
 #                       #
@@ -1613,24 +923,6 @@ Depth 20 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 34
-Depth 2 ==> South
-depth: 4, dir: South, alpha: 34
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 34
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 34
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 34
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 36
-Depth 12 ==> South
-depth: 14, dir: South, alpha: 36
-Depth 14 ==> South
-depth: 16, dir: South, alpha: 38
-Depth 16 ==> South
-depth: 18, dir: South, alpha: 38
-Depth 18 ==> South
 25 24
 #########################
 #                       #
@@ -1656,24 +948,6 @@ Depth 18 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 34
-Depth 2 ==> South
-depth: 4, dir: South, alpha: 34
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 34
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 34
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 36
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 36
-Depth 12 ==> South
-depth: 14, dir: South, alpha: 38
-Depth 14 ==> South
-depth: 16, dir: South, alpha: 38
-Depth 16 ==> South
-depth: 18, dir: South, alpha: 40
-Depth 18 ==> South
 25 24
 #########################
 #                       #
@@ -1699,24 +973,6 @@ Depth 18 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 34
-Depth 2 ==> South
-depth: 4, dir: South, alpha: 34
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 36
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 38
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 36
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 40
-Depth 12 ==> South
-depth: 14, dir: South, alpha: 42
-Depth 14 ==> South
-depth: 16, dir: South, alpha: 42
-Depth 16 ==> South
-depth: 18, dir: South, alpha: 42
-Depth 18 ==> South
 25 24
 #########################
 #                       #
@@ -1742,24 +998,6 @@ Depth 18 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 38
-Depth 2 ==> South
-depth: 4, dir: South, alpha: 38
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 38
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 38
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 40
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 42
-Depth 12 ==> South
-depth: 14, dir: South, alpha: 42
-Depth 14 ==> South
-depth: 16, dir: South, alpha: 42
-Depth 16 ==> South
-depth: 18, dir: South, alpha: 42
-Depth 18 ==> South
 25 24
 #########################
 #                       #
@@ -1785,24 +1023,6 @@ Depth 18 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 38
-Depth 2 ==> South
-depth: 4, dir: South, alpha: 38
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 38
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 40
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 42
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 42
-Depth 12 ==> South
-depth: 14, dir: South, alpha: 42
-Depth 14 ==> South
-depth: 16, dir: South, alpha: 42
-Depth 16 ==> South
-depth: 18, dir: South, alpha: 42
-Depth 18 ==> South
 25 24
 #########################
 #                       #
@@ -1828,24 +1048,6 @@ Depth 18 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 38
-Depth 2 ==> South
-depth: 4, dir: South, alpha: 38
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 40
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 42
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 42
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 42
-Depth 12 ==> South
-depth: 14, dir: South, alpha: 42
-Depth 14 ==> South
-depth: 16, dir: South, alpha: 42
-Depth 16 ==> South
-depth: 18, dir: South, alpha: 42
-Depth 18 ==> South
 25 24
 #########################
 #                       #
@@ -1871,26 +1073,6 @@ Depth 18 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 38
-Depth 2 ==> South
-depth: 4, dir: East, alpha: 40
-Depth 4 ==> East
-depth: 6, dir: East, alpha: 42
-Depth 6 ==> East
-depth: 8, dir: East, alpha: 42
-Depth 8 ==> East
-depth: 10, dir: East, alpha: 42
-Depth 10 ==> East
-depth: 12, dir: East, alpha: 42
-Depth 12 ==> East
-depth: 14, dir: East, alpha: 42
-Depth 14 ==> East
-depth: 16, dir: East, alpha: 42
-Depth 16 ==> East
-depth: 18, dir: East, alpha: 40
-Depth 18 ==> East
-depth: 20, dir: East, alpha: 40
-Depth 20 ==> East
 25 24
 #########################
 #                       #
@@ -1916,24 +1098,6 @@ Depth 20 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 40
-Depth 2 ==> South
-depth: 4, dir: East, alpha: 42
-Depth 4 ==> East
-depth: 6, dir: East, alpha: 44
-Depth 6 ==> East
-depth: 8, dir: North, alpha: 42
-Depth 8 ==> North
-depth: 10, dir: North, alpha: 42
-Depth 10 ==> North
-depth: 12, dir: North, alpha: 42
-Depth 12 ==> North
-depth: 14, dir: North, alpha: 42
-Depth 14 ==> North
-depth: 16, dir: North, alpha: 40
-Depth 16 ==> North
-depth: 18, dir: North, alpha: 40
-Depth 18 ==> North
 25 24
 #########################
 #                       #
@@ -1959,26 +1123,6 @@ Depth 18 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -8
-Depth 2 ==> East
-depth: 4, dir: East, alpha: 6
-Depth 4 ==> East
-depth: 6, dir: East, alpha: 42
-Depth 6 ==> East
-depth: 8, dir: East, alpha: 42
-Depth 8 ==> East
-depth: 10, dir: East, alpha: 42
-Depth 10 ==> East
-depth: 12, dir: East, alpha: 48
-Depth 12 ==> East
-depth: 14, dir: East, alpha: 46
-Depth 14 ==> East
-depth: 16, dir: East, alpha: 46
-Depth 16 ==> East
-depth: 18, dir: East, alpha: 42
-Depth 18 ==> East
-depth: 20, dir: East, alpha: 46
-Depth 20 ==> East
 25 24
 #########################
 #                       #
@@ -2004,26 +1148,6 @@ Depth 20 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 32
-Depth 2 ==> South
-depth: 4, dir: South, alpha: 42
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 42
-Depth 6 ==> South
-depth: 8, dir: East, alpha: 42
-Depth 8 ==> East
-depth: 10, dir: North, alpha: 48
-Depth 10 ==> North
-depth: 12, dir: North, alpha: 46
-Depth 12 ==> North
-depth: 14, dir: North, alpha: 46
-Depth 14 ==> North
-depth: 16, dir: North, alpha: 42
-Depth 16 ==> North
-depth: 18, dir: North, alpha: 46
-Depth 18 ==> North
-depth: 20, dir: North, alpha: 42
-Depth 20 ==> North
 25 24
 #########################
 #                       #
@@ -2049,28 +1173,6 @@ Depth 20 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -18
-Depth 2 ==> East
-depth: 4, dir: East, alpha: 6
-Depth 4 ==> East
-depth: 6, dir: East, alpha: 22
-Depth 6 ==> East
-depth: 8, dir: East, alpha: 48
-Depth 8 ==> East
-depth: 10, dir: East, alpha: 46
-Depth 10 ==> East
-depth: 12, dir: North, alpha: 46
-Depth 12 ==> North
-depth: 14, dir: North, alpha: 42
-Depth 14 ==> North
-depth: 16, dir: West, alpha: 46
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 42
-Depth 18 ==> West
-depth: 20, dir: West, alpha: 40
-Depth 20 ==> West
-depth: 22, dir: West, alpha: 40
-Depth 22 ==> West
 25 24
 #########################
 #                       #
@@ -2096,28 +1198,6 @@ Depth 22 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: North, alpha: -44
-Depth 2 ==> North
-depth: 4, dir: North, alpha: -32
-Depth 4 ==> North
-depth: 6, dir: North, alpha: -20
-Depth 6 ==> North
-depth: 8, dir: North, alpha: -8
-Depth 8 ==> North
-depth: 10, dir: North, alpha: 22
-Depth 10 ==> North
-depth: 12, dir: North, alpha: 40
-Depth 12 ==> North
-depth: 14, dir: North, alpha: 48
-Depth 14 ==> North
-depth: 16, dir: North, alpha: 44
-Depth 16 ==> North
-depth: 18, dir: North, alpha: 46
-Depth 18 ==> North
-depth: 20, dir: North, alpha: 46
-Depth 20 ==> North
-depth: 22, dir: North, alpha: 42
-Depth 22 ==> North
 25 24
 #########################
 #                       #
@@ -2143,28 +1223,6 @@ Depth 22 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -28
-Depth 2 ==> East
-depth: 4, dir: East, alpha: -12
-Depth 4 ==> East
-depth: 6, dir: East, alpha: 6
-Depth 6 ==> East
-depth: 8, dir: East, alpha: 22
-Depth 8 ==> East
-depth: 10, dir: East, alpha: 40
-Depth 10 ==> East
-depth: 12, dir: East, alpha: 48
-Depth 12 ==> East
-depth: 14, dir: East, alpha: 44
-Depth 14 ==> East
-depth: 16, dir: North, alpha: 46
-Depth 16 ==> North
-depth: 18, dir: North, alpha: 46
-Depth 18 ==> North
-depth: 20, dir: North, alpha: 42
-Depth 20 ==> North
-depth: 22, dir: North, alpha: 42
-Depth 22 ==> North
 25 24
 #########################
 #                       #
@@ -2190,30 +1248,6 @@ Depth 22 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -32
-Depth 2 ==> East
-depth: 4, dir: East, alpha: -24
-Depth 4 ==> East
-depth: 6, dir: East, alpha: -14
-Depth 6 ==> East
-depth: 8, dir: East, alpha: 8
-Depth 8 ==> East
-depth: 10, dir: East, alpha: 20
-Depth 10 ==> East
-depth: 12, dir: East, alpha: 36
-Depth 12 ==> East
-depth: 14, dir: East, alpha: 46
-Depth 14 ==> East
-depth: 16, dir: East, alpha: 46
-Depth 16 ==> East
-depth: 18, dir: North, alpha: 42
-Depth 18 ==> North
-depth: 20, dir: North, alpha: 42
-Depth 20 ==> North
-depth: 22, dir: East, alpha: 40
-Depth 22 ==> East
-depth: 24, dir: East, alpha: 40
-Depth 24 ==> East
 25 24
 #########################
 #                       #
@@ -2239,28 +1273,6 @@ Depth 24 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: -24
-Depth 2 ==> South
-depth: 4, dir: South, alpha: -14
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 8
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 20
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 36
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 46
-Depth 12 ==> South
-depth: 14, dir: East, alpha: 46
-Depth 14 ==> East
-depth: 16, dir: East, alpha: 40
-Depth 16 ==> East
-depth: 18, dir: East, alpha: 40
-Depth 18 ==> East
-depth: 20, dir: East, alpha: 40
-Depth 20 ==> East
-depth: 22, dir: East, alpha: 40
-Depth 22 ==> East
 25 24
 #########################
 #                       #
@@ -2286,28 +1298,6 @@ Depth 22 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 16
-Depth 2 ==> South
-depth: 4, dir: South, alpha: 23
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 29
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 35
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 45
-Depth 10 ==> South
-depth: 12, dir: East, alpha: 46
-Depth 12 ==> East
-depth: 14, dir: East, alpha: 40
-Depth 14 ==> East
-depth: 16, dir: East, alpha: 40
-Depth 16 ==> East
-depth: 18, dir: East, alpha: 40
-Depth 18 ==> East
-depth: 20, dir: East, alpha: 40
-Depth 20 ==> East
-depth: 22, dir: East, alpha: 40
-Depth 22 ==> East
 25 24
 #########################
 #                       #
@@ -2333,28 +1323,6 @@ Depth 22 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 16
-Depth 2 ==> South
-depth: 4, dir: South, alpha: 24
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 30
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 40
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 46
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 40
-Depth 12 ==> South
-depth: 14, dir: South, alpha: 40
-Depth 14 ==> South
-depth: 16, dir: South, alpha: 40
-Depth 16 ==> South
-depth: 18, dir: South, alpha: 40
-Depth 18 ==> South
-depth: 20, dir: South, alpha: 40
-Depth 20 ==> South
-depth: 22, dir: South, alpha: 40
-Depth 22 ==> South
 25 24
 #########################
 #                       #
@@ -2380,28 +1348,6 @@ Depth 22 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 24
-Depth 2 ==> South
-depth: 4, dir: South, alpha: 30
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 40
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 46
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 40
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 40
-Depth 12 ==> South
-depth: 14, dir: South, alpha: 40
-Depth 14 ==> South
-depth: 16, dir: South, alpha: 40
-Depth 16 ==> South
-depth: 18, dir: South, alpha: 40
-Depth 18 ==> South
-depth: 20, dir: South, alpha: 40
-Depth 20 ==> South
-depth: 22, dir: South, alpha: 40
-Depth 22 ==> South
 25 24
 #########################
 #                       #
@@ -2427,28 +1373,6 @@ Depth 22 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 30
-Depth 2 ==> South
-depth: 4, dir: South, alpha: 40
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 46
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 40
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 40
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 40
-Depth 12 ==> South
-depth: 14, dir: South, alpha: 40
-Depth 14 ==> South
-depth: 16, dir: South, alpha: 40
-Depth 16 ==> South
-depth: 18, dir: South, alpha: 40
-Depth 18 ==> South
-depth: 20, dir: South, alpha: 40
-Depth 20 ==> South
-depth: 22, dir: South, alpha: 40
-Depth 22 ==> South
 25 24
 #########################
 #                       #
@@ -2474,28 +1398,6 @@ Depth 22 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 40
-Depth 2 ==> South
-depth: 4, dir: South, alpha: 46
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 40
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 40
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 40
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 40
-Depth 12 ==> South
-depth: 14, dir: South, alpha: 40
-Depth 14 ==> South
-depth: 16, dir: South, alpha: 40
-Depth 16 ==> South
-depth: 18, dir: South, alpha: 40
-Depth 18 ==> South
-depth: 20, dir: South, alpha: 40
-Depth 20 ==> South
-depth: 22, dir: South, alpha: 40
-Depth 22 ==> South
 25 24
 #########################
 #                       #
@@ -2521,28 +1423,6 @@ Depth 22 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 46
-Depth 2 ==> South
-depth: 4, dir: South, alpha: 40
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 40
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 40
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 40
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 40
-Depth 12 ==> South
-depth: 14, dir: South, alpha: 40
-Depth 14 ==> South
-depth: 16, dir: South, alpha: 40
-Depth 16 ==> South
-depth: 18, dir: South, alpha: 40
-Depth 18 ==> South
-depth: 20, dir: South, alpha: 40
-Depth 20 ==> South
-depth: 22, dir: South, alpha: 40
-Depth 22 ==> South
 25 24
 #########################
 #                       #
@@ -2568,26 +1448,6 @@ Depth 22 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: 40
-Depth 2 ==> East
-depth: 4, dir: East, alpha: 40
-Depth 4 ==> East
-depth: 6, dir: East, alpha: 40
-Depth 6 ==> East
-depth: 8, dir: East, alpha: 40
-Depth 8 ==> East
-depth: 10, dir: East, alpha: 40
-Depth 10 ==> East
-depth: 12, dir: East, alpha: 40
-Depth 12 ==> East
-depth: 14, dir: East, alpha: 40
-Depth 14 ==> East
-depth: 16, dir: East, alpha: 40
-Depth 16 ==> East
-depth: 18, dir: East, alpha: 40
-Depth 18 ==> East
-depth: 20, dir: East, alpha: 40
-Depth 20 ==> East
 25 24
 #########################
 #                       #
@@ -2613,26 +1473,6 @@ Depth 20 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: 40
-Depth 2 ==> East
-depth: 4, dir: East, alpha: 40
-Depth 4 ==> East
-depth: 6, dir: East, alpha: 40
-Depth 6 ==> East
-depth: 8, dir: East, alpha: 40
-Depth 8 ==> East
-depth: 10, dir: East, alpha: 40
-Depth 10 ==> East
-depth: 12, dir: East, alpha: 40
-Depth 12 ==> East
-depth: 14, dir: East, alpha: 40
-Depth 14 ==> East
-depth: 16, dir: East, alpha: 40
-Depth 16 ==> East
-depth: 18, dir: East, alpha: 40
-Depth 18 ==> East
-depth: 20, dir: East, alpha: 40
-Depth 20 ==> East
 25 24
 #########################
 #                       #
@@ -2658,26 +1498,6 @@ Depth 20 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: 40
-Depth 2 ==> East
-depth: 4, dir: East, alpha: 40
-Depth 4 ==> East
-depth: 6, dir: East, alpha: 40
-Depth 6 ==> East
-depth: 8, dir: East, alpha: 40
-Depth 8 ==> East
-depth: 10, dir: East, alpha: 40
-Depth 10 ==> East
-depth: 12, dir: East, alpha: 40
-Depth 12 ==> East
-depth: 14, dir: East, alpha: 40
-Depth 14 ==> East
-depth: 16, dir: East, alpha: 40
-Depth 16 ==> East
-depth: 18, dir: East, alpha: 40
-Depth 18 ==> East
-depth: 20, dir: East, alpha: 40
-Depth 20 ==> East
 25 24
 #########################
 #                       #
@@ -2703,26 +1523,6 @@ Depth 20 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: 40
-Depth 2 ==> East
-depth: 4, dir: East, alpha: 40
-Depth 4 ==> East
-depth: 6, dir: East, alpha: 40
-Depth 6 ==> East
-depth: 8, dir: East, alpha: 40
-Depth 8 ==> East
-depth: 10, dir: East, alpha: 40
-Depth 10 ==> East
-depth: 12, dir: East, alpha: 40
-Depth 12 ==> East
-depth: 14, dir: East, alpha: 40
-Depth 14 ==> East
-depth: 16, dir: East, alpha: 40
-Depth 16 ==> East
-depth: 18, dir: East, alpha: 40
-Depth 18 ==> East
-depth: 20, dir: East, alpha: 42
-Depth 20 ==> East
 25 24
 #########################
 #                       #
@@ -2748,26 +1548,6 @@ Depth 20 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: 40
-Depth 2 ==> East
-depth: 4, dir: East, alpha: 40
-Depth 4 ==> East
-depth: 6, dir: East, alpha: 40
-Depth 6 ==> East
-depth: 8, dir: East, alpha: 40
-Depth 8 ==> East
-depth: 10, dir: East, alpha: 40
-Depth 10 ==> East
-depth: 12, dir: East, alpha: 40
-Depth 12 ==> East
-depth: 14, dir: East, alpha: 40
-Depth 14 ==> East
-depth: 16, dir: East, alpha: 40
-Depth 16 ==> East
-depth: 18, dir: East, alpha: 42
-Depth 18 ==> East
-depth: 20, dir: East, alpha: 42
-Depth 20 ==> East
 25 24
 #########################
 #                       #
@@ -2793,26 +1573,6 @@ Depth 20 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: 40
-Depth 2 ==> East
-depth: 4, dir: East, alpha: 40
-Depth 4 ==> East
-depth: 6, dir: East, alpha: 40
-Depth 6 ==> East
-depth: 8, dir: East, alpha: 40
-Depth 8 ==> East
-depth: 10, dir: East, alpha: 40
-Depth 10 ==> East
-depth: 12, dir: East, alpha: 40
-Depth 12 ==> East
-depth: 14, dir: East, alpha: 40
-Depth 14 ==> East
-depth: 16, dir: East, alpha: 42
-Depth 16 ==> East
-depth: 18, dir: North, alpha: 42
-Depth 18 ==> North
-depth: 20, dir: North, alpha: 40
-Depth 20 ==> North
 25 24
 #########################
 #                       #
@@ -2838,26 +1598,6 @@ Depth 20 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: 40
-Depth 2 ==> East
-depth: 4, dir: East, alpha: 40
-Depth 4 ==> East
-depth: 6, dir: East, alpha: 40
-Depth 6 ==> East
-depth: 8, dir: East, alpha: 40
-Depth 8 ==> East
-depth: 10, dir: East, alpha: 40
-Depth 10 ==> East
-depth: 12, dir: East, alpha: 40
-Depth 12 ==> East
-depth: 14, dir: East, alpha: 42
-Depth 14 ==> East
-depth: 16, dir: North, alpha: 42
-Depth 16 ==> North
-depth: 18, dir: North, alpha: 40
-Depth 18 ==> North
-depth: 20, dir: North, alpha: 40
-Depth 20 ==> North
 25 24
 #########################
 #                       #
@@ -2883,26 +1623,6 @@ Depth 20 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: 40
-Depth 2 ==> East
-depth: 4, dir: East, alpha: 40
-Depth 4 ==> East
-depth: 6, dir: East, alpha: 40
-Depth 6 ==> East
-depth: 8, dir: East, alpha: 40
-Depth 8 ==> East
-depth: 10, dir: East, alpha: 40
-Depth 10 ==> East
-depth: 12, dir: East, alpha: 42
-Depth 12 ==> East
-depth: 14, dir: North, alpha: 42
-Depth 14 ==> North
-depth: 16, dir: North, alpha: 40
-Depth 16 ==> North
-depth: 18, dir: North, alpha: 40
-Depth 18 ==> North
-depth: 20, dir: North, alpha: 40
-Depth 20 ==> North
 25 24
 #########################
 #                       #
@@ -2928,28 +1648,6 @@ Depth 20 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: 40
-Depth 2 ==> East
-depth: 4, dir: East, alpha: 40
-Depth 4 ==> East
-depth: 6, dir: East, alpha: 40
-Depth 6 ==> East
-depth: 8, dir: East, alpha: 40
-Depth 8 ==> East
-depth: 10, dir: East, alpha: 42
-Depth 10 ==> East
-depth: 12, dir: East, alpha: 42
-Depth 12 ==> East
-depth: 14, dir: East, alpha: 40
-Depth 14 ==> East
-depth: 16, dir: East, alpha: 40
-Depth 16 ==> East
-depth: 18, dir: East, alpha: 40
-Depth 18 ==> East
-depth: 20, dir: East, alpha: 40
-Depth 20 ==> East
-depth: 22, dir: East, alpha: 40
-Depth 22 ==> East
 25 24
 #########################
 #                       #
@@ -2975,26 +1673,6 @@ Depth 22 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: 40
-Depth 2 ==> East
-depth: 4, dir: East, alpha: 40
-Depth 4 ==> East
-depth: 6, dir: East, alpha: 40
-Depth 6 ==> East
-depth: 8, dir: East, alpha: 42
-Depth 8 ==> East
-depth: 10, dir: North, alpha: 42
-Depth 10 ==> North
-depth: 12, dir: North, alpha: 40
-Depth 12 ==> North
-depth: 14, dir: North, alpha: 40
-Depth 14 ==> North
-depth: 16, dir: North, alpha: 40
-Depth 16 ==> North
-depth: 18, dir: North, alpha: 40
-Depth 18 ==> North
-depth: 20, dir: North, alpha: 40
-Depth 20 ==> North
 25 24
 #########################
 #                       #
@@ -3020,28 +1698,6 @@ Depth 20 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: 40
-Depth 2 ==> East
-depth: 4, dir: East, alpha: 40
-Depth 4 ==> East
-depth: 6, dir: East, alpha: 42
-Depth 6 ==> East
-depth: 8, dir: North, alpha: 42
-Depth 8 ==> North
-depth: 10, dir: North, alpha: 40
-Depth 10 ==> North
-depth: 12, dir: North, alpha: 40
-Depth 12 ==> North
-depth: 14, dir: North, alpha: 40
-Depth 14 ==> North
-depth: 16, dir: North, alpha: 40
-Depth 16 ==> North
-depth: 18, dir: North, alpha: 40
-Depth 18 ==> North
-depth: 20, dir: North, alpha: 40
-Depth 20 ==> North
-depth: 22, dir: North, alpha: 40
-Depth 22 ==> North
 25 24
 #########################
 #                       #
@@ -3067,30 +1723,6 @@ Depth 22 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: 40
-Depth 2 ==> East
-depth: 4, dir: East, alpha: 42
-Depth 4 ==> East
-depth: 6, dir: East, alpha: 42
-Depth 6 ==> East
-depth: 8, dir: East, alpha: 40
-Depth 8 ==> East
-depth: 10, dir: East, alpha: 40
-Depth 10 ==> East
-depth: 12, dir: East, alpha: 40
-Depth 12 ==> East
-depth: 14, dir: East, alpha: 40
-Depth 14 ==> East
-depth: 16, dir: East, alpha: 40
-Depth 16 ==> East
-depth: 18, dir: East, alpha: 40
-Depth 18 ==> East
-depth: 20, dir: East, alpha: 40
-Depth 20 ==> East
-depth: 22, dir: East, alpha: 40
-Depth 22 ==> East
-depth: 24, dir: East, alpha: 40
-Depth 24 ==> East
 25 24
 #########################
 #                       #
@@ -3116,28 +1748,6 @@ Depth 24 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: 42
-Depth 2 ==> East
-depth: 4, dir: East, alpha: 42
-Depth 4 ==> East
-depth: 6, dir: East, alpha: 40
-Depth 6 ==> East
-depth: 8, dir: East, alpha: 40
-Depth 8 ==> East
-depth: 10, dir: East, alpha: 40
-Depth 10 ==> East
-depth: 12, dir: East, alpha: 40
-Depth 12 ==> East
-depth: 14, dir: East, alpha: 40
-Depth 14 ==> East
-depth: 16, dir: East, alpha: 40
-Depth 16 ==> East
-depth: 18, dir: East, alpha: 40
-Depth 18 ==> East
-depth: 20, dir: East, alpha: 40
-Depth 20 ==> East
-depth: 22, dir: East, alpha: 40
-Depth 22 ==> East
 25 24
 #########################
 #                       #
@@ -3163,28 +1773,6 @@ Depth 22 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: 42
-Depth 2 ==> East
-depth: 4, dir: East, alpha: 40
-Depth 4 ==> East
-depth: 6, dir: East, alpha: 40
-Depth 6 ==> East
-depth: 8, dir: East, alpha: 40
-Depth 8 ==> East
-depth: 10, dir: East, alpha: 40
-Depth 10 ==> East
-depth: 12, dir: East, alpha: 40
-Depth 12 ==> East
-depth: 14, dir: East, alpha: 40
-Depth 14 ==> East
-depth: 16, dir: East, alpha: 40
-Depth 16 ==> East
-depth: 18, dir: East, alpha: 40
-Depth 18 ==> East
-depth: 20, dir: East, alpha: 40
-Depth 20 ==> East
-depth: 22, dir: East, alpha: 40
-Depth 22 ==> East
 25 24
 #########################
 #                       #
@@ -3210,28 +1798,6 @@ Depth 22 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: 40
-Depth 2 ==> East
-depth: 4, dir: East, alpha: 40
-Depth 4 ==> East
-depth: 6, dir: East, alpha: 40
-Depth 6 ==> East
-depth: 8, dir: East, alpha: 40
-Depth 8 ==> East
-depth: 10, dir: East, alpha: 40
-Depth 10 ==> East
-depth: 12, dir: East, alpha: 40
-Depth 12 ==> East
-depth: 14, dir: East, alpha: 40
-Depth 14 ==> East
-depth: 16, dir: East, alpha: 40
-Depth 16 ==> East
-depth: 18, dir: East, alpha: 40
-Depth 18 ==> East
-depth: 20, dir: East, alpha: 40
-Depth 20 ==> East
-depth: 22, dir: East, alpha: 40
-Depth 22 ==> East
 25 24
 #########################
 #                       #
@@ -3257,26 +1823,6 @@ Depth 22 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 40
-Depth 2 ==> South
-depth: 4, dir: South, alpha: 40
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 40
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 40
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 40
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 40
-Depth 12 ==> South
-depth: 14, dir: South, alpha: 40
-Depth 14 ==> South
-depth: 16, dir: South, alpha: 40
-Depth 16 ==> South
-depth: 18, dir: South, alpha: 40
-Depth 18 ==> South
-depth: 20, dir: South, alpha: 40
-Depth 20 ==> South
 25 24
 #########################
 #                       #
@@ -3302,26 +1848,6 @@ Depth 20 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 40
-Depth 2 ==> South
-depth: 4, dir: South, alpha: 40
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 40
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 40
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 40
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 40
-Depth 12 ==> South
-depth: 14, dir: South, alpha: 40
-Depth 14 ==> South
-depth: 16, dir: West, alpha: 40
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 40
-Depth 18 ==> West
-depth: 20, dir: West, alpha: 40
-Depth 20 ==> West
 25 24
 #########################
 #                       #
@@ -3347,26 +1873,6 @@ Depth 20 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 40
-Depth 2 ==> South
-depth: 4, dir: South, alpha: 40
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 40
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 40
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 40
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 40
-Depth 12 ==> South
-depth: 14, dir: South, alpha: 40
-Depth 14 ==> South
-depth: 16, dir: South, alpha: 40
-Depth 16 ==> South
-depth: 18, dir: South, alpha: 40
-Depth 18 ==> South
-depth: 20, dir: South, alpha: 40
-Depth 20 ==> South
 25 24
 #########################
 #                       #
@@ -3392,26 +1898,6 @@ Depth 20 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: 42
-Depth 2 ==> East
-depth: 4, dir: East, alpha: 42
-Depth 4 ==> East
-depth: 6, dir: East, alpha: 40
-Depth 6 ==> East
-depth: 8, dir: East, alpha: 40
-Depth 8 ==> East
-depth: 10, dir: East, alpha: 40
-Depth 10 ==> East
-depth: 12, dir: East, alpha: 40
-Depth 12 ==> East
-depth: 14, dir: East, alpha: 40
-Depth 14 ==> East
-depth: 16, dir: East, alpha: 40
-Depth 16 ==> East
-depth: 18, dir: East, alpha: 40
-Depth 18 ==> East
-depth: 20, dir: East, alpha: 40
-Depth 20 ==> East
 25 24
 #########################
 #                       #
@@ -3437,28 +1923,6 @@ Depth 20 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: 42
-Depth 2 ==> East
-depth: 4, dir: East, alpha: 40
-Depth 4 ==> East
-depth: 6, dir: East, alpha: 40
-Depth 6 ==> East
-depth: 8, dir: East, alpha: 40
-Depth 8 ==> East
-depth: 10, dir: East, alpha: 40
-Depth 10 ==> East
-depth: 12, dir: East, alpha: 40
-Depth 12 ==> East
-depth: 14, dir: East, alpha: 40
-Depth 14 ==> East
-depth: 16, dir: East, alpha: 40
-Depth 16 ==> East
-depth: 18, dir: East, alpha: 40
-Depth 18 ==> East
-depth: 20, dir: East, alpha: 40
-Depth 20 ==> East
-depth: 22, dir: East, alpha: 40
-Depth 22 ==> East
 25 24
 #########################
 #                       #
@@ -3484,28 +1948,6 @@ Depth 22 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: 40
-Depth 2 ==> East
-depth: 4, dir: North, alpha: 40
-Depth 4 ==> North
-depth: 6, dir: North, alpha: 40
-Depth 6 ==> North
-depth: 8, dir: North, alpha: 40
-Depth 8 ==> North
-depth: 10, dir: North, alpha: 40
-Depth 10 ==> North
-depth: 12, dir: North, alpha: 40
-Depth 12 ==> North
-depth: 14, dir: North, alpha: 40
-Depth 14 ==> North
-depth: 16, dir: North, alpha: 40
-Depth 16 ==> North
-depth: 18, dir: North, alpha: 40
-Depth 18 ==> North
-depth: 20, dir: North, alpha: 40
-Depth 20 ==> North
-depth: 22, dir: North, alpha: 40
-Depth 22 ==> North
 25 24
 #########################
 #                       #
@@ -3531,30 +1973,6 @@ Depth 22 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: 40
-Depth 2 ==> East
-depth: 4, dir: East, alpha: 40
-Depth 4 ==> East
-depth: 6, dir: East, alpha: 40
-Depth 6 ==> East
-depth: 8, dir: East, alpha: 40
-Depth 8 ==> East
-depth: 10, dir: East, alpha: 40
-Depth 10 ==> East
-depth: 12, dir: East, alpha: 40
-Depth 12 ==> East
-depth: 14, dir: East, alpha: 40
-Depth 14 ==> East
-depth: 16, dir: East, alpha: 40
-Depth 16 ==> East
-depth: 18, dir: East, alpha: 40
-Depth 18 ==> East
-depth: 20, dir: East, alpha: 40
-Depth 20 ==> East
-depth: 22, dir: East, alpha: 40
-Depth 22 ==> East
-depth: 24, dir: East, alpha: 38
-Depth 24 ==> East
 25 24
 #########################
 #                       #
@@ -3580,28 +1998,6 @@ Depth 24 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 40
-Depth 2 ==> South
-depth: 4, dir: South, alpha: 40
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 40
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 40
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 40
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 40
-Depth 12 ==> South
-depth: 14, dir: South, alpha: 40
-Depth 14 ==> South
-depth: 16, dir: South, alpha: 40
-Depth 16 ==> South
-depth: 18, dir: South, alpha: 40
-Depth 18 ==> South
-depth: 20, dir: South, alpha: 40
-Depth 20 ==> South
-depth: 22, dir: South, alpha: 38
-Depth 22 ==> South
 25 24
 #########################
 #                       #
@@ -3627,28 +2023,6 @@ Depth 22 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 40
-Depth 2 ==> South
-depth: 4, dir: South, alpha: 40
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 40
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 40
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 40
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 40
-Depth 12 ==> South
-depth: 14, dir: South, alpha: 40
-Depth 14 ==> South
-depth: 16, dir: South, alpha: 40
-Depth 16 ==> South
-depth: 18, dir: South, alpha: 40
-Depth 18 ==> South
-depth: 20, dir: South, alpha: 38
-Depth 20 ==> South
-depth: 22, dir: South, alpha: 38
-Depth 22 ==> South
 25 24
 #########################
 #                       #
@@ -3674,28 +2048,6 @@ Depth 22 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 40
-Depth 2 ==> South
-depth: 4, dir: South, alpha: 40
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 40
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 40
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 40
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 40
-Depth 12 ==> South
-depth: 14, dir: South, alpha: 40
-Depth 14 ==> South
-depth: 16, dir: South, alpha: 40
-Depth 16 ==> South
-depth: 18, dir: South, alpha: 38
-Depth 18 ==> South
-depth: 20, dir: South, alpha: 38
-Depth 20 ==> South
-depth: 22, dir: South, alpha: 36
-Depth 22 ==> South
 25 24
 #########################
 #                       #
@@ -3721,26 +2073,6 @@ Depth 22 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 40
-Depth 2 ==> South
-depth: 4, dir: South, alpha: 40
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 40
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 40
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 40
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 40
-Depth 12 ==> South
-depth: 14, dir: South, alpha: 40
-Depth 14 ==> South
-depth: 16, dir: South, alpha: 38
-Depth 16 ==> South
-depth: 18, dir: South, alpha: 38
-Depth 18 ==> South
-depth: 20, dir: South, alpha: 36
-Depth 20 ==> South
 25 24
 #########################
 #                       #
@@ -3766,24 +2098,6 @@ Depth 20 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 40
-Depth 2 ==> South
-depth: 4, dir: West, alpha: 40
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 40
-Depth 6 ==> West
-depth: 8, dir: West, alpha: 40
-Depth 8 ==> West
-depth: 10, dir: West, alpha: 40
-Depth 10 ==> West
-depth: 12, dir: West, alpha: 40
-Depth 12 ==> West
-depth: 14, dir: West, alpha: 38
-Depth 14 ==> West
-depth: 16, dir: West, alpha: 38
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 36
-Depth 18 ==> West
 25 24
 #########################
 #                       #
@@ -3809,26 +2123,6 @@ Depth 18 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 40
-Depth 2 ==> South
-depth: 4, dir: West, alpha: 40
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 40
-Depth 6 ==> West
-depth: 8, dir: West, alpha: 40
-Depth 8 ==> West
-depth: 10, dir: West, alpha: 40
-Depth 10 ==> West
-depth: 12, dir: West, alpha: 38
-Depth 12 ==> West
-depth: 14, dir: West, alpha: 38
-Depth 14 ==> West
-depth: 16, dir: West, alpha: 36
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 34
-Depth 18 ==> West
-depth: 20, dir: West, alpha: 34
-Depth 20 ==> West
 25 24
 #########################
 #                       #
@@ -3854,26 +2148,6 @@ Depth 20 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 40
-Depth 2 ==> South
-depth: 4, dir: West, alpha: 40
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 40
-Depth 6 ==> West
-depth: 8, dir: West, alpha: 40
-Depth 8 ==> West
-depth: 10, dir: West, alpha: 38
-Depth 10 ==> West
-depth: 12, dir: West, alpha: 38
-Depth 12 ==> West
-depth: 14, dir: West, alpha: 36
-Depth 14 ==> West
-depth: 16, dir: West, alpha: 34
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 34
-Depth 18 ==> West
-depth: 20, dir: West, alpha: 34
-Depth 20 ==> West
 25 24
 #########################
 #                       #
@@ -3899,28 +2173,6 @@ Depth 20 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 40
-Depth 2 ==> South
-depth: 4, dir: West, alpha: 40
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 40
-Depth 6 ==> West
-depth: 8, dir: West, alpha: 38
-Depth 8 ==> West
-depth: 10, dir: West, alpha: 38
-Depth 10 ==> West
-depth: 12, dir: West, alpha: 36
-Depth 12 ==> West
-depth: 14, dir: West, alpha: 34
-Depth 14 ==> West
-depth: 16, dir: West, alpha: 34
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 34
-Depth 18 ==> West
-depth: 20, dir: West, alpha: 34
-Depth 20 ==> West
-depth: 22, dir: West, alpha: 34
-Depth 22 ==> West
 25 24
 #########################
 #                       #
@@ -3946,26 +2198,6 @@ Depth 22 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 40
-Depth 2 ==> South
-depth: 4, dir: West, alpha: 40
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 38
-Depth 6 ==> West
-depth: 8, dir: North, alpha: 38
-Depth 8 ==> North
-depth: 10, dir: North, alpha: 36
-Depth 10 ==> North
-depth: 12, dir: West, alpha: 34
-Depth 12 ==> West
-depth: 14, dir: West, alpha: 34
-Depth 14 ==> West
-depth: 16, dir: West, alpha: 34
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 34
-Depth 18 ==> West
-depth: 20, dir: West, alpha: 34
-Depth 20 ==> West
 25 24
 #########################
 #                       #
@@ -3991,26 +2223,6 @@ Depth 20 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: 40
-Depth 2 ==> South
-depth: 4, dir: South, alpha: 38
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 34
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 34
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 34
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 34
-Depth 12 ==> South
-depth: 14, dir: South, alpha: 34
-Depth 14 ==> South
-depth: 16, dir: South, alpha: 34
-Depth 16 ==> South
-depth: 18, dir: South, alpha: 34
-Depth 18 ==> South
-depth: 20, dir: South, alpha: 34
-Depth 20 ==> South
 25 24
 #########################
 #                       #
@@ -4036,28 +2248,6 @@ Depth 20 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 38
-Depth 2 ==> West
-depth: 4, dir: South, alpha: 34
-Depth 4 ==> South
-depth: 6, dir: South, alpha: 34
-Depth 6 ==> South
-depth: 8, dir: South, alpha: 34
-Depth 8 ==> South
-depth: 10, dir: South, alpha: 34
-Depth 10 ==> South
-depth: 12, dir: South, alpha: 34
-Depth 12 ==> South
-depth: 14, dir: South, alpha: 34
-Depth 14 ==> South
-depth: 16, dir: South, alpha: 34
-Depth 16 ==> South
-depth: 18, dir: South, alpha: 34
-Depth 18 ==> South
-depth: 20, dir: South, alpha: 34
-Depth 20 ==> South
-depth: 22, dir: South, alpha: 34
-Depth 22 ==> South
 25 24
 #########################
 #                       #
@@ -4083,26 +2273,6 @@ Depth 22 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 34
-Depth 2 ==> West
-depth: 4, dir: West, alpha: 34
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 34
-Depth 6 ==> West
-depth: 8, dir: West, alpha: 34
-Depth 8 ==> West
-depth: 10, dir: West, alpha: 34
-Depth 10 ==> West
-depth: 12, dir: West, alpha: 34
-Depth 12 ==> West
-depth: 14, dir: West, alpha: 34
-Depth 14 ==> West
-depth: 16, dir: West, alpha: 34
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 34
-Depth 18 ==> West
-depth: 20, dir: West, alpha: 34
-Depth 20 ==> West
 25 24
 #########################
 #                       #
@@ -4128,28 +2298,6 @@ Depth 20 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 34
-Depth 2 ==> West
-depth: 4, dir: West, alpha: 34
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 34
-Depth 6 ==> West
-depth: 8, dir: West, alpha: 34
-Depth 8 ==> West
-depth: 10, dir: West, alpha: 34
-Depth 10 ==> West
-depth: 12, dir: West, alpha: 34
-Depth 12 ==> West
-depth: 14, dir: West, alpha: 34
-Depth 14 ==> West
-depth: 16, dir: West, alpha: 34
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 34
-Depth 18 ==> West
-depth: 20, dir: West, alpha: 34
-Depth 20 ==> West
-depth: 22, dir: West, alpha: 34
-Depth 22 ==> West
 25 24
 #########################
 #                       #
@@ -4175,28 +2323,6 @@ Depth 22 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 34
-Depth 2 ==> West
-depth: 4, dir: West, alpha: 34
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 34
-Depth 6 ==> West
-depth: 8, dir: West, alpha: 34
-Depth 8 ==> West
-depth: 10, dir: West, alpha: 34
-Depth 10 ==> West
-depth: 12, dir: West, alpha: 34
-Depth 12 ==> West
-depth: 14, dir: West, alpha: 34
-Depth 14 ==> West
-depth: 16, dir: West, alpha: 34
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 34
-Depth 18 ==> West
-depth: 20, dir: West, alpha: 34
-Depth 20 ==> West
-depth: 22, dir: West, alpha: 34
-Depth 22 ==> West
 25 24
 #########################
 #                       #
@@ -4222,28 +2348,6 @@ Depth 22 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 34
-Depth 2 ==> West
-depth: 4, dir: West, alpha: 34
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 34
-Depth 6 ==> West
-depth: 8, dir: West, alpha: 34
-Depth 8 ==> West
-depth: 10, dir: West, alpha: 34
-Depth 10 ==> West
-depth: 12, dir: West, alpha: 34
-Depth 12 ==> West
-depth: 14, dir: West, alpha: 34
-Depth 14 ==> West
-depth: 16, dir: West, alpha: 34
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 34
-Depth 18 ==> West
-depth: 20, dir: West, alpha: 34
-Depth 20 ==> West
-depth: 22, dir: West, alpha: 34
-Depth 22 ==> West
 25 24
 #########################
 #                       #
@@ -4269,28 +2373,6 @@ Depth 22 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 34
-Depth 2 ==> West
-depth: 4, dir: West, alpha: 34
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 34
-Depth 6 ==> West
-depth: 8, dir: West, alpha: 34
-Depth 8 ==> West
-depth: 10, dir: West, alpha: 34
-Depth 10 ==> West
-depth: 12, dir: West, alpha: 34
-Depth 12 ==> West
-depth: 14, dir: West, alpha: 34
-Depth 14 ==> West
-depth: 16, dir: West, alpha: 34
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 34
-Depth 18 ==> West
-depth: 20, dir: West, alpha: 34
-Depth 20 ==> West
-depth: 22, dir: West, alpha: 34
-Depth 22 ==> West
 25 24
 #########################
 #                       #
@@ -4316,28 +2398,6 @@ Depth 22 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 34
-Depth 2 ==> West
-depth: 4, dir: West, alpha: 34
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 34
-Depth 6 ==> West
-depth: 8, dir: West, alpha: 34
-Depth 8 ==> West
-depth: 10, dir: West, alpha: 34
-Depth 10 ==> West
-depth: 12, dir: West, alpha: 34
-Depth 12 ==> West
-depth: 14, dir: West, alpha: 34
-Depth 14 ==> West
-depth: 16, dir: West, alpha: 34
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 34
-Depth 18 ==> West
-depth: 20, dir: West, alpha: 34
-Depth 20 ==> West
-depth: 22, dir: West, alpha: 34
-Depth 22 ==> West
 25 24
 #########################
 #                       #
@@ -4363,28 +2423,6 @@ Depth 22 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 34
-Depth 2 ==> West
-depth: 4, dir: West, alpha: 34
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 34
-Depth 6 ==> West
-depth: 8, dir: West, alpha: 34
-Depth 8 ==> West
-depth: 10, dir: West, alpha: 34
-Depth 10 ==> West
-depth: 12, dir: West, alpha: 34
-Depth 12 ==> West
-depth: 14, dir: West, alpha: 34
-Depth 14 ==> West
-depth: 16, dir: West, alpha: 34
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 34
-Depth 18 ==> West
-depth: 20, dir: West, alpha: 34
-Depth 20 ==> West
-depth: 22, dir: West, alpha: 34
-Depth 22 ==> West
 25 24
 #########################
 #                       #
@@ -4410,26 +2448,6 @@ Depth 22 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 34
-Depth 2 ==> West
-depth: 4, dir: West, alpha: 34
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 34
-Depth 6 ==> West
-depth: 8, dir: West, alpha: 34
-Depth 8 ==> West
-depth: 10, dir: West, alpha: 34
-Depth 10 ==> West
-depth: 12, dir: West, alpha: 34
-Depth 12 ==> West
-depth: 14, dir: West, alpha: 34
-Depth 14 ==> West
-depth: 16, dir: West, alpha: 34
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 34
-Depth 18 ==> West
-depth: 20, dir: West, alpha: 34
-Depth 20 ==> West
 25 24
 #########################
 #                       #
@@ -4455,26 +2473,6 @@ Depth 20 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 34
-Depth 2 ==> West
-depth: 4, dir: West, alpha: 34
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 34
-Depth 6 ==> West
-depth: 8, dir: West, alpha: 34
-Depth 8 ==> West
-depth: 10, dir: West, alpha: 34
-Depth 10 ==> West
-depth: 12, dir: West, alpha: 34
-Depth 12 ==> West
-depth: 14, dir: West, alpha: 34
-Depth 14 ==> West
-depth: 16, dir: West, alpha: 34
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 34
-Depth 18 ==> West
-depth: 20, dir: West, alpha: 34
-Depth 20 ==> West
 25 24
 #########################
 #                       #
@@ -4500,26 +2498,6 @@ Depth 20 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 34
-Depth 2 ==> West
-depth: 4, dir: West, alpha: 34
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 34
-Depth 6 ==> West
-depth: 8, dir: West, alpha: 34
-Depth 8 ==> West
-depth: 10, dir: West, alpha: 34
-Depth 10 ==> West
-depth: 12, dir: West, alpha: 34
-Depth 12 ==> West
-depth: 14, dir: West, alpha: 34
-Depth 14 ==> West
-depth: 16, dir: West, alpha: 34
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 34
-Depth 18 ==> West
-depth: 20, dir: West, alpha: 36
-Depth 20 ==> West
 25 24
 #########################
 #                       #
@@ -4545,26 +2523,6 @@ Depth 20 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 34
-Depth 2 ==> West
-depth: 4, dir: West, alpha: 34
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 34
-Depth 6 ==> West
-depth: 8, dir: West, alpha: 34
-Depth 8 ==> West
-depth: 10, dir: West, alpha: 34
-Depth 10 ==> West
-depth: 12, dir: West, alpha: 34
-Depth 12 ==> West
-depth: 14, dir: West, alpha: 34
-Depth 14 ==> West
-depth: 16, dir: West, alpha: 34
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 36
-Depth 18 ==> West
-depth: 20, dir: West, alpha: 36
-Depth 20 ==> West
 25 24
 #########################
 #                       #
@@ -4590,26 +2548,6 @@ Depth 20 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 34
-Depth 2 ==> West
-depth: 4, dir: West, alpha: 34
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 34
-Depth 6 ==> West
-depth: 8, dir: West, alpha: 34
-Depth 8 ==> West
-depth: 10, dir: West, alpha: 34
-Depth 10 ==> West
-depth: 12, dir: West, alpha: 34
-Depth 12 ==> West
-depth: 14, dir: West, alpha: 34
-Depth 14 ==> West
-depth: 16, dir: West, alpha: 36
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 36
-Depth 18 ==> West
-depth: 20, dir: West, alpha: 34
-Depth 20 ==> West
 25 24
 #########################
 #                       #
@@ -4635,26 +2573,6 @@ Depth 20 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 34
-Depth 2 ==> West
-depth: 4, dir: West, alpha: 34
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 34
-Depth 6 ==> West
-depth: 8, dir: West, alpha: 34
-Depth 8 ==> West
-depth: 10, dir: West, alpha: 34
-Depth 10 ==> West
-depth: 12, dir: West, alpha: 34
-Depth 12 ==> West
-depth: 14, dir: West, alpha: 36
-Depth 14 ==> West
-depth: 16, dir: West, alpha: 36
-Depth 16 ==> West
-depth: 18, dir: West, alpha: 34
-Depth 18 ==> West
-depth: 20, dir: West, alpha: 32
-Depth 20 ==> West
 25 24
 #########################
 #                       #
@@ -4680,28 +2598,6 @@ Depth 20 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 34
-Depth 2 ==> West
-depth: 4, dir: North, alpha: 34
-Depth 4 ==> North
-depth: 6, dir: North, alpha: 34
-Depth 6 ==> North
-depth: 8, dir: North, alpha: 34
-Depth 8 ==> North
-depth: 10, dir: North, alpha: 34
-Depth 10 ==> North
-depth: 12, dir: North, alpha: 36
-Depth 12 ==> North
-depth: 14, dir: North, alpha: 36
-Depth 14 ==> North
-depth: 16, dir: North, alpha: 34
-Depth 16 ==> North
-depth: 18, dir: North, alpha: 32
-Depth 18 ==> North
-depth: 20, dir: North, alpha: 24
-Depth 20 ==> North
-depth: 22, dir: North, alpha: 16
-Depth 22 ==> North
 25 24
 #########################
 #                       #
@@ -4727,28 +2623,6 @@ Depth 22 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 34
-Depth 2 ==> West
-depth: 4, dir: North, alpha: 34
-Depth 4 ==> North
-depth: 6, dir: North, alpha: 34
-Depth 6 ==> North
-depth: 8, dir: North, alpha: 34
-Depth 8 ==> North
-depth: 10, dir: North, alpha: 36
-Depth 10 ==> North
-depth: 12, dir: North, alpha: 36
-Depth 12 ==> North
-depth: 14, dir: North, alpha: 34
-Depth 14 ==> North
-depth: 16, dir: North, alpha: 32
-Depth 16 ==> North
-depth: 18, dir: North, alpha: 24
-Depth 18 ==> North
-depth: 20, dir: North, alpha: 16
-Depth 20 ==> North
-depth: 22, dir: North, alpha: 8
-Depth 22 ==> North
 25 24
 #########################
 #                       #
@@ -4774,26 +2648,6 @@ Depth 22 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 34
-Depth 2 ==> West
-depth: 4, dir: North, alpha: 34
-Depth 4 ==> North
-depth: 6, dir: North, alpha: 34
-Depth 6 ==> North
-depth: 8, dir: North, alpha: 36
-Depth 8 ==> North
-depth: 10, dir: North, alpha: 36
-Depth 10 ==> North
-depth: 12, dir: North, alpha: 34
-Depth 12 ==> North
-depth: 14, dir: North, alpha: 32
-Depth 14 ==> North
-depth: 16, dir: North, alpha: 24
-Depth 16 ==> North
-depth: 18, dir: North, alpha: 16
-Depth 18 ==> North
-depth: 20, dir: North, alpha: 8
-Depth 20 ==> North
 25 24
 #########################
 #                       #
@@ -4819,30 +2673,6 @@ Depth 20 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 34
-Depth 2 ==> West
-depth: 4, dir: North, alpha: 34
-Depth 4 ==> North
-depth: 6, dir: North, alpha: 36
-Depth 6 ==> North
-depth: 8, dir: North, alpha: 36
-Depth 8 ==> North
-depth: 10, dir: North, alpha: 34
-Depth 10 ==> North
-depth: 12, dir: North, alpha: 32
-Depth 12 ==> North
-depth: 14, dir: North, alpha: 24
-Depth 14 ==> North
-depth: 16, dir: North, alpha: 16
-Depth 16 ==> North
-depth: 18, dir: West, alpha: 8
-Depth 18 ==> West
-depth: 20, dir: North, alpha: -9
-Depth 20 ==> North
-depth: 22, dir: North, alpha: -9
-Depth 22 ==> North
-depth: 24, dir: North, alpha: -9
-Depth 24 ==> North
 25 24
 #########################
 #                       #
@@ -4868,32 +2698,6 @@ Depth 24 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 34
-Depth 2 ==> West
-depth: 4, dir: North, alpha: 36
-Depth 4 ==> North
-depth: 6, dir: North, alpha: 36
-Depth 6 ==> North
-depth: 8, dir: North, alpha: 34
-Depth 8 ==> North
-depth: 10, dir: North, alpha: 32
-Depth 10 ==> North
-depth: 12, dir: North, alpha: 24
-Depth 12 ==> North
-depth: 14, dir: West, alpha: 16
-Depth 14 ==> West
-depth: 16, dir: North, alpha: -9
-Depth 16 ==> North
-depth: 18, dir: North, alpha: -9
-Depth 18 ==> North
-depth: 20, dir: North, alpha: -9
-Depth 20 ==> North
-depth: 22, dir: North, alpha: -9
-Depth 22 ==> North
-depth: 24, dir: North, alpha: -9
-Depth 24 ==> North
-depth: 26, dir: North, alpha: -9
-Depth 26 ==> North
 25 24
 #########################
 #                       #
@@ -4919,32 +2723,6 @@ Depth 26 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 36
-Depth 2 ==> West
-depth: 4, dir: North, alpha: 36
-Depth 4 ==> North
-depth: 6, dir: North, alpha: 34
-Depth 6 ==> North
-depth: 8, dir: North, alpha: 32
-Depth 8 ==> North
-depth: 10, dir: West, alpha: 24
-Depth 10 ==> West
-depth: 12, dir: North, alpha: -9
-Depth 12 ==> North
-depth: 14, dir: North, alpha: -9
-Depth 14 ==> North
-depth: 16, dir: North, alpha: -9
-Depth 16 ==> North
-depth: 18, dir: North, alpha: -9
-Depth 18 ==> North
-depth: 20, dir: North, alpha: -9
-Depth 20 ==> North
-depth: 22, dir: North, alpha: -9
-Depth 22 ==> North
-depth: 24, dir: North, alpha: -9
-Depth 24 ==> North
-depth: 26, dir: North, alpha: -9
-Depth 26 ==> North
 25 24
 #########################
 #                       #
@@ -4970,34 +2748,6 @@ Depth 26 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: 36
-Depth 2 ==> West
-depth: 4, dir: West, alpha: 34
-Depth 4 ==> West
-depth: 6, dir: West, alpha: 32
-Depth 6 ==> West
-depth: 8, dir: North, alpha: -11
-Depth 8 ==> North
-depth: 10, dir: North, alpha: -9
-Depth 10 ==> North
-depth: 12, dir: North, alpha: -9
-Depth 12 ==> North
-depth: 14, dir: North, alpha: -9
-Depth 14 ==> North
-depth: 16, dir: North, alpha: -9
-Depth 16 ==> North
-depth: 18, dir: North, alpha: -9
-Depth 18 ==> North
-depth: 20, dir: North, alpha: -9
-Depth 20 ==> North
-depth: 22, dir: North, alpha: -9
-Depth 22 ==> North
-depth: 24, dir: North, alpha: -9
-Depth 24 ==> North
-depth: 26, dir: North, alpha: -9
-Depth 26 ==> North
-depth: 28, dir: North, alpha: -9
-Depth 28 ==> North
 25 24
 #########################
 #                       #
@@ -5023,36 +2773,6 @@ Depth 28 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: -9
-Depth 2 ==> West
-depth: 4, dir: West, alpha: -11
-Depth 4 ==> West
-depth: 6, dir: West, alpha: -11
-Depth 6 ==> West
-depth: 8, dir: West, alpha: -9
-Depth 8 ==> West
-depth: 10, dir: West, alpha: -9
-Depth 10 ==> West
-depth: 12, dir: West, alpha: -9
-Depth 12 ==> West
-depth: 14, dir: West, alpha: -9
-Depth 14 ==> West
-depth: 16, dir: West, alpha: -9
-Depth 16 ==> West
-depth: 18, dir: West, alpha: -9
-Depth 18 ==> West
-depth: 20, dir: West, alpha: -9
-Depth 20 ==> West
-depth: 22, dir: West, alpha: -9
-Depth 22 ==> West
-depth: 24, dir: West, alpha: -9
-Depth 24 ==> West
-depth: 26, dir: West, alpha: -9
-Depth 26 ==> West
-depth: 28, dir: West, alpha: -9
-Depth 28 ==> West
-depth: 30, dir: West, alpha: -9
-Depth 30 ==> West
 25 24
 #########################
 #                       #
@@ -5078,36 +2798,6 @@ Depth 30 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: West, alpha: -11
-Depth 2 ==> West
-depth: 4, dir: West, alpha: -11
-Depth 4 ==> West
-depth: 6, dir: West, alpha: -9
-Depth 6 ==> West
-depth: 8, dir: West, alpha: -9
-Depth 8 ==> West
-depth: 10, dir: West, alpha: -9
-Depth 10 ==> West
-depth: 12, dir: West, alpha: -9
-Depth 12 ==> West
-depth: 14, dir: West, alpha: -9
-Depth 14 ==> West
-depth: 16, dir: West, alpha: -9
-Depth 16 ==> West
-depth: 18, dir: West, alpha: -9
-Depth 18 ==> West
-depth: 20, dir: West, alpha: -9
-Depth 20 ==> West
-depth: 22, dir: West, alpha: -9
-Depth 22 ==> West
-depth: 24, dir: West, alpha: -9
-Depth 24 ==> West
-depth: 26, dir: West, alpha: -9
-Depth 26 ==> West
-depth: 28, dir: West, alpha: -9
-Depth 28 ==> West
-depth: 30, dir: West, alpha: -9
-Depth 30 ==> West
 25 24
 #########################
 #                       #
@@ -5133,36 +2823,6 @@ Depth 30 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: -11
-Depth 2 ==> South
-depth: 4, dir: South, alpha: -9
-Depth 4 ==> South
-depth: 6, dir: South, alpha: -9
-Depth 6 ==> South
-depth: 8, dir: South, alpha: -9
-Depth 8 ==> South
-depth: 10, dir: South, alpha: -9
-Depth 10 ==> South
-depth: 12, dir: South, alpha: -9
-Depth 12 ==> South
-depth: 14, dir: South, alpha: -9
-Depth 14 ==> South
-depth: 16, dir: South, alpha: -9
-Depth 16 ==> South
-depth: 18, dir: South, alpha: -9
-Depth 18 ==> South
-depth: 20, dir: South, alpha: -9
-Depth 20 ==> South
-depth: 22, dir: South, alpha: -9
-Depth 22 ==> South
-depth: 24, dir: South, alpha: -9
-Depth 24 ==> South
-depth: 26, dir: South, alpha: -9
-Depth 26 ==> South
-depth: 28, dir: South, alpha: -9
-Depth 28 ==> South
-depth: 30, dir: South, alpha: -9
-Depth 30 ==> South
 25 24
 #########################
 #                       #
@@ -5188,34 +2848,6 @@ Depth 30 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: -9
-Depth 2 ==> South
-depth: 4, dir: South, alpha: -9
-Depth 4 ==> South
-depth: 6, dir: South, alpha: -9
-Depth 6 ==> South
-depth: 8, dir: South, alpha: -9
-Depth 8 ==> South
-depth: 10, dir: South, alpha: -9
-Depth 10 ==> South
-depth: 12, dir: South, alpha: -9
-Depth 12 ==> South
-depth: 14, dir: South, alpha: -9
-Depth 14 ==> South
-depth: 16, dir: South, alpha: -9
-Depth 16 ==> South
-depth: 18, dir: East, alpha: -9
-Depth 18 ==> East
-depth: 20, dir: East, alpha: -9
-Depth 20 ==> East
-depth: 22, dir: East, alpha: -9
-Depth 22 ==> East
-depth: 24, dir: East, alpha: -9
-Depth 24 ==> East
-depth: 26, dir: East, alpha: -9
-Depth 26 ==> East
-depth: 28, dir: East, alpha: -9
-Depth 28 ==> East
 25 24
 #########################
 #                       #
@@ -5241,36 +2873,6 @@ Depth 28 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: -9
-Depth 2 ==> South
-depth: 4, dir: South, alpha: -9
-Depth 4 ==> South
-depth: 6, dir: South, alpha: -9
-Depth 6 ==> South
-depth: 8, dir: South, alpha: -9
-Depth 8 ==> South
-depth: 10, dir: South, alpha: -9
-Depth 10 ==> South
-depth: 12, dir: South, alpha: -9
-Depth 12 ==> South
-depth: 14, dir: South, alpha: -9
-Depth 14 ==> South
-depth: 16, dir: South, alpha: -9
-Depth 16 ==> South
-depth: 18, dir: South, alpha: -9
-Depth 18 ==> South
-depth: 20, dir: South, alpha: -9
-Depth 20 ==> South
-depth: 22, dir: South, alpha: -9
-Depth 22 ==> South
-depth: 24, dir: South, alpha: -9
-Depth 24 ==> South
-depth: 26, dir: South, alpha: -9
-Depth 26 ==> South
-depth: 28, dir: South, alpha: -9
-Depth 28 ==> South
-depth: 30, dir: South, alpha: -9
-Depth 30 ==> South
 25 24
 #########################
 #                       #
@@ -5296,36 +2898,6 @@ Depth 30 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: -9
-Depth 2 ==> South
-depth: 4, dir: South, alpha: -9
-Depth 4 ==> South
-depth: 6, dir: South, alpha: -9
-Depth 6 ==> South
-depth: 8, dir: South, alpha: -9
-Depth 8 ==> South
-depth: 10, dir: South, alpha: -9
-Depth 10 ==> South
-depth: 12, dir: South, alpha: -9
-Depth 12 ==> South
-depth: 14, dir: South, alpha: -9
-Depth 14 ==> South
-depth: 16, dir: South, alpha: -9
-Depth 16 ==> South
-depth: 18, dir: South, alpha: -9
-Depth 18 ==> South
-depth: 20, dir: South, alpha: -9
-Depth 20 ==> South
-depth: 22, dir: South, alpha: -9
-Depth 22 ==> South
-depth: 24, dir: South, alpha: -9
-Depth 24 ==> South
-depth: 26, dir: South, alpha: -9
-Depth 26 ==> South
-depth: 28, dir: South, alpha: -9
-Depth 28 ==> South
-depth: 30, dir: South, alpha: -9
-Depth 30 ==> South
 25 24
 #########################
 #                       #
@@ -5351,36 +2923,6 @@ Depth 30 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: -9
-Depth 2 ==> South
-depth: 4, dir: South, alpha: -9
-Depth 4 ==> South
-depth: 6, dir: South, alpha: -9
-Depth 6 ==> South
-depth: 8, dir: South, alpha: -9
-Depth 8 ==> South
-depth: 10, dir: South, alpha: -9
-Depth 10 ==> South
-depth: 12, dir: South, alpha: -9
-Depth 12 ==> South
-depth: 14, dir: South, alpha: -9
-Depth 14 ==> South
-depth: 16, dir: South, alpha: -9
-Depth 16 ==> South
-depth: 18, dir: South, alpha: -9
-Depth 18 ==> South
-depth: 20, dir: South, alpha: -9
-Depth 20 ==> South
-depth: 22, dir: South, alpha: -9
-Depth 22 ==> South
-depth: 24, dir: South, alpha: -9
-Depth 24 ==> South
-depth: 26, dir: South, alpha: -9
-Depth 26 ==> South
-depth: 28, dir: South, alpha: -9
-Depth 28 ==> South
-depth: 30, dir: South, alpha: -9
-Depth 30 ==> South
 25 24
 #########################
 #                       #
@@ -5406,34 +2948,6 @@ Depth 30 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: -9
-Depth 2 ==> South
-depth: 4, dir: South, alpha: -9
-Depth 4 ==> South
-depth: 6, dir: South, alpha: -9
-Depth 6 ==> South
-depth: 8, dir: South, alpha: -9
-Depth 8 ==> South
-depth: 10, dir: South, alpha: -9
-Depth 10 ==> South
-depth: 12, dir: South, alpha: -9
-Depth 12 ==> South
-depth: 14, dir: South, alpha: -9
-Depth 14 ==> South
-depth: 16, dir: South, alpha: -9
-Depth 16 ==> South
-depth: 18, dir: South, alpha: -9
-Depth 18 ==> South
-depth: 20, dir: South, alpha: -9
-Depth 20 ==> South
-depth: 22, dir: South, alpha: -9
-Depth 22 ==> South
-depth: 24, dir: South, alpha: -9
-Depth 24 ==> South
-depth: 26, dir: South, alpha: -9
-Depth 26 ==> South
-depth: 28, dir: South, alpha: -9
-Depth 28 ==> South
 25 24
 #########################
 #                       #
@@ -5459,34 +2973,6 @@ Depth 28 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: -9
-Depth 2 ==> South
-depth: 4, dir: South, alpha: -9
-Depth 4 ==> South
-depth: 6, dir: South, alpha: -9
-Depth 6 ==> South
-depth: 8, dir: South, alpha: -9
-Depth 8 ==> South
-depth: 10, dir: South, alpha: -9
-Depth 10 ==> South
-depth: 12, dir: South, alpha: -9
-Depth 12 ==> South
-depth: 14, dir: South, alpha: -9
-Depth 14 ==> South
-depth: 16, dir: South, alpha: -9
-Depth 16 ==> South
-depth: 18, dir: South, alpha: -9
-Depth 18 ==> South
-depth: 20, dir: South, alpha: -9
-Depth 20 ==> South
-depth: 22, dir: South, alpha: -9
-Depth 22 ==> South
-depth: 24, dir: South, alpha: -9
-Depth 24 ==> South
-depth: 26, dir: South, alpha: -9
-Depth 26 ==> South
-depth: 28, dir: South, alpha: -9
-Depth 28 ==> South
 25 24
 #########################
 #                       #
@@ -5512,34 +2998,6 @@ Depth 28 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: -9
-Depth 2 ==> South
-depth: 4, dir: South, alpha: -9
-Depth 4 ==> South
-depth: 6, dir: South, alpha: -9
-Depth 6 ==> South
-depth: 8, dir: South, alpha: -9
-Depth 8 ==> South
-depth: 10, dir: South, alpha: -9
-Depth 10 ==> South
-depth: 12, dir: South, alpha: -9
-Depth 12 ==> South
-depth: 14, dir: South, alpha: -9
-Depth 14 ==> South
-depth: 16, dir: South, alpha: -9
-Depth 16 ==> South
-depth: 18, dir: South, alpha: -9
-Depth 18 ==> South
-depth: 20, dir: South, alpha: -9
-Depth 20 ==> South
-depth: 22, dir: South, alpha: -9
-Depth 22 ==> South
-depth: 24, dir: South, alpha: -9
-Depth 24 ==> South
-depth: 26, dir: South, alpha: -9
-Depth 26 ==> South
-depth: 28, dir: South, alpha: -9
-Depth 28 ==> South
 25 24
 #########################
 #                       #
@@ -5565,34 +3023,6 @@ Depth 28 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: -9
-Depth 2 ==> South
-depth: 4, dir: South, alpha: -9
-Depth 4 ==> South
-depth: 6, dir: South, alpha: -9
-Depth 6 ==> South
-depth: 8, dir: South, alpha: -9
-Depth 8 ==> South
-depth: 10, dir: South, alpha: -9
-Depth 10 ==> South
-depth: 12, dir: South, alpha: -9
-Depth 12 ==> South
-depth: 14, dir: South, alpha: -9
-Depth 14 ==> South
-depth: 16, dir: South, alpha: -9
-Depth 16 ==> South
-depth: 18, dir: South, alpha: -9
-Depth 18 ==> South
-depth: 20, dir: South, alpha: -9
-Depth 20 ==> South
-depth: 22, dir: South, alpha: -9
-Depth 22 ==> South
-depth: 24, dir: South, alpha: -9
-Depth 24 ==> South
-depth: 26, dir: South, alpha: -9
-Depth 26 ==> South
-depth: 28, dir: South, alpha: -9
-Depth 28 ==> South
 25 24
 #########################
 #                       #
@@ -5618,30 +3048,6 @@ Depth 28 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -7
-Depth 2 ==> East
-depth: 4, dir: East, alpha: -7
-Depth 4 ==> East
-depth: 6, dir: East, alpha: -7
-Depth 6 ==> East
-depth: 8, dir: East, alpha: -7
-Depth 8 ==> East
-depth: 10, dir: East, alpha: -7
-Depth 10 ==> East
-depth: 12, dir: East, alpha: -7
-Depth 12 ==> East
-depth: 14, dir: East, alpha: -7
-Depth 14 ==> East
-depth: 16, dir: East, alpha: -7
-Depth 16 ==> East
-depth: 18, dir: East, alpha: -7
-Depth 18 ==> East
-depth: 20, dir: East, alpha: -7
-Depth 20 ==> East
-depth: 22, dir: East, alpha: -7
-Depth 22 ==> East
-depth: 24, dir: East, alpha: -7
-Depth 24 ==> East
 25 24
 #########################
 #                       #
@@ -5667,32 +3073,6 @@ Depth 24 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -7
-Depth 2 ==> East
-depth: 4, dir: East, alpha: -7
-Depth 4 ==> East
-depth: 6, dir: East, alpha: -7
-Depth 6 ==> East
-depth: 8, dir: East, alpha: -7
-Depth 8 ==> East
-depth: 10, dir: East, alpha: -7
-Depth 10 ==> East
-depth: 12, dir: East, alpha: -7
-Depth 12 ==> East
-depth: 14, dir: East, alpha: -7
-Depth 14 ==> East
-depth: 16, dir: East, alpha: -7
-Depth 16 ==> East
-depth: 18, dir: East, alpha: -7
-Depth 18 ==> East
-depth: 20, dir: East, alpha: -7
-Depth 20 ==> East
-depth: 22, dir: East, alpha: -7
-Depth 22 ==> East
-depth: 24, dir: East, alpha: -7
-Depth 24 ==> East
-depth: 26, dir: East, alpha: -7
-Depth 26 ==> East
 25 24
 #########################
 #                       #
@@ -5718,30 +3098,6 @@ Depth 26 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -5
-Depth 2 ==> East
-depth: 4, dir: East, alpha: -5
-Depth 4 ==> East
-depth: 6, dir: East, alpha: -5
-Depth 6 ==> East
-depth: 8, dir: East, alpha: -5
-Depth 8 ==> East
-depth: 10, dir: East, alpha: -5
-Depth 10 ==> East
-depth: 12, dir: East, alpha: -5
-Depth 12 ==> East
-depth: 14, dir: East, alpha: -5
-Depth 14 ==> East
-depth: 16, dir: East, alpha: -5
-Depth 16 ==> East
-depth: 18, dir: East, alpha: -5
-Depth 18 ==> East
-depth: 20, dir: East, alpha: -5
-Depth 20 ==> East
-depth: 22, dir: East, alpha: -5
-Depth 22 ==> East
-depth: 24, dir: East, alpha: -5
-Depth 24 ==> East
 25 24
 #########################
 #                       #
@@ -5767,30 +3123,6 @@ Depth 24 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -3
-Depth 2 ==> East
-depth: 4, dir: East, alpha: -3
-Depth 4 ==> East
-depth: 6, dir: East, alpha: -3
-Depth 6 ==> East
-depth: 8, dir: East, alpha: -3
-Depth 8 ==> East
-depth: 10, dir: East, alpha: -3
-Depth 10 ==> East
-depth: 12, dir: East, alpha: -3
-Depth 12 ==> East
-depth: 14, dir: East, alpha: -3
-Depth 14 ==> East
-depth: 16, dir: East, alpha: -3
-Depth 16 ==> East
-depth: 18, dir: East, alpha: -3
-Depth 18 ==> East
-depth: 20, dir: East, alpha: -3
-Depth 20 ==> East
-depth: 22, dir: East, alpha: -3
-Depth 22 ==> East
-depth: 24, dir: East, alpha: -3
-Depth 24 ==> East
 25 24
 #########################
 #1                      #
@@ -5816,32 +3148,6 @@ Depth 24 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -1
-Depth 2 ==> East
-depth: 4, dir: East, alpha: -1
-Depth 4 ==> East
-depth: 6, dir: East, alpha: -1
-Depth 6 ==> East
-depth: 8, dir: East, alpha: -1
-Depth 8 ==> East
-depth: 10, dir: East, alpha: -1
-Depth 10 ==> East
-depth: 12, dir: East, alpha: -1
-Depth 12 ==> East
-depth: 14, dir: East, alpha: -1
-Depth 14 ==> East
-depth: 16, dir: East, alpha: -1
-Depth 16 ==> East
-depth: 18, dir: East, alpha: -1
-Depth 18 ==> East
-depth: 20, dir: East, alpha: -1
-Depth 20 ==> East
-depth: 22, dir: East, alpha: -1
-Depth 22 ==> East
-depth: 24, dir: East, alpha: -1
-Depth 24 ==> East
-depth: 26, dir: East, alpha: -1
-Depth 26 ==> East
 25 24
 #########################
 ##1                     #
@@ -5867,32 +3173,6 @@ Depth 26 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -1
-Depth 2 ==> East
-depth: 4, dir: East, alpha: -1
-Depth 4 ==> East
-depth: 6, dir: East, alpha: -1
-Depth 6 ==> East
-depth: 8, dir: East, alpha: -1
-Depth 8 ==> East
-depth: 10, dir: East, alpha: -1
-Depth 10 ==> East
-depth: 12, dir: East, alpha: -1
-Depth 12 ==> East
-depth: 14, dir: East, alpha: -1
-Depth 14 ==> East
-depth: 16, dir: East, alpha: -1
-Depth 16 ==> East
-depth: 18, dir: East, alpha: -1
-Depth 18 ==> East
-depth: 20, dir: East, alpha: -1
-Depth 20 ==> East
-depth: 22, dir: East, alpha: -1
-Depth 22 ==> East
-depth: 24, dir: East, alpha: -1
-Depth 24 ==> East
-depth: 26, dir: East, alpha: -1
-Depth 26 ==> East
 25 24
 #########################
 ###                     #
@@ -5918,32 +3198,6 @@ Depth 26 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -1
-Depth 2 ==> East
-depth: 4, dir: East, alpha: -1
-Depth 4 ==> East
-depth: 6, dir: East, alpha: -1
-Depth 6 ==> East
-depth: 8, dir: East, alpha: -1
-Depth 8 ==> East
-depth: 10, dir: East, alpha: -1
-Depth 10 ==> East
-depth: 12, dir: East, alpha: -1
-Depth 12 ==> East
-depth: 14, dir: East, alpha: -1
-Depth 14 ==> East
-depth: 16, dir: East, alpha: -1
-Depth 16 ==> East
-depth: 18, dir: East, alpha: -1
-Depth 18 ==> East
-depth: 20, dir: East, alpha: -1
-Depth 20 ==> East
-depth: 22, dir: East, alpha: -1
-Depth 22 ==> East
-depth: 24, dir: East, alpha: -1
-Depth 24 ==> East
-depth: 26, dir: East, alpha: -1
-Depth 26 ==> East
 25 24
 #########################
 ###                     #
@@ -5969,32 +3223,6 @@ Depth 26 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -1
-Depth 2 ==> East
-depth: 4, dir: East, alpha: -1
-Depth 4 ==> East
-depth: 6, dir: East, alpha: -1
-Depth 6 ==> East
-depth: 8, dir: East, alpha: -1
-Depth 8 ==> East
-depth: 10, dir: East, alpha: -1
-Depth 10 ==> East
-depth: 12, dir: East, alpha: -1
-Depth 12 ==> East
-depth: 14, dir: East, alpha: -1
-Depth 14 ==> East
-depth: 16, dir: East, alpha: -1
-Depth 16 ==> East
-depth: 18, dir: East, alpha: -1
-Depth 18 ==> East
-depth: 20, dir: East, alpha: -1
-Depth 20 ==> East
-depth: 22, dir: East, alpha: -1
-Depth 22 ==> East
-depth: 24, dir: East, alpha: -1
-Depth 24 ==> East
-depth: 26, dir: East, alpha: -1
-Depth 26 ==> East
 25 24
 #########################
 ###                     #
@@ -6020,34 +3248,6 @@ Depth 26 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -1
-Depth 2 ==> East
-depth: 4, dir: East, alpha: -1
-Depth 4 ==> East
-depth: 6, dir: East, alpha: -1
-Depth 6 ==> East
-depth: 8, dir: East, alpha: -1
-Depth 8 ==> East
-depth: 10, dir: East, alpha: -1
-Depth 10 ==> East
-depth: 12, dir: East, alpha: -1
-Depth 12 ==> East
-depth: 14, dir: East, alpha: -1
-Depth 14 ==> East
-depth: 16, dir: East, alpha: -1
-Depth 16 ==> East
-depth: 18, dir: East, alpha: -1
-Depth 18 ==> East
-depth: 20, dir: East, alpha: -1
-Depth 20 ==> East
-depth: 22, dir: East, alpha: -1
-Depth 22 ==> East
-depth: 24, dir: East, alpha: -1
-Depth 24 ==> East
-depth: 26, dir: East, alpha: -1
-Depth 26 ==> East
-depth: 28, dir: East, alpha: -1
-Depth 28 ==> East
 25 24
 #########################
 ###                     #
@@ -6073,32 +3273,6 @@ Depth 28 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -1
-Depth 2 ==> East
-depth: 4, dir: East, alpha: -1
-Depth 4 ==> East
-depth: 6, dir: East, alpha: -1
-Depth 6 ==> East
-depth: 8, dir: East, alpha: -1
-Depth 8 ==> East
-depth: 10, dir: East, alpha: -1
-Depth 10 ==> East
-depth: 12, dir: East, alpha: -1
-Depth 12 ==> East
-depth: 14, dir: East, alpha: -1
-Depth 14 ==> East
-depth: 16, dir: East, alpha: -1
-Depth 16 ==> East
-depth: 18, dir: East, alpha: -1
-Depth 18 ==> East
-depth: 20, dir: East, alpha: -1
-Depth 20 ==> East
-depth: 22, dir: East, alpha: -1
-Depth 22 ==> East
-depth: 24, dir: East, alpha: -1
-Depth 24 ==> East
-depth: 26, dir: East, alpha: -1
-Depth 26 ==> East
 25 24
 #########################
 ###                     #
@@ -6124,30 +3298,6 @@ Depth 26 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -1
-Depth 2 ==> East
-depth: 4, dir: East, alpha: -1
-Depth 4 ==> East
-depth: 6, dir: East, alpha: -1
-Depth 6 ==> East
-depth: 8, dir: East, alpha: -1
-Depth 8 ==> East
-depth: 10, dir: East, alpha: -1
-Depth 10 ==> East
-depth: 12, dir: East, alpha: -1
-Depth 12 ==> East
-depth: 14, dir: East, alpha: -1
-Depth 14 ==> East
-depth: 16, dir: East, alpha: -1
-Depth 16 ==> East
-depth: 18, dir: East, alpha: -1
-Depth 18 ==> East
-depth: 20, dir: East, alpha: -1
-Depth 20 ==> East
-depth: 22, dir: East, alpha: -1
-Depth 22 ==> East
-depth: 24, dir: East, alpha: -1
-Depth 24 ==> East
 25 24
 #########################
 ###                     #
@@ -6173,30 +3323,6 @@ Depth 24 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -1
-Depth 2 ==> East
-depth: 4, dir: East, alpha: -1
-Depth 4 ==> East
-depth: 6, dir: East, alpha: -1
-Depth 6 ==> East
-depth: 8, dir: East, alpha: -1
-Depth 8 ==> East
-depth: 10, dir: East, alpha: -1
-Depth 10 ==> East
-depth: 12, dir: East, alpha: -1
-Depth 12 ==> East
-depth: 14, dir: East, alpha: -1
-Depth 14 ==> East
-depth: 16, dir: East, alpha: -1
-Depth 16 ==> East
-depth: 18, dir: East, alpha: -1
-Depth 18 ==> East
-depth: 20, dir: East, alpha: -1
-Depth 20 ==> East
-depth: 22, dir: East, alpha: -1
-Depth 22 ==> East
-depth: 24, dir: East, alpha: -3
-Depth 24 ==> East
 25 24
 #########################
 ###                     #
@@ -6222,30 +3348,6 @@ Depth 24 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -1
-Depth 2 ==> East
-depth: 4, dir: East, alpha: -1
-Depth 4 ==> East
-depth: 6, dir: East, alpha: -1
-Depth 6 ==> East
-depth: 8, dir: East, alpha: -1
-Depth 8 ==> East
-depth: 10, dir: East, alpha: -1
-Depth 10 ==> East
-depth: 12, dir: East, alpha: -1
-Depth 12 ==> East
-depth: 14, dir: East, alpha: -1
-Depth 14 ==> East
-depth: 16, dir: East, alpha: -1
-Depth 16 ==> East
-depth: 18, dir: East, alpha: -1
-Depth 18 ==> East
-depth: 20, dir: East, alpha: -1
-Depth 20 ==> East
-depth: 22, dir: East, alpha: -3
-Depth 22 ==> East
-depth: 24, dir: East, alpha: -3
-Depth 24 ==> East
 25 24
 #########################
 ###                     #
@@ -6271,28 +3373,6 @@ Depth 24 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -1
-Depth 2 ==> East
-depth: 4, dir: East, alpha: -1
-Depth 4 ==> East
-depth: 6, dir: East, alpha: -1
-Depth 6 ==> East
-depth: 8, dir: East, alpha: -1
-Depth 8 ==> East
-depth: 10, dir: East, alpha: -1
-Depth 10 ==> East
-depth: 12, dir: East, alpha: -1
-Depth 12 ==> East
-depth: 14, dir: East, alpha: -1
-Depth 14 ==> East
-depth: 16, dir: East, alpha: -1
-Depth 16 ==> East
-depth: 18, dir: East, alpha: -1
-Depth 18 ==> East
-depth: 20, dir: East, alpha: -3
-Depth 20 ==> East
-depth: 22, dir: East, alpha: -3
-Depth 22 ==> East
 25 24
 #########################
 ###                     #
@@ -6318,30 +3398,6 @@ Depth 22 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -1
-Depth 2 ==> East
-depth: 4, dir: East, alpha: -1
-Depth 4 ==> East
-depth: 6, dir: East, alpha: -1
-Depth 6 ==> East
-depth: 8, dir: East, alpha: -1
-Depth 8 ==> East
-depth: 10, dir: East, alpha: -1
-Depth 10 ==> East
-depth: 12, dir: East, alpha: -1
-Depth 12 ==> East
-depth: 14, dir: East, alpha: -1
-Depth 14 ==> East
-depth: 16, dir: East, alpha: -1
-Depth 16 ==> East
-depth: 18, dir: East, alpha: -3
-Depth 18 ==> East
-depth: 20, dir: East, alpha: -3
-Depth 20 ==> East
-depth: 22, dir: East, alpha: -5
-Depth 22 ==> East
-depth: 24, dir: East, alpha: -5
-Depth 24 ==> East
 25 24
 #########################
 ###                     #
@@ -6367,28 +3423,6 @@ Depth 24 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: North, alpha: -1
-Depth 2 ==> North
-depth: 4, dir: North, alpha: -1
-Depth 4 ==> North
-depth: 6, dir: North, alpha: -1
-Depth 6 ==> North
-depth: 8, dir: North, alpha: -1
-Depth 8 ==> North
-depth: 10, dir: North, alpha: -1
-Depth 10 ==> North
-depth: 12, dir: North, alpha: -1
-Depth 12 ==> North
-depth: 14, dir: North, alpha: -1
-Depth 14 ==> North
-depth: 16, dir: North, alpha: -3
-Depth 16 ==> North
-depth: 18, dir: North, alpha: -3
-Depth 18 ==> North
-depth: 20, dir: North, alpha: -5
-Depth 20 ==> North
-depth: 22, dir: North, alpha: -5
-Depth 22 ==> North
 25 24
 #########################
 ###                     #
@@ -6414,30 +3448,6 @@ Depth 22 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: North, alpha: -1
-Depth 2 ==> North
-depth: 4, dir: North, alpha: -1
-Depth 4 ==> North
-depth: 6, dir: North, alpha: -1
-Depth 6 ==> North
-depth: 8, dir: North, alpha: -1
-Depth 8 ==> North
-depth: 10, dir: North, alpha: -1
-Depth 10 ==> North
-depth: 12, dir: North, alpha: -1
-Depth 12 ==> North
-depth: 14, dir: North, alpha: -3
-Depth 14 ==> North
-depth: 16, dir: North, alpha: -3
-Depth 16 ==> North
-depth: 18, dir: North, alpha: -5
-Depth 18 ==> North
-depth: 20, dir: North, alpha: -5
-Depth 20 ==> North
-depth: 22, dir: North, alpha: -7
-Depth 22 ==> North
-depth: 24, dir: North, alpha: -7
-Depth 24 ==> North
 25 24
 #########################
 ###                     #
@@ -6463,30 +3473,6 @@ Depth 24 ==> North
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -1
-Depth 2 ==> East
-depth: 4, dir: East, alpha: -1
-Depth 4 ==> East
-depth: 6, dir: East, alpha: -1
-Depth 6 ==> East
-depth: 8, dir: East, alpha: -1
-Depth 8 ==> East
-depth: 10, dir: East, alpha: -1
-Depth 10 ==> East
-depth: 12, dir: East, alpha: -3
-Depth 12 ==> East
-depth: 14, dir: East, alpha: -3
-Depth 14 ==> East
-depth: 16, dir: East, alpha: -5
-Depth 16 ==> East
-depth: 18, dir: East, alpha: -5
-Depth 18 ==> East
-depth: 20, dir: East, alpha: -7
-Depth 20 ==> East
-depth: 22, dir: East, alpha: -7
-Depth 22 ==> East
-depth: 24, dir: East, alpha: -9
-Depth 24 ==> East
 25 24
 #########################
 ###                     #
@@ -6512,30 +3498,6 @@ Depth 24 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -1
-Depth 2 ==> East
-depth: 4, dir: East, alpha: -1
-Depth 4 ==> East
-depth: 6, dir: East, alpha: -1
-Depth 6 ==> East
-depth: 8, dir: East, alpha: -1
-Depth 8 ==> East
-depth: 10, dir: East, alpha: -3
-Depth 10 ==> East
-depth: 12, dir: East, alpha: -3
-Depth 12 ==> East
-depth: 14, dir: East, alpha: -5
-Depth 14 ==> East
-depth: 16, dir: East, alpha: -5
-Depth 16 ==> East
-depth: 18, dir: East, alpha: -7
-Depth 18 ==> East
-depth: 20, dir: East, alpha: -7
-Depth 20 ==> East
-depth: 22, dir: East, alpha: -9
-Depth 22 ==> East
-depth: 24, dir: East, alpha: -9
-Depth 24 ==> East
 25 24
 #########################
 ###                     #
@@ -6561,28 +3523,6 @@ Depth 24 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -1
-Depth 2 ==> East
-depth: 4, dir: East, alpha: -1
-Depth 4 ==> East
-depth: 6, dir: East, alpha: -1
-Depth 6 ==> East
-depth: 8, dir: East, alpha: -3
-Depth 8 ==> East
-depth: 10, dir: East, alpha: -3
-Depth 10 ==> East
-depth: 12, dir: East, alpha: -5
-Depth 12 ==> East
-depth: 14, dir: East, alpha: -5
-Depth 14 ==> East
-depth: 16, dir: East, alpha: -7
-Depth 16 ==> East
-depth: 18, dir: East, alpha: -7
-Depth 18 ==> East
-depth: 20, dir: East, alpha: -9
-Depth 20 ==> East
-depth: 22, dir: East, alpha: -9
-Depth 22 ==> East
 25 24
 #########################
 ###                     #
@@ -6608,30 +3548,6 @@ Depth 22 ==> East
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -1
-Depth 2 ==> East
-depth: 4, dir: East, alpha: -1
-Depth 4 ==> East
-depth: 6, dir: East, alpha: -3
-Depth 6 ==> East
-depth: 8, dir: South, alpha: -3
-Depth 8 ==> South
-depth: 10, dir: South, alpha: -5
-Depth 10 ==> South
-depth: 12, dir: South, alpha: -5
-Depth 12 ==> South
-depth: 14, dir: South, alpha: -7
-Depth 14 ==> South
-depth: 16, dir: South, alpha: -7
-Depth 16 ==> South
-depth: 18, dir: South, alpha: -9
-Depth 18 ==> South
-depth: 20, dir: South, alpha: -9
-Depth 20 ==> South
-depth: 22, dir: South, alpha: -11
-Depth 22 ==> South
-depth: 24, dir: South, alpha: -11
-Depth 24 ==> South
 25 24
 #########################
 ###                     #
@@ -6657,28 +3573,6 @@ Depth 24 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -3
-Depth 2 ==> East
-depth: 4, dir: East, alpha: -3
-Depth 4 ==> East
-depth: 6, dir: East, alpha: -3
-Depth 6 ==> East
-depth: 8, dir: South, alpha: -5
-Depth 8 ==> South
-depth: 10, dir: South, alpha: -5
-Depth 10 ==> South
-depth: 12, dir: South, alpha: -7
-Depth 12 ==> South
-depth: 14, dir: South, alpha: -7
-Depth 14 ==> South
-depth: 16, dir: South, alpha: -9
-Depth 16 ==> South
-depth: 18, dir: South, alpha: -9
-Depth 18 ==> South
-depth: 20, dir: West, alpha: -11
-Depth 20 ==> West
-depth: 22, dir: West, alpha: -11
-Depth 22 ==> West
 25 24
 #########################
 ###                     #
@@ -6704,30 +3598,6 @@ Depth 22 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: -7
-Depth 2 ==> South
-depth: 4, dir: South, alpha: -7
-Depth 4 ==> South
-depth: 6, dir: South, alpha: -7
-Depth 6 ==> South
-depth: 8, dir: South, alpha: -7
-Depth 8 ==> South
-depth: 10, dir: South, alpha: -7
-Depth 10 ==> South
-depth: 12, dir: South, alpha: -7
-Depth 12 ==> South
-depth: 14, dir: South, alpha: -9
-Depth 14 ==> South
-depth: 16, dir: South, alpha: -9
-Depth 16 ==> South
-depth: 18, dir: West, alpha: -11
-Depth 18 ==> West
-depth: 20, dir: West, alpha: -11
-Depth 20 ==> West
-depth: 22, dir: West, alpha: -12
-Depth 22 ==> West
-depth: 24, dir: West, alpha: -11
-Depth 24 ==> West
 25 24
 #########################
 ###                     #
@@ -6753,30 +3623,6 @@ Depth 24 ==> West
 #                       #
 #                       #
 #########################
-depth: 2, dir: South, alpha: -9
-Depth 2 ==> South
-depth: 4, dir: South, alpha: -9
-Depth 4 ==> South
-depth: 6, dir: South, alpha: -9
-Depth 6 ==> South
-depth: 8, dir: South, alpha: -9
-Depth 8 ==> South
-depth: 10, dir: South, alpha: -9
-Depth 10 ==> South
-depth: 12, dir: South, alpha: -9
-Depth 12 ==> South
-depth: 14, dir: South, alpha: -9
-Depth 14 ==> South
-depth: 16, dir: South, alpha: -11
-Depth 16 ==> South
-depth: 18, dir: South, alpha: -11
-Depth 18 ==> South
-depth: 20, dir: South, alpha: -12
-Depth 20 ==> South
-depth: 22, dir: South, alpha: -11
-Depth 22 ==> South
-depth: 24, dir: South, alpha: -19
-Depth 24 ==> South
 25 24
 #########################
 ###                     #
@@ -6802,30 +3648,6 @@ Depth 24 ==> South
 #                       #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -9
-Depth 2 ==> East
-depth: 4, dir: East, alpha: -9
-Depth 4 ==> East
-depth: 6, dir: East, alpha: -9
-Depth 6 ==> East
-depth: 8, dir: East, alpha: -9
-Depth 8 ==> East
-depth: 10, dir: East, alpha: -9
-Depth 10 ==> East
-depth: 12, dir: East, alpha: -9
-Depth 12 ==> East
-depth: 14, dir: East, alpha: -11
-Depth 14 ==> East
-depth: 16, dir: East, alpha: -11
-Depth 16 ==> East
-depth: 18, dir: South, alpha: -12
-Depth 18 ==> South
-depth: 20, dir: South, alpha: -11
-Depth 20 ==> South
-depth: 22, dir: South, alpha: -19
-Depth 22 ==> South
-depth: 24, dir: South, alpha: -19
-Depth 24 ==> South
 25 24
 #########################
 ###                     #
@@ -6851,30 +3673,6 @@ Depth 24 ==> South
 #                  2    #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -11
-Depth 2 ==> East
-depth: 4, dir: East, alpha: -11
-Depth 4 ==> East
-depth: 6, dir: East, alpha: -11
-Depth 6 ==> East
-depth: 8, dir: East, alpha: -11
-Depth 8 ==> East
-depth: 10, dir: East, alpha: -11
-Depth 10 ==> East
-depth: 12, dir: East, alpha: -11
-Depth 12 ==> East
-depth: 14, dir: East, alpha: -11
-Depth 14 ==> East
-depth: 16, dir: East, alpha: -12
-Depth 16 ==> East
-depth: 18, dir: East, alpha: -11
-Depth 18 ==> East
-depth: 20, dir: East, alpha: -19
-Depth 20 ==> East
-depth: 22, dir: East, alpha: -19
-Depth 22 ==> East
-depth: 24, dir: East, alpha: -19
-Depth 24 ==> East
 25 24
 #########################
 ###                     #
@@ -6900,32 +3698,6 @@ Depth 24 ==> East
 #                  #2   #
 #                       #
 #########################
-depth: 2, dir: North, alpha: -11
-Depth 2 ==> North
-depth: 4, dir: North, alpha: -11
-Depth 4 ==> North
-depth: 6, dir: North, alpha: -11
-Depth 6 ==> North
-depth: 8, dir: North, alpha: -11
-Depth 8 ==> North
-depth: 10, dir: North, alpha: -11
-Depth 10 ==> North
-depth: 12, dir: North, alpha: -11
-Depth 12 ==> North
-depth: 14, dir: North, alpha: -12
-Depth 14 ==> North
-depth: 16, dir: North, alpha: -11
-Depth 16 ==> North
-depth: 18, dir: North, alpha: -19
-Depth 18 ==> North
-depth: 20, dir: North, alpha: -19
-Depth 20 ==> North
-depth: 22, dir: North, alpha: -19
-Depth 22 ==> North
-depth: 24, dir: North, alpha: -19
-Depth 24 ==> North
-depth: 26, dir: North, alpha: -19
-Depth 26 ==> North
 25 24
 #########################
 ###                     #
@@ -6951,32 +3723,6 @@ Depth 26 ==> North
 #                  ##   #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -11
-Depth 2 ==> East
-depth: 4, dir: East, alpha: -11
-Depth 4 ==> East
-depth: 6, dir: East, alpha: -11
-Depth 6 ==> East
-depth: 8, dir: East, alpha: -11
-Depth 8 ==> East
-depth: 10, dir: East, alpha: -11
-Depth 10 ==> East
-depth: 12, dir: East, alpha: -12
-Depth 12 ==> East
-depth: 14, dir: East, alpha: -11
-Depth 14 ==> East
-depth: 16, dir: East, alpha: -19
-Depth 16 ==> East
-depth: 18, dir: East, alpha: -19
-Depth 18 ==> East
-depth: 20, dir: East, alpha: -19
-Depth 20 ==> East
-depth: 22, dir: East, alpha: -19
-Depth 22 ==> East
-depth: 24, dir: East, alpha: -19
-Depth 24 ==> East
-depth: 26, dir: East, alpha: -19
-Depth 26 ==> East
 25 24
 #########################
 ###                     #
@@ -7002,34 +3748,6 @@ Depth 26 ==> East
 #                  ##   #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -11
-Depth 2 ==> East
-depth: 4, dir: East, alpha: -11
-Depth 4 ==> East
-depth: 6, dir: East, alpha: -11
-Depth 6 ==> East
-depth: 8, dir: East, alpha: -11
-Depth 8 ==> East
-depth: 10, dir: South, alpha: -12
-Depth 10 ==> South
-depth: 12, dir: South, alpha: -11
-Depth 12 ==> South
-depth: 14, dir: South, alpha: -19
-Depth 14 ==> South
-depth: 16, dir: South, alpha: -19
-Depth 16 ==> South
-depth: 18, dir: South, alpha: -19
-Depth 18 ==> South
-depth: 20, dir: South, alpha: -19
-Depth 20 ==> South
-depth: 22, dir: South, alpha: -19
-Depth 22 ==> South
-depth: 24, dir: South, alpha: -19
-Depth 24 ==> South
-depth: 26, dir: South, alpha: -19
-Depth 26 ==> South
-depth: 28, dir: South, alpha: -19
-Depth 28 ==> South
 25 24
 #########################
 ###                     #
@@ -7055,36 +3773,6 @@ Depth 28 ==> South
 #                  ##2  #
 #                       #
 #########################
-depth: 2, dir: East, alpha: -13
-Depth 2 ==> East
-depth: 4, dir: East, alpha: -13
-Depth 4 ==> East
-depth: 6, dir: East, alpha: -13
-Depth 6 ==> East
-depth: 8, dir: East, alpha: -12
-Depth 8 ==> East
-depth: 10, dir: East, alpha: -11
-Depth 10 ==> East
-depth: 12, dir: East, alpha: -19
-Depth 12 ==> East
-depth: 14, dir: East, alpha: -19
-Depth 14 ==> East
-depth: 16, dir: East, alpha: -19
-Depth 16 ==> East
-depth: 18, dir: East, alpha: -19
-Depth 18 ==> East
-depth: 20, dir: East, alpha: -19
-Depth 20 ==> East
-depth: 22, dir: East, alpha: -19
-Depth 22 ==> East
-depth: 24, dir: East, alpha: -19
-Depth 24 ==> East
-depth: 26, dir: East, alpha: -19
-Depth 26 ==> East
-depth: 28, dir: East, alpha: -19
-Depth 28 ==> East
-depth: 30, dir: East, alpha: -19
-Depth 30 ==> East
 25 24
 #########################
 ###                     #
@@ -7110,36 +3798,6 @@ Depth 30 ==> East
 #                  ###2 #
 #                       #
 #########################
-depth: 2, dir: North, alpha: -13
-Depth 2 ==> North
-depth: 4, dir: North, alpha: -13
-Depth 4 ==> North
-depth: 6, dir: North, alpha: -12
-Depth 6 ==> North
-depth: 8, dir: North, alpha: -11
-Depth 8 ==> North
-depth: 10, dir: North, alpha: -19
-Depth 10 ==> North
-depth: 12, dir: North, alpha: -19
-Depth 12 ==> North
-depth: 14, dir: North, alpha: -19
-Depth 14 ==> North
-depth: 16, dir: North, alpha: -19
-Depth 16 ==> North
-depth: 18, dir: North, alpha: -19
-Depth 18 ==> North
-depth: 20, dir: North, alpha: -19
-Depth 20 ==> North
-depth: 22, dir: North, alpha: -19
-Depth 22 ==> North
-depth: 24, dir: North, alpha: -19
-Depth 24 ==> North
-depth: 26, dir: North, alpha: -19
-Depth 26 ==> North
-depth: 28, dir: North, alpha: -19
-Depth 28 ==> North
-depth: 30, dir: North, alpha: -19
-Depth 30 ==> North
 25 24
 #########################
 ###                     #
@@ -7165,36 +3823,6 @@ Depth 30 ==> North
 #                  #### #
 #                       #
 #########################
-depth: 2, dir: North, alpha: -13
-Depth 2 ==> North
-depth: 4, dir: North, alpha: -12
-Depth 4 ==> North
-depth: 6, dir: North, alpha: -9
-Depth 6 ==> North
-depth: 8, dir: North, alpha: -19
-Depth 8 ==> North
-depth: 10, dir: North, alpha: -19
-Depth 10 ==> North
-depth: 12, dir: North, alpha: -19
-Depth 12 ==> North
-depth: 14, dir: North, alpha: -19
-Depth 14 ==> North
-depth: 16, dir: North, alpha: -19
-Depth 16 ==> North
-depth: 18, dir: North, alpha: -19
-Depth 18 ==> North
-depth: 20, dir: North, alpha: -19
-Depth 20 ==> North
-depth: 22, dir: North, alpha: -19
-Depth 22 ==> North
-depth: 24, dir: North, alpha: -19
-Depth 24 ==> North
-depth: 26, dir: North, alpha: -19
-Depth 26 ==> North
-depth: 28, dir: North, alpha: -19
-Depth 28 ==> North
-depth: 30, dir: North, alpha: -19
-Depth 30 ==> North
 25 24
 #########################
 ###                     #
@@ -7220,36 +3848,6 @@ Depth 30 ==> North
 #                  #### #
 #                       #
 #########################
-depth: 2, dir: North, alpha: -12
-Depth 2 ==> North
-depth: 4, dir: North, alpha: -9
-Depth 4 ==> North
-depth: 6, dir: North, alpha: -11
-Depth 6 ==> North
-depth: 8, dir: North, alpha: -11
-Depth 8 ==> North
-depth: 10, dir: North, alpha: -11
-Depth 10 ==> North
-depth: 12, dir: North, alpha: -11
-Depth 12 ==> North
-depth: 14, dir: North, alpha: -11
-Depth 14 ==> North
-depth: 16, dir: North, alpha: -11
-Depth 16 ==> North
-depth: 18, dir: North, alpha: -11
-Depth 18 ==> North
-depth: 20, dir: North, alpha: -11
-Depth 20 ==> North
-depth: 22, dir: North, alpha: -11
-Depth 22 ==> North
-depth: 24, dir: North, alpha: -11
-Depth 24 ==> North
-depth: 26, dir: North, alpha: -11
-Depth 26 ==> North
-depth: 28, dir: North, alpha: -11
-Depth 28 ==> North
-depth: 30, dir: North, alpha: -11
-Depth 30 ==> North
 25 24
 #########################
 ###                     #
