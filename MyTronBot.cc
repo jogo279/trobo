@@ -13,6 +13,7 @@
 #include <unordered_map>
 #include <cilk/reducer_list.h>
 #include <mutex>
+#include <atomic>
 
 using namespace std;
 
@@ -394,15 +395,20 @@ pair<string, int> parallel_alphabeta (bool maxi, int cur_depth, int max_depth, c
 }
 
 pair<string, int> parallel_alphabeta_abort (bool maxi, int cur_depth, int max_depth, const Map &map, ABState *prev, cache_key move_seq, reducer_list &write_buffer) {
-  ABState cur = ABState(prev);
+  std::atomic<int> a;
+  std::atomic<int> b;
+  ABState cur = ABState(prev,&a,&b);
 
-  cur.setA(prev->getA());
-  cur.setB(prev->getB());
+  // cur.setA(prev->getA());
+  // cur.setB(prev->getB());
+  a.store(prev->getA());
+  b.store(prev->getB());
 
   std::mutex m;
   string best_move;
   int best_score = maxi ? LOSE : WIN;
   bool timeout = false;
+
 
   auto inlet = [&] (string ret_mv, int ret_sc) {
     if (ret_mv == "T") {
@@ -411,30 +417,41 @@ pair<string, int> parallel_alphabeta_abort (bool maxi, int cur_depth, int max_de
     }
     if (ret_mv == "A") return;
 
-    m.lock();
-    if (prev->getA() > cur.getA()) cur.setA(prev->getA());
-    if (prev->getB() < cur.getB()) cur.setB(prev->getB());
+    // if (prev->getA() > cur.getA()) cur.setA(prev->getA());
+    // if (prev->getB() < cur.getB()) cur.setB(prev->getB());
+    int best_a = cur.bestA();
+    int best_b = cur.bestB();
+    if (best_a > a.load()) cur.setA(a);
+    if (best_b < b.load()) cur.setB(b); 
     //fprintf(stderr, "made the inlet with %s %d\n", ret_mv.c_str(), ret_sc);
+    
     if (maxi) {
       if (ret_sc > best_score) {
-        best_score = ret_sc;
-        best_move = ret_mv;
-        if (ret_sc >= cur.getB()) cur.abort();
-        if (ret_sc > cur.getA()) cur.setA(ret_sc);
+        m.lock();
+        if(ret_sc > best_score) {
+          best_score = ret_sc;
+          best_move = ret_mv;
+        }
+        m.unlock();
+        if (ret_sc >= b.load()) cur.abort();
+        if (ret_sc > a.load()) cur.setA(ret_sc);
       }
     } else {
       if (ret_sc < best_score) {
-        best_score = ret_sc;
-        best_move = ret_mv;
-        if (ret_sc <= cur.getA()) cur.abort();
-        if (ret_sc < cur.getB()) cur.setB(ret_sc);
+        m.lock();
+        if (ret_sc < best_score) {
+          best_score = ret_sc;
+          best_move = ret_mv;
+        }
+        m.unlock();
+        if (ret_sc <= a.load()) cur.abort();
+        if (ret_sc < b.load()) cur.setB(ret_sc);
       }
     }
-    m.unlock();
     return;
   };
 
-  std::tuple<int,int,bool> state = cur.bestAB();
+  // std::tuple<int,int,bool> state = cur.bestAB();
 
   // if(std::get<2>(state)) return make_pair("A", LOSE);
   if (cur.isAborted()) return make_pair("A", LOSE);
@@ -502,7 +519,9 @@ string MakeMove(const Map& map) {
       if(vm.count("parallel")) {
         reducer_list write_buffer;
         if (vm.count("abort")) {
-          ABState init = ABState(NULL);
+          atomic<int> a(INT_MIN);
+          atomic<int> b(INT_MAX);
+          ABState init = ABState(NULL, &a, &b);
           temp = parallel_alphabeta_abort(true,0,depth, map, &init, 1, write_buffer).first;
         } else {
           temp = parallel_alphabeta(true,0,depth, map, INT_MIN, INT_MAX,1, write_buffer).first;
@@ -536,7 +555,9 @@ string MakeMove(const Map& map) {
       if(vm.count("parallel")) {
         reducer_list write_buffer;
         if (vm.count("abort")) {
-          ABState init = ABState(NULL);
+          atomic<int> a(INT_MIN);
+          atomic<int> b(INT_MAX);
+          ABState init = ABState(NULL, &a, &b);
           temp = parallel_alphabeta_abort(true,0,depth, map, &init, 1, write_buffer).first;
         } else {
           temp = parallel_alphabeta(true,0,depth, map, INT_MIN, INT_MAX,1, write_buffer).first;
