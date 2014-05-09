@@ -1,287 +1,209 @@
 Maximum depth: 10
 maps/15x16.txt at depth 10
 Sequential ab bot: 
-Move took 1.6764 seconds
-cache size: 6633, counter: 6633
+Move took 2.1738 seconds
 Parallel ab bot: 
-Move took 0.3960 seconds
-cache size: 7031, counter: 7031
+Move took 0.4004 seconds
 Parallel ab abort bot: 
-Move took 0.4340 seconds
-cache size: 6704, counter: 6814
+Move took 0.4170 seconds
 -----------------------------------
 maps/apocalyptic.txt at depth 10
 Sequential ab bot: 
-Move took 0.0736 seconds
-cache size: 201, counter: 201
+Move took 0.0963 seconds
 Parallel ab bot: 
-Move took 0.1474 seconds
-cache size: 212, counter: 212
+Move took 0.2298 seconds
 Parallel ab abort bot: 
-Move took 0.1720 seconds
-cache size: 192, counter: 212
+Move took 0.2480 seconds
 -----------------------------------
 maps/big-room.txt at depth 10
 Sequential ab bot: 
-Move took 0.2099 seconds
-cache size: 361, counter: 361
+Move took 0.4681 seconds
 Parallel ab bot: 
-Move took 0.1928 seconds
-cache size: 363, counter: 363
+Move took 0.1757 seconds
 Parallel ab abort bot: 
-Move took 0.2259 seconds
-cache size: 346, counter: 363
+Move took 0.1850 seconds
 -----------------------------------
 maps/box.txt at depth 10
 Sequential ab bot: 
-Move took 0.0689 seconds
-cache size: 372, counter: 372
+Move took 0.0692 seconds
 Parallel ab bot: 
-Move took 0.0894 seconds
-cache size: 374, counter: 374
+Move took 0.0935 seconds
 Parallel ab abort bot: 
-Move took 0.0647 seconds
-cache size: 366, counter: 374
+Move took 0.1361 seconds
 -----------------------------------
 maps/center.txt at depth 10
 Sequential ab bot: 
-Move took 2.2385 seconds
-cache size: 3594, counter: 3594
+Move took 2.5684 seconds
 Parallel ab bot: 
-Move took 0.6825 seconds
-cache size: 5335, counter: 5335
+Move took 0.7306 seconds
 Parallel ab abort bot: 
-Move took 0.6827 seconds
-cache size: 4356, counter: 4601
+Move took 0.6130 seconds
 -----------------------------------
 maps/divider.txt at depth 10
 Sequential ab bot: 
-Move took 19.7546 seconds
-cache size: 0, counter: 0
+Move took 22.8723 seconds
 Parallel ab bot: 
-Move took 2.9307 seconds
-cache size: 0, counter: 0
+Move took 3.4847 seconds
 Parallel ab abort bot: 
-Move took 2.8762 seconds
-cache size: 0, counter: 0
+Move took 3.7169 seconds
 -----------------------------------
 maps/duel-small.txt at depth 10
 Sequential ab bot: 
-Move took 0.6924 seconds
-cache size: 3729, counter: 3729
+Move took 0.9946 seconds
 Parallel ab bot: 
-Move took 0.2195 seconds
-cache size: 5709, counter: 5709
+Move took 0.2280 seconds
 Parallel ab abort bot: 
-Move took 0.2210 seconds
-cache size: 4341, counter: 4618
+Move took 0.2088 seconds
 -----------------------------------
 maps/empty-room.txt at depth 10
 Sequential ab bot: 
-Move took 0.0697 seconds
-cache size: 362, counter: 362
+Move took 0.0693 seconds
 Parallel ab bot: 
-Move took 0.0605 seconds
-cache size: 364, counter: 364
+Move took 0.0598 seconds
 Parallel ab abort bot: 
-Move took 0.1119 seconds
-cache size: 351, counter: 364
+Move took 0.0956 seconds
 -----------------------------------
 maps/error-room.txt at depth 10
 Sequential ab bot: 
-Move took 0.2995 seconds
-cache size: 0, counter: 0
+Move took 0.2961 seconds
 Parallel ab bot: 
-Move took 0.0602 seconds
-cache size: 0, counter: 0
+Move took 0.0521 seconds
 Parallel ab abort bot: 
-Move took 0.0505 seconds
-cache size: 0, counter: 0
+Move took 0.0474 seconds
 -----------------------------------
 maps/gate.txt at depth 10
 Sequential ab bot: 
 Move took 0.0089 seconds
-cache size: 89, counter: 89
 Parallel ab bot: 
-Move took 0.0206 seconds
-cache size: 87, counter: 87
+Move took 0.0144 seconds
 Parallel ab abort bot: 
-Move took 0.0235 seconds
-cache size: 72, counter: 87
+Move took 0.0143 seconds
 -----------------------------------
 maps/giant-room.txt at depth 10
 Sequential ab bot: 
-Move took 0.9776 seconds
-cache size: 361, counter: 361
+Move took 1.4716 seconds
 Parallel ab bot: 
-Move took 0.8090 seconds
-cache size: 363, counter: 363
+Move took 1.0646 seconds
 Parallel ab abort bot: 
-Move took 1.0041 seconds
-cache size: 343, counter: 363
+Move took 1.1291 seconds
 -----------------------------------
 maps/huge-room.txt at depth 10
 Sequential ab bot: 
-Move took 0.9654 seconds
-cache size: 361, counter: 361
+Move took 1.2622 seconds
 Parallel ab bot: 
-Move took 0.8900 seconds
-cache size: 363, counter: 363
+Move took 0.8335 seconds
 Parallel ab abort bot: 
-Move took 1.0823 seconds
-cache size: 341, counter: 363
+Move took 0.9321 seconds
 -----------------------------------
 maps/joust.txt at depth 10
 Sequential ab bot: 
-Move took 0.0795 seconds
-cache size: 213, counter: 213
+Move took 0.1178 seconds
 Parallel ab bot: 
-Move took 0.0986 seconds
-cache size: 213, counter: 213
+Move took 0.1957 seconds
 Parallel ab abort bot: 
-Move took 0.1006 seconds
-cache size: 177, counter: 213
+Move took 0.1692 seconds
 -----------------------------------
 maps/keyhole.txt at depth 10
 Sequential ab bot: 
-Move took 1.5989 seconds
-cache size: 3096, counter: 3096
+Move took 1.6374 seconds
 Parallel ab bot: 
-Move took 0.4981 seconds
-cache size: 4591, counter: 4591
+Move took 0.6465 seconds
 Parallel ab abort bot: 
-Move took 0.5560 seconds
-cache size: 3580, counter: 3930
+Move took 0.6915 seconds
 -----------------------------------
 maps/oval.txt at depth 10
 Sequential ab bot: 
-Move took 0.4102 seconds
-cache size: 2461, counter: 2461
+Move took 0.4160 seconds
 Parallel ab bot: 
-Move took 0.1837 seconds
-cache size: 4314, counter: 4314
+Move took 0.1835 seconds
 Parallel ab abort bot: 
-Move took 0.2099 seconds
-cache size: 3593, counter: 3920
+Move took 0.1943 seconds
 -----------------------------------
 maps/playground.txt at depth 10
 Sequential ab bot: 
-Move took 4.1004 seconds
-cache size: 0, counter: 0
+Move took 4.8543 seconds
 Parallel ab bot: 
-Move took 0.6020 seconds
-cache size: 0, counter: 0
+Move took 0.7311 seconds
 Parallel ab abort bot: 
-Move took 0.5909 seconds
-cache size: 0, counter: 0
+Move took 0.6382 seconds
 -----------------------------------
 maps/plus.txt at depth 10
 Sequential ab bot: 
-Move took 0.0310 seconds
-cache size: 219, counter: 219
+Move took 0.0307 seconds
 Parallel ab bot: 
-Move took 0.0340 seconds
-cache size: 224, counter: 224
+Move took 0.0231 seconds
 Parallel ab abort bot: 
-Move took 0.0365 seconds
-cache size: 191, counter: 224
+Move took 0.0237 seconds
 -----------------------------------
 maps/quadrant.txt at depth 10
 Sequential ab bot: 
-Move took 0.3118 seconds
-cache size: 2295, counter: 2295
+Move took 0.3180 seconds
 Parallel ab bot: 
-Move took 0.1865 seconds
-cache size: 7240, counter: 7240
+Move took 0.2129 seconds
 Parallel ab abort bot: 
-Move took 0.2292 seconds
-cache size: 5749, counter: 6272
+Move took 0.2088 seconds
 -----------------------------------
 maps/ring.txt at depth 10
 Sequential ab bot: 
-Move took 0.0034 seconds
-cache size: 50, counter: 50
+Move took 0.0052 seconds
 Parallel ab bot: 
-Move took 0.0055 seconds
-cache size: 50, counter: 50
+Move took 0.0058 seconds
 Parallel ab abort bot: 
-Move took 0.0237 seconds
-cache size: 48, counter: 50
+Move took 0.0058 seconds
 -----------------------------------
 maps/test.txt at depth 10
 Sequential ab bot: 
-Move took 0.0140 seconds
-cache size: 0, counter: 0
+Move took 0.0246 seconds
 Parallel ab bot: 
-Move took 0.0154 seconds
-cache size: 0, counter: 0
+Move took 0.0173 seconds
 Parallel ab abort bot: 
-Move took 0.0102 seconds
-cache size: 0, counter: 0
+Move took 0.0212 seconds
 -----------------------------------
 maps/toronto2.txt at depth 10
 Sequential ab bot: 
-Move took 0.0508 seconds
-cache size: 272, counter: 272
+Move took 0.0951 seconds
 Parallel ab bot: 
-Move took 0.0868 seconds
-cache size: 278, counter: 278
+Move took 0.1348 seconds
 Parallel ab abort bot: 
-Move took 0.1131 seconds
-cache size: 268, counter: 278
+Move took 0.1208 seconds
 -----------------------------------
 maps/toronto.txt at depth 10
 Sequential ab bot: 
-Move took 0.0237 seconds
-cache size: 214, counter: 214
+Move took 0.0645 seconds
 Parallel ab bot: 
-Move took 0.0176 seconds
-cache size: 302, counter: 302
+Move took 0.0427 seconds
 Parallel ab abort bot: 
-Move took 0.0231 seconds
-cache size: 266, counter: 302
+Move took 0.0215 seconds
 -----------------------------------
 maps/triangle.txt at depth 10
 Sequential ab bot: 
-Move took 0.1843 seconds
-cache size: 983, counter: 983
+Move took 0.1876 seconds
 Parallel ab bot: 
-Move took 0.1618 seconds
-cache size: 1004, counter: 1004
+Move took 0.2302 seconds
 Parallel ab abort bot: 
-Move took 0.1831 seconds
-cache size: 956, counter: 1004
+Move took 0.2308 seconds
 -----------------------------------
 maps/trix.txt at depth 10
 Sequential ab bot: 
-Move took 0.0282 seconds
-cache size: 166, counter: 166
+Move took 0.0286 seconds
 Parallel ab bot: 
-Move took 0.0456 seconds
-cache size: 169, counter: 169
+Move took 0.0447 seconds
 Parallel ab abort bot: 
-Move took 0.0554 seconds
-cache size: 164, counter: 169
+Move took 0.0700 seconds
 -----------------------------------
 maps/u.txt at depth 10
 Sequential ab bot: 
-Move took 0.1835 seconds
-cache size: 1491, counter: 1491
+Move took 0.1943 seconds
 Parallel ab bot: 
-Move took 0.0991 seconds
-cache size: 1962, counter: 1962
+Move took 0.0913 seconds
 Parallel ab abort bot: 
-Move took 0.1152 seconds
-cache size: 1866, counter: 1924
+Move took 0.1046 seconds
 -----------------------------------
 maps/vee.txt at depth 10
 Sequential ab bot: 
 Move took 0.0016 seconds
-cache size: 27, counter: 27
 Parallel ab bot: 
-Move took 0.0090 seconds
-cache size: 27, counter: 27
+Move took 0.0168 seconds
 Parallel ab abort bot: 
-Move took 0.0090 seconds
-cache size: 27, counter: 27
+Move took 0.0128 seconds
 -----------------------------------
