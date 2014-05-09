@@ -1,0 +1,11 @@
+0 0
+Traceback (most recent call last):
+  File "opponents/corey_abshire/MyTronBot.py", line 130, in <module>
+    mainloop()
+  File "opponents/corey_abshire/MyTronBot.py", line 97, in mainloop
+    same_dist = same_distance(board, board.me(), board.them())
+  File "/afs/andrew.cmu.edu/usr13/jagoldma/private/tron/opponents/corey_abshire/tron.py", line 150, in me
+    self._me = self.find(ME)
+  File "/afs/andrew.cmu.edu/usr13/jagoldma/private/tron/opponents/corey_abshire/tron.py", line 170, in find
+    raise KeyError("object '%s' is not in the board" % obj)
+KeyError: "object '1' is not in the board"

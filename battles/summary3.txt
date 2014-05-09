@@ -1,0 +1,1 @@
+Winning percentage for minimax_parallel is 50.0

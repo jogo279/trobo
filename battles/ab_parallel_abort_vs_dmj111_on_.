@@ -1,0 +1,15 @@
+0 0
+Traceback (most recent call last):
+  File "opponents/dmj111/MyTronBot.py", line 847, in <module>
+    main()
+  File "opponents/dmj111/MyTronBot.py", line 836, in main
+    move(djbot.which_move_alpha(board))
+  File "opponents/dmj111/MyTronBot.py", line 733, in which_move_alpha
+    board = Board(realBoard)
+  File "opponents/dmj111/MyTronBot.py", line 305, in __init__
+    self.me = self.toN(board.me())
+  File "opponents/dmj111/MyTronBot.py", line 179, in me
+    self._me = self.find(ME)
+  File "opponents/dmj111/MyTronBot.py", line 199, in find
+    raise KeyError("object '%s' is not in the board" % obj)
+KeyError: "object '1' is not in the board"

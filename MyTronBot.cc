@@ -578,7 +578,7 @@ string MakeMove(const Map& map) {
     }
     if (temp != "T") cur_move = temp;
     depth ++;
-    fprintf(stderr, "Depth: %d, Move: %s, Time Left: %.4f\n", depth, temp.c_str(), timeLeft());
+    //fprintf(stderr, "Depth: %d, Move: %s, Time Left: %.4f\n", depth, temp.c_str(), timeLeft());
   }
   return cur_move;
 }

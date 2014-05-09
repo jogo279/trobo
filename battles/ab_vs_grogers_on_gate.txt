@@ -1,0 +1,1341 @@
+16 16
+################
+#             2#
+#              #
+# ##############
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+############## #
+#              #
+#1             #
+################
+depth: 2, dir: South, alpha: 0
+Depth 2 ==> South
+depth: 4, dir: South, alpha: 0
+Depth 4 ==> South
+depth: 6, dir: South, alpha: 0
+Depth 6 ==> South
+depth: 8, dir: South, alpha: 0
+Depth 8 ==> South
+depth: 10, dir: South, alpha: 0
+Depth 10 ==> South
+depth: 12, dir: South, alpha: 0
+Depth 12 ==> South
+depth: 14, dir: South, alpha: 0
+Depth 14 ==> South
+depth: 16, dir: South, alpha: 0
+Depth 16 ==> South
+depth: 18, dir: South, alpha: 0
+Depth 18 ==> South
+depth: 20, dir: South, alpha: 0
+Depth 20 ==> South
+depth: 22, dir: South, alpha: 0
+Depth 22 ==> South
+depth: 24, dir: South, alpha: 0
+Depth 24 ==> South
+depth: 26, dir: South, alpha: 0
+Depth 26 ==> South
+depth: 28, dir: South, alpha: 0
+Depth 28 ==> South
+depth: 30, dir: South, alpha: 0
+Depth 30 ==> South
+depth: 32, dir: South, alpha: 0
+Depth 32 ==> South
+depth: 34, dir: South, alpha: 0
+Depth 34 ==> South
+depth: 36, dir: South, alpha: 0
+Depth 36 ==> South
+depth: 38, dir: South, alpha: 0
+Depth 38 ==> South
+depth: 40, dir: South, alpha: 0
+Depth 40 ==> South
+depth: 42, dir: South, alpha: 0
+Depth 42 ==> South
+depth: 44, dir: South, alpha: 0
+Depth 44 ==> South
+16 16
+################
+#             ##
+#             2#
+# ##############
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+############## #
+#1             #
+##             #
+################
+depth: 2, dir: West, alpha: 0
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 0
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 0
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 0
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 0
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 0
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 0
+Depth 14 ==> West
+depth: 16, dir: West, alpha: 0
+Depth 16 ==> West
+depth: 18, dir: West, alpha: 0
+Depth 18 ==> West
+depth: 20, dir: West, alpha: 0
+Depth 20 ==> West
+depth: 22, dir: West, alpha: 0
+Depth 22 ==> West
+depth: 24, dir: West, alpha: 0
+Depth 24 ==> West
+depth: 26, dir: West, alpha: 0
+Depth 26 ==> West
+depth: 28, dir: West, alpha: 0
+Depth 28 ==> West
+depth: 30, dir: West, alpha: 0
+Depth 30 ==> West
+depth: 32, dir: West, alpha: 0
+Depth 32 ==> West
+depth: 34, dir: West, alpha: 0
+Depth 34 ==> West
+depth: 36, dir: West, alpha: 0
+Depth 36 ==> West
+depth: 38, dir: West, alpha: 0
+Depth 38 ==> West
+depth: 40, dir: West, alpha: 0
+Depth 40 ==> West
+depth: 42, dir: West, alpha: 0
+Depth 42 ==> West
+depth: 44, dir: West, alpha: 0
+Depth 44 ==> West
+16 16
+################
+#             ##
+#            2##
+# ##############
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+############## #
+##1            #
+##             #
+################
+depth: 2, dir: West, alpha: 0
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 0
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 0
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 0
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 0
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 0
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 0
+Depth 14 ==> West
+depth: 16, dir: West, alpha: 0
+Depth 16 ==> West
+depth: 18, dir: West, alpha: 0
+Depth 18 ==> West
+depth: 20, dir: West, alpha: 0
+Depth 20 ==> West
+depth: 22, dir: West, alpha: 0
+Depth 22 ==> West
+depth: 24, dir: West, alpha: 0
+Depth 24 ==> West
+depth: 26, dir: West, alpha: 0
+Depth 26 ==> West
+depth: 28, dir: West, alpha: 0
+Depth 28 ==> West
+depth: 30, dir: West, alpha: 0
+Depth 30 ==> West
+depth: 32, dir: West, alpha: 0
+Depth 32 ==> West
+depth: 34, dir: West, alpha: 0
+Depth 34 ==> West
+depth: 36, dir: West, alpha: 0
+Depth 36 ==> West
+depth: 38, dir: West, alpha: 0
+Depth 38 ==> West
+depth: 40, dir: West, alpha: 0
+Depth 40 ==> West
+depth: 42, dir: West, alpha: 0
+Depth 42 ==> West
+depth: 44, dir: West, alpha: 0
+Depth 44 ==> West
+16 16
+################
+#             ##
+#           2###
+# ##############
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+############## #
+###            #
+##1            #
+################
+depth: 2, dir: West, alpha: 16
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 16
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 16
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 16
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 16
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 16
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 16
+Depth 14 ==> West
+depth: 16, dir: West, alpha: 16
+Depth 16 ==> West
+depth: 18, dir: West, alpha: 16
+Depth 18 ==> West
+depth: 20, dir: West, alpha: 16
+Depth 20 ==> West
+depth: 22, dir: West, alpha: 16
+Depth 22 ==> West
+depth: 24, dir: West, alpha: 3
+Depth 24 ==> West
+depth: 26, dir: West, alpha: 3
+Depth 26 ==> West
+depth: 28, dir: West, alpha: 14
+Depth 28 ==> West
+depth: 30, dir: West, alpha: 14
+Depth 30 ==> West
+depth: 32, dir: West, alpha: 14
+Depth 32 ==> West
+depth: 34, dir: West, alpha: 12
+Depth 34 ==> West
+depth: 36, dir: West, alpha: 14
+Depth 36 ==> West
+depth: 38, dir: West, alpha: 10
+Depth 38 ==> West
+depth: 40, dir: West, alpha: 12
+Depth 40 ==> West
+16 16
+################
+#             ##
+#          2####
+# ##############
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+############## #
+###            #
+###1           #
+################
+depth: 2, dir: West, alpha: 16
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 16
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 16
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 16
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 16
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 16
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 16
+Depth 14 ==> West
+depth: 16, dir: West, alpha: 16
+Depth 16 ==> West
+depth: 18, dir: West, alpha: 16
+Depth 18 ==> West
+depth: 20, dir: West, alpha: 16
+Depth 20 ==> West
+depth: 22, dir: West, alpha: 3
+Depth 22 ==> West
+depth: 24, dir: West, alpha: 3
+Depth 24 ==> West
+depth: 26, dir: West, alpha: 14
+Depth 26 ==> West
+depth: 28, dir: West, alpha: 14
+Depth 28 ==> West
+depth: 30, dir: West, alpha: 14
+Depth 30 ==> West
+depth: 32, dir: West, alpha: 12
+Depth 32 ==> West
+depth: 34, dir: West, alpha: 14
+Depth 34 ==> West
+depth: 36, dir: West, alpha: 10
+Depth 36 ==> West
+depth: 38, dir: West, alpha: 12
+Depth 38 ==> West
+depth: 40, dir: West, alpha: 8
+Depth 40 ==> West
+16 16
+################
+#             ##
+#         2#####
+# ##############
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+############## #
+###            #
+####1          #
+################
+depth: 2, dir: West, alpha: 16
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 16
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 16
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 16
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 16
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 16
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 16
+Depth 14 ==> West
+depth: 16, dir: West, alpha: 16
+Depth 16 ==> West
+depth: 18, dir: West, alpha: 16
+Depth 18 ==> West
+depth: 20, dir: West, alpha: 3
+Depth 20 ==> West
+depth: 22, dir: West, alpha: 3
+Depth 22 ==> West
+depth: 24, dir: West, alpha: 14
+Depth 24 ==> West
+depth: 26, dir: West, alpha: 14
+Depth 26 ==> West
+depth: 28, dir: West, alpha: 14
+Depth 28 ==> West
+depth: 30, dir: West, alpha: 12
+Depth 30 ==> West
+depth: 32, dir: West, alpha: 14
+Depth 32 ==> West
+depth: 34, dir: West, alpha: 10
+Depth 34 ==> West
+depth: 36, dir: West, alpha: 12
+Depth 36 ==> West
+depth: 38, dir: West, alpha: 8
+Depth 38 ==> West
+depth: 40, dir: West, alpha: 10
+Depth 40 ==> West
+16 16
+################
+#             ##
+#        2######
+# ##############
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+############## #
+###            #
+#####1         #
+################
+depth: 2, dir: West, alpha: 16
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 16
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 16
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 16
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 16
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 16
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 16
+Depth 14 ==> West
+depth: 16, dir: West, alpha: 16
+Depth 16 ==> West
+depth: 18, dir: West, alpha: 3
+Depth 18 ==> West
+depth: 20, dir: West, alpha: 3
+Depth 20 ==> West
+depth: 22, dir: West, alpha: 14
+Depth 22 ==> West
+depth: 24, dir: West, alpha: 14
+Depth 24 ==> West
+depth: 26, dir: West, alpha: 14
+Depth 26 ==> West
+depth: 28, dir: West, alpha: 12
+Depth 28 ==> West
+depth: 30, dir: West, alpha: 14
+Depth 30 ==> West
+depth: 32, dir: West, alpha: 10
+Depth 32 ==> West
+depth: 34, dir: West, alpha: 12
+Depth 34 ==> West
+depth: 36, dir: West, alpha: 8
+Depth 36 ==> West
+depth: 38, dir: West, alpha: 10
+Depth 38 ==> West
+16 16
+################
+#             ##
+#       2#######
+# ##############
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+############## #
+###            #
+######1        #
+################
+depth: 2, dir: West, alpha: 16
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 16
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 16
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 16
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 16
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 16
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 16
+Depth 14 ==> West
+depth: 16, dir: West, alpha: 3
+Depth 16 ==> West
+depth: 18, dir: West, alpha: 3
+Depth 18 ==> West
+depth: 20, dir: West, alpha: 14
+Depth 20 ==> West
+depth: 22, dir: West, alpha: 14
+Depth 22 ==> West
+depth: 24, dir: West, alpha: 14
+Depth 24 ==> West
+depth: 26, dir: West, alpha: 12
+Depth 26 ==> West
+depth: 28, dir: West, alpha: 14
+Depth 28 ==> West
+depth: 30, dir: West, alpha: 10
+Depth 30 ==> West
+depth: 32, dir: West, alpha: 12
+Depth 32 ==> West
+depth: 34, dir: West, alpha: 8
+Depth 34 ==> West
+depth: 36, dir: West, alpha: 10
+Depth 36 ==> West
+16 16
+################
+#             ##
+#      2########
+# ##############
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+############## #
+###            #
+#######1       #
+################
+depth: 2, dir: West, alpha: 16
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 16
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 16
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 16
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 16
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 16
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 3
+Depth 14 ==> West
+depth: 16, dir: West, alpha: 3
+Depth 16 ==> West
+depth: 18, dir: West, alpha: 14
+Depth 18 ==> West
+depth: 20, dir: West, alpha: 14
+Depth 20 ==> West
+depth: 22, dir: West, alpha: 14
+Depth 22 ==> West
+depth: 24, dir: West, alpha: 12
+Depth 24 ==> West
+depth: 26, dir: West, alpha: 14
+Depth 26 ==> West
+depth: 28, dir: West, alpha: 10
+Depth 28 ==> West
+depth: 30, dir: West, alpha: 12
+Depth 30 ==> West
+depth: 32, dir: West, alpha: 8
+Depth 32 ==> West
+depth: 34, dir: West, alpha: 10
+Depth 34 ==> West
+16 16
+################
+#             ##
+#     2#########
+# ##############
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+############## #
+###            #
+########1      #
+################
+depth: 2, dir: West, alpha: 16
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 16
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 16
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 16
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 16
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 3
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 3
+Depth 14 ==> West
+depth: 16, dir: West, alpha: 14
+Depth 16 ==> West
+depth: 18, dir: West, alpha: 14
+Depth 18 ==> West
+depth: 20, dir: West, alpha: 14
+Depth 20 ==> West
+depth: 22, dir: West, alpha: 12
+Depth 22 ==> West
+depth: 24, dir: West, alpha: 14
+Depth 24 ==> West
+depth: 26, dir: West, alpha: 10
+Depth 26 ==> West
+depth: 28, dir: West, alpha: 12
+Depth 28 ==> West
+depth: 30, dir: West, alpha: 8
+Depth 30 ==> West
+depth: 32, dir: West, alpha: 10
+Depth 32 ==> West
+depth: 34, dir: West, alpha: 6
+Depth 34 ==> West
+16 16
+################
+#             ##
+#    2##########
+# ##############
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+############## #
+###            #
+#########1     #
+################
+depth: 2, dir: West, alpha: 16
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 16
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 16
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 16
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 3
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 3
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 14
+Depth 14 ==> West
+depth: 16, dir: West, alpha: 14
+Depth 16 ==> West
+depth: 18, dir: West, alpha: 14
+Depth 18 ==> West
+depth: 20, dir: West, alpha: 12
+Depth 20 ==> West
+depth: 22, dir: West, alpha: 14
+Depth 22 ==> West
+depth: 24, dir: West, alpha: 10
+Depth 24 ==> West
+depth: 26, dir: West, alpha: 12
+Depth 26 ==> West
+depth: 28, dir: West, alpha: 8
+Depth 28 ==> West
+depth: 30, dir: West, alpha: 10
+Depth 30 ==> West
+depth: 32, dir: West, alpha: 6
+Depth 32 ==> West
+16 16
+################
+#             ##
+#   2###########
+# ##############
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+############## #
+###            #
+##########1    #
+################
+depth: 2, dir: West, alpha: 16
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 16
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 16
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 3
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 3
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 14
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 14
+Depth 14 ==> West
+depth: 16, dir: West, alpha: 14
+Depth 16 ==> West
+depth: 18, dir: West, alpha: 12
+Depth 18 ==> West
+depth: 20, dir: West, alpha: 14
+Depth 20 ==> West
+depth: 22, dir: West, alpha: 10
+Depth 22 ==> West
+depth: 24, dir: West, alpha: 12
+Depth 24 ==> West
+depth: 26, dir: West, alpha: 8
+Depth 26 ==> West
+depth: 28, dir: West, alpha: 10
+Depth 28 ==> West
+depth: 30, dir: West, alpha: 6
+Depth 30 ==> West
+16 16
+################
+#             ##
+#  2############
+# ##############
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+############## #
+###            #
+###########1   #
+################
+depth: 2, dir: West, alpha: 16
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 16
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 3
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 3
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 14
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 14
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 14
+Depth 14 ==> West
+depth: 16, dir: West, alpha: 12
+Depth 16 ==> West
+depth: 18, dir: West, alpha: 14
+Depth 18 ==> West
+depth: 20, dir: West, alpha: 10
+Depth 20 ==> West
+depth: 22, dir: West, alpha: 12
+Depth 22 ==> West
+depth: 24, dir: West, alpha: 8
+Depth 24 ==> West
+depth: 26, dir: West, alpha: 10
+Depth 26 ==> West
+depth: 28, dir: West, alpha: 6
+Depth 28 ==> West
+16 16
+################
+#             ##
+# 2#############
+# ##############
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+############## #
+###        1   #
+############   #
+################
+depth: 2, dir: West, alpha: 24
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 11
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 11
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 14
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 14
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 14
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 12
+Depth 14 ==> West
+depth: 16, dir: West, alpha: 14
+Depth 16 ==> West
+depth: 18, dir: West, alpha: 10
+Depth 18 ==> West
+depth: 20, dir: West, alpha: 12
+Depth 20 ==> West
+depth: 22, dir: West, alpha: 8
+Depth 22 ==> West
+depth: 24, dir: West, alpha: 10
+Depth 24 ==> West
+depth: 26, dir: West, alpha: 6
+Depth 26 ==> West
+16 16
+################
+#             ##
+#2##############
+# ##############
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+############## #
+###        #1  #
+############   #
+################
+depth: 2, dir: South, alpha: 11
+Depth 2 ==> South
+depth: 4, dir: South, alpha: 11
+Depth 4 ==> South
+depth: 6, dir: South, alpha: 14
+Depth 6 ==> South
+depth: 8, dir: South, alpha: 14
+Depth 8 ==> South
+depth: 10, dir: South, alpha: 14
+Depth 10 ==> South
+depth: 12, dir: South, alpha: 12
+Depth 12 ==> South
+depth: 14, dir: South, alpha: 14
+Depth 14 ==> South
+depth: 16, dir: South, alpha: 10
+Depth 16 ==> South
+depth: 18, dir: South, alpha: 12
+Depth 18 ==> South
+depth: 20, dir: South, alpha: 8
+Depth 20 ==> South
+depth: 22, dir: South, alpha: 10
+Depth 22 ==> South
+depth: 24, dir: South, alpha: 6
+Depth 24 ==> South
+depth: 26, dir: South, alpha: 4
+Depth 26 ==> South
+16 16
+################
+#             ##
+################
+#2##############
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+############## #
+###        ##1 #
+############   #
+################
+depth: 2, dir: South, alpha: 11
+Depth 2 ==> South
+depth: 4, dir: South, alpha: 14
+Depth 4 ==> South
+depth: 6, dir: South, alpha: 14
+Depth 6 ==> South
+depth: 8, dir: South, alpha: 14
+Depth 8 ==> South
+depth: 10, dir: South, alpha: 12
+Depth 10 ==> South
+depth: 12, dir: South, alpha: 14
+Depth 12 ==> South
+depth: 14, dir: South, alpha: 10
+Depth 14 ==> South
+depth: 16, dir: South, alpha: 12
+Depth 16 ==> South
+depth: 18, dir: South, alpha: 8
+Depth 18 ==> South
+depth: 20, dir: South, alpha: 10
+Depth 20 ==> South
+depth: 22, dir: South, alpha: 6
+Depth 22 ==> South
+depth: 24, dir: South, alpha: 4
+Depth 24 ==> South
+16 16
+################
+#             ##
+################
+################
+#2             #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+############## #
+###        ###1#
+############   #
+################
+depth: 2, dir: East, alpha: 14
+Depth 2 ==> East
+depth: 4, dir: East, alpha: 14
+Depth 4 ==> East
+depth: 6, dir: East, alpha: 14
+Depth 6 ==> East
+depth: 8, dir: East, alpha: 12
+Depth 8 ==> East
+depth: 10, dir: East, alpha: 14
+Depth 10 ==> East
+depth: 12, dir: East, alpha: 10
+Depth 12 ==> East
+depth: 14, dir: East, alpha: 12
+Depth 14 ==> East
+depth: 16, dir: East, alpha: 8
+Depth 16 ==> East
+depth: 18, dir: East, alpha: 10
+Depth 18 ==> East
+depth: 20, dir: East, alpha: 6
+Depth 20 ==> East
+depth: 22, dir: South, alpha: 4
+Depth 22 ==> South
+depth: 24, dir: South, alpha: 0
+Depth 24 ==> South
+16 16
+################
+#             ##
+################
+################
+##             #
+#2             #
+#              #
+#              #
+#              #
+#              #
+#              #
+#              #
+##############1#
+###        #####
+############   #
+################
+depth: 2, dir: East, alpha: 12
+Depth 2 ==> East
+depth: 4, dir: East, alpha: 12
+Depth 4 ==> East
+depth: 6, dir: East, alpha: 12
+Depth 6 ==> East
+depth: 8, dir: East, alpha: 14
+Depth 8 ==> East
+depth: 10, dir: East, alpha: 10
+Depth 10 ==> East
+depth: 12, dir: East, alpha: 12
+Depth 12 ==> East
+depth: 14, dir: East, alpha: 8
+Depth 14 ==> East
+depth: 16, dir: East, alpha: 10
+Depth 16 ==> East
+depth: 18, dir: East, alpha: 6
+Depth 18 ==> East
+depth: 20, dir: South, alpha: 4
+Depth 20 ==> South
+16 16
+################
+#             ##
+################
+################
+##             #
+##             #
+#2             #
+#              #
+#              #
+#              #
+#              #
+#             1#
+################
+###        #####
+############   #
+################
+depth: 2, dir: East, alpha: 8
+Depth 2 ==> East
+depth: 4, dir: East, alpha: 8
+Depth 4 ==> East
+depth: 6, dir: East, alpha: 8
+Depth 6 ==> East
+depth: 8, dir: East, alpha: 10
+Depth 8 ==> East
+depth: 10, dir: East, alpha: 12
+Depth 10 ==> East
+depth: 12, dir: East, alpha: 8
+Depth 12 ==> East
+depth: 14, dir: East, alpha: 10
+Depth 14 ==> East
+depth: 16, dir: East, alpha: 6
+Depth 16 ==> East
+depth: 18, dir: South, alpha: 4
+Depth 18 ==> South
+16 16
+################
+#             ##
+################
+################
+##             #
+##             #
+##             #
+#2             #
+#              #
+#              #
+#              #
+#            1##
+################
+###        #####
+############   #
+################
+depth: 2, dir: East, alpha: 2
+Depth 2 ==> East
+depth: 4, dir: East, alpha: 2
+Depth 4 ==> East
+depth: 6, dir: East, alpha: 2
+Depth 6 ==> East
+depth: 8, dir: East, alpha: 4
+Depth 8 ==> East
+depth: 10, dir: East, alpha: 8
+Depth 10 ==> East
+depth: 12, dir: East, alpha: 10
+Depth 12 ==> East
+depth: 14, dir: East, alpha: 6
+Depth 14 ==> East
+depth: 16, dir: South, alpha: 5
+Depth 16 ==> South
+depth: 18, dir: East, alpha: 0
+Depth 18 ==> East
+depth: 20, dir: East, alpha: 0
+Depth 20 ==> East
+depth: 22, dir: East, alpha: 0
+Depth 22 ==> East
+16 16
+################
+#             ##
+################
+################
+##             #
+##             #
+##             #
+##2            #
+#              #
+#              #
+#              #
+#           1###
+################
+###        #####
+############   #
+################
+depth: 2, dir: East, alpha: 2
+Depth 2 ==> East
+depth: 4, dir: East, alpha: 2
+Depth 4 ==> East
+depth: 6, dir: East, alpha: 4
+Depth 6 ==> East
+depth: 8, dir: East, alpha: 8
+Depth 8 ==> East
+depth: 10, dir: East, alpha: 10
+Depth 10 ==> East
+depth: 12, dir: East, alpha: 6
+Depth 12 ==> East
+depth: 14, dir: South, alpha: 4
+Depth 14 ==> South
+depth: 16, dir: East, alpha: 0
+Depth 16 ==> East
+depth: 18, dir: East, alpha: 0
+Depth 18 ==> East
+depth: 20, dir: East, alpha: 0
+Depth 20 ==> East
+depth: 22, dir: East, alpha: 0
+Depth 22 ==> East
+16 16
+################
+#             ##
+################
+################
+##             #
+##             #
+##             #
+###2           #
+#              #
+#              #
+#              #
+#          1####
+################
+###        #####
+############   #
+################
+depth: 2, dir: East, alpha: 2
+Depth 2 ==> East
+depth: 4, dir: East, alpha: 4
+Depth 4 ==> East
+depth: 6, dir: East, alpha: 8
+Depth 6 ==> East
+depth: 8, dir: East, alpha: 10
+Depth 8 ==> East
+depth: 10, dir: East, alpha: 6
+Depth 10 ==> East
+depth: 12, dir: South, alpha: 3
+Depth 12 ==> South
+depth: 14, dir: East, alpha: 0
+Depth 14 ==> East
+depth: 16, dir: East, alpha: 0
+Depth 16 ==> East
+depth: 18, dir: East, alpha: 0
+Depth 18 ==> East
+depth: 20, dir: East, alpha: 0
+Depth 20 ==> East
+depth: 22, dir: East, alpha: 0
+Depth 22 ==> East
+depth: 24, dir: East, alpha: 0
+Depth 24 ==> East
+16 16
+################
+#             ##
+################
+################
+##             #
+##             #
+##             #
+####2          #
+#              #
+#              #
+#              #
+#         1#####
+################
+###        #####
+############   #
+################
+depth: 2, dir: East, alpha: 4
+Depth 2 ==> East
+depth: 4, dir: East, alpha: 8
+Depth 4 ==> East
+depth: 6, dir: East, alpha: 10
+Depth 6 ==> East
+depth: 8, dir: East, alpha: 6
+Depth 8 ==> East
+depth: 10, dir: South, alpha: 2
+Depth 10 ==> South
+depth: 12, dir: East, alpha: 0
+Depth 12 ==> East
+depth: 14, dir: East, alpha: 0
+Depth 14 ==> East
+depth: 16, dir: East, alpha: 0
+Depth 16 ==> East
+depth: 18, dir: East, alpha: 0
+Depth 18 ==> East
+depth: 20, dir: East, alpha: 0
+Depth 20 ==> East
+depth: 22, dir: East, alpha: 0
+Depth 22 ==> East
+depth: 24, dir: East, alpha: 0
+Depth 24 ==> East
+16 16
+################
+#             ##
+################
+################
+##             #
+##             #
+##             #
+#####2         #
+#              #
+#              #
+#              #
+#        1######
+################
+###        #####
+############   #
+################
+depth: 2, dir: East, alpha: 14
+Depth 2 ==> East
+depth: 4, dir: East, alpha: 10
+Depth 4 ==> East
+depth: 6, dir: East, alpha: 6
+Depth 6 ==> East
+depth: 8, dir: South, alpha: 1
+Depth 8 ==> South
+depth: 10, dir: East, alpha: 0
+Depth 10 ==> East
+depth: 12, dir: East, alpha: 0
+Depth 12 ==> East
+depth: 14, dir: East, alpha: 0
+Depth 14 ==> East
+depth: 16, dir: East, alpha: 0
+Depth 16 ==> East
+depth: 18, dir: East, alpha: 0
+Depth 18 ==> East
+depth: 20, dir: East, alpha: 0
+Depth 20 ==> East
+depth: 22, dir: East, alpha: 0
+Depth 22 ==> East
+depth: 24, dir: East, alpha: 0
+Depth 24 ==> East
+depth: 26, dir: East, alpha: 0
+Depth 26 ==> East
+16 16
+################
+#             ##
+################
+################
+##             #
+##             #
+##             #
+######2        #
+#              #
+#              #
+#        1     #
+#        #######
+################
+###        #####
+############   #
+################
+depth: 2, dir: East, alpha: 10
+Depth 2 ==> East
+depth: 4, dir: East, alpha: 6
+Depth 4 ==> East
+depth: 6, dir: East, alpha: 0
+Depth 6 ==> East
+depth: 8, dir: East, alpha: 0
+Depth 8 ==> East
+depth: 10, dir: East, alpha: 0
+Depth 10 ==> East
+depth: 12, dir: East, alpha: 0
+Depth 12 ==> East
+depth: 14, dir: East, alpha: 0
+Depth 14 ==> East
+depth: 16, dir: East, alpha: 0
+Depth 16 ==> East
+depth: 18, dir: East, alpha: 0
+Depth 18 ==> East
+depth: 20, dir: East, alpha: 0
+Depth 20 ==> East
+depth: 22, dir: East, alpha: 0
+Depth 22 ==> East
+depth: 24, dir: East, alpha: 0
+Depth 24 ==> East
+depth: 26, dir: East, alpha: 0
+Depth 26 ==> East
+16 16
+################
+#             ##
+################
+################
+##             #
+##             #
+##             #
+#######2       #
+#              #
+#        1     #
+#        #     #
+#        #######
+################
+###        #####
+############   #
+################
+depth: 2, dir: East, alpha: 6
+Depth 2 ==> East
+depth: 4, dir: East, alpha: 0
+Depth 4 ==> East
+depth: 6, dir: East, alpha: 0
+Depth 6 ==> East
+depth: 8, dir: East, alpha: 0
+Depth 8 ==> East
+depth: 10, dir: East, alpha: 0
+Depth 10 ==> East
+depth: 12, dir: East, alpha: 0
+Depth 12 ==> East
+depth: 14, dir: East, alpha: 0
+Depth 14 ==> East
+depth: 16, dir: East, alpha: 0
+Depth 16 ==> East
+depth: 18, dir: East, alpha: 0
+Depth 18 ==> East
+depth: 20, dir: East, alpha: 0
+Depth 20 ==> East
+depth: 22, dir: East, alpha: 0
+Depth 22 ==> East
+depth: 24, dir: East, alpha: 0
+Depth 24 ==> East
+depth: 26, dir: East, alpha: 0
+Depth 26 ==> East
+depth: 28, dir: East, alpha: 0
+Depth 28 ==> East
+16 16
+################
+#             ##
+################
+################
+##             #
+##             #
+##             #
+########2      #
+#        1     #
+#        #     #
+#        #     #
+#        #######
+################
+###        #####
+############   #
+################
+depth: 2, dir: North, alpha: 0
+Depth 2 ==> North
+depth: 4, dir: North, alpha: 0
+Depth 4 ==> North
+depth: 6, dir: North, alpha: 0
+Depth 6 ==> North
+depth: 8, dir: North, alpha: 0
+Depth 8 ==> North
+depth: 10, dir: North, alpha: 0
+Depth 10 ==> North
+depth: 12, dir: North, alpha: 0
+Depth 12 ==> North
+depth: 14, dir: North, alpha: 0
+Depth 14 ==> North
+depth: 16, dir: North, alpha: 0
+Depth 16 ==> North
+depth: 18, dir: North, alpha: 0
+Depth 18 ==> North
+depth: 20, dir: North, alpha: 0
+Depth 20 ==> North
+depth: 22, dir: North, alpha: 0
+Depth 22 ==> North
+depth: 24, dir: North, alpha: 0
+Depth 24 ==> North
+depth: 26, dir: North, alpha: 0
+Depth 26 ==> North
+depth: 28, dir: North, alpha: 0
+Depth 28 ==> North
+depth: 30, dir: North, alpha: 0
+Depth 30 ==> North
+16 16
+################
+#             ##
+################
+################
+##             #
+##             #
+##      2      #
+#########1     #
+#        #     #
+#        #     #
+#        #     #
+#        #######
+################
+###        #####
+############   #
+################
+depth: 2, dir: East, alpha: 0
+Depth 2 ==> East
+depth: 4, dir: East, alpha: 0
+Depth 4 ==> East
+depth: 6, dir: East, alpha: 0
+Depth 6 ==> East
+depth: 8, dir: East, alpha: 0
+Depth 8 ==> East
+depth: 10, dir: East, alpha: 0
+Depth 10 ==> East
+depth: 12, dir: East, alpha: 0
+Depth 12 ==> East
+depth: 14, dir: East, alpha: 0
+Depth 14 ==> East
+depth: 16, dir: East, alpha: 0
+Depth 16 ==> East
+depth: 18, dir: East, alpha: 0
+Depth 18 ==> East
+depth: 20, dir: East, alpha: 0
+Depth 20 ==> East
+depth: 22, dir: East, alpha: 0
+Depth 22 ==> East
+depth: 24, dir: East, alpha: 0
+Depth 24 ==> East
+depth: 26, dir: East, alpha: 0
+Depth 26 ==> East
+depth: 28, dir: East, alpha: 0
+Depth 28 ==> East
+depth: 30, dir: East, alpha: 0
+Depth 30 ==> East
+depth: 32, dir: East, alpha: 0
+Depth 32 ==> East
+depth: 34, dir: East, alpha: 0
+Depth 34 ==> East
+depth: 36, dir: East, alpha: 0
+Depth 36 ==> East
+depth: 38, dir: East, alpha: 0
+Depth 38 ==> East
+depth: 40, dir: East, alpha: 0
+Depth 40 ==> East
+Players collided. Draw!
