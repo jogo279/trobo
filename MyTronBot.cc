@@ -21,7 +21,7 @@ typedef pair<int,int> coord;
 typedef cilk::reducer_list_append<std::pair<int, string>> reducer_list;
 
 #define DEFAULT_TIME 1.0
-#define START_DEPTH 10
+#define START_DEPTH 6
 #define STOP_DEPTH 32
 
 #define step(dir,x,y) ((dir)=="NORTH"?(coord(x,y-1)) : ((dir)=="EAST"?(coord(x+1,y)):((dir)=="SOUTH"?(coord(x,y+1)):coord(x-1,y))))
@@ -400,13 +400,17 @@ pair<string, int> parallel_alphabeta_abort (bool maxi, int cur_depth, int max_de
 
   std::atomic<int> a(prev->getA());
   std::atomic<int> b(prev->getB());
-  ABState cur = ABState(prev,&a,&b);
+  ABState cur = ABState(prev,&a,&b); 
 
   if (timeLeft() < 0 && !vm.count("depth")) return make_pair("T", LOSE);
   if (map.State() != IN_PROGRESS) return make_pair("-",map.State());
   if(cur_depth == max_depth) return make_pair("",map.Score());
-  if (cur.isAborted()) return make_pair("A", LOSE);
 
+  if (cur.isAborted()) return make_pair("A", LOSE);
+  int ancesterA = cur.bestA();
+  int ancesterB = cur.bestB();
+  if(ancesterA > a.load()) cur.setA(ancesterA);
+  if(ancesterB < b.load()) cur.setB(ancesterB);
 
   string direction[4] = {"NORTH", "SOUTH", "EAST", "WEST"};
   int player = maxi ? 1 : 0;
@@ -432,6 +436,12 @@ pair<string, int> parallel_alphabeta_abort (bool maxi, int cur_depth, int max_de
 
   pair<string, int> child_ab = parallel_alphabeta_abort(!maxi, cur_depth + 1, max_depth, Map(map, player, direction[ord_children[0]], cur_depth==max_depth-1), &cur, updateMoveSeq(move_seq, ord_children[0]), write_buffer);
   
+  if (cur.isAborted()) return make_pair("A", maxi ? LOSE : WIN);
+  ancesterA = cur.bestA();
+  ancesterB = cur.bestB();
+  if(ancesterA > a.load()) cur.setA(ancesterA);
+  if(ancesterB < b.load()) cur.setB(ancesterB);
+
   if(maxi){
     cilk::reducer_max_index<int, int> best_move;
     cilk::reducer_opadd<int> timeout;
@@ -442,11 +452,14 @@ pair<string, int> parallel_alphabeta_abort (bool maxi, int cur_depth, int max_de
     
     if (b>a && ord_children.size()>1) {
       cilk_for(int i = 1; i < ord_children.size(); i++) {
-        pair<string, int> child_ab_parr = parallel_alphabeta_abort(!maxi, cur_depth + 1, max_depth, Map(map, player, direction[ord_children[i]], cur_depth==max_depth-1), &cur, updateMoveSeq(move_seq, ord_children[i]), write_buffer);
-        if (child_ab_parr.first == "T") timeout += 1;
-        best_move.calc_max(ord_children[i], child_ab_parr.second);
+        if(!cur.isSelfAborted()){
+          pair<string, int> child_ab_parr = parallel_alphabeta_abort(!maxi, cur_depth + 1, max_depth, Map(map, player, direction[ord_children[i]], cur_depth==max_depth-1), &cur, updateMoveSeq(move_seq, ord_children[i]), write_buffer);
+          if (child_ab_parr.first == "T") timeout += 1;
+          if (child_ab_parr.second > a.load()) cur.setA(child_ab_parr.second);
 
-        if(child_ab_parr.second >= b.load()) cur.abort();
+          best_move.calc_max(ord_children[i], child_ab_parr.second);
+          if(child_ab_parr.first == "A" || child_ab_parr.second >= b.load()) cur.abort();
+        }
       }
     }
 
@@ -464,11 +477,15 @@ pair<string, int> parallel_alphabeta_abort (bool maxi, int cur_depth, int max_de
     
     if (b>a && ord_children.size() > 1) {
       cilk_for(int i = 1; i < ord_children.size(); i++) {
-        pair<string, int> child_ab_parr = parallel_alphabeta_abort(!maxi, cur_depth + 1, max_depth, Map(map, player, direction[ord_children[i]], cur_depth==max_depth-1), &cur, updateMoveSeq(move_seq, ord_children[i]), write_buffer);
-        if (child_ab_parr.first == "T") timeout += 1;
-        best_move.calc_min(ord_children[i], child_ab_parr.second);
+        if(!cur.isSelfAborted()){
+          pair<string, int> child_ab_parr = parallel_alphabeta_abort(!maxi, cur_depth + 1, max_depth, Map(map, player, direction[ord_children[i]], cur_depth==max_depth-1), &cur, updateMoveSeq(move_seq, ord_children[i]), write_buffer);
+          if (child_ab_parr.first == "T") timeout += 1;
+          if (child_ab_parr.second < b.load()) cur.setB(child_ab_parr.second);
 
-        if(child_ab_parr.second <= a.load()) cur.abort();
+          best_move.calc_min(ord_children[i], child_ab_parr.second);
+
+          if(child_ab_parr.first == "A" || child_ab_parr.second <= a.load()) cur.abort();
+        }
       }
     }
 
@@ -576,6 +593,35 @@ pair<string, int> parallel_alphabeta_abort (bool maxi, int cur_depth, int max_de
   // return make_pair(best_move, best_score);
 }
 
+pair<string, int> hybrid_start (int depth, const Map &map, ABState *init, reducer_list &write_buffer) {
+  // int local[3][3];
+  int numWalls=0;
+  for(int i=-1; i<=1; i++){
+    for(int j=-1; j<=1; j++){
+      if(map.IsWall(map.MyX()+i,map.MyY()+j)){
+        // local[i][j]=1;
+        numWalls++;
+      }
+    }
+  }
+  int numAdjWalls=0;
+  if(map.IsWall(map.MyX()+1,map.MyY()))
+    numAdjWalls++;
+  if(map.IsWall(map.MyX()-1,map.MyY()))
+    numAdjWalls++;
+  if(map.IsWall(map.MyX(),map.MyY()+1))
+    numAdjWalls++;
+  if(map.IsWall(map.MyX(),map.MyY()-1))
+    numAdjWalls++;
+  // fprintf(stderr, "Number of walls: %d\n", numWalls);
+  if((numWalls >= 5 && numAdjWalls >=1) || depth <= 4)
+    return alphabeta(true, 0, depth, map, INT_MIN, INT_MAX, 1, write_buffer);
+  else if(numWalls <= 2 && numAdjWalls <= 1)
+    return parallel_alphabeta_abort(true,0,depth, map, init, 1, write_buffer);
+  else
+    return parallel_alphabeta(true,0,depth, map, INT_MIN, INT_MAX, 1, write_buffer);
+}
+
 
 string MakeMove(const Map& map) {
   startTime = CycleTimer::currentSeconds();
@@ -583,6 +629,10 @@ string MakeMove(const Map& map) {
 
   int depth = START_DEPTH;
   string cur_move, temp;
+  atomic<int> a(INT_MIN);
+  atomic<int> b(INT_MAX);
+  ABState init = ABState(NULL, &a, &b);
+  reducer_list write_buffer; 
 
   // If only benching a particular depth
   if(vm.count("depth")) {
@@ -594,12 +644,8 @@ string MakeMove(const Map& map) {
         temp = endgame(0, depth, map, 1).first;
       }
     } else if (vm.count("ab")) {
-      reducer_list write_buffer;
       if(vm.count("parallel")) {
         if (vm.count("abort")) {
-          atomic<int> a(INT_MIN);
-          atomic<int> b(INT_MAX);
-          ABState init = ABState(NULL, &a, &b);
           temp = parallel_alphabeta_abort(true,0,depth, map, &init, 1, write_buffer).first;
         } else {
           temp = parallel_alphabeta(true,0,depth, map, INT_MIN, INT_MAX,1, write_buffer).first;
@@ -611,6 +657,8 @@ string MakeMove(const Map& map) {
       for(std::list<std::pair<int,string>>::const_iterator i=write_buffer_list.begin(); i!= write_buffer_list.end(); i++){
         cacheMove((*i).first,((*i).second));
       }
+    } else if(vm.count("hybrid")){
+      temp = hybrid_start (depth, map, &init, write_buffer).first;
     } else {
       if(vm.count("parallel")) {
         temp = parallel_minimax(true, 0, depth, map, 1).first;
@@ -674,6 +722,7 @@ int main(int argc, char* argv[]) {
     ("ab", "alphabeta pruning")
     ("abort", "abort")
     ("minimax", "standard minimax")
+    ("hybrid,h", "hybrid algorithm")
     ("numworkers,n", po::value<string>(), "Number of CILK workers")
     ("test", "debugging line")
     ("depth,d", po::value<int>(), "Search to a particular depth d");
@@ -722,7 +771,8 @@ int main(int argc, char* argv[]) {
       // fprintf(stderr, "def\n");
       Map::MakeMove(MakeMove(map));
       double end_time = CycleTimer::currentSeconds();
-      fprintf(stderr, "Move took %.4f seconds\n", end_time - start_time);
+      fprintf(stderr, "%.4f\n", end_time - start_time);
+      // fprintf(stderr, "Move took %.4f seconds\n", end_time - start_time);
       // fprintf(stderr, "cache size: %d, counter: %d\n", cache.size(), cache_count);
       // fprintf(stderr, "Spent %.4f seconds in varonoi function\n", vscoreTime);
     }
