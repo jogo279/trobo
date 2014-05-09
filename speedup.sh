@@ -16,8 +16,9 @@ tot4="0"
 tot5="0"
 tot6="0"
 
-echo "Maximum depth: $depth"
-for i in maps/*
+numfiles=$(ls abortmaps | wc -l)
+echo "$numfiles"
+for i in abortmaps/*
 do
 	if test -f "$i"
 	then
@@ -47,19 +48,25 @@ do
 		out4=$($exe $allflags $parabflags < "$i" 2> errFile)
 		cat errFile
 		tmp4=$(cat errFile)
-		tot4=$(perl -e "print $tot4+$tmp4")
+		spd4=$(perl -e "print ($tmp2/$tmp4)/$numfiles")
+		echo "$spd4"
+		tot4=$(perl -e "print $tot4+$spd4")
 
 		echo "Parallel ab abort bot: "
 		out5=$($exe $allflags $parababortflags < "$i" 2> errFile)
 		cat errFile
 		tmp5=$(cat errFile)
-		tot5=$(perl -e "print $tot5+$tmp5")
+		spd5=$(perl -e "print ($tmp2/$tmp5)/$numfiles")
+		echo "$spd5"
+		tot5=$(perl -e "print $tot5+$spd5")
 
 		echo "Hybrid bot: "
 		out6=$($exe $allflags $hybridflags < "$i" 2> errFile)
 		cat errFile
 		tmp6=$(cat errFile)
-		tot6=$(perl -e "print $tot6+$tmp6")
+		spd6=$(perl -e "print ($tmp2/$tmp6)/$numfiles")
+		echo "$spd6"
+		tot6=$(perl -e "print $tot6+$spd6")
 
 
 		# if [ "$out1" != "$out2" ]

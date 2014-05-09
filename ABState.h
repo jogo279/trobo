@@ -15,6 +15,7 @@ public:
     int bestB() const;
 
     int isAborted() const;
+    int isSelfAborted() const;
     // std::tuple<int,int,bool> bestAB() const;
 
     void abort();  

@@ -47,6 +47,10 @@ int ABState::bestB() const {
   return b->load();
 }
 
+int ABState::isSelfAborted() const {
+  return aborted;
+}
+
 int ABState::isAborted() const {
   return aborted || (parent && this->parent->isAborted());
 }

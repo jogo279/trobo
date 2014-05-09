@@ -45,13 +45,13 @@ void Map::printBlocks() const {
     for (int i = 0; i < map_width; i++){
       int id = getBlock(i,j);
       if(id == -1)
-        fprintf(stderr, "#");
+        fprintf(stderr, "##");
       else if (i == player_one_x && j == player_one_y)
-        fprintf(stderr, "*");
+        fprintf(stderr, "**");
       else if (i == player_two_x && j == player_two_y)
-        fprintf(stderr, "$");
+        fprintf(stderr, "$$");
       else
-        fprintf(stderr, "%d", id);
+        fprintf(stderr, "%02i", id);
     }
     fprintf(stderr, "\n");
   }
@@ -649,6 +649,7 @@ int Map::varonoiBlockScore(int block_id, std::vector<bool> visited, int player) 
 void Map::varonoiBlockScoreWrapper() {
   vector<bool> my_visited(numBlocks(),false);
   vector<bool> opp_visited(numBlocks(),false);
+  // printBlocks();
 
   int my_score=0, opp_score=0, new_score;
   int myX[4] = {player_one_x, player_one_x+1, player_one_x, player_one_x-1};
