@@ -645,7 +645,7 @@ int main(int argc, char* argv[]) {
       Map::MakeMove(MakeMove(map));
       double end_time = CycleTimer::currentSeconds();
       fprintf(stderr, "Move took %.4f seconds\n", end_time - start_time);
-      fprintf(stderr, "cache size: %d, counter: %d\n", cache.size(), cache_count);
+      // fprintf(stderr, "cache size: %d, counter: %d\n", cache.size(), cache_count);
       // fprintf(stderr, "Spent %.4f seconds in varonoi function\n", vscoreTime);
     }
   } else {
