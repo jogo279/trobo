@@ -4,6 +4,7 @@ seqminiflags="--minimax"
 seqabflags="--ab"
 parminiflags="-p --minimax"
 parabflags="-p --ab"
+parababortflags="-p --ab --abort"
 
 exe="./MyTronBot"
 
@@ -30,6 +31,10 @@ do
 
 		echo "Parallel ab bot: "
 		out4=$($exe $allflags $parabflags < "$i" 2> errFile)
+		cat errFile
+
+		echo "Parallel ab abort bot: "
+		out5=$($exe $allflags $parababortflags < "$i" 2> errFile)
 		cat errFile
 
 		# if [ "$out1" != "$out2" ]
