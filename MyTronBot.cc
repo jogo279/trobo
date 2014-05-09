@@ -92,6 +92,7 @@ void cacheMove(cache_key move_seq, string move_str) {
 }
 
 double timeLeft() {
+  // fprintf(stderr, "time left: %f\n", timeLimit - (CycleTimer::currentSeconds() - startTime));
   return timeLimit - (CycleTimer::currentSeconds() - startTime);
 }
 
@@ -407,10 +408,10 @@ pair<string, int> parallel_alphabeta_abort (bool maxi, int cur_depth, int max_de
   if(cur_depth == max_depth) return make_pair("",map.Score());
 
   if (cur.isAborted()) return make_pair("A", LOSE);
-  int ancesterA = cur.bestA();
-  int ancesterB = cur.bestB();
-  if(ancesterA > a.load()) cur.setA(ancesterA);
-  if(ancesterB < b.load()) cur.setB(ancesterB);
+  // int ancesterA = cur.bestA();
+  // int ancesterB = cur.bestB();
+  // if(ancesterA > a.load()) cur.setA(ancesterA);
+  // if(ancesterB < b.load()) cur.setB(ancesterB);
 
   string direction[4] = {"NORTH", "SOUTH", "EAST", "WEST"};
   int player = maxi ? 1 : 0;
@@ -437,10 +438,10 @@ pair<string, int> parallel_alphabeta_abort (bool maxi, int cur_depth, int max_de
   pair<string, int> child_ab = parallel_alphabeta_abort(!maxi, cur_depth + 1, max_depth, Map(map, player, direction[ord_children[0]], cur_depth==max_depth-1), &cur, updateMoveSeq(move_seq, ord_children[0]), write_buffer);
   
   if (cur.isAborted()) return make_pair("A", maxi ? LOSE : WIN);
-  ancesterA = cur.bestA();
-  ancesterB = cur.bestB();
-  if(ancesterA > a.load()) cur.setA(ancesterA);
-  if(ancesterB < b.load()) cur.setB(ancesterB);
+  // ancesterA = cur.bestA();
+  // ancesterB = cur.bestB();
+  // if(ancesterA > a.load()) cur.setA(ancesterA);
+  // if(ancesterB < b.load()) cur.setB(ancesterB);
 
   if(maxi){
     cilk::reducer_max_index<int, int> best_move;
@@ -624,15 +625,16 @@ pair<string, int> hybrid_start (int depth, const Map &map, ABState *init, reduce
 
 
 string MakeMove(const Map& map) {
+  // int i=static_cast<double>(vm["time"].as<int>());
   startTime = CycleTimer::currentSeconds();
-  timeLimit =(vm.count("time") ? vm["time"].as<double>(): DEFAULT_TIME) * .99;//multiply by .99 to leave error margin
+  timeLimit =(vm.count("time") ? double(vm["time"].as<int>()): DEFAULT_TIME) * .99;//multiply by .99 to leave error margin
+  // fprintf(stderr, "Timelimit: %d, %f, %f, %f\n",  i,double(i), (double)i, static_cast<double>(i));
 
   int depth = START_DEPTH;
   string cur_move, temp;
   atomic<int> a(INT_MIN);
   atomic<int> b(INT_MAX);
   ABState init = ABState(NULL, &a, &b);
-  reducer_list write_buffer; 
 
   // If only benching a particular depth
   if(vm.count("depth")) {
@@ -643,21 +645,26 @@ string MakeMove(const Map& map) {
       } else {
         temp = endgame(0, depth, map, 1).first;
       }
-    } else if (vm.count("ab")) {
-      if(vm.count("parallel")) {
-        if (vm.count("abort")) {
-          temp = parallel_alphabeta_abort(true,0,depth, map, &init, 1, write_buffer).first;
+    } else if (vm.count("ab")) { 
+      for(int x=-1;x<=0; x++){
+        reducer_list write_buffer;
+        if(x==0) startTime = CycleTimer::currentSeconds();
+        if(vm.count("parallel")) {
+          if (vm.count("abort")) {
+            temp = parallel_alphabeta_abort(true,0,depth+x, map, &init, 1, write_buffer).first;
+          } else {
+            temp = parallel_alphabeta(true,0,depth+x, map, INT_MIN, INT_MAX,1, write_buffer).first;
+          }
         } else {
-          temp = parallel_alphabeta(true,0,depth, map, INT_MIN, INT_MAX,1, write_buffer).first;
+          temp = alphabeta(true, 0, depth+x, map, INT_MIN, INT_MAX, 1, write_buffer).first;
         }
-      } else {
-        temp = alphabeta(true, 0, depth, map, INT_MIN, INT_MAX, 1, write_buffer).first;
-      }
-      const std::list<std::pair<int,string>> &write_buffer_list = write_buffer.get_value();
-      for(std::list<std::pair<int,string>>::const_iterator i=write_buffer_list.begin(); i!= write_buffer_list.end(); i++){
-        cacheMove((*i).first,((*i).second));
+        const std::list<std::pair<int,string>> &write_buffer_list = write_buffer.get_value();
+        for(std::list<std::pair<int,string>>::const_iterator i=write_buffer_list.begin(); i!= write_buffer_list.end(); i++){
+          cacheMove((*i).first,((*i).second));
+        } 
       }
     } else if(vm.count("hybrid")){
+      reducer_list write_buffer;
       temp = hybrid_start (depth, map, &init, write_buffer).first;
     } else {
       if(vm.count("parallel")) {
@@ -767,7 +774,7 @@ int main(int argc, char* argv[]) {
 
       // fprintf(stderr, "\n\nStart of move: %d (should be %d)\n", map.IsWall(map.MyX(),map.MyY()), map.IsWall(0,0));
       // fprintf(stderr, "Varonoi score  recursive on the starter map: %d\n", map.Score());
-      double start_time = CycleTimer::currentSeconds();
+      start_time = CycleTimer::currentSeconds();
       // fprintf(stderr, "def\n");
       Map::MakeMove(MakeMove(map));
       double end_time = CycleTimer::currentSeconds();

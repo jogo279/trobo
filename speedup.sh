@@ -16,9 +16,9 @@ tot4="0"
 tot5="0"
 tot6="0"
 
-numfiles=$(ls abortmaps | wc -l)
+numfiles=$(ls maps | wc -l)
 echo "$numfiles"
-for i in abortmaps/*
+for i in maps/*
 do
 	if test -f "$i"
 	then
@@ -48,7 +48,7 @@ do
 		out4=$($exe $allflags $parabflags < "$i" 2> errFile)
 		cat errFile
 		tmp4=$(cat errFile)
-		spd4=$(perl -e "print ($tmp2/$tmp4)/$numfiles")
+		spd4=$(perl -e "print ($tmp2/$tmp4)")
 		echo "$spd4"
 		tot4=$(perl -e "print $tot4+$spd4")
 
@@ -56,7 +56,7 @@ do
 		out5=$($exe $allflags $parababortflags < "$i" 2> errFile)
 		cat errFile
 		tmp5=$(cat errFile)
-		spd5=$(perl -e "print ($tmp2/$tmp5)/$numfiles")
+		spd5=$(perl -e "print ($tmp2/$tmp5)")
 		echo "$spd5"
 		tot5=$(perl -e "print $tot5+$spd5")
 
@@ -64,7 +64,7 @@ do
 		out6=$($exe $allflags $hybridflags < "$i" 2> errFile)
 		cat errFile
 		tmp6=$(cat errFile)
-		spd6=$(perl -e "print ($tmp2/$tmp6)/$numfiles")
+		spd6=$(perl -e "print ($tmp2/$tmp6)")
 		echo "$spd6"
 		tot6=$(perl -e "print $tot6+$spd6")
 

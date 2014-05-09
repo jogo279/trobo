@@ -1,189 +1,189 @@
 Maximum depth: 10
 maps/15x16.txt at depth 10
 Sequential bot minimax: 
-2.9920
+2.9889
 Sequential ab bot: 
-0.7515
+0.7591
 Parallel minimax bot: 
-0.3986
+0.4127
 Parallel ab bot: 
-0.2024
+0.2053
 Parallel ab abort bot: 
-2.9244
+2.9369
 Hybrid bot: 
-0.3648
+2.9472
 -----------------------------------
 maps/apocalyptic.txt at depth 10
 Sequential bot minimax: 
-0.3723
+0.3658
 Sequential ab bot: 
-0.0855
+0.0849
 Parallel minimax bot: 
-0.0499
+0.0519
 Parallel ab bot: 
-0.1183
+0.1132
 Parallel ab abort bot: 
-0.3624
+0.3779
 Hybrid bot: 
-0.0939
+0.3761
 -----------------------------------
 maps/big-room.txt at depth 10
 Sequential bot minimax: 
-1.7753
+1.7904
 Sequential ab bot: 
-0.2483
+0.2491
 Parallel minimax bot: 
-0.2525
+0.2486
 Parallel ab bot: 
-0.2358
+0.2334
 Parallel ab abort bot: 
-1.7689
+1.7725
 Hybrid bot: 
-0.2048
+1.7696
 -----------------------------------
 maps/box.txt at depth 10
 Sequential bot minimax: 
-0.5327
+0.5380
 Sequential ab bot: 
-0.0790
+0.0796
 Parallel minimax bot: 
-0.0756
+0.0788
 Parallel ab bot: 
-0.0722
+0.0743
 Parallel ab abort bot: 
-0.5496
+0.5437
 Hybrid bot: 
-0.0682
+0.5417
 -----------------------------------
 maps/center.txt at depth 10
 Sequential bot minimax: 
-13.8243
+13.9037
 Sequential ab bot: 
-1.4259
+1.4293
 Parallel minimax bot: 
-1.9196
+1.9130
 Parallel ab bot: 
-0.4861
+0.4527
 Parallel ab abort bot: 
-13.8479
+13.9637
 Hybrid bot: 
-0.5372
+13.8230
 -----------------------------------
 maps/divider.txt at depth 10
 Sequential bot minimax: 
-19.0127
+18.7931
 Sequential ab bot: 
-18.8002
+18.8735
 Parallel minimax bot: 
-2.6005
+2.5673
 Parallel ab bot: 
-2.6050
+2.5609
 Parallel ab abort bot: 
-19.0222
+18.9310
 Hybrid bot: 
-18.8324
+18.8820
 -----------------------------------
 maps/duel-small.txt at depth 10
 Sequential bot minimax: 
-4.2605
+4.2658
 Sequential ab bot: 
-0.4294
+0.4243
 Parallel minimax bot: 
-0.5833
+0.5979
 Parallel ab bot: 
-0.1367
+0.1372
 Parallel ab abort bot: 
-4.2611
+4.2715
 Hybrid bot: 
-0.1568
+4.2414
 -----------------------------------
 maps/empty-room.txt at depth 10
 Sequential bot minimax: 
-0.5673
+0.5676
 Sequential ab bot: 
-0.0793
+0.0794
 Parallel minimax bot: 
-0.0897
+0.0854
 Parallel ab bot: 
-0.0758
+0.0751
 Parallel ab abort bot: 
 0.5654
 Hybrid bot: 
-0.0667
+0.5732
 -----------------------------------
 maps/gate.txt at depth 10
 Sequential bot minimax: 
-0.0534
+0.0527
 Sequential ab bot: 
-0.0152
+0.0155
 Parallel minimax bot: 
-0.0096
+0.0093
 Parallel ab bot: 
 0.0248
 Parallel ab abort bot: 
-0.0531
+0.0539
 Hybrid bot: 
-0.0087
+0.0535
 -----------------------------------
 maps/giant-room.txt at depth 10
 Sequential bot minimax: 
-8.2653
+8.3452
 Sequential ab bot: 
-1.1606
+1.1540
 Parallel minimax bot: 
-1.1479
+1.1474
 Parallel ab bot: 
-1.0396
+1.0412
 Parallel ab abort bot: 
-8.2480
+8.2609
 Hybrid bot: 
-0.9604
+8.2325
 -----------------------------------
 maps/joust.txt at depth 10
 Sequential bot minimax: 
-1.7450
+1.7590
 Sequential ab bot: 
-0.1267
+0.1275
 Parallel minimax bot: 
-0.2488
+0.2479
 Parallel ab bot: 
-0.1229
+0.1280
 Parallel ab abort bot: 
-1.7409
+1.7594
 Hybrid bot: 
-0.0761
+1.7493
 -----------------------------------
 maps/keyhole.txt at depth 10
 Sequential bot minimax: 
-36.6911
+36.6961
 Sequential ab bot: 
-1.7519
+1.7458
 Parallel minimax bot: 
-5.0030
+5.0178
 Parallel ab bot: 
-0.4870
+0.5088
 Parallel ab abort bot: 
-36.5016
+36.7750
 Hybrid bot: 
-0.3872
+36.3606
 -----------------------------------
 maps/oval.txt at depth 10
 Sequential bot minimax: 
-2.3445
+2.2850
 Sequential ab bot: 
-0.3248
+0.3241
 Parallel minimax bot: 
-0.3300
+0.3705
 Parallel ab bot: 
-0.1470
+0.1466
 Parallel ab abort bot: 
-2.3030
+2.2762
 Hybrid bot: 
-0.1636
+2.3222
 Outputs do not agree! Sequential minimax bot: 3 vs. sequential ab bot: 2
-Sequential minimax total: 92.4364
-Sequential ab total: 25.2783
-Parallel minimax total: 12.709
-Parallel ab total: 5.7536
-Parallel abort ab total: 92.1485
-Hybrid total: 21.9208
+Sequential minimax total: 92.3513
+Sequential ab total: 25.3461
+Parallel minimax total: 12.7485
+Parallel ab total: 5.7015
+Parallel abort ab total: 92.488
+Hybrid total: 91.8723

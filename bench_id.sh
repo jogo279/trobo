@@ -4,6 +4,7 @@ seqabflags="--ab"
 parminiflags="-p --minimax"
 parabflags="-p --ab"
 parababortflags="-p --ab --abort"
+hybridflags="-p --hybrid"
 
 exe="./MyTronBot"
 
@@ -16,13 +17,13 @@ do
 		# echo "Parallel bot: "
 		# cat "$i" | ./SeqTronBot -v
 
-		echo "Sequential bot minimax: "
-		out1=$($exe $allflags $seqminiflags < "$i" 2> errFile)
-		cat errFile
+		# echo "Sequential bot minimax: "
+		# out1=$($exe $allflags $seqminiflags < "$i" 2> errFile)
+		# cat errFile
 
-		echo "Parallel minimax bot: "
-		out3=$($exe $allflags $parminiflags < "$i" 2> errFile)
-		cat errFile
+		# echo "Parallel minimax bot: "
+		# out3=$($exe $allflags $parminiflags < "$i" 2> errFile)
+		# cat errFile
 
 		echo "Sequential ab bot: "
 		out2=$($exe $allflags $seqabflags < "$i" 2> errFile)
@@ -35,6 +36,10 @@ do
 		echo "Parallel ab abort bot: "
 		out5=$($exe $allflags $parababortflags < "$i" 2> errFile)
 		cat errFile
+		
+		# echo "Hybrid bot: "
+		# out6=$($exe $allflags $hybridflags < "$i" 2> errFile)
+		# cat errFile
 
 		# if [ "$out1" != "$out2" ]
 		# then
