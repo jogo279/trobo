@@ -54,7 +54,12 @@ do
 		# fi
 		if [ "$out2" != "$out4" ]
 		then
-			echo "Outputs do not agree! Sequential minimax bot: $out1 vs. Parallel ab bot: $out4"
+			echo "Outputs do not agree! Sequential ab bot: $out2 vs. Parallel ab bot: $out4"
+			break
+		fi
+		if [ "$out2" != "$out5" ]
+		then
+			echo "Outputs do not agree! Sequential ab bot: $out2 vs. Parallel abort ab bot: $out4"
 			break
 		fi
 		echo "-----------------------------------"
