@@ -465,6 +465,14 @@ bool Map::IsPlayer(int x, int y) const {
   }
 }
 
+bool Map::IsInBounds(int x, int y) const {
+  if (x < 0 || y < 0 || x >= map_width || y >= map_height) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
 bool Map::IsWall(int x, int y) const {
   if (x < 0 || y < 0 || x >= map_width || y >= map_height) {
     return true;

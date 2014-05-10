@@ -1,189 +1,373 @@
 Maximum depth: 10
 maps/15x16.txt at depth 10
 Sequential bot minimax: 
-2.9920
+2.9394
 Sequential ab bot: 
-0.7515
+0.0605
 Parallel minimax bot: 
-0.3986
+0.3950
 Parallel ab bot: 
-0.2024
+0.0274
 Parallel ab abort bot: 
-2.9244
+0.0286
 Hybrid bot: 
-0.3648
+Number of walls 11 to size 77, fraction: 0.142857
+2 
+1.6337
 -----------------------------------
 maps/apocalyptic.txt at depth 10
 Sequential bot minimax: 
-0.3723
+0.3602
 Sequential ab bot: 
-0.0855
+0.0394
 Parallel minimax bot: 
-0.0499
+0.0512
 Parallel ab bot: 
-0.1183
+0.0504
 Parallel ab abort bot: 
-0.3624
+0.0506
 Hybrid bot: 
-0.0939
+Number of walls 26 to size 80, fraction: 0.325000
+1 
+0.0740
 -----------------------------------
 maps/big-room.txt at depth 10
 Sequential bot minimax: 
-1.7753
+1.7496
 Sequential ab bot: 
-0.2483
+0.0966
 Parallel minimax bot: 
-0.2525
+0.2639
 Parallel ab bot: 
-0.2358
+0.0897
 Parallel ab abort bot: 
-1.7689
+0.0906
 Hybrid bot: 
-0.2048
+Number of walls 13 to size 49, fraction: 0.265306
+3 
+0.2058
 -----------------------------------
 maps/box.txt at depth 10
 Sequential bot minimax: 
-0.5327
+0.5391
 Sequential ab bot: 
-0.0790
+0.0310
 Parallel minimax bot: 
-0.0756
+0.0774
 Parallel ab bot: 
-0.0722
+0.0279
 Parallel ab abort bot: 
-0.5496
+0.0276
 Hybrid bot: 
-0.0682
+Number of walls 16 to size 49, fraction: 0.326531
+3 
+0.0665
 -----------------------------------
 maps/center.txt at depth 10
 Sequential bot minimax: 
-13.8243
+13.8081
 Sequential ab bot: 
-1.4259
+0.2463
 Parallel minimax bot: 
-1.9196
+1.9291
 Parallel ab bot: 
-0.4861
+0.0849
 Parallel ab abort bot: 
-13.8479
+0.1741
 Hybrid bot: 
-0.5372
+Number of walls 0 to size 121, fraction: 0.000000
+1 
+0.5354
 -----------------------------------
 maps/divider.txt at depth 10
 Sequential bot minimax: 
-19.0127
+18.8691
 Sequential ab bot: 
-18.8002
+18.7617
 Parallel minimax bot: 
-2.6005
+2.5793
 Parallel ab bot: 
-2.6050
+2.5698
 Parallel ab abort bot: 
-19.0222
+2.5649
 Hybrid bot: 
-18.8324
+1 
+19.0725
 -----------------------------------
 maps/duel-small.txt at depth 10
 Sequential bot minimax: 
-4.2605
+4.2400
 Sequential ab bot: 
-0.4294
+0.1007
 Parallel minimax bot: 
-0.5833
+0.5786
 Parallel ab bot: 
-0.1367
+0.0397
 Parallel ab abort bot: 
-4.2611
+0.0663
 Hybrid bot: 
-0.1568
+Number of walls 0 to size 121, fraction: 0.000000
+3 
+0.1520
 -----------------------------------
 maps/empty-room.txt at depth 10
 Sequential bot minimax: 
-0.5673
+0.5722
 Sequential ab bot: 
-0.0793
+0.0308
 Parallel minimax bot: 
-0.0897
+0.0842
 Parallel ab bot: 
-0.0758
+0.0289
 Parallel ab abort bot: 
-0.5654
+0.0291
 Hybrid bot: 
-0.0667
+Number of walls 13 to size 49, fraction: 0.265306
+3 
+0.0690
 -----------------------------------
 maps/gate.txt at depth 10
 Sequential bot minimax: 
-0.0534
+0.0550
 Sequential ab bot: 
-0.0152
+0.0088
 Parallel minimax bot: 
-0.0096
+0.0119
 Parallel ab bot: 
-0.0248
+0.0137
 Parallel ab abort bot: 
-0.0531
+0.0136
 Hybrid bot: 
-0.0087
+Number of walls 19 to size 49, fraction: 0.387755
+1 
+0.0089
 -----------------------------------
 maps/giant-room.txt at depth 10
 Sequential bot minimax: 
-8.2653
+8.1352
 Sequential ab bot: 
-1.1606
+0.4464
 Parallel minimax bot: 
-1.1479
+1.1299
 Parallel ab bot: 
-1.0396
+0.4066
 Parallel ab abort bot: 
-8.2480
+0.4033
 Hybrid bot: 
-0.9604
+Number of walls 13 to size 49, fraction: 0.265306
+3 
+0.9514
 -----------------------------------
 maps/joust.txt at depth 10
 Sequential bot minimax: 
-1.7450
+1.7385
 Sequential ab bot: 
-0.1267
+0.0757
 Parallel minimax bot: 
-0.2488
+0.2424
 Parallel ab bot: 
-0.1229
+0.0714
 Parallel ab abort bot: 
-1.7409
+0.0717
 Hybrid bot: 
-0.0761
+Number of walls 13 to size 49, fraction: 0.265306
+3 
+0.0775
 -----------------------------------
 maps/keyhole.txt at depth 10
 Sequential bot minimax: 
-36.6911
+36.5002
 Sequential ab bot: 
-1.7519
+0.9114
 Parallel minimax bot: 
-5.0030
+4.9752
 Parallel ab bot: 
-0.4870
+0.2404
 Parallel ab abort bot: 
-36.5016
+0.2402
 Hybrid bot: 
-0.3872
+Number of walls 0 to size 121, fraction: 0.000000
+1 
+0.3880
 -----------------------------------
 maps/oval.txt at depth 10
 Sequential bot minimax: 
-2.3445
+2.2760
 Sequential ab bot: 
-0.3248
+0.1347
 Parallel minimax bot: 
-0.3300
+0.3195
 Parallel ab bot: 
-0.1470
+0.0615
 Parallel ab abort bot: 
-2.3030
+0.0645
 Hybrid bot: 
-0.1636
-Outputs do not agree! Sequential minimax bot: 3 vs. sequential ab bot: 2
-Sequential minimax total: 92.4364
-Sequential ab total: 25.2783
-Parallel minimax total: 12.709
-Parallel ab total: 5.7536
-Parallel abort ab total: 92.1485
-Hybrid total: 21.9208
+Number of walls 18 to size 77, fraction: 0.233766
+3 
+0.4015
+-----------------------------------
+maps/playground.txt at depth 10
+Sequential bot minimax: 
+3.9277
+Sequential ab bot: 
+3.9368
+Parallel minimax bot: 
+0.5195
+Parallel ab bot: 
+0.5186
+Parallel ab abort bot: 
+0.5277
+Hybrid bot: 
+3 
+3.9360
+-----------------------------------
+maps/plus.txt at depth 10
+Sequential bot minimax: 
+0.4631
+Sequential ab bot: 
+0.0243
+Parallel minimax bot: 
+0.0641
+Parallel ab bot: 
+0.0182
+Parallel ab abort bot: 
+0.0182
+Hybrid bot: 
+Number of walls 27 to size 110, fraction: 0.245455
+2 
+0.0310
+-----------------------------------
+maps/quadrant.txt at depth 10
+Sequential bot minimax: 
+4.9028
+Sequential ab bot: 
+0.1609
+Parallel minimax bot: 
+0.6472
+Parallel ab bot: 
+0.0675
+Parallel ab abort bot: 
+0.0653
+Hybrid bot: 
+Number of walls 30 to size 81, fraction: 0.370370
+3 
+0.1748
+-----------------------------------
+maps/ring.txt at depth 10
+Sequential bot minimax: 
+0.0052
+Sequential ab bot: 
+0.0024
+Parallel minimax bot: 
+0.0033
+Parallel ab bot: 
+0.0032
+Parallel ab abort bot: 
+0.0033
+Hybrid bot: 
+Number of walls 29 to size 77, fraction: 0.376623
+4 
+0.0034
+-----------------------------------
+maps/test.txt at depth 10
+Sequential bot minimax: 
+0.3455
+Sequential ab bot: 
+0.0269
+Parallel minimax bot: 
+0.0516
+Parallel ab bot: 
+0.0337
+Parallel ab abort bot: 
+0.0320
+Hybrid bot: 
+Number of walls 56 to size 88, fraction: 0.636364
+1 
+0.0452
+-----------------------------------
+maps/toronto2.txt at depth 10
+Sequential bot minimax: 
+0.3326
+Sequential ab bot: 
+0.0327
+Parallel minimax bot: 
+0.0480
+Parallel ab bot: 
+0.0381
+Parallel ab abort bot: 
+0.0374
+Hybrid bot: 
+Number of walls 17 to size 49, fraction: 0.346939
+3 
+0.0505
+-----------------------------------
+maps/toronto.txt at depth 10
+Sequential bot minimax: 
+0.0830
+Sequential ab bot: 
+0.0152
+Parallel minimax bot: 
+0.0155
+Parallel ab bot: 
+0.0100
+Parallel ab abort bot: 
+0.0100
+Hybrid bot: 
+Number of walls 33 to size 81, fraction: 0.407407
+1 
+0.0168
+-----------------------------------
+maps/triangle.txt at depth 10
+Sequential bot minimax: 
+0.5970
+Sequential ab bot: 
+0.0251
+Parallel minimax bot: 
+0.0824
+Parallel ab bot: 
+0.0238
+Parallel ab abort bot: 
+0.0238
+Hybrid bot: 
+Number of walls 15 to size 49, fraction: 0.306122
+2 
+0.1852
+-----------------------------------
+maps/trix.txt at depth 10
+Sequential bot minimax: 
+0.0552
+Sequential ab bot: 
+0.0132
+Parallel minimax bot: 
+0.0118
+Parallel ab bot: 
+0.0189
+Parallel ab abort bot: 
+0.0191
+Hybrid bot: 
+Number of walls 16 to size 49, fraction: 0.326531
+3 
+0.0285
+-----------------------------------
+maps/u.txt at depth 10
+Sequential bot minimax: 
+0.3962
+Sequential ab bot: 
+0.0252
+Parallel minimax bot: 
+0.0541
+Parallel ab bot: 
+0.0165
+Parallel ab abort bot: 
+0.0164
+Hybrid bot: 
+Number of walls 19 to size 64, fraction: 0.296875
+4 
+0.0863
+-----------------------------------
+Sequential minimax total: 102.8909
+Sequential ab total: 25.2067
+Parallel minimax total: 14.1351
+Parallel ab total: 4.4608
+Parallel abort ab total: 4.5783
+Hybrid total: 28.1939

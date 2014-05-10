@@ -45,6 +45,7 @@ class Map {
   // a wall, FALSE means it's not a wall, and is passable. Any spaces that are
   // not on the board are deemed to be walls.
   bool IsWall(int x, int y) const;
+  bool IsInBounds(int x, int y) const;
   bool IsPlayer(int x, int y) const;
   bool IsEmpty(int x, int y) const;
 

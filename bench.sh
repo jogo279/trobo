@@ -4,6 +4,7 @@ seqminiflags="--minimax"
 seqabflags="--ab"
 parminiflags="-p --minimax"
 parabflags="-p --ab"
+parababortflags="-p --ab --abort"
 hybridflags="--hybrid"
 
 tot1="0"
@@ -24,11 +25,11 @@ do
 		# echo "Parallel bot: "
 		# cat "$i" | ./SeqTronBot -v
 
-		echo "Sequential bot minimax: "
-		out1=$($exe $allflags $seqminiflags < "$i" 2> errFile)
-		cat errFile
-		tmp1=$(cat errFile)
-		tot1=$(perl -e "print $tot1+$tmp1")
+		# echo "Sequential bot minimax: "
+		# out1=$($exe $allflags $seqminiflags < "$i" 2> errFile)
+		# cat errFile
+		# tmp1=$(cat errFile)
+		# tot1=$(perl -e "print $tot1+$tmp1")
 
 		echo "Sequential ab bot: "
 		out2=$($exe $allflags $seqabflags < "$i" 2> errFile)
@@ -36,11 +37,11 @@ do
 		tmp2=$(cat errFile)
 		tot2=$(perl -e "print $tot2+$tmp2")
 
-		echo "Parallel minimax bot: "
-		out3=$($exe $allflags $parminiflags < "$i" 2> errFile)
-		cat errFile
-		tmp3=$(cat errFile)
-		tot3=$(perl -e "print $tot3+$tmp3")
+		# echo "Parallel minimax bot: "
+		# out3=$($exe $allflags $parminiflags < "$i" 2> errFile)
+		# cat errFile
+		# tmp3=$(cat errFile)
+		# tot3=$(perl -e "print $tot3+$tmp3")
 
 		echo "Parallel ab bot: "
 		out4=$($exe $allflags $parabflags < "$i" 2> errFile)
@@ -56,25 +57,26 @@ do
 
 		echo "Hybrid bot: "
 		out6=$($exe $allflags $hybridflags < "$i" 2> errFile)
+		echo "$out6 "
 		cat errFile
 		tmp6=$(cat errFile)
 		tot6=$(perl -e "print $tot6+$tmp6")
 
-		if [ "$out1" != "$out2" ]
-		then
-			echo "Outputs do not agree! Sequential minimax bot: $out1 vs. sequential ab bot: $out2"
-			break
-		fi
-		if [ "$out1" != "$out3" ]
-		then
-			echo "Outputs do not agree! Sequential minimax bot: $out1 vs. Parallel minimax bot: $out3"
-			break
-		fi
-		if [ "$out1" != "$out4" ]
-		then
-			echo "Outputs do not agree! Sequential minimax bot: $out1 vs. Parallel ab bot: $out4"
-			break
-		fi
+		# if [ "$out1" != "$out2" ]
+		# then
+		# 	echo "Outputs do not agree! Sequential minimax bot: $out1 vs. sequential ab bot: $out2"
+		# 	break
+		# fi
+		# if [ "$out1" != "$out3" ]
+		# then
+		# 	echo "Outputs do not agree! Sequential minimax bot: $out1 vs. Parallel minimax bot: $out3"
+		# 	break
+		# fi
+		# if [ "$out1" != "$out4" ]
+		# then
+		# 	echo "Outputs do not agree! Sequential minimax bot: $out1 vs. Parallel ab bot: $out4"
+		# 	break
+		# fi
 		echo "-----------------------------------"
 	fi
 done

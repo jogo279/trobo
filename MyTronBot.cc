@@ -50,7 +50,7 @@ po::variables_map vm;
 
 double vscoreTime;
 
-double startTime, timeLimit;
+double start_time, timeLimit;
 int cache_count;
 unordered_map<cache_key, char> cache;
 
@@ -93,7 +93,7 @@ void cacheMove(cache_key move_seq, string move_str) {
 
 double timeLeft() {
   // fprintf(stderr, "time left: %f\n", timeLimit - (CycleTimer::currentSeconds() - startTime));
-  return timeLimit - (CycleTimer::currentSeconds() - startTime);
+  return timeLimit - (CycleTimer::currentSeconds() - start_time);
 }
 
 /* Once we've entered the endgame, we can ignore our opponent */
@@ -596,15 +596,53 @@ pair<string, int> parallel_alphabeta_abort (bool maxi, int cur_depth, int max_de
 
 pair<string, int> hybrid_start (int depth, const Map &map, ABState *init, reducer_list &write_buffer) {
   // int local[3][3];
+  // fprintf(stderr, "Starting hybrd\n");
   int numWalls=0;
-  for(int i=-1; i<=1; i++){
-    for(int j=-1; j<=1; j++){
-      if(map.IsWall(map.MyX()+i,map.MyY()+j)){
+  int numSteps = (depth+1)/2;
+  int size=0;
+  for(int i=0; i<=numSteps; i++){
+    for(int j=0; j<=numSteps-i; j++){
+      if(i==0 && j==0) continue;
+      int x = map.MyX()+i;
+      int y = map.MyY()+j;
+      if(map.IsInBounds(x,y)){
+        // fprintf(stdout,"%d, %d\n",x,y);
         // local[i][j]=1;
-        numWalls++;
+        size++;
+        if(map.IsWall(x,y) )
+          numWalls++;
+      }
+      y = map.MyY()-j;
+      if(map.IsInBounds(x,y)){
+        // fprintf(stdout,"%d, %d\n",x,y);
+        // local[i][j]=1;
+        size++;
+        if(map.IsWall(x,y) )
+          numWalls++;
+      }
+      x=map.MyX()-i;
+      if(map.IsInBounds(x,y)){
+        // fprintf(stdout,"%d, %d\n",x,y);
+        // local[i][j]=1;
+        size++;
+        if(map.IsWall(x,y) )
+          numWalls++;
+      }
+      y = map.MyY()+j;
+      if(map.IsInBounds(x,y)){
+        // fprintf(stdout,"%d, %d\n",x,y);
+        // local[i][j]=1;
+        size++;
+        if(map.IsWall(x,y) )
+          numWalls++;
       }
     }
   }
+
+  double frac = ((double)numWalls/size);
+  // frac /= size;
+  fprintf(stdout, "Number of walls %d to size %d, fraction: %f\n", numWalls, size, frac);
+
   int numAdjWalls=0;
   if(map.IsWall(map.MyX()+1,map.MyY()))
     numAdjWalls++;
@@ -614,11 +652,10 @@ pair<string, int> hybrid_start (int depth, const Map &map, ABState *init, reduce
     numAdjWalls++;
   if(map.IsWall(map.MyX(),map.MyY()-1))
     numAdjWalls++;
-  // fprintf(stderr, "Number of walls: %d\n", numWalls);
-  if((numWalls >= 5 && numAdjWalls >=1) || depth <= 4)
+  if(frac >= (0.0003911*depth*depth - 0.0195*depth + 0.4691) || depth <= 4)
     return alphabeta(true, 0, depth, map, INT_MIN, INT_MAX, 1, write_buffer);
-  else if(numWalls <= 2 && numAdjWalls <= 1)
-    return parallel_alphabeta_abort(true,0,depth, map, init, 1, write_buffer);
+  // else if(numWalls <= 2 && numAdjWalls <= 1)
+    // return parallel_alphabeta_abort(true,0,depth, map, init, 1, write_buffer);
   else
     return parallel_alphabeta(true,0,depth, map, INT_MIN, INT_MAX, 1, write_buffer);
 }
@@ -626,7 +663,7 @@ pair<string, int> hybrid_start (int depth, const Map &map, ABState *init, reduce
 
 string MakeMove(const Map& map) {
   // int i=static_cast<double>(vm["time"].as<int>());
-  startTime = CycleTimer::currentSeconds();
+  start_time = CycleTimer::currentSeconds();
   timeLimit =(vm.count("time") ? double(vm["time"].as<int>()): DEFAULT_TIME) * .99;//multiply by .99 to leave error margin
   // fprintf(stderr, "Timelimit: %d, %f, %f, %f\n",  i,double(i), (double)i, static_cast<double>(i));
 
@@ -639,7 +676,8 @@ string MakeMove(const Map& map) {
   // If only benching a particular depth
   if(vm.count("depth")) {
     depth = vm["depth"].as<int>();
-    if (map.endGame()) {
+    if (map.endGame()) { 
+      fprintf(stderr, "Endgame!\n");
       if (vm.count("parallel")) {
         temp = parallel_endgame(0, depth, map, 1).first;
       } else {
@@ -648,7 +686,7 @@ string MakeMove(const Map& map) {
     } else if (vm.count("ab")) { 
       for(int x=-1;x<=0; x++){
         reducer_list write_buffer;
-        if(x==0) startTime = CycleTimer::currentSeconds();
+        if(x==0) start_time = CycleTimer::currentSeconds();
         if(vm.count("parallel")) {
           if (vm.count("abort")) {
             temp = parallel_alphabeta_abort(true,0,depth+x, map, &init, 1, write_buffer).first;
@@ -664,8 +702,19 @@ string MakeMove(const Map& map) {
         } 
       }
     } else if(vm.count("hybrid")){
-      reducer_list write_buffer;
-      temp = hybrid_start (depth, map, &init, write_buffer).first;
+      for(int x=-1;x<=0; x++){
+        reducer_list write_buffer;
+        if(x==-1){
+          parallel_alphabeta(true,0,depth-1, map, INT_MIN, INT_MAX,1, write_buffer).first;
+        } else {
+          start_time = CycleTimer::currentSeconds();
+          temp = hybrid_start (depth, map, &init, write_buffer).first;
+        }
+        const std::list<std::pair<int,string>> &write_buffer_list = write_buffer.get_value();
+        for(std::list<std::pair<int,string>>::const_iterator i=write_buffer_list.begin(); i!= write_buffer_list.end(); i++){
+          cacheMove((*i).first,((*i).second));
+        } 
+      }
     } else {
       if(vm.count("parallel")) {
         temp = parallel_minimax(true, 0, depth, map, 1).first;
@@ -702,6 +751,13 @@ string MakeMove(const Map& map) {
       for(std::list<std::pair<int,string>>::const_iterator i=write_buffer_list.begin(); i!= write_buffer_list.end(); i++){
         cacheMove((*i).first,((*i).second));
       }
+    } else if(vm.count("hybrid")){
+      reducer_list write_buffer;
+      temp = hybrid_start (depth, map, &init, write_buffer).first;
+      const std::list<std::pair<int,string>> &write_buffer_list = write_buffer.get_value();
+      for(std::list<std::pair<int,string>>::const_iterator i=write_buffer_list.begin(); i!= write_buffer_list.end(); i++){
+        cacheMove((*i).first,((*i).second));
+      } 
     } else {
       if(vm.count("parallel")) {
         temp = parallel_minimax(true, 0, depth, map, 1).first;
