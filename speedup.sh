@@ -14,7 +14,7 @@ tot2="0"
 tot3="0"
 tot4="0"
 tot5="0"
-tot6="0"
+tot6="0" 
 
 numfiles=$(ls maps | wc -l)
 echo "$numfiles"
@@ -63,6 +63,7 @@ do
 		echo "Hybrid bot: "
 		out6=$($exe $allflags $hybridflags < "$i" 2> errFile)
 		cat errFile
+		echo "$out6"
 		tmp6=$(cat errFile)
 		spd6=$(perl -e "print ($tmp2/$tmp6)")
 		echo "$spd6"

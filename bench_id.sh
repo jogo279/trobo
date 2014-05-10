@@ -37,9 +37,10 @@ do
 		out5=$($exe $allflags $parababortflags < "$i" 2> errFile)
 		cat errFile
 		
-		# echo "Hybrid bot: "
-		# out6=$($exe $allflags $hybridflags < "$i" 2> errFile)
-		# cat errFile
+		echo "Hybrid bot: "
+		out6=$($exe $allflags $hybridflags < "$i" 2> errFile)
+		echo "$out6"
+		cat errFile
 
 		# if [ "$out1" != "$out2" ]
 		# then
