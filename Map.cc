@@ -244,6 +244,16 @@ void Map::computeBlocks() {
     calculateArticulations(representative[i].first, representative[i].second, -1);
   }
 
+  //find adjacencies amongst cut vertices
+  for (int i = 0; i < num_blocks; i++) {
+    int x = cut_location[i].first;
+    int y = cut_location[i].second;
+
+    if (getBlock(x,y+1) != -1) block_neighbors[i].insert(getBlock(x,y+1));
+    if (getBlock(x,y-1) != -1) block_neighbors[i].insert(getBlock(x,y-1));
+    if (getBlock(x-1,y) != -1) block_neighbors[i].insert(getBlock(x-1,y));
+    if (getBlock(x+1,y) != -1) block_neighbors[i].insert(getBlock(x+1,y));
+  }
 
   for (int i = 0; i < map_height; i++)
     for (int j = 0; j < map_width; j++)
@@ -625,8 +635,9 @@ void Map::ReadFromFile(FILE *file_handle) {
 int Map::varonoiBlockScore(int block_id, std::vector<bool> visited, int player) {
   int block_score = blockVaronoi(block_id, player);
 
-  if(blockBattlefront(block_id)) return block_score;
-
+  // if(blockBattlefront(block_id)) return block_score;
+  if (block_score==0) return 0;
+  
   set<int> neighbor_blocks = neighborBlocks(block_id);
   set<int>::iterator it;
 

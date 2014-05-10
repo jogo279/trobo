@@ -710,9 +710,9 @@ string MakeMove(const Map& map) {
       }
     }
     if (temp != "T") cur_move = temp;
+    fprintf(stderr, "Depth: %d, Move: %s, Time Left: %.4f\n", depth, temp.c_str(), timeLeft());
     depth ++;
   }
-  fprintf(stderr, "Depth: %d, Move: %s, Time Left: %.4f\n", depth, temp.c_str(), timeLeft());
   return cur_move;
 }
 
@@ -774,11 +774,11 @@ int main(int argc, char* argv[]) {
 
       // fprintf(stderr, "\n\nStart of move: %d (should be %d)\n", map.IsWall(map.MyX(),map.MyY()), map.IsWall(0,0));
       // fprintf(stderr, "Varonoi score  recursive on the starter map: %d\n", map.Score());
-      start_time = CycleTimer::currentSeconds();
+      startTime = CycleTimer::currentSeconds();
       // fprintf(stderr, "def\n");
       Map::MakeMove(MakeMove(map));
       double end_time = CycleTimer::currentSeconds();
-      fprintf(stderr, "%.4f\n", end_time - start_time);
+      fprintf(stderr, "%.4f\n", end_time - startTime);
       // fprintf(stderr, "Move took %.4f seconds\n", end_time - start_time);
       // fprintf(stderr, "cache size: %d, counter: %d\n", cache.size(), cache_count);
       // fprintf(stderr, "Spent %.4f seconds in varonoi function\n", vscoreTime);
