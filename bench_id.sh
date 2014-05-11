@@ -25,17 +25,17 @@ do
 		# out3=$($exe $allflags $parminiflags < "$i" 2> errFile)
 		# cat errFile
 
-		echo "Sequential ab bot: "
-		out2=$($exe $allflags $seqabflags < "$i" 2> errFile)
-		cat errFile
+		# echo "Sequential ab bot: "
+		# out2=$($exe $allflags $seqabflags < "$i" 2> errFile)
+		# cat errFile
 
-		echo "Parallel ab bot: "
-		out4=$($exe $allflags $parabflags < "$i" 2> errFile)
-		cat errFile
+		# echo "Parallel ab bot: "
+		# out4=$($exe $allflags $parabflags < "$i" 2> errFile)
+		# cat errFile
 
-		echo "Parallel ab abort bot: "
-		out5=$($exe $allflags $parababortflags < "$i" 2> errFile)
-		cat errFile
+		# echo "Parallel ab abort bot: "
+		# out5=$($exe $allflags $parababortflags < "$i" 2> errFile)
+		# cat errFile
 		
 		echo "Hybrid bot: "
 		out6=$($exe $allflags $hybridflags < "$i" 2> errFile)

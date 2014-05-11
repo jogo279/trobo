@@ -1,4 +1,4 @@
-depth="10"
+depth="14"
 allflags="-v -d $depth"
 seqminiflags="--minimax"
 seqabflags="--ab"
