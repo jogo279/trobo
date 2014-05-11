@@ -1,0 +1,9 @@
+0 0
+lua: opponents/luv2run/sandcrawler.lua:122: attempt to index field 'player1' (a nil value)
+stack traceback:
+	opponents/luv2run/sandcrawler.lua:122: in function 'my_xy'
+	opponents/luv2run/sandcrawler.lua:193: in function 'makeBoard'
+	opponents/luv2run/sandcrawler.lua:696: in function 'miniBot'
+	opponents/luv2run/sandcrawler.lua:1124: in function 'runBot'
+	opponents/luv2run/sandcrawler.lua:1165: in main chunk
+	[C]: ?

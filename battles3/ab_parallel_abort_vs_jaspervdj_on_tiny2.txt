@@ -1,0 +1,3 @@
+0 0
+MyTronbot: Prelude.head: empty list
+MyTronbot: Prelude.head: empty list

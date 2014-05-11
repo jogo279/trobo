@@ -1,0 +1,1 @@
+Winning percentage for ab_parallel_abort is 50.0

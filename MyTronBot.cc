@@ -66,7 +66,7 @@ void cacheMove(cache_key move_seq, string move_str) {
   char move;
   // cache_key new_move_seq;
   int c = (int)move_str[0];
-  // fprintf(stderr, "size: %d, count: %d, key: %d, move %s\n", cache.size(),cache_count, move_seq, move_str.c_str());
+  // //fprintf(stderr, "size: %d, count: %d, key: %d, move %s\n", cache.size(),cache_count, move_seq, move_str.c_str());
   switch (c) {
     case 'n':
     case 'N':
@@ -92,7 +92,7 @@ void cacheMove(cache_key move_seq, string move_str) {
 }
 
 double timeLeft() {
-  // fprintf(stderr, "time left: %f\n", timeLimit - (CycleTimer::currentSeconds() - startTime));
+  // //fprintf(stderr, "time left: %f\n", timeLimit - (CycleTimer::currentSeconds() - startTime));
   return timeLimit - (CycleTimer::currentSeconds() - start_time);
 }
 
@@ -345,7 +345,7 @@ pair<string, int> parallel_alphabeta (bool maxi, int cur_depth, int max_depth, c
   }
 
   for (int i = 0; i < 4; i++) {
-    // fprintf(stderr, "i: %d, best guess: %d\n",i,best_guess);
+    // //fprintf(stderr, "i: %d, best guess: %d\n",i,best_guess);
     coord next = maxi ? step(direction[i],map.MyX(),map.MyY()) : step(direction[i], map.OpponentX(), map.OpponentY());
     if((map.IsEmpty(next.first, next.second) || (!maxi && !map.IsWall(next.first,next.second))) && best_guess != i) ord_children.push_back(i);
   }
@@ -428,7 +428,7 @@ pair<string, int> parallel_alphabeta_abort (bool maxi, int cur_depth, int max_de
   }
 
   for (int i = 0; i < 4; i++) {
-    // fprintf(stderr, "i: %d, best guess: %d\n",i,best_guess);
+    // //fprintf(stderr, "i: %d, best guess: %d\n",i,best_guess);
     coord next = maxi ? step(direction[i],map.MyX(),map.MyY()) : step(direction[i], map.OpponentX(), map.OpponentY());
     if((map.IsEmpty(next.first, next.second) || (!maxi && !map.IsWall(next.first,next.second))) && best_guess != i) ord_children.push_back(i);
   }
@@ -519,7 +519,7 @@ pair<string, int> parallel_alphabeta_abort (bool maxi, int cur_depth, int max_de
   //   int best_b = cur.bestB();
   //   if (best_a > a.load()) cur.setA(a);
   //   if (best_b < b.load()) cur.setB(b); 
-  //   //fprintf(stderr, "made the inlet with %s %d\n", ret_mv.c_str(), ret_sc);
+  //   ////fprintf(stderr, "made the inlet with %s %d\n", ret_mv.c_str(), ret_sc);
     
   //   if (maxi) {
   //     if (ret_sc > best_score) {
@@ -596,7 +596,7 @@ pair<string, int> parallel_alphabeta_abort (bool maxi, int cur_depth, int max_de
 
 pair<string, int> hybrid_start (int depth, const Map &map, ABState *init, reducer_list &write_buffer) {
   // int local[3][3];
-  // fprintf(stderr, "Starting hybrd\n");
+  // //fprintf(stderr, "Starting hybrd\n");
   int numWalls=0;
   int numSteps = (depth+1)/2;
   int size=0;
@@ -606,7 +606,7 @@ pair<string, int> hybrid_start (int depth, const Map &map, ABState *init, reduce
       int x = map.MyX()+i;
       int y = map.MyY()+j;
       if(map.IsInBounds(x,y)){
-        // fprintf(stdout,"%d, %d\n",x,y);
+        // //fprintf(stdout,"%d, %d\n",x,y);
         // local[i][j]=1;
         size++;
         if(map.IsWall(x,y) )
@@ -614,7 +614,7 @@ pair<string, int> hybrid_start (int depth, const Map &map, ABState *init, reduce
       }
       y = map.MyY()-j;
       if(map.IsInBounds(x,y)){
-        // fprintf(stdout,"%d, %d\n",x,y);
+        // //fprintf(stdout,"%d, %d\n",x,y);
         // local[i][j]=1;
         size++;
         if(map.IsWall(x,y) )
@@ -622,7 +622,7 @@ pair<string, int> hybrid_start (int depth, const Map &map, ABState *init, reduce
       }
       x=map.MyX()-i;
       if(map.IsInBounds(x,y)){
-        // fprintf(stdout,"%d, %d\n",x,y);
+        // //fprintf(stdout,"%d, %d\n",x,y);
         // local[i][j]=1;
         size++;
         if(map.IsWall(x,y) )
@@ -630,7 +630,7 @@ pair<string, int> hybrid_start (int depth, const Map &map, ABState *init, reduce
       }
       y = map.MyY()+j;
       if(map.IsInBounds(x,y)){
-        // fprintf(stdout,"%d, %d\n",x,y);
+        // //fprintf(stdout,"%d, %d\n",x,y);
         // local[i][j]=1;
         size++;
         if(map.IsWall(x,y) )
@@ -641,7 +641,7 @@ pair<string, int> hybrid_start (int depth, const Map &map, ABState *init, reduce
 
   double frac = ((double)numWalls/size);
   // frac /= size;
-  fprintf(stdout, "Number of walls %d to size %d, fraction: %f\n", numWalls, size, frac);
+  //fprintf(stdout, "Number of walls %d to size %d, fraction: %f\n", numWalls, size, frac);
 
   int numAdjWalls=0;
   if(map.IsWall(map.MyX()+1,map.MyY()))
@@ -665,7 +665,7 @@ string MakeMove(const Map& map) {
   // int i=static_cast<double>(vm["time"].as<int>());
   start_time = CycleTimer::currentSeconds();
   timeLimit =(vm.count("time") ? double(vm["time"].as<int>()): DEFAULT_TIME) * .99;//multiply by .99 to leave error margin
-  // fprintf(stderr, "Timelimit: %d, %f, %f, %f\n",  i,double(i), (double)i, static_cast<double>(i));
+  // //fprintf(stderr, "Timelimit: %d, %f, %f, %f\n",  i,double(i), (double)i, static_cast<double>(i));
 
   int depth = START_DEPTH;
   string cur_move, temp;
@@ -677,7 +677,7 @@ string MakeMove(const Map& map) {
   if(vm.count("depth")) {
     depth = vm["depth"].as<int>();
     if (map.endGame()) { 
-      fprintf(stderr, "Endgame!\n");
+      //fprintf(stderr, "Endgame!\n");
       if (vm.count("parallel")) {
         temp = parallel_endgame(0, depth, map, 1).first;
       } else {
@@ -722,7 +722,7 @@ string MakeMove(const Map& map) {
         temp = minimax(true, 0, depth, map, 1).first;
       }
     }
-    // fprintf(stdout, "lkasdfdskl %s\n", temp.c_str());
+    // //fprintf(stdout, "lkasdfdskl %s\n", temp.c_str());
     return temp;
   }
 
@@ -766,7 +766,7 @@ string MakeMove(const Map& map) {
       }
     }
     if (temp != "T") cur_move = temp;
-    fprintf(stderr, "Depth: %d, Move: %s, Time Left: %.4f\n", depth, temp.c_str(), timeLeft());
+    //fprintf(stderr, "Depth: %d, Move: %s, Time Left: %.4f\n", depth, temp.c_str(), timeLeft());
     depth ++;
   }
   return cur_move;
@@ -793,14 +793,14 @@ int main(int argc, char* argv[]) {
   po::store(po::parse_command_line(argc, argv, desc), vm);
 
   if (vm.count("numworkers") && 0!= __cilkrts_set_param("nworkers",vm["numworkers"].as<string>().c_str())) {
-    fprintf(stderr, "Failed to set worker count\n");
+    //fprintf(stderr, "Failed to set worker count\n");
     return 1;
   } else if (vm.count("numworkers")) {
-    fprintf(stderr, "Using %s workers\n", vm["numworkers"].as<string>().c_str());
+    //fprintf(stderr, "Using %s workers\n", vm["numworkers"].as<string>().c_str());
   }
 
   if (vm.count("test")) {
-    fprintf(stderr, "Cache size: %d, length size: %d, seq size: %d\n", CACHE_SIZE, LEN_SIZE, SEQ_SIZE);
+    //fprintf(stderr, "Cache size: %d, length size: %d, seq size: %d\n", CACHE_SIZE, LEN_SIZE, SEQ_SIZE);
     std::cout << bitset<CACHE_SIZE>(MOVE_LEN_MASK) << '\n' << bitset<CACHE_SIZE>(MOVE_SEQ_MASK) << '\n';
     cache_key a = 0ULL;
     std::cout << bitset<CACHE_SIZE>(INC_LEN(a)) << '\n';
@@ -828,16 +828,16 @@ int main(int argc, char* argv[]) {
       vscoreTime = 0.;
       Map map;
 
-      // fprintf(stderr, "\n\nStart of move: %d (should be %d)\n", map.IsWall(map.MyX(),map.MyY()), map.IsWall(0,0));
-      // fprintf(stderr, "Varonoi score  recursive on the starter map: %d\n", map.Score());
+      // //fprintf(stderr, "\n\nStart of move: %d (should be %d)\n", map.IsWall(map.MyX(),map.MyY()), map.IsWall(0,0));
+      // //fprintf(stderr, "Varonoi score  recursive on the starter map: %d\n", map.Score());
       start_time = CycleTimer::currentSeconds();
-      // fprintf(stderr, "def\n");
+      // //fprintf(stderr, "def\n");
       Map::MakeMove(MakeMove(map));
       double end_time = CycleTimer::currentSeconds();
-      fprintf(stderr, "%.4f\n", end_time - start_time);
-      // fprintf(stderr, "Move took %.4f seconds\n", end_time - start_time);
-      // fprintf(stderr, "cache size: %d, counter: %d\n", cache.size(), cache_count);
-      // fprintf(stderr, "Spent %.4f seconds in varonoi function\n", vscoreTime);
+      //fprintf(stderr, "%.4f\n", end_time - start_time);
+      // //fprintf(stderr, "Move took %.4f seconds\n", end_time - start_time);
+      // //fprintf(stderr, "cache size: %d, counter: %d\n", cache.size(), cache_count);
+      // //fprintf(stderr, "Spent %.4f seconds in varonoi function\n", vscoreTime);
     }
   } else {
     while (true) {

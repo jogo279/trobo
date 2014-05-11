@@ -1,0 +1,269 @@
+15 15
+###############
+#             #
+# # # # # # # #
+#  2          #
+# # # # # # # #
+#             #
+# # # # # # # #
+#             #
+# # # # # # # #
+#             #
+# # # # # # # #
+#          1  #
+# # # # # # # #
+#             #
+###############
+depth: 2,	total: 16,	hit: 0,	eval: 10,	best depth: 0,	decision: 3,	score: 0
+depth: 4,	total: 26,	hit: 10,	eval: 10,	best depth: 0,	decision: 3,	score: 0
+depth: 6,	total: 91,	hit: 20,	eval: 45,	best depth: 0,	decision: 3,	score: 0
+depth: 8,	total: 134,	hit: 65,	eval: 43,	best depth: 0,	decision: 3,	score: 0
+depth: 10,	total: 347,	hit: 107,	eval: 152,	best depth: 0,	decision: 3,	score: 0
+depth: 12,	total: 526,	hit: 262,	eval: 159,	best depth: 0,	decision: 3,	score: 0
+depth: 14,	total: 1309,	hit: 384,	eval: 532,	best depth: 0,	decision: 3,	score: 0
+depth: 16,	total: 1803,	hit: 881,	eval: 426,	best depth: 0,	decision: 3,	score: -1
+depth: 18,	total: 4919,	hit: 1329,	eval: 1864,	best depth: 2,	decision: 3,	score: -1
+depth: 20,	total: 5500,	hit: 2622,	eval: 1260,	best depth: 4,	decision: 3,	score: -1
+depth: 22,	total: 14369,	hit: 3750,	eval: 5148,	best depth: 6,	decision: 3,	score: -1
+depth: 24,	total: 19522,	hit: 7744,	eval: 4022,	best depth: 8,	decision: 3,	score: -1
+depth: 26,	total: 47684,	hit: 11653,	eval: 16765,	best depth: 10,	decision: 3,	score: -1
+depth: 28,	total: 55190,	hit: 23218,	eval: 10410,	best depth: 12,	decision: 3,	score: -1
+depth: 30,	total: 139912,	hit: 33327,	eval: 45322,	best depth: 14,	decision: 3,	score: -1
+depth: 32,	total: 163407,	hit: 62732,	eval: 29070,	best depth: 16,	decision: 3,	score: -1
+depth: 34,	total: 340386,	hit: 98157,	eval: 99595,	best depth: 18,	decision: 3,	score: -1
+depth: 36,	total: 354620,	hit: 150606,	eval: 58765,	best depth: 20,	decision: 3,	score: -1
+depth: 38,	total: 816214,	hit: 217385,	eval: 233871,	best depth: 22,	decision: 3,	score: -1
+15 15
+###############
+#             #
+# # # # # # # #
+#  #          #
+# #2# # # # # #
+#             #
+# # # # # # # #
+#             #
+# # # # # # # #
+#             #
+# # # # # #1# #
+#          #  #
+# # # # # # # #
+#             #
+###############
+depth: 2,	total: 1,	hit: 0,	eval: 1,	best depth: 0,	decision: 3,	score: 0
+depth: 4,	total: 10,	hit: 1,	eval: 9,	best depth: 0,	decision: 3,	score: 0
+depth: 6,	total: 19,	hit: 10,	eval: 9,	best depth: 0,	decision: 3,	score: 0
+depth: 8,	total: 83,	hit: 19,	eval: 50,	best depth: 0,	decision: 3,	score: 0
+depth: 10,	total: 127,	hit: 69,	eval: 44,	best depth: 0,	decision: 3,	score: 0
+depth: 12,	total: 336,	hit: 100,	eval: 162,	best depth: 0,	decision: 3,	score: 0
+depth: 14,	total: 432,	hit: 256,	eval: 103,	best depth: 0,	decision: 3,	score: -1
+depth: 16,	total: 1555,	hit: 469,	eval: 602,	best depth: 2,	decision: 3,	score: -1
+depth: 18,	total: 1607,	hit: 975,	eval: 237,	best depth: 4,	decision: 3,	score: -1
+depth: 20,	total: 4766,	hit: 2102,	eval: 1256,	best depth: 6,	decision: 3,	score: -1
+depth: 22,	total: 5038,	hit: 3360,	eval: 569,	best depth: 8,	decision: 3,	score: -1
+depth: 24,	total: 15473,	hit: 6897,	eval: 3256,	best depth: 10,	decision: 3,	score: -1
+depth: 26,	total: 16299,	hit: 10650,	eval: 1408,	best depth: 12,	decision: 3,	score: -1
+depth: 28,	total: 38040,	hit: 24178,	eval: 2731,	best depth: 14,	decision: 3,	score: -1
+depth: 30,	total: 41136,	hit: 29136,	eval: 1424,	best depth: 16,	decision: 3,	score: -1
+depth: 32,	total: 76734,	hit: 51088,	eval: 4316,	best depth: 18,	decision: 3,	score: -1
+depth: 34,	total: 95488,	hit: 65296,	eval: 3783,	best depth: 20,	decision: 3,	score: -1
+depth: 36,	total: 257468,	hit: 104074,	eval: 47368,	best depth: 22,	decision: 3,	score: -1
+depth: 38,	total: 255587,	hit: 94427,	eval: 35369,	best depth: 24,	decision: 3,	score: -1
+15 15
+###############
+#             #
+# # # # # # # #
+#  #          #
+# ### # # # # #
+#  2          #
+# # # # # # # #
+#             #
+# # # # # # # #
+#          1  #
+# # # # # ### #
+#          #  #
+# # # # # # # #
+#             #
+###############
+depth: 2,	total: 9,	hit: 9,	eval: 0,	best depth: 0,	decision: 3,	score: -1
+depth: 4,	total: 16,	hit: 16,	eval: 0,	best depth: 0,	decision: 3,	score: -1
+depth: 6,	total: 65,	hit: 58,	eval: 0,	best depth: 0,	decision: 3,	score: -1
+depth: 8,	total: 98,	hit: 91,	eval: 0,	best depth: 0,	decision: 3,	score: -1
+depth: 10,	total: 317,	hit: 276,	eval: 2,	best depth: 0,	decision: 3,	score: -1
+depth: 12,	total: 426,	hit: 385,	eval: 2,	best depth: 0,	decision: 3,	score: -1
+depth: 14,	total: 1156,	hit: 965,	eval: 14,	best depth: 0,	decision: 3,	score: -1
+depth: 16,	total: 1496,	hit: 1302,	eval: 19,	best depth: 0,	decision: 3,	score: -1
+depth: 18,	total: 4161,	hit: 3084,	eval: 168,	best depth: 0,	decision: 3,	score: -1
+depth: 20,	total: 5126,	hit: 4197,	eval: 73,	best depth: 0,	decision: 3,	score: -1
+depth: 22,	total: 12343,	hit: 8548,	eval: 593,	best depth: 0,	decision: 3,	score: -1
+depth: 24,	total: 14545,	hit: 11169,	eval: 261,	best depth: 0,	decision: 3,	score: -1
+depth: 26,	total: 35772,	hit: 22899,	eval: 2174,	best depth: 0,	decision: 3,	score: -1
+depth: 28,	total: 39293,	hit: 28072,	eval: 760,	best depth: 0,	decision: 3,	score: -1
+depth: 30,	total: 101115,	hit: 50928,	eval: 13848,	best depth: 18,	decision: 3,	score: -1
+depth: 32,	total: 111063,	hit: 75504,	eval: 2258,	best depth: 20,	decision: 3,	score: -1
+depth: 34,	total: 174592,	hit: 115666,	eval: 5937,	best depth: 0,	decision: 3,	score: -1
+depth: 36,	total: 273305,	hit: 157410,	eval: 18194,	best depth: 24,	decision: 3,	score: -1
+15 15
+###############
+#             #
+# # # # # # # #
+#  #          #
+# ### # # # # #
+#  #          #
+# #2# # # # # #
+#             #
+# # # # # #1# #
+#          #  #
+# # # # # ### #
+#          #  #
+# # # # # # # #
+#             #
+###############
+depth: 2,	total: 1,	hit: 1,	eval: 0,	best depth: 0,	decision: 3,	score: -1
+depth: 4,	total: 10,	hit: 10,	eval: 0,	best depth: 0,	decision: 3,	score: -1
+depth: 6,	total: 19,	hit: 18,	eval: 1,	best depth: 0,	decision: 3,	score: -1
+depth: 8,	total: 83,	hit: 72,	eval: 7,	best depth: 0,	decision: 3,	score: -1
+depth: 10,	total: 129,	hit: 118,	eval: 7,	best depth: 0,	decision: 3,	score: -1
+depth: 12,	total: 463,	hit: 400,	eval: 25,	best depth: 2,	decision: 3,	score: -1
+depth: 14,	total: 573,	hit: 517,	eval: 22,	best depth: 4,	decision: 3,	score: -1
+depth: 16,	total: 1787,	hit: 1446,	eval: 137,	best depth: 6,	decision: 3,	score: -1
+depth: 18,	total: 2402,	hit: 1977,	eval: 119,	best depth: 8,	decision: 3,	score: -1
+depth: 20,	total: 5959,	hit: 4302,	eval: 622,	best depth: 10,	decision: 3,	score: -1
+depth: 22,	total: 6839,	hit: 5395,	eval: 425,	best depth: 12,	decision: 3,	score: -1
+depth: 24,	total: 17973,	hit: 11666,	eval: 2301,	best depth: 14,	decision: 3,	score: -1
+depth: 26,	total: 18775,	hit: 14263,	eval: 876,	best depth: 16,	decision: 3,	score: -1
+depth: 28,	total: 41079,	hit: 25930,	eval: 4942,	best depth: 18,	decision: 3,	score: -1
+depth: 30,	total: 45565,	hit: 30955,	eval: 3198,	best depth: 20,	decision: 3,	score: -1
+depth: 32,	total: 87720,	hit: 54874,	eval: 9434,	best depth: 22,	decision: 3,	score: -1
+depth: 34,	total: 98759,	hit: 62976,	eval: 6388,	best depth: 24,	decision: 3,	score: -1
+depth: 36,	total: 212352,	hit: 74748,	eval: 51556,	best depth: 26,	decision: 3,	score: -1
+15 15
+###############
+#             #
+# # # # # # # #
+#  #          #
+# ### # # # # #
+#  #          #
+# ### # # # # #
+#  2       1  #
+# # # # # ### #
+#          #  #
+# # # # # ### #
+#          #  #
+# # # # # # # #
+#             #
+###############
+depth: 2,	total: 9,	hit: 9,	eval: 0,	best depth: 0,	decision: 2,	score: -1
+depth: 4,	total: 18,	hit: 18,	eval: 0,	best depth: 0,	decision: 2,	score: -1
+depth: 6,	total: 82,	hit: 79,	eval: 0,	best depth: 0,	decision: 2,	score: -1
+depth: 8,	total: 122,	hit: 119,	eval: 0,	best depth: 0,	decision: 2,	score: -1
+depth: 10,	total: 461,	hit: 434,	eval: 0,	best depth: 0,	decision: 2,	score: -1
+depth: 12,	total: 527,	hit: 501,	eval: 0,	best depth: 0,	decision: 2,	score: -1
+depth: 14,	total: 1905,	hit: 1722,	eval: 3,	best depth: 0,	decision: 2,	score: -1
+depth: 16,	total: 1831,	hit: 1679,	eval: 2,	best depth: 0,	decision: 2,	score: -1
+depth: 18,	total: 5938,	hit: 5113,	eval: 37,	best depth: 0,	decision: 2,	score: -1
+depth: 20,	total: 5117,	hit: 4510,	eval: 21,	best depth: 0,	decision: 2,	score: -1
+depth: 22,	total: 17279,	hit: 14162,	eval: 188,	best depth: 0,	decision: 2,	score: -1
+depth: 24,	total: 14212,	hit: 11867,	eval: 135,	best depth: 0,	decision: 2,	score: -1
+depth: 26,	total: 39355,	hit: 31287,	eval: 586,	best depth: 0,	decision: 2,	score: -1
+depth: 28,	total: 33144,	hit: 26095,	eval: 664,	best depth: 0,	decision: 2,	score: -1
+depth: 30,	total: 93358,	hit: 70338,	eval: 2569,	best depth: 0,	decision: 2,	score: -1
+depth: 32,	total: 75517,	hit: 55762,	eval: 2033,	best depth: 24,	decision: 2,	score: -1
+depth: 34,	total: 192617,	hit: 128300,	eval: 11226,	best depth: 26,	decision: 2,	score: -1
+depth: 36,	total: 142354,	hit: 77853,	eval: 9088,	best depth: 28,	decision: 2,	score: -1
+15 15
+###############
+#             #
+# # # # # # # #
+#  #          #
+# ### # # # # #
+#  #          #
+# ### # # # # #
+#  #2     1#  #
+# # # # # ### #
+#          #  #
+# # # # # ### #
+#          #  #
+# # # # # # # #
+#             #
+###############
+depth: 2,	total: 1,	hit: 1,	eval: 0,	best depth: 0,	decision: 2,	score: -1
+depth: 4,	total: 10,	hit: 10,	eval: 0,	best depth: 0,	decision: 2,	score: -1
+depth: 6,	total: 16,	hit: 16,	eval: 0,	best depth: 0,	decision: 2,	score: -1
+depth: 8,	total: 70,	hit: 65,	eval: 0,	best depth: 2,	decision: 2,	score: -1
+depth: 10,	total: 91,	hit: 86,	eval: 0,	best depth: 4,	decision: 2,	score: -1
+depth: 12,	total: 290,	hit: 251,	eval: 6,	best depth: 6,	decision: 2,	score: -1
+depth: 14,	total: 332,	hit: 295,	eval: 4,	best depth: 8,	decision: 2,	score: -1
+depth: 16,	total: 932,	hit: 771,	eval: 40,	best depth: 10,	decision: 2,	score: -1
+depth: 18,	total: 1033,	hit: 889,	eval: 38,	best depth: 12,	decision: 2,	score: -1
+depth: 20,	total: 2722,	hit: 2022,	eval: 227,	best depth: 14,	decision: 2,	score: -1
+depth: 22,	total: 2639,	hit: 2098,	eval: 121,	best depth: 16,	decision: 2,	score: -1
+depth: 24,	total: 6113,	hit: 4520,	eval: 584,	best depth: 18,	decision: 2,	score: -1
+depth: 26,	total: 5431,	hit: 4383,	eval: 268,	best depth: 20,	decision: 2,	score: -1
+depth: 28,	total: 18722,	hit: 9962,	eval: 3651,	best depth: 22,	decision: 2,	score: -1
+depth: 30,	total: 11318,	hit: 8658,	eval: 372,	best depth: 24,	decision: 2,	score: -1
+depth: 32,	total: 31423,	hit: 20798,	eval: 3605,	best depth: 26,	decision: 2,	score: -1
+depth: 34,	total: 24947,	hit: 18418,	eval: 961,	best depth: 28,	decision: 2,	score: -1
+depth: 36,	total: 53187,	hit: 21137,	eval: 12635,	best depth: 30,	decision: 2,	score: -1
+depth: 38,	total: 67945,	hit: 29017,	eval: 7355,	best depth: 32,	decision: 2,	score: -1
+depth: 40,	total: 81419,	hit: 38031,	eval: 16237,	best depth: 34,	decision: 2,	score: -1
+depth: 42,	total: 82908,	hit: 41764,	eval: 8515,	best depth: 36,	decision: 2,	score: -1
+depth: 44,	total: 134875,	hit: 51560,	eval: 27078,	best depth: 38,	decision: 2,	score: -1
+depth: 46,	total: 156046,	hit: 67770,	eval: 11562,	best depth: 40,	decision: 2,	score: -1
+15 15
+###############
+#             #
+# # # # # # # #
+#  #          #
+# ### # # # # #
+#  #          #
+# ### # # # # #
+#  ##2   1##  #
+# # # # # ### #
+#          #  #
+# # # # # ### #
+#          #  #
+# # # # # # # #
+#             #
+###############
+depth: 2,	total: 9,	hit: 7,	eval: 0,	best depth: 0,	decision: 2,	score: -1
+depth: 4,	total: 15,	hit: 13,	eval: 0,	best depth: 0,	decision: 2,	score: -1
+depth: 6,	total: 69,	hit: 54,	eval: 0,	best depth: 0,	decision: 2,	score: -1
+depth: 8,	total: 92,	hit: 77,	eval: 0,	best depth: 0,	decision: 2,	score: -1
+depth: 10,	total: 299,	hit: 219,	eval: 2,	best depth: 0,	decision: 2,	score: -1
+depth: 12,	total: 374,	hit: 295,	eval: 1,	best depth: 0,	decision: 2,	score: -1
+depth: 14,	total: 930,	hit: 697,	eval: 4,	best depth: 0,	decision: 2,	score: -1
+depth: 16,	total: 1162,	hit: 911,	eval: 16,	best depth: 0,	decision: 2,	score: -1
+depth: 18,	total: 2533,	hit: 1898,	eval: 81,	best depth: 14,	decision: 2,	score: -1
+depth: 20,	total: 2949,	hit: 2268,	eval: 16,	best depth: 16,	decision: 2,	score: -1
+depth: 22,	total: 6081,	hit: 4802,	eval: 151,	best depth: 18,	decision: 2,	score: -1
+depth: 24,	total: 5937,	hit: 4961,	eval: 18,	best depth: 20,	decision: 2,	score: -1
+depth: 26,	total: 12621,	hit: 10105,	eval: 432,	best depth: 22,	decision: 2,	score: -1
+depth: 28,	total: 11552,	hit: 9688,	eval: 16,	best depth: 24,	decision: 2,	score: -1
+depth: 30,	total: 23371,	hit: 19143,	eval: 615,	best depth: 26,	decision: 2,	score: -1
+depth: 32,	total: 23612,	hit: 18824,	eval: 276,	best depth: 28,	decision: 2,	score: -1
+depth: 34,	total: 44818,	hit: 33952,	eval: 2683,	best depth: 30,	decision: 2,	score: -1
+depth: 36,	total: 46353,	hit: 35928,	eval: 690,	best depth: 32,	decision: 2,	score: -1
+depth: 38,	total: 78409,	hit: 56087,	eval: 4584,	best depth: 34,	decision: 2,	score: -1
+depth: 40,	total: 72090,	hit: 55272,	eval: 1105,	best depth: 36,	decision: 2,	score: -1
+depth: 42,	total: 134290,	hit: 87445,	eval: 10642,	best depth: 38,	decision: 2,	score: -1
+depth: 44,	total: 119604,	hit: 87497,	eval: 2203,	best depth: 40,	decision: 2,	score: -1
+depth: 46,	total: 145568,	hit: 93414,	eval: 12041,	best depth: 42,	decision: 2,	score: -1
+depth: 48,	total: 220984,	hit: 111315,	eval: 13187,	best depth: 44,	decision: 2,	score: -1
+15 15
+###############
+#             #
+# # # # # # # #
+#  #          #
+# ### # # # # #
+#  #          #
+# ### # # # # #
+#  ###2 1###  #
+# # # # # ### #
+#          #  #
+# # # # # ### #
+#          #  #
+# # # # # # # #
+#             #
+###############
+depth: 2,	total: 0,	hit: 0,	eval: 0,	best depth: 0,	decision: 2,	score: -1
+Players collided. Draw!
