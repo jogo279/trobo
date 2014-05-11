@@ -52,6 +52,8 @@ double vscoreTime;
 
 double start_time, timeLimit;
 int cache_count;
+int counter;
+cilk::reducer_opadd<int> parallel_counter;
 unordered_map<cache_key, char> cache;
 
 int updateMoveSeq(cache_key move_seq, int move) {
@@ -244,8 +246,11 @@ pair<string, int> parallel_minimax (bool maxi, int cur_depth, int max_depth, con
 
 
 pair<string, int> alphabeta (bool maxi, int cur_depth, int max_depth, const Map &map, int a, int b, cache_key move_seq, reducer_list &write_buffer) {
+  counter++;
   if (timeLeft() < 0 && !vm.count("depth")) return make_pair("T", LOSE);
   if (map.State() != IN_PROGRESS) return make_pair("-",map.State());
+
+
   string direction[4] = {"NORTH", "SOUTH", "EAST", "WEST"};
   int score[4];
   pair<string, int> child_ab;
@@ -325,10 +330,11 @@ pair<string, int> alphabeta (bool maxi, int cur_depth, int max_depth, const Map 
 }
 
 pair<string, int> parallel_alphabeta (bool maxi, int cur_depth, int max_depth, const Map &map, int a, int b, cache_key move_seq, reducer_list &write_buffer) {
+  parallel_counter += 1;
+
   if (timeLeft() < 0 && !vm.count("depth")) return make_pair("T", LOSE);
   if (map.State() != IN_PROGRESS) return make_pair("-",map.State());
   if(cur_depth == max_depth) return make_pair("",map.Score());
-
 
   string direction[4] = {"NORTH", "SOUTH", "EAST", "WEST"};
   int player = maxi ? 1 : 0;
@@ -399,6 +405,7 @@ pair<string, int> parallel_alphabeta (bool maxi, int cur_depth, int max_depth, c
 
 pair<string, int> parallel_alphabeta_abort (bool maxi, int cur_depth, int max_depth, const Map &map, ABState *prev, cache_key move_seq, reducer_list &write_buffer) {
 
+  parallel_counter++;
   std::atomic<int> a(prev->getA());
   std::atomic<int> b(prev->getB());
   ABState cur = ABState(prev,&a,&b); 
@@ -407,7 +414,11 @@ pair<string, int> parallel_alphabeta_abort (bool maxi, int cur_depth, int max_de
   if (map.State() != IN_PROGRESS) return make_pair("-",map.State());
   if(cur_depth == max_depth) return make_pair("",map.Score());
 
-  if (cur.isAborted()) return make_pair("A", LOSE);
+  if (cur.isAborted())  { 
+    parallel_counter--;
+    return make_pair("A", LOSE);
+  }
+
   // int ancesterA = cur.bestA();
   // int ancesterB = cur.bestB();
   // if(ancesterA > a.load()) cur.setA(ancesterA);
@@ -677,7 +688,6 @@ string MakeMove(const Map& map) {
   if(vm.count("depth")) {
     depth = vm["depth"].as<int>();
     if (map.endGame()) { 
-      //fprintf(stderr, "Endgame!\n");
       if (vm.count("parallel")) {
         temp = parallel_endgame(0, depth, map, 1).first;
       } else {
@@ -686,7 +696,12 @@ string MakeMove(const Map& map) {
     } else if (vm.count("ab")) { 
       for(int x=-1;x<=0; x++){
         reducer_list write_buffer;
-        if(x==0) start_time = CycleTimer::currentSeconds();
+        if(x==0) { 
+          start_time = CycleTimer::currentSeconds();
+          counter=0;
+          parallel_counter -= parallel_counter.get_value();
+          fprintf(stderr, "parallel counter: %d\n", parallel_counter.get_value());
+        } 
         if(vm.count("parallel")) {
           if (vm.count("abort")) {
             temp = parallel_alphabeta_abort(true,0,depth+x, map, &init, 1, write_buffer).first;
@@ -791,6 +806,7 @@ int main(int argc, char* argv[]) {
     ("depth,d", po::value<int>(), "Search to a particular depth d");
 
   po::store(po::parse_command_line(argc, argv, desc), vm);
+  counter=0;
 
   if (vm.count("numworkers") && 0!= __cilkrts_set_param("nworkers",vm["numworkers"].as<string>().c_str())) {
     //fprintf(stderr, "Failed to set worker count\n");
@@ -827,17 +843,14 @@ int main(int argc, char* argv[]) {
     while (true) {
       vscoreTime = 0.;
       Map map;
-
-      // //fprintf(stderr, "\n\nStart of move: %d (should be %d)\n", map.IsWall(map.MyX(),map.MyY()), map.IsWall(0,0));
-      // //fprintf(stderr, "Varonoi score  recursive on the starter map: %d\n", map.Score());
+      
       start_time = CycleTimer::currentSeconds();
-      // //fprintf(stderr, "def\n");
       Map::MakeMove(MakeMove(map));
       double end_time = CycleTimer::currentSeconds();
-      //fprintf(stderr, "%.4f\n", end_time - start_time);
-      // //fprintf(stderr, "Move took %.4f seconds\n", end_time - start_time);
-      // //fprintf(stderr, "cache size: %d, counter: %d\n", cache.size(), cache_count);
-      // //fprintf(stderr, "Spent %.4f seconds in varonoi function\n", vscoreTime);
+      if(vm.count("parallel"))
+        fprintf(stderr, "%d\n", parallel_counter.get_value());
+      else
+        fprintf(stderr,"%d\n", counter);
     }
   } else {
     while (true) {
