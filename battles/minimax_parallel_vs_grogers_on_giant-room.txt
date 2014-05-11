@@ -1,0 +1,3499 @@
+50 50
+##################################################
+#1                                               #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                               2#
+##################################################
+depth: 2, dir: North, alpha: 0
+Depth 2 ==> North
+depth: 4, dir: North, alpha: 0
+Depth 4 ==> North
+depth: 6, dir: North, alpha: 0
+Depth 6 ==> North
+depth: 8, dir: North, alpha: 0
+Depth 8 ==> North
+depth: 10, dir: North, alpha: 0
+Depth 10 ==> North
+depth: 12, dir: North, alpha: 0
+Depth 12 ==> North
+depth: 14, dir: North, alpha: 0
+Depth 14 ==> North
+depth: 16, dir: North, alpha: 0
+Depth 16 ==> North
+depth: 18, dir: North, alpha: 0
+Depth 18 ==> North
+depth: 20, dir: North, alpha: 0
+Depth 20 ==> North
+50 50
+##################################################
+##                                               #
+#1                                               #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                               2#
+#                                               ##
+##################################################
+depth: 2, dir: West, alpha: 0
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 0
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 0
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 0
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 0
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 0
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 0
+Depth 14 ==> West
+depth: 16, dir: West, alpha: 0
+Depth 16 ==> West
+depth: 18, dir: West, alpha: 0
+Depth 18 ==> West
+50 50
+##################################################
+##                                               #
+##                                               #
+#1                                               #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                              2##
+#                                               ##
+##################################################
+depth: 2, dir: North, alpha: 0
+Depth 2 ==> North
+depth: 4, dir: North, alpha: 0
+Depth 4 ==> North
+depth: 6, dir: North, alpha: 0
+Depth 6 ==> North
+depth: 8, dir: North, alpha: 0
+Depth 8 ==> North
+depth: 10, dir: North, alpha: 0
+Depth 10 ==> North
+depth: 12, dir: North, alpha: 0
+Depth 12 ==> North
+depth: 14, dir: North, alpha: 0
+Depth 14 ==> North
+depth: 16, dir: North, alpha: 0
+Depth 16 ==> North
+depth: 18, dir: North, alpha: 0
+Depth 18 ==> North
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+#1                                               #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                              2 #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: West, alpha: 6
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 0
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 0
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 0
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 0
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 0
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 0
+Depth 14 ==> West
+depth: 16, dir: West, alpha: 0
+Depth 16 ==> West
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+#1                                               #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                             2# #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: West, alpha: 14
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 8
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 0
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 0
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 0
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 0
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 0
+Depth 14 ==> West
+depth: 16, dir: West, alpha: 0
+Depth 16 ==> West
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+##1                                              #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                            2## #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: North, alpha: 8
+Depth 2 ==> North
+depth: 4, dir: North, alpha: 0
+Depth 4 ==> North
+depth: 6, dir: North, alpha: 0
+Depth 6 ==> North
+depth: 8, dir: North, alpha: 0
+Depth 8 ==> North
+depth: 10, dir: North, alpha: 0
+Depth 10 ==> North
+depth: 12, dir: North, alpha: 0
+Depth 12 ==> North
+depth: 14, dir: North, alpha: 0
+Depth 14 ==> North
+depth: 16, dir: North, alpha: 0
+Depth 16 ==> North
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+###1                                             #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                            2   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: North, alpha: 0
+Depth 2 ==> North
+depth: 4, dir: North, alpha: 0
+Depth 4 ==> North
+depth: 6, dir: North, alpha: 0
+Depth 6 ==> North
+depth: 8, dir: North, alpha: 0
+Depth 8 ==> North
+depth: 10, dir: North, alpha: 0
+Depth 10 ==> North
+depth: 12, dir: North, alpha: 0
+Depth 12 ==> North
+depth: 14, dir: North, alpha: 0
+Depth 14 ==> North
+depth: 16, dir: North, alpha: 0
+Depth 16 ==> North
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  1                                             #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                            2   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: West, alpha: 10
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 0
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 0
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 0
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 0
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 0
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 0
+Depth 14 ==> West
+depth: 16, dir: West, alpha: 0
+Depth 16 ==> West
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  1                                             #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                           2#   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: West, alpha: 22
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 12
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 0
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 0
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 0
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 0
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 0
+Depth 14 ==> West
+depth: 16, dir: West, alpha: 0
+Depth 16 ==> West
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  #1                                            #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                          2##   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: North, alpha: 12
+Depth 2 ==> North
+depth: 4, dir: North, alpha: 0
+Depth 4 ==> North
+depth: 6, dir: North, alpha: 0
+Depth 6 ==> North
+depth: 8, dir: North, alpha: 0
+Depth 8 ==> North
+depth: 10, dir: North, alpha: 0
+Depth 10 ==> North
+depth: 12, dir: North, alpha: 0
+Depth 12 ==> North
+depth: 14, dir: North, alpha: 0
+Depth 14 ==> North
+depth: 16, dir: North, alpha: 0
+Depth 16 ==> North
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   1                                            #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                          2     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: West, alpha: 26
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 14
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 0
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 0
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 0
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 0
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 0
+Depth 14 ==> West
+depth: 16, dir: West, alpha: 0
+Depth 16 ==> West
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   #1                                           #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                         2#     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: North, alpha: 14
+Depth 2 ==> North
+depth: 4, dir: North, alpha: 0
+Depth 4 ==> North
+depth: 6, dir: North, alpha: 0
+Depth 6 ==> North
+depth: 8, dir: North, alpha: 0
+Depth 8 ==> North
+depth: 10, dir: North, alpha: 0
+Depth 10 ==> North
+depth: 12, dir: North, alpha: 0
+Depth 12 ==> North
+depth: 14, dir: North, alpha: 0
+Depth 14 ==> North
+depth: 16, dir: North, alpha: 0
+Depth 16 ==> North
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    1                                           #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                         2      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: West, alpha: 30
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 16
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 0
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 0
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 0
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 0
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 0
+Depth 14 ==> West
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    #1                                          #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                        2#      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: North, alpha: 16
+Depth 2 ==> North
+depth: 4, dir: North, alpha: 0
+Depth 4 ==> North
+depth: 6, dir: North, alpha: 0
+Depth 6 ==> North
+depth: 8, dir: North, alpha: 0
+Depth 8 ==> North
+depth: 10, dir: North, alpha: 0
+Depth 10 ==> North
+depth: 12, dir: North, alpha: 0
+Depth 12 ==> North
+depth: 14, dir: North, alpha: 0
+Depth 14 ==> North
+depth: 16, dir: North, alpha: 0
+Depth 16 ==> North
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     1                                          #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                        2       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: West, alpha: 34
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 18
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 0
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 0
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 0
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 0
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 0
+Depth 14 ==> West
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     #1                                         #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                       2#       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: North, alpha: 18
+Depth 2 ==> North
+depth: 4, dir: North, alpha: 0
+Depth 4 ==> North
+depth: 6, dir: North, alpha: 0
+Depth 6 ==> North
+depth: 8, dir: North, alpha: 0
+Depth 8 ==> North
+depth: 10, dir: North, alpha: 0
+Depth 10 ==> North
+depth: 12, dir: North, alpha: 0
+Depth 12 ==> North
+depth: 14, dir: North, alpha: 0
+Depth 14 ==> North
+depth: 16, dir: North, alpha: 0
+Depth 16 ==> North
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      1                                         #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                       2        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: West, alpha: 38
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 20
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 0
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 0
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 0
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 0
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 0
+Depth 14 ==> West
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      #1                                        #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                      2#        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: North, alpha: 20
+Depth 2 ==> North
+depth: 4, dir: North, alpha: 0
+Depth 4 ==> North
+depth: 6, dir: North, alpha: 0
+Depth 6 ==> North
+depth: 8, dir: North, alpha: 0
+Depth 8 ==> North
+depth: 10, dir: North, alpha: 0
+Depth 10 ==> North
+depth: 12, dir: North, alpha: 0
+Depth 12 ==> North
+depth: 14, dir: North, alpha: 0
+Depth 14 ==> North
+depth: 16, dir: North, alpha: 0
+Depth 16 ==> North
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       1                                        #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                      2         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: West, alpha: 42
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 22
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 0
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 0
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 0
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 0
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 0
+Depth 14 ==> West
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       #1                                       #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                     2#         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: North, alpha: 22
+Depth 2 ==> North
+depth: 4, dir: North, alpha: 0
+Depth 4 ==> North
+depth: 6, dir: North, alpha: 0
+Depth 6 ==> North
+depth: 8, dir: North, alpha: 0
+Depth 8 ==> North
+depth: 10, dir: North, alpha: 0
+Depth 10 ==> North
+depth: 12, dir: North, alpha: 0
+Depth 12 ==> North
+depth: 14, dir: North, alpha: 0
+Depth 14 ==> North
+depth: 16, dir: North, alpha: 0
+Depth 16 ==> North
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        1                                       #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                     2          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: West, alpha: 46
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 24
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 0
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 0
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 0
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 0
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 0
+Depth 14 ==> West
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        #1                                      #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                    2#          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: North, alpha: 24
+Depth 2 ==> North
+depth: 4, dir: North, alpha: 0
+Depth 4 ==> North
+depth: 6, dir: North, alpha: 0
+Depth 6 ==> North
+depth: 8, dir: North, alpha: 0
+Depth 8 ==> North
+depth: 10, dir: North, alpha: 0
+Depth 10 ==> North
+depth: 12, dir: North, alpha: 0
+Depth 12 ==> North
+depth: 14, dir: North, alpha: 0
+Depth 14 ==> North
+depth: 16, dir: North, alpha: 0
+Depth 16 ==> North
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         1                                      #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                    2           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: West, alpha: 50
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 26
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 0
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 0
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 0
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 0
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 0
+Depth 14 ==> West
+depth: 16, dir: West, alpha: 0
+Depth 16 ==> West
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         #1                                     #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                   2#           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: North, alpha: 26
+Depth 2 ==> North
+depth: 4, dir: North, alpha: 0
+Depth 4 ==> North
+depth: 6, dir: North, alpha: 0
+Depth 6 ==> North
+depth: 8, dir: North, alpha: 0
+Depth 8 ==> North
+depth: 10, dir: North, alpha: 0
+Depth 10 ==> North
+depth: 12, dir: North, alpha: 0
+Depth 12 ==> North
+depth: 14, dir: North, alpha: 0
+Depth 14 ==> North
+depth: 16, dir: North, alpha: 0
+Depth 16 ==> North
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         ##                                     #
+#          1                                     #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                   2            #
+#                                   ##           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: West, alpha: 54
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 28
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 0
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 0
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 0
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 0
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 0
+Depth 14 ==> West
+depth: 16, dir: West, alpha: 0
+Depth 16 ==> West
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         ##                                     #
+#          #1                                    #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                  2#            #
+#                                   ##           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: North, alpha: 28
+Depth 2 ==> North
+depth: 4, dir: North, alpha: 0
+Depth 4 ==> North
+depth: 6, dir: North, alpha: 0
+Depth 6 ==> North
+depth: 8, dir: North, alpha: 0
+Depth 8 ==> North
+depth: 10, dir: North, alpha: 0
+Depth 10 ==> North
+depth: 12, dir: North, alpha: 0
+Depth 12 ==> North
+depth: 14, dir: North, alpha: 0
+Depth 14 ==> North
+depth: 16, dir: North, alpha: 0
+Depth 16 ==> North
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         ##                                     #
+#          ##                                    #
+#           1                                    #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                  2             #
+#                                  ##            #
+#                                   ##           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: West, alpha: 58
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 30
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 0
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 0
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 0
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 0
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 0
+Depth 14 ==> West
+depth: 16, dir: West, alpha: 0
+Depth 16 ==> West
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         ##                                     #
+#          ##                                    #
+#           #1                                   #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                 2#             #
+#                                  ##            #
+#                                   ##           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: North, alpha: 30
+Depth 2 ==> North
+depth: 4, dir: North, alpha: 0
+Depth 4 ==> North
+depth: 6, dir: North, alpha: 0
+Depth 6 ==> North
+depth: 8, dir: North, alpha: 0
+Depth 8 ==> North
+depth: 10, dir: North, alpha: 0
+Depth 10 ==> North
+depth: 12, dir: North, alpha: 0
+Depth 12 ==> North
+depth: 14, dir: North, alpha: 0
+Depth 14 ==> North
+depth: 16, dir: North, alpha: 0
+Depth 16 ==> North
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         ##                                     #
+#          ##                                    #
+#           ##                                   #
+#            1                                   #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                 2              #
+#                                 ##             #
+#                                  ##            #
+#                                   ##           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: West, alpha: 62
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 32
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 0
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 0
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 0
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 0
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 0
+Depth 14 ==> West
+depth: 16, dir: West, alpha: 0
+Depth 16 ==> West
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         ##                                     #
+#          ##                                    #
+#           ##                                   #
+#            #1                                  #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                2#              #
+#                                 ##             #
+#                                  ##            #
+#                                   ##           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: North, alpha: 32
+Depth 2 ==> North
+depth: 4, dir: North, alpha: 0
+Depth 4 ==> North
+depth: 6, dir: North, alpha: 0
+Depth 6 ==> North
+depth: 8, dir: North, alpha: 0
+Depth 8 ==> North
+depth: 10, dir: North, alpha: 0
+Depth 10 ==> North
+depth: 12, dir: North, alpha: 0
+Depth 12 ==> North
+depth: 14, dir: North, alpha: 0
+Depth 14 ==> North
+depth: 16, dir: North, alpha: 0
+Depth 16 ==> North
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         ##                                     #
+#          ##                                    #
+#           ##                                   #
+#            ##                                  #
+#             1                                  #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                2               #
+#                                ##              #
+#                                 ##             #
+#                                  ##            #
+#                                   ##           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: West, alpha: 66
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 34
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 0
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 0
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 0
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 0
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 0
+Depth 14 ==> West
+depth: 16, dir: West, alpha: 0
+Depth 16 ==> West
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         ##                                     #
+#          ##                                    #
+#           ##                                   #
+#            ##                                  #
+#             #1                                 #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                               2#               #
+#                                ##              #
+#                                 ##             #
+#                                  ##            #
+#                                   ##           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: North, alpha: 34
+Depth 2 ==> North
+depth: 4, dir: North, alpha: 0
+Depth 4 ==> North
+depth: 6, dir: North, alpha: 0
+Depth 6 ==> North
+depth: 8, dir: North, alpha: 0
+Depth 8 ==> North
+depth: 10, dir: North, alpha: 0
+Depth 10 ==> North
+depth: 12, dir: North, alpha: 0
+Depth 12 ==> North
+depth: 14, dir: North, alpha: 0
+Depth 14 ==> North
+depth: 16, dir: North, alpha: 0
+Depth 16 ==> North
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         ##                                     #
+#          ##                                    #
+#           ##                                   #
+#            ##                                  #
+#             ##                                 #
+#              1                                 #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                               2                #
+#                               ##               #
+#                                ##              #
+#                                 ##             #
+#                                  ##            #
+#                                   ##           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: West, alpha: 70
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 36
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 0
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 0
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 0
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 0
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 0
+Depth 14 ==> West
+depth: 16, dir: West, alpha: 0
+Depth 16 ==> West
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         ##                                     #
+#          ##                                    #
+#           ##                                   #
+#            ##                                  #
+#             ##                                 #
+#              #1                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                              2#                #
+#                               ##               #
+#                                ##              #
+#                                 ##             #
+#                                  ##            #
+#                                   ##           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: North, alpha: 36
+Depth 2 ==> North
+depth: 4, dir: North, alpha: 0
+Depth 4 ==> North
+depth: 6, dir: North, alpha: 0
+Depth 6 ==> North
+depth: 8, dir: North, alpha: 0
+Depth 8 ==> North
+depth: 10, dir: North, alpha: 0
+Depth 10 ==> North
+depth: 12, dir: North, alpha: 0
+Depth 12 ==> North
+depth: 14, dir: North, alpha: 0
+Depth 14 ==> North
+depth: 16, dir: North, alpha: 0
+Depth 16 ==> North
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         ##                                     #
+#          ##                                    #
+#           ##                                   #
+#            ##                                  #
+#             ##                                 #
+#              ##                                #
+#               1                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                              2                 #
+#                              ##                #
+#                               ##               #
+#                                ##              #
+#                                 ##             #
+#                                  ##            #
+#                                   ##           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: West, alpha: 74
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 38
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 0
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 0
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 0
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 0
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 0
+Depth 14 ==> West
+depth: 16, dir: West, alpha: 0
+Depth 16 ==> West
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         ##                                     #
+#          ##                                    #
+#           ##                                   #
+#            ##                                  #
+#             ##                                 #
+#              ##                                #
+#               #1                               #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                             2#                 #
+#                              ##                #
+#                               ##               #
+#                                ##              #
+#                                 ##             #
+#                                  ##            #
+#                                   ##           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: North, alpha: 38
+Depth 2 ==> North
+depth: 4, dir: North, alpha: 0
+Depth 4 ==> North
+depth: 6, dir: North, alpha: 0
+Depth 6 ==> North
+depth: 8, dir: North, alpha: 0
+Depth 8 ==> North
+depth: 10, dir: North, alpha: 0
+Depth 10 ==> North
+depth: 12, dir: North, alpha: 0
+Depth 12 ==> North
+depth: 14, dir: North, alpha: 0
+Depth 14 ==> North
+depth: 16, dir: North, alpha: 0
+Depth 16 ==> North
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         ##                                     #
+#          ##                                    #
+#           ##                                   #
+#            ##                                  #
+#             ##                                 #
+#              ##                                #
+#               ##                               #
+#                1                               #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                             2                  #
+#                             ##                 #
+#                              ##                #
+#                               ##               #
+#                                ##              #
+#                                 ##             #
+#                                  ##            #
+#                                   ##           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: West, alpha: 78
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 40
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 0
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 0
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 0
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 0
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 0
+Depth 14 ==> West
+depth: 16, dir: West, alpha: 0
+Depth 16 ==> West
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         ##                                     #
+#          ##                                    #
+#           ##                                   #
+#            ##                                  #
+#             ##                                 #
+#              ##                                #
+#               ##                               #
+#                #1                              #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                            2#                  #
+#                             ##                 #
+#                              ##                #
+#                               ##               #
+#                                ##              #
+#                                 ##             #
+#                                  ##            #
+#                                   ##           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: North, alpha: 40
+Depth 2 ==> North
+depth: 4, dir: North, alpha: 0
+Depth 4 ==> North
+depth: 6, dir: North, alpha: 0
+Depth 6 ==> North
+depth: 8, dir: North, alpha: 0
+Depth 8 ==> North
+depth: 10, dir: North, alpha: 0
+Depth 10 ==> North
+depth: 12, dir: North, alpha: 0
+Depth 12 ==> North
+depth: 14, dir: North, alpha: 0
+Depth 14 ==> North
+depth: 16, dir: North, alpha: 0
+Depth 16 ==> North
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         ##                                     #
+#          ##                                    #
+#           ##                                   #
+#            ##                                  #
+#             ##                                 #
+#              ##                                #
+#               ##                               #
+#                ##                              #
+#                 1                              #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                            2                   #
+#                            ##                  #
+#                             ##                 #
+#                              ##                #
+#                               ##               #
+#                                ##              #
+#                                 ##             #
+#                                  ##            #
+#                                   ##           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: West, alpha: 82
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 42
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 0
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 0
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 0
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 0
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 0
+Depth 14 ==> West
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         ##                                     #
+#          ##                                    #
+#           ##                                   #
+#            ##                                  #
+#             ##                                 #
+#              ##                                #
+#               ##                               #
+#                ##                              #
+#                 #1                             #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                           2#                   #
+#                            ##                  #
+#                             ##                 #
+#                              ##                #
+#                               ##               #
+#                                ##              #
+#                                 ##             #
+#                                  ##            #
+#                                   ##           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: North, alpha: 42
+Depth 2 ==> North
+depth: 4, dir: North, alpha: 0
+Depth 4 ==> North
+depth: 6, dir: North, alpha: 0
+Depth 6 ==> North
+depth: 8, dir: North, alpha: 0
+Depth 8 ==> North
+depth: 10, dir: North, alpha: 0
+Depth 10 ==> North
+depth: 12, dir: North, alpha: 0
+Depth 12 ==> North
+depth: 14, dir: North, alpha: -49
+Depth 14 ==> North
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         ##                                     #
+#          ##                                    #
+#           ##                                   #
+#            ##                                  #
+#             ##                                 #
+#              ##                                #
+#               ##                               #
+#                ##                              #
+#                 ##                             #
+#                  1                             #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                           2                    #
+#                           ##                   #
+#                            ##                  #
+#                             ##                 #
+#                              ##                #
+#                               ##               #
+#                                ##              #
+#                                 ##             #
+#                                  ##            #
+#                                   ##           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: West, alpha: 86
+Depth 2 ==> West
+depth: 4, dir: West, alpha: 44
+Depth 4 ==> West
+depth: 6, dir: West, alpha: 0
+Depth 6 ==> West
+depth: 8, dir: West, alpha: 0
+Depth 8 ==> West
+depth: 10, dir: West, alpha: 0
+Depth 10 ==> West
+depth: 12, dir: West, alpha: -49
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 0
+Depth 14 ==> West
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         ##                                     #
+#          ##                                    #
+#           ##                                   #
+#            ##                                  #
+#             ##                                 #
+#              ##                                #
+#               ##                               #
+#                ##                              #
+#                 ##                             #
+#                  #1                            #
+#                                                #
+#                                                #
+#                                                #
+#                                                #
+#                          2#                    #
+#                           ##                   #
+#                            ##                  #
+#                             ##                 #
+#                              ##                #
+#                               ##               #
+#                                ##              #
+#                                 ##             #
+#                                  ##            #
+#                                   ##           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: North, alpha: 44
+Depth 2 ==> North
+depth: 4, dir: North, alpha: 0
+Depth 4 ==> North
+depth: 6, dir: North, alpha: 0
+Depth 6 ==> North
+depth: 8, dir: North, alpha: 0
+Depth 8 ==> North
+depth: 10, dir: North, alpha: -49
+Depth 10 ==> North
+depth: 12, dir: North, alpha: 0
+Depth 12 ==> North
+depth: 14, dir: West, alpha: -11
+Depth 14 ==> West
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         ##                                     #
+#          ##                                    #
+#           ##                                   #
+#            ##                                  #
+#             ##                                 #
+#              ##                                #
+#               ##                               #
+#                ##                              #
+#                 ##                             #
+#                  ##                            #
+#                   1                            #
+#                                                #
+#                                                #
+#                                                #
+#                         2##                    #
+#                           ##                   #
+#                            ##                  #
+#                             ##                 #
+#                              ##                #
+#                               ##               #
+#                                ##              #
+#                                 ##             #
+#                                  ##            #
+#                                   ##           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: North, alpha: 90
+Depth 2 ==> North
+depth: 4, dir: North, alpha: 46
+Depth 4 ==> North
+depth: 6, dir: North, alpha: 0
+Depth 6 ==> North
+depth: 8, dir: North, alpha: -49
+Depth 8 ==> North
+depth: 10, dir: North, alpha: 0
+Depth 10 ==> North
+depth: 12, dir: West, alpha: -11
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 0
+Depth 14 ==> West
+depth: 16, dir: West, alpha: 0
+Depth 16 ==> West
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         ##                                     #
+#          ##                                    #
+#           ##                                   #
+#            ##                                  #
+#             ##                                 #
+#              ##                                #
+#               ##                               #
+#                ##                              #
+#                 ##                             #
+#                  ##                            #
+#                   #1                           #
+#                                                #
+#                                                #
+#                                                #
+#                        2###                    #
+#                           ##                   #
+#                            ##                  #
+#                             ##                 #
+#                              ##                #
+#                               ##               #
+#                                ##              #
+#                                 ##             #
+#                                  ##            #
+#                                   ##           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: North, alpha: 0
+Depth 2 ==> North
+depth: 4, dir: North, alpha: 0
+Depth 4 ==> North
+depth: 6, dir: North, alpha: -62
+Depth 6 ==> North
+depth: 8, dir: North, alpha: 0
+Depth 8 ==> North
+depth: 10, dir: West, alpha: -11
+Depth 10 ==> West
+depth: 12, dir: West, alpha: 0
+Depth 12 ==> West
+depth: 14, dir: West, alpha: 0
+Depth 14 ==> West
+depth: 16, dir: West, alpha: 0
+Depth 16 ==> West
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         ##                                     #
+#          ##                                    #
+#           ##                                   #
+#            ##                                  #
+#             ##                                 #
+#              ##                                #
+#               ##                               #
+#                ##                              #
+#                 ##                             #
+#                  ##                            #
+#                   ##1                          #
+#                                                #
+#                                                #
+#                                                #
+#                       2####                    #
+#                           ##                   #
+#                            ##                  #
+#                             ##                 #
+#                              ##                #
+#                               ##               #
+#                                ##              #
+#                                 ##             #
+#                                  ##            #
+#                                   ##           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: North, alpha: -94
+Depth 2 ==> North
+depth: 4, dir: North, alpha: -61
+Depth 4 ==> North
+depth: 6, dir: North, alpha: 0
+Depth 6 ==> North
+depth: 8, dir: North, alpha: -11
+Depth 8 ==> North
+depth: 10, dir: North, alpha: 0
+Depth 10 ==> North
+depth: 12, dir: North, alpha: 0
+Depth 12 ==> North
+depth: 14, dir: North, alpha: 0
+Depth 14 ==> North
+depth: 16, dir: North, alpha: 0
+Depth 16 ==> North
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         ##                                     #
+#          ##                                    #
+#           ##                                   #
+#            ##                                  #
+#             ##                                 #
+#              ##                                #
+#               ##                               #
+#                ##                              #
+#                 ##                             #
+#                  ##                            #
+#                   ###                          #
+#                     1                          #
+#                                                #
+#                       2                        #
+#                       #####                    #
+#                           ##                   #
+#                            ##                  #
+#                             ##                 #
+#                              ##                #
+#                               ##               #
+#                                ##              #
+#                                 ##             #
+#                                  ##            #
+#                                   ##           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: North, alpha: -61
+Depth 2 ==> North
+depth: 4, dir: West, alpha: 0
+Depth 4 ==> West
+depth: 6, dir: North, alpha: -11
+Depth 6 ==> North
+depth: 8, dir: North, alpha: 0
+Depth 8 ==> North
+depth: 10, dir: North, alpha: 0
+Depth 10 ==> North
+depth: 12, dir: North, alpha: 0
+Depth 12 ==> North
+depth: 14, dir: North, alpha: 0
+Depth 14 ==> North
+depth: 16, dir: North, alpha: 0
+Depth 16 ==> North
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         ##                                     #
+#          ##                                    #
+#           ##                                   #
+#            ##                                  #
+#             ##                                 #
+#              ##                                #
+#               ##                               #
+#                ##                              #
+#                 ##                             #
+#                  ##                            #
+#                   ###                          #
+#                     #1                         #
+#                       2                        #
+#                       #                        #
+#                       #####                    #
+#                           ##                   #
+#                            ##                  #
+#                             ##                 #
+#                              ##                #
+#                               ##               #
+#                                ##              #
+#                                 ##             #
+#                                  ##            #
+#                                   ##           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: North, alpha: -36
+Depth 2 ==> North
+depth: 4, dir: North, alpha: -11
+Depth 4 ==> North
+depth: 6, dir: North, alpha: 0
+Depth 6 ==> North
+depth: 8, dir: North, alpha: 0
+Depth 8 ==> North
+depth: 10, dir: North, alpha: 0
+Depth 10 ==> North
+depth: 12, dir: North, alpha: 0
+Depth 12 ==> North
+depth: 14, dir: North, alpha: 0
+Depth 14 ==> North
+depth: 16, dir: North, alpha: 0
+Depth 16 ==> North
+depth: 18, dir: North, alpha: 0
+Depth 18 ==> North
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         ##                                     #
+#          ##                                    #
+#           ##                                   #
+#            ##                                  #
+#             ##                                 #
+#              ##                                #
+#               ##                               #
+#                ##                              #
+#                 ##                             #
+#                  ##                            #
+#                   ###1                         #
+#                     ##2                        #
+#                       #                        #
+#                       #                        #
+#                       #####                    #
+#                           ##                   #
+#                            ##                  #
+#                             ##                 #
+#                              ##                #
+#                               ##               #
+#                                ##              #
+#                                 ##             #
+#                                  ##            #
+#                                   ##           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: North, alpha: -11
+Depth 2 ==> North
+depth: 4, dir: North, alpha: 0
+Depth 4 ==> North
+depth: 6, dir: North, alpha: 0
+Depth 6 ==> North
+depth: 8, dir: North, alpha: 0
+Depth 8 ==> North
+depth: 10, dir: North, alpha: 0
+Depth 10 ==> North
+depth: 12, dir: North, alpha: 0
+Depth 12 ==> North
+depth: 14, dir: North, alpha: 0
+Depth 14 ==> North
+depth: 16, dir: North, alpha: 0
+Depth 16 ==> North
+depth: 18, dir: North, alpha: 0
+Depth 18 ==> North
+depth: 20, dir: North, alpha: 0
+Depth 20 ==> North
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         ##                                     #
+#          ##                                    #
+#           ##                                   #
+#            ##                                  #
+#             ##                                 #
+#              ##                                #
+#               ##                               #
+#                ##                              #
+#                 ##                             #
+#                  ##  1                         #
+#                   ####2                        #
+#                     ###                        #
+#                       #                        #
+#                       #                        #
+#                       #####                    #
+#                           ##                   #
+#                            ##                  #
+#                             ##                 #
+#                              ##                #
+#                               ##               #
+#                                ##              #
+#                                 ##             #
+#                                  ##            #
+#                                   ##           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: North, alpha: 0
+Depth 2 ==> North
+depth: 4, dir: North, alpha: 0
+Depth 4 ==> North
+depth: 6, dir: North, alpha: 0
+Depth 6 ==> North
+depth: 8, dir: North, alpha: 0
+Depth 8 ==> North
+depth: 10, dir: North, alpha: 0
+Depth 10 ==> North
+depth: 12, dir: North, alpha: 0
+Depth 12 ==> North
+depth: 14, dir: North, alpha: 0
+Depth 14 ==> North
+depth: 16, dir: North, alpha: 0
+Depth 16 ==> North
+depth: 18, dir: North, alpha: 0
+Depth 18 ==> North
+depth: 20, dir: North, alpha: 0
+Depth 20 ==> North
+depth: 22, dir: North, alpha: 0
+Depth 22 ==> North
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         ##                                     #
+#          ##                                    #
+#           ##                                   #
+#            ##                                  #
+#             ##                                 #
+#              ##                                #
+#               ##                               #
+#                ##                              #
+#                 ##   1                         #
+#                  ##  #2                        #
+#                   #####                        #
+#                     ###                        #
+#                       #                        #
+#                       #                        #
+#                       #####                    #
+#                           ##                   #
+#                            ##                  #
+#                             ##                 #
+#                              ##                #
+#                               ##               #
+#                                ##              #
+#                                 ##             #
+#                                  ##            #
+#                                   ##           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: North, alpha: 0
+Depth 2 ==> North
+depth: 4, dir: North, alpha: 0
+Depth 4 ==> North
+depth: 6, dir: North, alpha: 0
+Depth 6 ==> North
+depth: 8, dir: North, alpha: 0
+Depth 8 ==> North
+depth: 10, dir: North, alpha: 0
+Depth 10 ==> North
+depth: 12, dir: North, alpha: 0
+Depth 12 ==> North
+depth: 14, dir: North, alpha: 0
+Depth 14 ==> North
+depth: 16, dir: North, alpha: 0
+Depth 16 ==> North
+depth: 18, dir: North, alpha: 0
+Depth 18 ==> North
+depth: 20, dir: North, alpha: 0
+Depth 20 ==> North
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         ##                                     #
+#          ##                                    #
+#           ##                                   #
+#            ##                                  #
+#             ##                                 #
+#              ##                                #
+#               ##                               #
+#                ##    1                         #
+#                 ##   #2                        #
+#                  ##  ##                        #
+#                   #####                        #
+#                     ###                        #
+#                       #                        #
+#                       #                        #
+#                       #####                    #
+#                           ##                   #
+#                            ##                  #
+#                             ##                 #
+#                              ##                #
+#                               ##               #
+#                                ##              #
+#                                 ##             #
+#                                  ##            #
+#                                   ##           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: East, alpha: 18
+Depth 2 ==> East
+depth: 4, dir: East, alpha: 0
+Depth 4 ==> East
+depth: 6, dir: East, alpha: 0
+Depth 6 ==> East
+depth: 8, dir: East, alpha: 0
+Depth 8 ==> East
+depth: 10, dir: East, alpha: 0
+Depth 10 ==> East
+depth: 12, dir: East, alpha: 0
+Depth 12 ==> East
+depth: 14, dir: East, alpha: 0
+Depth 14 ==> East
+depth: 16, dir: East, alpha: 0
+Depth 16 ==> East
+depth: 18, dir: East, alpha: 0
+Depth 18 ==> East
+depth: 20, dir: East, alpha: 0
+Depth 20 ==> East
+50 50
+##################################################
+##                                               #
+##                                               #
+##                                               #
+##                                               #
+####                                             #
+#  #                                             #
+#  ##                                            #
+#   ##                                           #
+#    ##                                          #
+#     ##                                         #
+#      ##                                        #
+#       ##                                       #
+#        ##                                      #
+#         ##                                     #
+#          ##                                    #
+#           ##                                   #
+#            ##                                  #
+#             ##                                 #
+#              ##                                #
+#               ##                               #
+#                ##    #1                        #
+#                 ##   ##2                       #
+#                  ##  ##                        #
+#                   #####                        #
+#                     ###                        #
+#                       #                        #
+#                       #                        #
+#                       #####                    #
+#                           ##                   #
+#                            ##                  #
+#                             ##                 #
+#                              ##                #
+#                               ##               #
+#                                ##              #
+#                                 ##             #
+#                                  ##            #
+#                                   ##           #
+#                                    ##          #
+#                                     ##         #
+#                                      ##        #
+#                                       ##       #
+#                                        ##      #
+#                                         ##     #
+#                                          ###   #
+#                                            #   #
+#                                            ### #
+#                                              ###
+#                                               ##
+##################################################
+depth: 2, dir: North, alpha: 0
+Depth 2 ==> North
+depth: 4, dir: North, alpha: 0
+Depth 4 ==> North
+depth: 6, dir: North, alpha: 0
+Depth 6 ==> North
+depth: 8, dir: North, alpha: 0
+Depth 8 ==> North
+depth: 10, dir: North, alpha: 0
+Depth 10 ==> North
+depth: 12, dir: North, alpha: 0
+Depth 12 ==> North
+depth: 14, dir: North, alpha: 0
+Depth 14 ==> North
+depth: 16, dir: North, alpha: 0
+Depth 16 ==> North
+depth: 18, dir: North, alpha: 0
+Depth 18 ==> North
+depth: 20, dir: North, alpha: 0
+Depth 20 ==> North
+Players collided. Draw!
